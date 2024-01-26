@@ -2,6 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-	@apply text-4xl font-bold;
+@layer base {
+	h1 {
+		@apply text-4xl font-bold;
+	}
+
+	.light {
+		--color-primary: 245 215 66;
+		--color-secondary: 210 210 210;
+		--color-contrast: 0 0 0;
+		--color-contrast-secondary: 0 0 0;
+		--color-theme: 255 255 255;
+		@apply text-contrast border-contrast fill-contrast;
+	}
+
+	.dark {
+		--color-primary: 71 63 21;
+		--color-secondary: 200 200 200;
+		--color-contrast: 255 255 255;
+		--color-contrast-secondary: 0 0 0;
+		--color-theme: 0 0 0;
+		@apply text-contrast border-contrast fill-contrast;
+	}
+
+	:root {
+		@apply light stroke-2;
+	}
+
+	div:has(label > input.dark-mode-toggle:checked) {
+		@apply dark;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			@apply dark;
+		}
+
+		div:has(label > input.dark-mode-toggle:checked) {
+			@apply light;
+		}
+	}
+
+	:root,
+	.bg-primary {
+		@apply text-contrast fill-contrast;
+	}
+
+	.bg-secondary {
+		@apply text-contrast-secondary fill-contrast-secondary;
+	}
+
+	.hrz {
+		@apply flex items-center;
+	}
+
+	.vrt {
+		@apply flex flex-col items-center;
+	}
+
+	.center {
+		justify-content: center;
+	}
 }
