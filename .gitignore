@@ -1,6 +1,7 @@
 .DS_Store
 .vscode
 node_modules
+venv
 /build
 /.svelte-kit
 /package
@@ -9,3 +10,6 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+*.tsv
+*.csv
+data/**/*.json
