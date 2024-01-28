@@ -1,9 +1,12 @@
 <script>
 	import DarkModeButton from './DarkModeButton.svelte';
+	import HamburgerMenu from './HamburgerMenu.svelte';
 </script>
 
 <div class="w-full h-screen vrt justify-stretch bg-theme">
-	<div class="w-full hrz justify-end"><DarkModeButton /></div>
+	<div class="w-full hrz justify-end">
+		<HamburgerMenu><DarkModeButton /></HamburgerMenu>
+	</div>
 	<div class="vrt center gap-2 grow">
 		<h1>Hello Adam</h1>
 		<p class="border-b">
