@@ -4,9 +4,15 @@
 </script>
 
 <div class="w-full h-screen vrt justify-stretch bg-theme">
-	<div class="w-full hrz justify-end">
-		<HamburgerMenu><DarkModeButton /></HamburgerMenu>
-	</div>
+	<HamburgerMenu>
+		<div
+			class="vrt items-start gap-2 p-2 min-w-56 bg-theme border-b-2 border-l-2 border-secondary rounded-bl-lg"
+		>
+			<p>A menu item</p>
+			<p>Ok we probably don't really need a menu but I wanted to make this</p>
+			<DarkModeButton />
+		</div></HamburgerMenu
+	>
 	<div class="vrt center gap-2 grow">
 		<h1>Hello Adam</h1>
 		<p class="border-b">
