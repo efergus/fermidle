@@ -19,14 +19,15 @@
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		class="feather feather-menu"
-		><line class="line1" x1="-9" y1="0" x2="9" y2="0"></line><line
-			class="line2"
+		><line class="line1" x1="-9" y1="0" x2="9" y2="0" />
+		<line class="line2" x1="-9" y1="0" x2="9" y2="0" /><line
+			class="line3"
 			x1="-9"
 			y1="0"
 			x2="9"
 			y2="0"
-		></line><line class="line3" x1="-9" y1="0" x2="9" y2="0"></line></svg
-	>
+		/>
+	</svg>
 </label>
 
 <style lang="postcss">

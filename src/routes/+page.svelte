@@ -1,6 +1,6 @@
 <script>
 	import DarkModeButton from './DarkModeButton.svelte';
-	import HamburgerMenu from './HamburgerMenu.svelte';
+	import HamburgerMenu from './SlideMenu.svelte';
 </script>
 
 <div class="w-full h-screen vrt justify-stretch bg-theme">

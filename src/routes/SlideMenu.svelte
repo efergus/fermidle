@@ -7,7 +7,7 @@
 <div class="relative w-full">
 	<div class="menu">
 		<slot />
-		<HamburgerToggle />
+		<HamburgerToggle bind:checked={open} />
 	</div>
 </div>
 
