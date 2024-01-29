@@ -14,7 +14,7 @@ number_regex = r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?"
 range_regex = f"{number_regex}(?:-{number_regex})?"
 unit_regex = r"[^\s]*"
 
-value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})")
+value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})$")
 
 
 def default(fn):
@@ -58,23 +58,23 @@ def get_things(df: DataFrame):
         thing = Thing(
             row_name, tags=[tag.lower() for tag in row.get("tags", "").split(", ")]
         )
+        values = defaultdict(list)
         for col_name in cols:
             if col_name in ("tags", "thing"):
                 continue
             vals = row[col_name]
-            values = defaultdict(list)
             for val in vals.split(","):
                 val = val.strip()
                 m = value_regex.match(val)
                 if not m:
-                    values[m] = Value(m)
+                    values[val].append(Value(val, None, "", col_name, row_name))
                     continue
                 (name, number, unit) = m.group(1, 2, 3)
                 num, uncertainty = parse_number(number)
-                values[col_name] = Value(
+                values[col_name].append(Value(
                     name, num, unit, col_name, row_name, uncertainty
-                )
-            thing.values = dict(values)
+                ))
+        thing.values = dict(values)
         things.append(thing)
     return things
 
@@ -112,6 +112,22 @@ def main(input, output):
 
     df = df.set_index("thing", drop=True)
     things = get_things(df)
+    values = [value for thing in things for values in thing.values.values() for value in values]
+
+    broken = [value.name for value in values if value.value is None]
+    values_by_kind = defaultdict(list)
+    for value in values:
+        if value.value is None:
+            continue
+        values_by_kind[value.kind].append(value)
+
+    units_by_kind = defaultdict(set)
+    for kind, values in values_by_kind.items():
+        units_by_kind[kind] = set(value.unit for value in values)
+    units_by_kind = dict(units_by_kind)
+    print("Broken:", broken)
+    pprint(units_by_kind)
+
     things_serial = [asdict(thing) for thing in things]
     json.dump(things_serial, output, indent=2)
 
