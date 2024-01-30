@@ -2,21 +2,7 @@
     import '../app.css';
     let base = 5; //TODO: get actual base from data etc
 
-    let inputField;
-    let newFieldValue = '';
-
-    function isNumeric(str) {
-        if (typeof str != "string") return false // we only process strings!  
-        return !isNaN(parseInt(str)) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-                !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
-     }
-
-    const onInput = (event) => {
-        if (event.key !== 'Enter') return;
-        if (!isNumeric(newFieldValue)) return;
-        console.log(newFieldValue);
-        inputField.value = '';
-    };
+    let guess = '';
 </script>
 
 <div class="hrz items-start">
@@ -28,9 +14,7 @@
         name="inputField1"
         type="text"
         placeholder="Guess..."
-        bind:this={inputField}
-        on:keydown={onInput}
-        bind:value={newFieldValue} />
+        bind:value={guess} />
 </div>
 <!-- <p>User input: {newFieldValue || "..."}</p> -->
 
