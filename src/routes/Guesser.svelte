@@ -11,12 +11,10 @@
     </b>
     <input
         class="border-2 rounded border-contrast max-w-32"
-        name="inputField1"
         type="text"
         placeholder="Guess..."
         bind:value={guess} />
 </div>
-<!-- <p>User input: {newFieldValue || "..."}</p> -->
 
 <style>
 
