@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { slide } from 'svelte/transition';
 
 	export let value = 0;
 
@@ -93,10 +92,8 @@
 		if (['ArrowDown', 'ArrowUp'].includes(key)) {
 			e.preventDefault();
 			cleanup(target, value + (key === 'ArrowUp' ? 1 : -1), true, false);
-			// target.setSelectionRange(val.length, val.length);
 			return;
 		}
-		console.log(key);
 		if (key.length > 1) {
 			return;
 		}

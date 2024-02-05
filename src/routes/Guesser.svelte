@@ -2,9 +2,7 @@
 	import clsx from 'clsx';
 	import Increment from './Increment.svelte';
 	import ChevronDown from '$lib/icons/ChevronDown.svelte';
-	import ChevronsDown from '$lib/icons/ChevronsDown.svelte';
 	import ChevronUp from '$lib/icons/ChevronUp.svelte';
-	import ChevronsUp from '$lib/icons/ChevronsUp.svelte';
 	import { onMount } from 'svelte';
 	import IntInput from './IntInput.svelte';
 	import { spring } from 'svelte/motion';
@@ -19,7 +17,6 @@
 	let focused = false;
 	let focusTimeout: number;
 
-	let input: IntInput;
 	let inputGroup: HTMLDivElement | null = null;
 
 	onMount(() => {
@@ -41,11 +38,6 @@
 			zeros[0] = '0.';
 			guessDisplay = [...zeros, d];
 		}
-	}
-	$: {
-		guess;
-		focused = true;
-		// console.log('FOCUS', focused);
 	}
 </script>
 
@@ -72,7 +64,7 @@
 			<Increment show={focused} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput bind:this={input} bind:value={guess} />
+			<IntInput bind:value={guess} />
 			<Increment show={focused} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>
