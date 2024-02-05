@@ -7,6 +7,10 @@
 		@apply text-4xl font-bold;
 	}
 
+	input {
+		@apply bg-theme;
+	}
+
 	.light {
 		--color-primary: 245 215 66;
 		--color-secondary: 210 210 210;
@@ -18,9 +22,9 @@
 
 	.dark {
 		--color-primary: 71 63 21;
-		--color-secondary: 200 200 200;
+		--color-secondary: 70 70 74;
 		--color-contrast: 255 255 255;
-		--color-contrast-secondary: 0 0 0;
+		--color-contrast-secondary: 255 255 255;
 		--color-theme: 0 0 0;
 		@apply text-contrast border-contrast fill-contrast;
 	}
