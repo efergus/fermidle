@@ -11,13 +11,14 @@
 
 	export let guess = 0;
 	export let digit = 5;
+	export let unit = 'units';
 
 	export function focus() {
 		input?.focus();
 	}
 
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
-	let guessDisplay = '';
+	let guessDisplay = [''];
 
 	let focused = false;
 
@@ -25,24 +26,24 @@
 	let inputGroup: HTMLDivElement | null = null;
 
 	onMount(() => {
-		document.addEventListener('click', () => {
-			focused = !!inputGroup?.contains(document.activeElement);
-		});
+		// document.addEventListener('click', () => {
+		// 	focused = !!inputGroup?.contains(document.activeElement);
+		// });
 	});
 
 	const incrementer = (value: number) => () => {
 		guess += value;
 	};
 
-	$: console.log(guess);
 	$: $guessDisplayAmt = guess;
 	$: {
 		const amt = Math.round($guessDisplayAmt);
 		const d = digit.toString();
+		const zeros = new Array(Math.abs(amt)).fill('0');
 		if (amt >= 0) {
-			guessDisplay = d + '0'.repeat(amt);
+			guessDisplay = [d, ...zeros.flatMap((z, i) => (i % 3 === 2 ? [z, ','] : [z])).reverse()];
 		} else {
-			guessDisplay = '0.' + '0'.repeat(-amt - 1) + d;
+			guessDisplay = ['0.', ...zeros, d];
 		}
 	}
 </script>
@@ -76,8 +77,14 @@
 			</Increment>
 		</div>
 	</div>
-	<div class="text-4xl w-full max-w-[20ch] h-[5em] break-words">
-		{guessDisplay}
+	<div class="text-4xl w-full max-w-[20ch] h-[6em] break-words flex flex-wrap content-start">
+		{#each guessDisplay as item}
+			<p>{item}</p>
+		{/each}
+		<div class="vrt justify-end">
+			<p class="pl-2 font-bold text-2xl">{unit}</p>
+		</div>
+		<!-- {guessDisplay} -->
 	</div>
 </div>
 

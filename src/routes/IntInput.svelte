@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
 	export let value = 0;
@@ -13,7 +14,6 @@
 		if (!input) return;
 		newValue = newValue.toString();
 		const start = input.selectionStart ?? 0;
-		console.log(stayPut, input.value, newValue);
 		input.value = newValue;
 		if (stayPut) {
 			input.setSelectionRange(start, start);
@@ -45,6 +45,26 @@
 			set(cleanedValue, stayPut);
 		}
 	};
+
+	const keyListener = (e: KeyboardEvent) => {
+		if (document.activeElement !== document.body) {
+			return;
+		}
+		if (!['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key) && !/[-\d]/.test(e.key)) {
+			e.stopPropagation();
+			return;
+		}
+		input?.focus();
+		e.preventDefault();
+	};
+
+	onMount(() => {
+		document.addEventListener('keydown', (e) => {
+			keyListener(e);
+			return () => document.removeEventListener('keydown', keyListener);
+		});
+	});
+
 	$: {
 		if (input && parse(input.value) !== value) {
 			cleanup(input, value.toString(), true, false);
@@ -66,6 +86,7 @@
 		value = parse(e.currentTarget.value);
 	}}
 	on:keydown={(e) => {
+		console.log('keydown');
 		e.stopPropagation();
 		const key = e.key;
 		const target = e.currentTarget;
