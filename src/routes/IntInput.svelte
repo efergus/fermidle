@@ -73,7 +73,7 @@
 </script>
 
 <input
-	class="peer rounded border-2 border-secondary focus:border-contrast w-[3.5ch] text-4xl outline-none text-center font-semibold"
+	class="peer rounded border-2 border-secondary focus:border-contrast w-[3.5ch] text-4xl text-center font-semibold"
 	type="text"
 	inputmode="numeric"
 	pattern="-?[0-9]*"
@@ -86,7 +86,6 @@
 		value = parse(e.currentTarget.value);
 	}}
 	on:keydown={(e) => {
-		console.log('keydown');
 		e.stopPropagation();
 		const key = e.key;
 		const target = e.currentTarget;

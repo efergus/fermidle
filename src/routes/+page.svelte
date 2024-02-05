@@ -6,22 +6,6 @@
 
 	let guess = 0;
 	let input: Guesser;
-
-	// onMount(() => {
-	// 	document.addEventListener('keydown', (e) => {
-	// 		if (e.key === 'ArrowUp') {
-	// 			guess += 1;
-	// 		} else if (e.key === 'ArrowDown') {
-	// 			guess -= 1;
-	// 		}
-	// 		if (e.key === ' ' || e.key.length > 1) {
-	// 			e.stopPropagation();
-	// 			return;
-	// 		}
-	// 		input?.focus();
-	// 		e.preventDefault();
-	// 	});
-	// });
 </script>
 
 <!-- svelte-ignore a11y-interactive-supports-focus -->

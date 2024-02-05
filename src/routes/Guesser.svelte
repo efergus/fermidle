@@ -13,22 +13,17 @@
 	export let digit = 5;
 	export let unit = 'units';
 
-	export function focus() {
-		input?.focus();
-	}
-
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
 
 	let focused = false;
+	let focusTimeout: number;
 
 	let input: IntInput;
 	let inputGroup: HTMLDivElement | null = null;
 
 	onMount(() => {
-		// document.addEventListener('click', () => {
-		// 	focused = !!inputGroup?.contains(document.activeElement);
-		// });
+		document.addEventListener('click', () => {});
 	});
 
 	const incrementer = (value: number) => () => {
@@ -43,37 +38,43 @@
 		if (amt >= 0) {
 			guessDisplay = [d, ...zeros.flatMap((z, i) => (i % 3 === 2 ? [z, ','] : [z])).reverse()];
 		} else {
-			guessDisplay = ['0.', ...zeros, d];
+			zeros[0] = '0.';
+			guessDisplay = [...zeros, d];
 		}
+	}
+	$: {
+		guess;
+		focused = true;
+		// console.log('FOCUS', focused);
 	}
 </script>
 
 <div class="vrt gap-4 w-full">
 	<div class="hrz items-start">
-		<div class="h-full vrt justify-end">
+		<div class="h-full vrt justify-end pt-8">
 			<b class="text-8xl">
 				{digit} ⋅ 10
 			</b>
 		</div>
-		<div class={clsx('vrt rounded', focused && 'outline-contrast')} bind:this={inputGroup}>
-			<Increment show={focused} on:click={incrementer(5)}>
-				<ChevronsUp />
-			</Increment>
+		<div
+			class={clsx('vrt rounded')}
+			bind:this={inputGroup}
+			on:focusin={() => {
+				focused = true;
+				clearTimeout(focusTimeout);
+			}}
+			on:focusout={() => {
+				if (!inputGroup?.contains(document.activeElement)) {
+					focusTimeout = setTimeout(() => (focused = false), 2000);
+				}
+			}}
+		>
 			<Increment show={focused} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput
-				bind:this={input}
-				bind:value={guess}
-				on:focus={() => {
-					focused = true;
-				}}
-			/>
+			<IntInput bind:this={input} bind:value={guess} />
 			<Increment show={focused} on:click={incrementer(-1)}>
 				<ChevronDown />
-			</Increment>
-			<Increment show={focused} on:click={incrementer(-5)}>
-				<ChevronsDown />
 			</Increment>
 		</div>
 	</div>
@@ -84,7 +85,6 @@
 		<div class="vrt justify-end">
 			<p class="pl-2 font-bold text-2xl">{unit}</p>
 		</div>
-		<!-- {guessDisplay} -->
 	</div>
 </div>
 
