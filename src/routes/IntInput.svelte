@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { setAnswer } from '$lib/context/answer';
+	import { dispatchers, ident } from '$lib/dispatch';
 	import { onMount } from 'svelte';
 
 	export let value = 0;
@@ -6,6 +8,10 @@
 	export function focus() {
 		input?.focus();
 	}
+
+	const { change } = dispatchers({
+		change: ident<number>
+	});
 
 	let input: HTMLInputElement | null = null;
 
@@ -49,8 +55,11 @@
 		if (document.activeElement !== document.body) {
 			return;
 		}
-		if (!['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key) && !/[-\d]/.test(e.key)) {
-			e.stopPropagation();
+		if (
+			e.key.length > 1
+				? !['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key)
+				: !/^[-\d]$/.test(e.key)
+		) {
 			return;
 		}
 		input?.focus();
@@ -58,15 +67,18 @@
 	};
 
 	onMount(() => {
-		document.addEventListener('keydown', (e) => {
-			keyListener(e);
-			return () => document.removeEventListener('keydown', keyListener);
-		});
+		document.addEventListener('keydown', keyListener);
+		return () => document.removeEventListener('keydown', keyListener);
 	});
 
 	$: {
 		if (input && parse(input.value) !== value) {
 			cleanup(input, value.toString(), true, false);
+		}
+	}
+	$: {
+		if (input) {
+			setAnswer(input);
 		}
 	}
 </script>
@@ -79,7 +91,6 @@
 	value="0"
 	bind:this={input}
 	on:focus
-	on:change
 	on:input
 	on:input={(e) => {
 		value = parse(e.currentTarget.value);
@@ -93,6 +104,10 @@
 			e.preventDefault();
 			cleanup(target, value + (key === 'ArrowUp' ? 1 : -1), true, false);
 			return;
+		}
+		if (key === 'Enter') {
+			e.preventDefault();
+			change(parse(val));
 		}
 		if (key.length > 1) {
 			return;
