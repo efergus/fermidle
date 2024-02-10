@@ -4,16 +4,21 @@
 	import { onMount } from 'svelte';
 
 	export let value = 0;
+	export let enabled = true;
 
-	export function focus() {
-		input?.focus();
+	let input: HTMLInputElement | null = null;
+
+	export function focus(focus = true) {
+		if (focus) {
+			input?.focus();
+		} else {
+			input?.blur();
+		}
 	}
 
 	const { change } = dispatchers({
 		change: ident<number>
 	});
-
-	let input: HTMLInputElement | null = null;
 
 	const set = (newValue: string | number, stayPut = true) => {
 		if (!input) return;
@@ -89,6 +94,7 @@
 	inputmode="numeric"
 	pattern="-?[0-9]*"
 	value="0"
+	disabled={!enabled}
 	bind:this={input}
 	on:focus
 	on:input
@@ -107,6 +113,7 @@
 		}
 		if (key === 'Enter') {
 			e.preventDefault();
+			focus(false);
 			change(parse(val));
 		}
 		if (key.length > 1) {

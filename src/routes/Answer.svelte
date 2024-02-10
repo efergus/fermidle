@@ -6,8 +6,9 @@
 
 	export let values: (string | number)[] = [];
 	export let target: Element | null = null;
+	export let duration = 1400;
 
-	const options = { duration: 1400, easing: cubicInOut };
+	const options = { duration, easing: cubicInOut };
 </script>
 
 <div class="flex flex-col-reverse gap-2 min-h-60">
