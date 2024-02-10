@@ -11,7 +11,7 @@
 	const options = { duration, easing: cubicInOut };
 </script>
 
-<div class="flex flex-col-reverse gap-2 min-h-60">
+<div class="flex flex-col-reverse justify-end gap-2 min-h-72">
 	{#if target}
 		{#each values as value, i (i)}
 			<div
