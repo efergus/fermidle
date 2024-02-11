@@ -75,7 +75,7 @@
 			</Increment>
 		</div>
 	</div>
-	<div class="text-4xl w-full max-w-[20ch] h-[6em] break-words flex flex-wrap content-start">
+	<div class="text-4xl w-full max-w-md break-words flex flex-wrap content-start">
 		{#each guessDisplay as item}
 			<p>{item}</p>
 		{/each}

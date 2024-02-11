@@ -57,54 +57,10 @@
 	};
 
 	const keyListener = (e: KeyboardEvent) => {
-		if (document.activeElement !== document.body) {
-			return;
-		}
-		if (
-			e.key.length > 1
-				? !['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key)
-				: !/^[-\d]$/.test(e.key)
-		) {
-			return;
-		}
-		input?.focus();
-		e.preventDefault();
-	};
-
-	onMount(() => {
-		document.addEventListener('keydown', keyListener);
-		return () => document.removeEventListener('keydown', keyListener);
-	});
-
-	$: {
-		if (input && parse(input.value) !== value) {
-			cleanup(input, value.toString(), true, false);
-		}
-	}
-	$: {
-		if (input) {
-			setAnswer(input);
-		}
-	}
-</script>
-
-<input
-	class="peer rounded border-2 border-secondary focus:border-contrast w-[3.5ch] text-4xl text-center font-semibold"
-	type="text"
-	inputmode="numeric"
-	pattern="-?[0-9]*"
-	value="0"
-	disabled={!enabled}
-	bind:this={input}
-	on:focus
-	on:input
-	on:input={(e) => {
-		value = parse(e.currentTarget.value);
-	}}
-	on:keydown={(e) => {
+		if (!input) return;
 		e.stopPropagation();
 		const key = e.key;
-		const target = e.currentTarget;
+		const target = input;
 		const val = target.value;
 		if (['ArrowDown', 'ArrowUp'].includes(key)) {
 			e.preventDefault();
@@ -115,6 +71,9 @@
 			e.preventDefault();
 			focus(false);
 			change(parse(val));
+		}
+		if (key === 'Escape') {
+			focus(false);
 		}
 		if (key.length > 1) {
 			return;
@@ -144,7 +103,58 @@
 			e.preventDefault();
 			return;
 		}
+	};
+
+	const outsideKeyListener = (e: KeyboardEvent) => {
+		if (document.activeElement !== document.body) {
+			return;
+		}
+		if (
+			e.key.length > 1
+				? !['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key)
+				: !/^[-\d]$/.test(e.key)
+		) {
+			return;
+		}
+		focus();
+		if (input) {
+			input.value = '';
+		}
+		keyListener(e);
+		e.preventDefault();
+	};
+
+	onMount(() => {
+		document.addEventListener('keydown', outsideKeyListener);
+		return () => document.removeEventListener('keydown', outsideKeyListener);
+	});
+
+	$: {
+		if (input && parse(input.value) !== value) {
+			cleanup(input, value.toString(), true, false);
+		}
+	}
+	$: {
+		if (input) {
+			setAnswer(input);
+		}
+	}
+</script>
+
+<input
+	class="peer rounded border-2 border-secondary focus:border-contrast w-[3.5ch] text-4xl text-center font-semibold"
+	type="text"
+	inputmode="numeric"
+	pattern="-?[0-9]*"
+	value="0"
+	disabled={!enabled}
+	bind:this={input}
+	on:focus
+	on:input
+	on:input={(e) => {
+		value = parse(e.currentTarget.value);
 	}}
+	on:keydown={keyListener}
 	on:input={(e) => {
 		cleanup(e.currentTarget, e.currentTarget.value);
 	}}
