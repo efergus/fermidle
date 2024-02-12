@@ -1,13 +1,24 @@
 <script lang="ts">
+	import { setAnswer } from '$lib/context/answer';
+	import { dispatchers, ident } from '$lib/dispatch';
 	import { onMount } from 'svelte';
 
 	export let value = 0;
-
-	export function focus() {
-		input?.focus();
-	}
+	export let enabled = true;
 
 	let input: HTMLInputElement | null = null;
+
+	export function focus(focus = true) {
+		if (focus) {
+			input?.focus();
+		} else {
+			input?.blur();
+		}
+	}
+
+	const { change } = dispatchers({
+		change: ident<number>
+	});
 
 	const set = (newValue: string | number, stayPut = true) => {
 		if (!input) return;
@@ -46,53 +57,23 @@
 	};
 
 	const keyListener = (e: KeyboardEvent) => {
-		if (document.activeElement !== document.body) {
-			return;
-		}
-		if (!['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key) && !/[-\d]/.test(e.key)) {
-			e.stopPropagation();
-			return;
-		}
-		input?.focus();
-		e.preventDefault();
-	};
-
-	onMount(() => {
-		document.addEventListener('keydown', (e) => {
-			keyListener(e);
-			return () => document.removeEventListener('keydown', keyListener);
-		});
-	});
-
-	$: {
-		if (input && parse(input.value) !== value) {
-			cleanup(input, value.toString(), true, false);
-		}
-	}
-</script>
-
-<input
-	class="peer rounded border-2 border-secondary focus:border-contrast w-[3.5ch] text-4xl text-center font-semibold"
-	type="text"
-	inputmode="numeric"
-	pattern="-?[0-9]*"
-	value="0"
-	bind:this={input}
-	on:focus
-	on:change
-	on:input
-	on:input={(e) => {
-		value = parse(e.currentTarget.value);
-	}}
-	on:keydown={(e) => {
+		if (!input) return;
 		e.stopPropagation();
 		const key = e.key;
-		const target = e.currentTarget;
+		const target = input;
 		const val = target.value;
 		if (['ArrowDown', 'ArrowUp'].includes(key)) {
 			e.preventDefault();
 			cleanup(target, value + (key === 'ArrowUp' ? 1 : -1), true, false);
 			return;
+		}
+		if (key === 'Enter') {
+			e.preventDefault();
+			focus(false);
+			change(parse(val));
+		}
+		if (key === 'Escape') {
+			focus(false);
 		}
 		if (key.length > 1) {
 			return;
@@ -122,7 +103,58 @@
 			e.preventDefault();
 			return;
 		}
+	};
+
+	const outsideKeyListener = (e: KeyboardEvent) => {
+		if (document.activeElement !== document.body) {
+			return;
+		}
+		if (
+			e.key.length > 1
+				? !['ArrowUp', 'ArrowDown', 'Backspace', 'Delete'].includes(e.key)
+				: !/^[-\d]$/.test(e.key)
+		) {
+			return;
+		}
+		focus();
+		if (input) {
+			input.value = '';
+		}
+		keyListener(e);
+		e.preventDefault();
+	};
+
+	onMount(() => {
+		document.addEventListener('keydown', outsideKeyListener);
+		return () => document.removeEventListener('keydown', outsideKeyListener);
+	});
+
+	$: {
+		if (input && parse(input.value) !== value) {
+			cleanup(input, value.toString(), true, false);
+		}
+	}
+	$: {
+		if (input) {
+			setAnswer(input);
+		}
+	}
+</script>
+
+<input
+	class="peer rounded border-2 border-secondary focus:border-contrast w-[3.5ch] text-4xl text-center font-semibold"
+	type="text"
+	inputmode="numeric"
+	pattern="-?[0-9]*"
+	value="0"
+	disabled={!enabled}
+	bind:this={input}
+	on:focus
+	on:input
+	on:input={(e) => {
+		value = parse(e.currentTarget.value);
 	}}
+	on:keydown={keyListener}
 	on:input={(e) => {
 		cleanup(e.currentTarget, e.currentTarget.value);
 	}}

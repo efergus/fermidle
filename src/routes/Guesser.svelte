@@ -15,7 +15,7 @@
 	let guessDisplay = [''];
 
 	let focused = false;
-	let focusTimeout: number;
+	let clearFocusTimeout = () => {};
 
 	let inputGroup: HTMLDivElement | null = null;
 
@@ -45,7 +45,7 @@
 	<div class="hrz items-start">
 		<div class="h-full vrt justify-end pt-8">
 			<b class="text-8xl">
-				{digit} ⋅ 10
+				{digit} · 10
 			</b>
 		</div>
 		<div
@@ -53,24 +53,29 @@
 			bind:this={inputGroup}
 			on:focusin={() => {
 				focused = true;
-				clearTimeout(focusTimeout);
+				clearFocusTimeout();
 			}}
 			on:focusout={() => {
 				if (!inputGroup?.contains(document.activeElement)) {
-					focusTimeout = setTimeout(() => (focused = false), 2000);
+					clearFocusTimeout();
+					const handle = setTimeout(() => (focused = false), 2000);
+					clearFocusTimeout = () => {
+						clearTimeout(handle);
+						clearFocusTimeout = () => {};
+					};
 				}
 			}}
 		>
 			<Increment show={focused} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput bind:value={guess} />
+			<IntInput on:change bind:value={guess} />
 			<Increment show={focused} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>
 		</div>
 	</div>
-	<div class="text-4xl w-full max-w-[20ch] h-[6em] break-words flex flex-wrap content-start">
+	<div class="text-4xl w-full max-w-md break-words flex flex-wrap content-start">
 		{#each guessDisplay as item}
 			<p>{item}</p>
 		{/each}
