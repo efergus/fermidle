@@ -10,11 +10,14 @@ from typing import Dict, List
 import json
 import click
 
-number_regex = r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?"
-range_regex = f"{number_regex}(?:-{number_regex})?"
-unit_regex = r"[^\s]*"
+import units
 
-value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})$")
+number_regex = r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?"
+range_regex = f"{number_regex}(?:-{number_regex})*"
+unit_regex = r"[^\s]*"
+note_regex = r"\(.*\)"
+
+value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})\s*({note_regex})?$")
 
 
 def default(fn):
@@ -23,11 +26,11 @@ def default(fn):
 
 @dataclass
 class Value:
+    value: units.Quantity
     name: str = ""  # ie Max height, population, etc
-    value: float = None  # The value
-    unit: str = ""  # ie g/cm^3
     kind: str = ""  # ie legth, volume, density
     thing: str = ""  # ie Eiffel tower, Pacific ocean
+    note: str = ""
     uncertainty: float = 0.0  # +/- how much
 
 
@@ -69,7 +72,7 @@ def get_things(df: DataFrame):
                 if not m:
                     values[val].append(Value(val, None, "", col_name, row_name))
                     continue
-                (name, number, unit) = m.group(1, 2, 3)
+                (name, number, unit, note) = m.group(1, 2, 3, 4)
                 num, uncertainty = parse_number(number)
                 values[col_name].append(Value(
                     name, num, unit, col_name, row_name, uncertainty
@@ -127,6 +130,9 @@ def main(input, output):
     units_by_kind = dict(units_by_kind)
     print("Broken:", broken)
     pprint(units_by_kind)
+    for x in units_by_kind.values():
+        for unit in x:
+            units.parse(unit)
 
     things_serial = [asdict(thing) for thing in things]
     json.dump(things_serial, output, indent=2)
