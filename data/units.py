@@ -122,7 +122,7 @@ def scientific(num: float, precision: int=None):
     magnitude = floor(log10(num))
     if precision != None:
         num *= 10**(precision - magnitude - 1)
-        num = floor(num)/10**(precision - 1)
+        num = round(num)/10**(precision - 1)
         return f"{num}e{magnitude}"
     return f"{num / 10**magnitude}e{magnitude}"
 
@@ -149,27 +149,6 @@ class Units:
             unit.power *= -1
         return Units(positive + negative)
     
-    @staticmethod
-    def _standardized(unit: Units | Unit | List[Unit], map: ConversionMap):
-        if type(unit) == Units:
-            unit = unit.units
-        if type(unit) == list:
-            return combine_units([Units._standardized(copy(unit), known) for unit in unit])
-        if unit.name not in map or map[unit.name] == None:
-            return (1, unit.magnitude * unit.power, Units([Unit(unit.name, unit.power)]))
-        conversion = copy(map[unit.name])
-        # some combine operation
-        conversion2 = Units._standardized(conversion.to, known)
-        for unit2 in conversion2:
-            unit2.power *= unit.power
-        conversion.to = conversion2
-        conversion.magnitude = (conversion2.magnitude + unit.magnitude) * unit.power
-        conversion.ratio = (conversion2.ratio * conversion.ratio) ** unit.power
-        return conversion
-    
-    def standardized(self, known):
-        return Units._standardized(self, known)
-    
     def mul(self, units: Units):
         units = Units(self.units + units.units)
         units.simplify()
@@ -183,6 +162,9 @@ class Units:
 
     def sort(self):
         self.units.sort(key=lambda x: (x.power, x.name, x.magnitude))
+
+    def single(self):
+        return (len(self.units) == 1 and self.units[0].power == 1 and self.units[0].name) or None
 
     def __len__(self):
         return len(self.units)
@@ -216,6 +198,19 @@ class Units:
     
     def __iter__(self):
         return self.units.__iter__()
+    
+@dataclass
+class Conversion:
+    from_name: str
+    to_name: str
+    offset: float
+    ratio: float = 1
+
+    def convert(self, quantity: Quantity):
+        single = quantity.units.single()
+        if not single or single != self.from_name:
+            return None
+        return Quantity((quantity.value + self.offset) * self.ratio, Units([Unit(self.to_name)]))
 
 @dataclass
 class Quantity:
@@ -233,22 +228,28 @@ class Quantity:
         units = Units.parse(units, preferred)
         return Quantity(float(number or '1'), units)
 
-    def standardized(self, map: ConversionMap):
+    def standardized(self, map: ConversionMap, limit=100):
         res = deepcopy(self)
-        for i in range(0, 100):
+        for i in range(0, limit):
+            single = res.units.single()
+            if single and single in map:
+                conversion = map[single]
+                if type(conversion) == Conversion:
+                    res = conversion.convert(res)
+                    continue
             simplifier = Quantity(1)
             for unit in res.units:
                 name = unit.name
                 if unit.magnitude:
                     simplifier *= Quantity(10**(unit.magnitude*unit.power), Units([unit.magnitudeless(), unit**-1]))
-                elif name in map and map[name]:
+                elif name in map and map[name] and type(map[name]) == Quantity:
                     simplifier *= map[name]**unit.power
             if len(simplifier.units):
                 res *= simplifier
             else:
                 break
-        if i == 0:
-            raise 
+        if i == 100:
+            raise ValueError("AAAH")
         return res
     
     def mul(self, other: Quantity):
@@ -276,10 +277,12 @@ def canonicalize_quantity_map(unit, quantity) -> Quantity:
         return
     if type(quantity) == str:
         return Quantity.from_str(quantity) * Unit(unit) ** -1
+    if type(quantity) == Conversion:
+        return quantity
     return quantity * Unit(unit) ** -1
     
 
-ConversionMap = Dict[str, Quantity | None]
+ConversionMap = Dict[str, Quantity | Conversion | None]
 
 preferred = {
     "g": None,
@@ -298,6 +301,8 @@ preferred = {
     "lb": "453.5924 g",
     "mph": "mile/h",
     "mile": "1.60934 km",
+    "psi": "lb/in^2",
+    "gal": "3.78541 L",
     # standard, unusual units
     # "ton": Unit("g", magnitude=6),
     # "picometer": "pm",
@@ -308,8 +313,16 @@ preferred = {
 
     "h": "hour",
     "hour": "3600 s",
+    "day": "86400 s",
     "yr": "year",
     "year": Quantity(365*24*60*60, Units([Unit("s")])),
+
+    "db": "dB",
+    "C": Conversion("C", "K", 273.15),
+    "F": Conversion("F", "C", -32, 5/9),
+    "W": "J/s",
+    "Wh": "W*h",
+    "L": "1e-3 m3"
 }
 
 preferred = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity in preferred.items()}
@@ -346,17 +359,20 @@ preferred = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity 
 
 # known = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity in known.items()}
 
-def test(value1: str, value2: str):
+def test(value1: str, value2: str = "1"):
     quant1 = Quantity.from_str(value1)
     quant2 = Quantity.from_str(value2)
     quant3 = quant1 * quant2
-    print(quant3)
+    print("Quantity:", quant3)
     standardized = quant3.standardized(preferred)
-    print(standardized)
+    print("Standardized:", standardized)
 
 if __name__ == "__main__":
     test("1 km^2/s", "0.5 ly/yr")
     test("1 ft^2/h", "2")
+    test("30 F")
+    test("Wh")
+    test("2 gal")
     # test("1 kft^2/h")
     # test("1 s/h")
     # test("1 mph/s")

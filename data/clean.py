@@ -75,7 +75,7 @@ def get_things(df: DataFrame):
                 (name, number, unit, note) = m.group(1, 2, 3, 4)
                 num, uncertainty = parse_number(number)
                 values[col_name].append(Value(
-                    name, num, unit, col_name, row_name, uncertainty
+                    units.Quantity.from_str(f"{num} {unit}"), name, col_name, row_name, uncertainty
                 ))
         thing.values = dict(values)
         things.append(thing)
@@ -115,7 +115,7 @@ def main(input, output):
 
     df = df.set_index("thing", drop=True)
     things = get_things(df)
-    values = [value for thing in things for values in thing.values.values() for value in values]
+    values: List[Value] = [value for thing in things for values in thing.values.values() for value in values]
 
     broken = [value.name for value in values if value.value is None]
     values_by_kind = defaultdict(list)
@@ -124,15 +124,26 @@ def main(input, output):
             continue
         values_by_kind[value.kind].append(value)
 
-    units_by_kind = defaultdict(set)
-    for kind, values in values_by_kind.items():
-        units_by_kind[kind] = set(value.unit for value in values)
-    units_by_kind = dict(units_by_kind)
-    print("Broken:", broken)
-    pprint(units_by_kind)
-    for x in units_by_kind.values():
-        for unit in x:
-            units.parse(unit)
+    # units_by_kind = defaultdict(set)
+    # for kind, values in values_by_kind.items():
+    #     units_by_kind[kind] = set(value.unit for value in values)
+    # units_by_kind = dict(units_by_kind)
+    # print("Broken:", broken)
+    # pprint(units_by_kind)
+    # for x in units_by_kind.values():
+    #     for unit in x:
+    #         units.parse(unit)
+    all_units = defaultdict(int)
+    for value in values:
+        print(f"{value.name or value.kind} of {value.thing}:")
+        print(value.value)
+        if type(value.value) == units.Quantity:
+            standardized = value.value.standardized(units.preferred)
+            print(standardized)
+            all_units[str(standardized.units)] += 1
+    
+    units_by_frequency = [f"{x[0]}\t{x[1]}" for x in sorted(all_units.items(), reverse=True, key=lambda x: x[1])]
+    print("\n".join(units_by_frequency))
 
     things_serial = [asdict(thing) for thing in things]
     json.dump(things_serial, output, indent=2)
