@@ -265,6 +265,14 @@ class Quantity:
             return self.mul(other)
         if t == Unit:
             return self.mul(Quantity(1, Units([other])))
+        if t == float:
+            return Quantity(self.value * other, self.units)
+    
+    def __rmul__(self, other):
+        return self.__mul__(other)
+        
+    def __truediv__(self, other):
+        return self * other ** -1
         
     def __pow__(self, power):
         return Quantity(self.value ** power, self.units ** power)

@@ -1,4 +1,5 @@
 # import csv
+from __future__ import annotations
 import pandas
 import re
 from pandas import DataFrame, isna
@@ -6,11 +7,12 @@ from dataclasses import dataclass, field, asdict
 from collections import defaultdict
 from pprint import pprint
 import numpy as np
-from typing import Dict, List
+from typing import Dict, List, Callable
 import json
 import click
 
 import units
+import alter
 
 number_regex = r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?"
 range_regex = f"{number_regex}(?:-{number_regex})*"
@@ -31,7 +33,7 @@ class Value:
     kind: str = ""  # ie legth, volume, density
     thing: str = ""  # ie Eiffel tower, Pacific ocean
     note: str = ""
-    uncertainty: float = 0.0  # +/- how much
+    original: str = ""
 
 
 @dataclass
@@ -39,6 +41,27 @@ class Thing:
     name: str  # ie Eiffel tower, Pacific ocean
     tags: List[str]  # ie sphere, building
     values: Dict[str, List[Value]] = default(dict)
+    broken: Dict[str, List[str]] = default(dict)
+
+    def canonical(self, kind, single=False):
+        """Return the canonical value of a given kind, if it exists"""
+        values = self.values.get(kind, [])
+        if single and len(values) == 1:
+            return values[0]
+        for value in values:
+            if not value.name:
+                return value
+        return None
+
+    def alter(self, fns: List[Callable[[Thing], List[Value] | None]]):
+        for fn in fns:
+            extra = fn(self) or []
+            for value in extra:
+                value.thing = self.name
+                if value.kind in self.values:
+                    self.values[value.kind].append(value)
+                else:
+                    self.values[value.kind] = [value]
 
 
 def drop_empty(df: DataFrame, log=False):
@@ -53,31 +76,33 @@ def parse_number(s: str):
         return None, 0
 
 
-def get_things(df: DataFrame):
+def get_things(df: DataFrame) -> List[Thing]:
     things = []
-    for row_name in df.index:
-        row = df.loc[row_name].dropna()
+    for thing_name in df.index:
+        row = df.loc[thing_name].dropna()
         cols = row.index
         thing = Thing(
-            row_name, tags=[tag.lower() for tag in row.get("tags", "").split(", ")]
+            thing_name, tags=[tag.lower().strip() for tag in row.get("tags", "").split(", ") if tag]
         )
         values = defaultdict(list)
-        for col_name in cols:
-            if col_name in ("tags", "thing"):
+        broken = defaultdict(list)
+        for kind in cols:
+            if kind in ("tags", "thing"):
                 continue
-            vals = row[col_name]
+            vals = row[kind]
             for val in vals.split(","):
                 val = val.strip()
                 m = value_regex.match(val)
                 if not m:
-                    values[val].append(Value(val, None, "", col_name, row_name))
+                    broken[kind].append(val)
                     continue
                 (name, number, unit, note) = m.group(1, 2, 3, 4)
                 num, uncertainty = parse_number(number)
-                values[col_name].append(Value(
-                    units.Quantity.from_str(f"{num} {unit}"), name, col_name, row_name, uncertainty
+                values[kind].append(Value(
+                    units.Quantity.from_str(f"{num} {unit}").standardized(units.preferred), (name or "").lower(), kind, thing_name, original=val
                 ))
         thing.values = dict(values)
+        thing.broken = dict(broken)
         things.append(thing)
     return things
 
@@ -115,6 +140,11 @@ def main(input, output):
 
     df = df.set_index("thing", drop=True)
     things = get_things(df)
+    for thing in things:
+        thing.alter(alter.alter_map.get('', []))
+        for tag in thing.tags:
+            thing.alter(alter.alter_map.get(tag, []))
+
     values: List[Value] = [value for thing in things for values in thing.values.values() for value in values]
 
     broken = [value.name for value in values if value.value is None]
@@ -135,12 +165,12 @@ def main(input, output):
     #         units.parse(unit)
     all_units = defaultdict(int)
     for value in values:
-        print(f"{value.name or value.kind} of {value.thing}:")
-        print(value.value)
-        if type(value.value) == units.Quantity:
-            standardized = value.value.standardized(units.preferred)
-            print(standardized)
-            all_units[str(standardized.units)] += 1
+        # print(f"{value.name or value.kind} of {value.thing}:")
+        # print(value.value)
+        # if value.kind == 'density':
+        #     print(f"{value.name or value.kind} of {value.thing}:")
+        #     print(value.value)
+        all_units[str(value.value.units)] += 1
     
     units_by_frequency = [f"{x[0]}\t{x[1]}" for x in sorted(all_units.items(), reverse=True, key=lambda x: x[1])]
     print("\n".join(units_by_frequency))
