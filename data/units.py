@@ -119,6 +119,7 @@ class Unit:
     #     return conversion.ratio, conversion.to
 
 def scientific(num: float, precision: int=None):
+    print("AAA", repr(num))
     magnitude = floor(log10(num))
     if precision != None:
         num *= 10**(precision - magnitude - 1)
@@ -252,6 +253,17 @@ class Quantity:
             raise ValueError("AAAH")
         return res
     
+    def close(self, other, eps=1e-5):
+        if self.units != other.units:
+            return False
+        if self.value * other.value < 0:
+            return False
+        a = max(self.value, other.value)
+        b = min(self.value, other.value)
+        if not b:
+            return False
+        return a/b < eps
+    
     def mul(self, other: Quantity):
         value = self.value
         units = self.units
@@ -279,6 +291,12 @@ class Quantity:
         
     def __str__(self):
         return f"{scientific(self.value, 3)} {self.units}"
+    
+    def serialize(self):
+        return {
+            'value': self.value,
+            'units': str(self.units)
+        }
         
 def canonicalize_quantity_map(unit, quantity) -> Quantity:
     if not quantity:
@@ -298,7 +316,6 @@ preferred = {
     "s": None,
     "bit": None,
     "pH": None,
-    "Hz": None,
     "J": None,
     # imperial
     "in": "2.54e-2 m",
@@ -313,7 +330,7 @@ preferred = {
     "gal": "3.78541 L",
     # standard, unusual units
     # "ton": Unit("g", magnitude=6),
-    # "picometer": "pm",
+    "picometer": "pm",
     # "kph": Conversion([Unit("m"), Unit("s", -1)], 5/18),
     # "eV": Conversion("J", 1.60218e-19),
     # "C": Conversion("K", 1, 273.15),
@@ -330,7 +347,8 @@ preferred = {
     "F": Conversion("F", "C", -32, 5/9),
     "W": "J/s",
     "Wh": "W*h",
-    "L": "1e-3 m3"
+    "L": "1e-3 m3",
+    "Hz": "/s"
 }
 
 preferred = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity in preferred.items()}

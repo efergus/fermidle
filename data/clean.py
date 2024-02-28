@@ -35,6 +35,14 @@ class Value:
     note: str = ""
     original: str = ""
 
+    def serialize(self):
+        return {
+            'value': self.value.serialize(),
+            'name': self.name,
+            'kind': self.kind,
+            'thing': self.thing,
+            'note': self.note
+        }
 
 @dataclass
 class Thing:
@@ -62,6 +70,15 @@ class Thing:
                     self.values[value.kind].append(value)
                 else:
                     self.values[value.kind] = [value]
+
+    def serialize(self):
+        return {
+            'name': self.name,
+            'tags': self.tags,
+            'values': {
+                key: [value.serialize() for value in values] for key, values in self.values.items()
+            },
+        }
 
 
 def drop_empty(df: DataFrame, log=False):
@@ -98,6 +115,9 @@ def get_things(df: DataFrame) -> List[Thing]:
                     continue
                 (name, number, unit, note) = m.group(1, 2, 3, 4)
                 num, uncertainty = parse_number(number)
+                if not num:
+                    broken[kind].append(val)
+                    continue
                 values[kind].append(Value(
                     units.Quantity.from_str(f"{num} {unit}").standardized(units.preferred), (name or "").lower(), kind, thing_name, original=val
                 ))
@@ -105,7 +125,6 @@ def get_things(df: DataFrame) -> List[Thing]:
         thing.broken = dict(broken)
         things.append(thing)
     return things
-
 
 @click.command()
 @click.argument("input", type=click.File("r"), default="Fermidle - Values.tsv")
@@ -175,7 +194,7 @@ def main(input, output):
     units_by_frequency = [f"{x[0]}\t{x[1]}" for x in sorted(all_units.items(), reverse=True, key=lambda x: x[1])]
     print("\n".join(units_by_frequency))
 
-    things_serial = [asdict(thing) for thing in things]
+    things_serial = [thing.serialize() for thing in things]
     json.dump(things_serial, output, indent=2)
 
 
