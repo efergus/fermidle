@@ -119,6 +119,7 @@
 		focus();
 		if (input) {
 			input.value = '';
+			console.log('CLEARED');
 		}
 		keyListener(e);
 		e.preventDefault();

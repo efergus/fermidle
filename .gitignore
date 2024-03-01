@@ -13,3 +13,4 @@ vite.config.ts.timestamp-*
 *.tsv
 *.csv
 data/**/*.json
+__pycache__
