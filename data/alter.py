@@ -7,7 +7,10 @@ def sphere_volume_surface_area(thing: Thing):
         print("No length", thing.values)
         return []
     radius = None
-    if len(thing.values['length']) == 1:
+    diameter = thing.canonical('length')
+    if diameter:
+        radius = diameter / 2
+    elif len(thing.values['length']) == 1:
         radius = thing.values['length'][0].value / 2
     else:
         for value in thing.values['length']:

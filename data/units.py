@@ -27,51 +27,6 @@ prefixes_by_magnitude = {
 }
 
 @dataclass
-class Conversion:
-    # to_unit: InitVar[str | Unit | List[Unit] | Units]
-    to: Unit
-    ratio: float = 1
-    offset: float = 0
-    magnitude: int = 0
-
-    def __post_init__(self):
-        to_unit = self.to
-        t = type(to_unit)
-        if t == str:
-            self.to = Units([Unit(to_unit)])
-        elif t == Unit:
-            self.to = Units([to_unit])
-        elif t == list:
-            self.to = Units(to_unit)
-        else:
-            self.to = to_unit
-    
-    def to(self, conversion: Conversion):
-        units = deepcopy(conversion.to)
-        ratio = self.ratio * conversion.ratio
-        # TODO: check
-        offset = self.offset*self.ratio + conversion.offset
-        return Conversion(units, ratio, offset)
-    
-    def standardized(self, map: ConversionMap) -> Conversion:
-        units = []
-        ratio = self.ratio
-        # TODO: handle this at all lol
-        offset = self.offset
-        for unit in self.to:
-            name = unit.name
-            if name not in map or map[name] == None:
-                units.append(copy(unit))
-                continue
-            conversion = map[name].standardized(map)
-            ratio *= conversion.ratio
-            to = [copy(unit) for unit in conversion.to]
-            for child in to:
-                child.power *= unit.power
-            units.extend(conversion.to)
-        return Conversion(units, ratio, offset)
-
-@dataclass
 class Unit:
     name: str
     power: int = 1
@@ -107,19 +62,8 @@ class Unit:
     
     def magnitudeless(self):
         return Unit(self.name, self.power)
-    
-    # def preferred(self, known: Dict[str, Conversion]):
-    #     if self.name not in known:
-    #         return self
-    #     conversion = known[self.name]
-    #     # ratio = 1
-    #     # power = 1
-    #     # magnitude = 0
-    #     # for unit in conversion.to:
-    #     return conversion.ratio, conversion.to
 
 def scientific(num: float, precision: int=None):
-    print("AAA", repr(num))
     magnitude = floor(log10(num))
     if precision != None:
         num *= 10**(precision - magnitude - 1)
@@ -329,11 +273,8 @@ preferred = {
     "psi": "lb/in^2",
     "gal": "3.78541 L",
     # standard, unusual units
-    # "ton": Unit("g", magnitude=6),
     "picometer": "pm",
-    # "kph": Conversion([Unit("m"), Unit("s", -1)], 5/18),
-    # "eV": Conversion("J", 1.60218e-19),
-    # "C": Conversion("K", 1, 273.15),
+    "kph": Quantity.from_str("km/h"),
     "ly": "9.461e15 m",
 
     "h": "hour",
@@ -353,38 +294,6 @@ preferred = {
 
 preferred = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity in preferred.items()}
 
-# known = {
-#     "g": None,
-#     "m": None,
-#     "s": None,
-#     "bit": None,
-#     "pH": None,
-#     "Hz": None,
-#     "J": None,
-#     # Technically the unit is Bells
-#     "dB": None,
-#     # imperial
-#     "in": Conversion("m", 2.54e-2),
-#     "ft": Conversion("m", 0.3048),
-#     "yard": Conversion("m", 0.9144),
-#     "oz": Conversion("g", 28.3495),
-#     "lb": Conversion("g", 453.5924),
-#     "mph": Conversion("kph", 1.60934),
-#     "mile": Conversion("km", 1.60934),
-#     # standard, unusual units
-#     "ton": Unit("g", magnitude=6),
-#     "picometer": "pm",
-#     "kph": Conversion([Unit("m"), Unit("s", -1)], 5/18),
-#     "eV": Conversion("J", 1.60218e-19),
-#     "C": Conversion("K", 1, 273.15),
-
-#     "h": "hour",
-#     "hour": Conversion("s", 3600),
-#     "year": Conversion("s", 365*24*60*60),
-# }
-
-# known = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity in known.items()}
-
 def test(value1: str, value2: str = "1"):
     quant1 = Quantity.from_str(value1)
     quant2 = Quantity.from_str(value2)
@@ -399,11 +308,3 @@ if __name__ == "__main__":
     test("30 F")
     test("Wh")
     test("2 gal")
-    # test("1 kft^2/h")
-    # test("1 s/h")
-    # test("1 mph/s")
-    # test("1 miles")
-    # for unit, conversion in known.items():
-    #     if conversion:
-    #         print("Unit:", unit)
-    #         print(conversion.standardized(known))
