@@ -30,11 +30,19 @@
 		<p>answer was: {shown_answer ?? ''}</p>
 		<Guesser
 			on:change={() => {
+				// const value = question?.answer ?? 1;
+				// shown_answer = Math.round(Math.log10(value));
+				// digit = Math.round(value / 10 ** shown_answer);
+				// question = random_question();
+				// guesses = [...guesses, guess];
 				const value = question?.answer ?? 1;
-				shown_answer = Math.round(Math.log10(value));
-				digit = Math.round(value / 10 ** shown_answer);
-				question = random_question();
+				let real_answer = Math.round(Math.log10(value));
+				digit = Math.round(value / 10 ** real_answer);
 				guesses = [...guesses, guess];
+				if (guess === real_answer) {
+					shown_answer = real_answer;
+					question = random_question();
+				}
 			}}
 			{digit}
 			bind:guess
