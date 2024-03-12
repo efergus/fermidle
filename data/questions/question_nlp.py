@@ -10,7 +10,7 @@ from typing import List
 import openai
 from dotenv import load_dotenv
 import examples
-from examples import Example, example_1
+from examples import Example, ExampleValue, example_1
 import json
 import sys
 
@@ -77,26 +77,39 @@ def load_values(filename: str):
     for thing in data:
         for values in thing["values"].values():
             for value in values:
-                example_values[value["kind"]].append(examples.ExampleValue(thing["name"], value["kind"], value["name"], value["value"]["value"]))
+                example_values[value["kind"]].append(examples.ExampleValue(thing["name"], value["kind"], value["name"], value=value["value"]["value"], units=value["value"]["units"].replace('1', '')))
     return dict(example_values)
 
 
-def complete(example: examples.ExampleValue, model: str = "3") -> None:
+def complete(example: Example, model: str = "3") -> None:
     """Create a question using GPT completion"""
 
     # Initialize the OpenAI client with API key from the environment
     client = openai.OpenAI()
+    for example_value in (example.smaller, example.larger):
+        example_messages = examples.complete_calling(example_value)
+        # messages = [START_MESSAGE]
+        messages = []
+        messages.extend(example_messages)
+        for message in messages:
+            # print(f"{message['role']}: {message['content']}")
+            print(message)
+        response = COMPLETION[model](
+                        CompletionContext(
+                            openai_client=client,
+                            messages=messages,
+                            live=False
+                        )
+                    )
+        print(response)
+        example_value.called = response
     example_messages = examples.completion(example)
-    # messages = [START_MESSAGE]
-    messages = []
-    messages.extend(example_messages)
-    for message in messages:
+    for message in example_messages:
         print(message)
-    enabled = True
     response = COMPLETION[model](
                     CompletionContext(
                         openai_client=client,
-                        messages=messages,
+                        messages=example_messages,
                         live=False
                     )
                 )
@@ -106,9 +119,13 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         random.seed(sys.argv[1])
     values = load_values("../values.json")
-    # lengths = values.get('length', [])
+    lengths = values.get('length', [])
     # print(json.dumps(lengths[:2]))
-    length_values = values["length"]
-    length_pair = random.sample(length_values, 2)
+    # length_values = values["length"]
+    length_pair = random.sample(lengths, 2)
     length_pair.sort(key=lambda x: x.value)
     complete(Example(length_pair[0], length_pair[1]), "3")
+    # print(values)
+    # value = random.choice(lengths)
+    # print(len(values))
+    # complete(value)
