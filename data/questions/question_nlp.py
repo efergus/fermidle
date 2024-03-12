@@ -30,7 +30,7 @@ OPENAI_MODELS = {
 # SYSTEM = """
 # Given data of the from:
 # """.strip()
-SYSTEM = ""
+SYSTEM = "Do not include any values in your questions"
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
 START_MESSAGE = {
     "role": "system",
@@ -88,8 +88,8 @@ def complete(example: Example, model: str = "3") -> None:
     client = openai.OpenAI()
     for example_value in (example.smaller, example.larger):
         example_messages = examples.complete_calling(example_value)
-        # messages = [START_MESSAGE]
-        messages = []
+        messages = [START_MESSAGE]
+        # messages = []
         messages.extend(example_messages)
         for message in messages:
             # print(f"{message['role']}: {message['content']}")
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         random.seed(sys.argv[1])
     values = load_values("../values.json")
-    lengths = values.get('length', [])
+    lengths = values.get('mass', [])
     # print(json.dumps(lengths[:2]))
     # length_values = values["length"]
     length_pair = random.sample(lengths, 2)
