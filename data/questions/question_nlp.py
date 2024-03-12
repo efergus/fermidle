@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 
+from collections import defaultdict
 import logging
 import os
 from dataclasses import dataclass
+import random
 from typing import List
 
 import openai
 from dotenv import load_dotenv
 import examples
+from examples import Example, example_1
+import json
+import sys
 
 # Load environment variables
 load_dotenv()
@@ -22,7 +27,10 @@ OPENAI_MODELS = {
     "gpt-4": "gpt-4",
     "gpt-4-turbo": "gpt-4-turbo-preview"
 }
-SYSTEM = 'Give a short middle-school level numerical question given a data specification'
+# SYSTEM = """
+# Given data of the from:
+# """.strip()
+SYSTEM = ""
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
 START_MESSAGE = {
     "role": "system",
@@ -59,18 +67,31 @@ def complete_openai(context: CompletionContext):
     return response
 
 
-COMPLETION = {v: complete_openai for v in OPENAI_MODELS.values()}
+COMPLETION = {v: complete_openai for v in OPENAI_MODELS.keys()}
 # Utilities
 
+def load_values(filename: str):
+    with open(filename, "r") as file:
+        data = json.load(file)
+    example_values = defaultdict(list)
+    for thing in data:
+        for values in thing["values"].values():
+            for value in values:
+                example_values[value["kind"]].append(examples.ExampleValue(thing["name"], value["kind"], value["name"], value["value"]["value"]))
+    return dict(example_values)
 
-def complete(model: str = "gpt-3.5-turbo") -> None:
+
+def complete(example: examples.ExampleValue, model: str = "3") -> None:
     """Create a question using GPT completion"""
 
     # Initialize the OpenAI client with API key from the environment
     client = openai.OpenAI()
-
-    messages = [START_MESSAGE]
-    messages.extend(examples.length_example_1)
+    example_messages = examples.completion(example)
+    # messages = [START_MESSAGE]
+    messages = []
+    messages.extend(example_messages)
+    for message in messages:
+        print(message)
     enabled = True
     response = COMPLETION[model](
                     CompletionContext(
@@ -82,4 +103,12 @@ def complete(model: str = "gpt-3.5-turbo") -> None:
     print(response)
 
 if __name__ == "__main__":
-    complete()
+    if len(sys.argv) > 1:
+        random.seed(sys.argv[1])
+    values = load_values("../values.json")
+    # lengths = values.get('length', [])
+    # print(json.dumps(lengths[:2]))
+    length_values = values["length"]
+    length_pair = random.sample(length_values, 2)
+    length_pair.sort(key=lambda x: x.value)
+    complete(Example(length_pair[0], length_pair[1]), "3")

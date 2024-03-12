@@ -7,11 +7,10 @@ def sphere_volume_surface_area(thing: Thing):
         print("No length", thing.values)
         return []
     radius = None
-    diameter = thing.canonical('length')
+    diameter = thing.canonical('length', True)
     if diameter:
-        radius = diameter / 2
-    elif len(thing.values['length']) == 1:
-        radius = thing.values['length'][0].value / 2
+        diameter.name = 'diameter'
+        radius = diameter.value / 2
     else:
         for value in thing.values['length']:
             # print("length", value)
@@ -31,7 +30,7 @@ def sphere_volume_surface_area(thing: Thing):
     if 'surface area' not in thing.values:
         extend.append(Value(4 * math.pi * radius ** 2, kind='surface area', note='auto'))
     if 'circumference' not in thing.values:
-        extend.append(Value(2 * math.pi * radius, kind='length', note='auto'))
+        extend.append(Value(2 * math.pi * radius, kind='length', name='circumference', note='auto'))
     return extend
 
 speed_of_light = Quantity.from_str('3.0e8 m/s')

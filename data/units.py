@@ -274,7 +274,7 @@ preferred = {
     "gal": "3.78541 L",
     # standard, unusual units
     "picometer": "pm",
-    "kph": Quantity.from_str("km/h"),
+    # "kph": Quantity.from_str("km/h"),
     "ly": "9.461e15 m",
 
     "h": "hour",
