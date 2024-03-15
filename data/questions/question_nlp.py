@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
+from abc import ABC, abstractmethod
 from collections import defaultdict
 import logging
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import random
 from typing import List
 
@@ -30,44 +31,48 @@ OPENAI_MODELS = {
 # SYSTEM = """
 # Given data of the from:
 # """.strip()
-SYSTEM = "Do not include any values in your questions"
+SYSTEM = "Don't include any values"
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
 START_MESSAGE = {
     "role": "system",
     "content": SYSTEM,
 }
 
+class CompletionContext(ABC):
+
+    @abstractmethod
+    def complete(self, messages: List[dict]):
+        pass
 
 @dataclass
-class CompletionContext:
-    openai_client: openai.OpenAI
-    messages: List[dict]
+class OpenAICompletionContext(CompletionContext):
     model: str = "3"
-    live: bool = True
+    live: bool = False
+    openai_client: openai.OpenAI = field(init=False)
 
+    def __post_init__(self):
+        self.client = openai.OpenAI()
 
-def complete_openai(context: CompletionContext):
-    """Complete the current message using OpenAI."""
-    try:
-        response = ""
-        stream = context.openai_client.chat.completions.create(
-            messages=context.messages,
-            model=OPENAI_MODELS.get(context.model, context.model),
-            stream=True,
-        )
-        for part in stream:
-            if part.choices[0].finish_reason == "stop":
-                break
-            content = part.choices[0].delta.content
-            response += content
-            if context.live:
-                print(content, end="", flush=True)
-    except openai.OpenAIError as e:
-        print(f"An API error occurred: {e}")
-    return response
+    def complete(self, messages: List[dict]):
+        """Complete the current message using OpenAI."""
+        try:
+            response = ""
+            stream = self.client.chat.completions.create(
+                messages=messages,
+                model=OPENAI_MODELS.get(self.model, self.model),
+                stream=True,
+            )
+            for part in stream:
+                if part.choices[0].finish_reason == "stop":
+                    break
+                content = part.choices[0].delta.content
+                response += content
+                if self.live:
+                    print(content, end="", flush=True)
+        except openai.OpenAIError as e:
+            print(f"An API error occurred: {e}")
+        return response
 
-
-COMPLETION = {v: complete_openai for v in OPENAI_MODELS.keys()}
 # Utilities
 
 def load_values(filename: str):
@@ -79,52 +84,63 @@ def load_values(filename: str):
             for value in values:
                 example_values[value["kind"]].append(examples.ExampleValue(thing["name"], value["kind"], value["name"], value=value["value"]["value"], units=value["value"]["units"].replace('1', '')))
     return dict(example_values)
-
-
-def complete(example: Example, model: str = "3") -> None:
-    """Create a question using GPT completion"""
-
-    # Initialize the OpenAI client with API key from the environment
-    client = openai.OpenAI()
-    for example_value in (example.smaller, example.larger):
-        example_messages = examples.complete_calling(example_value)
-        messages = [START_MESSAGE]
-        # messages = []
-        messages.extend(example_messages)
-        for message in messages:
-            # print(f"{message['role']}: {message['content']}")
-            print(message)
-        response = COMPLETION[model](
-                        CompletionContext(
-                            openai_client=client,
-                            messages=messages,
-                            live=False
-                        )
-                    )
-        print(response)
-        example_value.called = response
-    example_messages = examples.completion(example)
-    for message in example_messages:
-        print(message)
-    response = COMPLETION[model](
-                    CompletionContext(
-                        openai_client=client,
-                        messages=example_messages,
-                        live=False
-                    )
-                )
+    
+def complete_called(example: ExampleValue, context: CompletionContext):
+    """Detrmine a value's name using LLM completion"""
+    messages = [START_MESSAGE, *examples.completion_called(example)]
+    # for message in messages:
+    #     print(f"{message['role']}: {repr(message['content'])}")
+    response = context.complete(messages)
     print(response)
+    return response
+
+def complete(example: Example, context: CompletionContext) -> None:
+    """Create a question using LLM completion"""
+    messages = examples.completion(example)
+    # for message in messages:
+    #     print(f"{message['role']}: {repr(message['content'])}")
+    response = context.complete(messages)
+    print(response)
+    return response
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         random.seed(sys.argv[1])
-    values = load_values("../values.json")
-    lengths = values.get('mass', [])
-    # print(json.dumps(lengths[:2]))
-    # length_values = values["length"]
-    length_pair = random.sample(lengths, 2)
-    length_pair.sort(key=lambda x: x.value)
-    complete(Example(length_pair[0], length_pair[1]), "3")
+    values = load_values("./values.json")
+    try:
+        with open("./names.json", "r") as f:
+            named = json.load(f)
+    except FileNotFoundError:
+        named = []
+    named_set = {(value["thing"], value["measurement"], value.get('name', '')) for value in named}
+    context = OpenAICompletionContext()
+    added = []
+    try:
+        for values in values.values():
+            for value in values:
+                if (value.thing, value.measurement, value.name) in named_set:
+                    continue
+                value.called = complete_called(value, context).strip()
+                added.append(value)
+    except:
+        pass
+    print(added)
+    for value in added:
+        named.append({
+            **value.to_dict(),
+            "called": value.called
+            })
+    with open('./names.json', 'w') as f:
+        json.dump(named, f, indent=2)
+    # lengths: List[ExampleValue] = values.get('mass', [])
+    # # print(json.dumps(lengths[:2]))
+    # # length_values = values["length"]
+    # length_pair = random.sample(lengths, 2)
+    # length_pair.sort(key=lambda x: x.value)
+    # smaller, larger = length_pair
+    # for value in length_pair:
+    #     value.called = complete_called(value, context)
+    # complete(Example(*length_pair), context)
     # print(values)
     # value = random.choice(lengths)
     # print(len(values))

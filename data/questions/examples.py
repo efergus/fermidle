@@ -14,7 +14,7 @@ def scientific(num: float, precision: int=None):
 @dataclass
 class ExampleValue:
     thing: str
-    kind: str
+    measurement: str
     name: str = ""
     value: float = 0
     units: str = ""
@@ -24,12 +24,12 @@ class ExampleValue:
         return f"{scientific(self.value, 1)} {self.units}"
 
     def to_string(self, thing_key: str="thing"):
-        return "\n".join(f"{key}: {value}" for key, value in self.to_dict(thing_key).items())
+        return "\n".join(f"{key}: {value}" for key, value in self.to_dict(thing_key).items() if value)
 
     # def to_string(self):
     #     if self.name:
-    #         return f"{self.thing}: {self.name}, {self.kind}"
-    #     return f"{self.thing}, {self.kind}"
+    #         return f"{self.thing}: {self.name}, {self.measurement}"
+    #     return f"{self.thing}, {self.measurement}"
 
     # def to_string(self):
     #     return json.dumps(self.to_dict)
@@ -37,7 +37,7 @@ class ExampleValue:
     def to_dict(self, thing_key: str = "thing"):
         data = {
             thing_key: self.thing,
-            "measurement": self.kind
+            "measurement": self.measurement
         }
         if self.name:
             data["name"] = self.name
@@ -110,7 +110,7 @@ calling_example_1 = examples(golf_ball_diameter, eiffel_tower_length, titanic_ma
 def completion(example: Example):
     return examples(example_1, example_2, example_3, example_4, example)
 
-def complete_calling(example: ExampleValue):
+def completion_called(example: ExampleValue):
     return examples(golf_ball_diameter, titanic_mass, earth_circumference, corolla_trunk_volume, example)
 
 # length_example_1 = [
