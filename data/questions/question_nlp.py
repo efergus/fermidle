@@ -3,10 +3,12 @@
 from abc import ABC, abstractmethod
 from collections import defaultdict
 import logging
+import math
 import os
 from dataclasses import dataclass, field
 import random
-from typing import List
+from typing import Dict, List, Set
+import click
 
 import openai
 from dotenv import load_dotenv
@@ -14,6 +16,7 @@ import examples
 from examples import Example, ExampleValue, example_1
 import json
 import sys
+from datetime import datetime, timezone
 
 # Load environment variables
 load_dotenv()
@@ -31,7 +34,7 @@ OPENAI_MODELS = {
 # SYSTEM = """
 # Given data of the from:
 # """.strip()
-SYSTEM = "Don't include any values"
+SYSTEM = "Convert data to what you'd call it. Don't include any values"
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
 START_MESSAGE = {
     "role": "system",
@@ -84,6 +87,20 @@ def load_values(filename: str):
             for value in values:
                 example_values[value["kind"]].append(examples.ExampleValue(thing["name"], value["kind"], value["name"], value=value["value"]["value"], units=value["value"]["units"].replace('1', '')))
     return dict(example_values)
+
+def name_key(value: dict | ExampleValue):
+    if type(value) == ExampleValue:
+        return (value.thing, value.measurement, value.name)
+    return (value["thing"], value["measurement"], value.get('name', ''))
+
+def load_names(filename: str):
+    try:
+        with open(filename, "r") as f:
+            named = json.load(f)
+    except FileNotFoundError:
+        named = []
+    named_dict = {name_key(value): value for value in named}
+    return named_dict
     
 def complete_called(example: ExampleValue, context: CompletionContext):
     """Detrmine a value's name using LLM completion"""
@@ -103,35 +120,34 @@ def complete(example: Example, context: CompletionContext) -> None:
     print(response)
     return response
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        random.seed(sys.argv[1])
+
+def create_called():
     values = load_values("./values.json")
-    try:
-        with open("./names.json", "r") as f:
-            named = json.load(f)
-    except FileNotFoundError:
-        named = []
-    named_set = {(value["thing"], value["measurement"], value.get('name', '')) for value in named}
+    named = load_names("./names.json")
     context = OpenAICompletionContext()
     added = []
     try:
         for values in values.values():
             for value in values:
-                if (value.thing, value.measurement, value.name) in named_set:
+                key = name_key(value)
+                if key in named:
                     continue
-                value.called = complete_called(value, context).strip()
-                added.append(value)
-    except:
+                called = complete_called(value, context).strip()
+                value_dict = {
+                    **value.to_dict(),
+                    "called": called,
+                    "generated": datetime.now(tz=timezone.utc).replace(microsecond=0).isoformat()
+                    }
+                added.append(value_dict)
+    except KeyboardInterrupt:
         pass
-    print(added)
     for value in added:
-        named.append({
-            **value.to_dict(),
-            "called": value.called
-            })
-    with open('./names.json', 'w') as f:
-        json.dump(named, f, indent=2)
+        named[name_key(value)] = value
+        print(value)
+    if len(named):
+        with open('./names.json', 'w') as f:
+            json.dump(list(named.values()), f, indent=2)
+    return named
     # lengths: List[ExampleValue] = values.get('mass', [])
     # # print(json.dumps(lengths[:2]))
     # # length_values = values["length"]
@@ -145,3 +161,55 @@ if __name__ == "__main__":
     # value = random.choice(lengths)
     # print(len(values))
     # complete(value)
+
+ValuesByMeasurement = Dict[str, List[ExampleValue]]
+
+def random_value(values: List[ExampleValue]):
+    """Choose a value with a random magnitude
+    TODO: Actually implement in a way that works lol
+    """
+    # values = [value for value in values if value not in exclude]
+    if(not values):
+       raise ValueError("No values available to choose from")
+    for value in values:
+        if value.value <= 0:
+            print(f"Skipping {value}")
+    logged = [math.log(value.value) for value in values if value.value > 0]
+    min_value = min(logged)
+    max_value = max(logged)
+    delta = max_value - min_value
+    point = random.random()*delta + min_value
+    while True:
+        value = random.choice(values)
+        scale = math.fabs(point-math.log(value.value))/delta
+        if random.random() > scale:
+            return value
+
+def minmax_value(value_1, value_2):
+    if value_1.value <= value_2.value:
+        return (value_1, value_2)
+    return (value_2, value_1)
+
+def create_questions(values_by_measurement: ValuesByMeasurement, seed: str = ""):
+    if seed:
+        random.seed(seed)
+    values = values_by_measurement["length"]
+    smaller, larger = minmax_value(random_value(values), random_value(values))
+    print(smaller, larger)
+    # print(list(values_by_measurement.values())[0][:10])
+
+@click.command()
+@click.option('--names', default=False)
+@click.option('--seed', default="")
+def main(names, seed):
+    if names:
+        create_called()
+    names = load_names("./names.json")
+    values_by_measurement = defaultdict(list)
+    for value_dict in names.values():
+        value = ExampleValue.from_dict(value_dict)
+        values_by_measurement[value.measurement].append(value)
+    create_questions(dict(values_by_measurement), seed)
+
+if __name__ == "__main__":
+    main()

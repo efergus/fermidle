@@ -3,12 +3,15 @@ from dataclasses import dataclass
 from typing import List
 from math import floor, log10
 
-def scientific(num: float, precision: int=None):
+def scientific(num: float, precision: int=None, pad=False):
     magnitude = floor(log10(num))
     if precision != None:
         num *= 10**(precision - magnitude - 1)
         num = round(num)/10**(precision - 1)
-        return f"{num}e{magnitude}"
+        num_str = str(num)
+        if pad:
+            num_str = num_str.ljust(precision+1, '0')
+        return f"{num_str}e{magnitude}"
     return f"{num / 10**magnitude}e{magnitude}"
 
 @dataclass
@@ -43,7 +46,20 @@ class ExampleValue:
             data["name"] = self.name
         if self.value and self.units:
             data["value"] = f"{self.value_string()}"
+        elif self.value:
+            data["value"] = scientific(self.value, 1)
+        if self.called:
+            data["called"] = self.called
         return data
+    
+    @staticmethod
+    def from_dict(data: dict):
+        value, _, units = data.get("value", "").partition(' ')
+        if value:
+            value = float(value)
+        else:
+            value = 0.0
+        return ExampleValue(data["thing"], data["measurement"], data.get("name", ""), value, units, data.get("called", ""))
     
     def to_messages(self, include_called=True):
         messages = [
@@ -96,16 +112,17 @@ water_bottle_volume = ExampleValue("Water bottle", "volume", called = "Volume of
 corolla_trunk_volume = ExampleValue("Corolla", "volume", "trunk", called = "Volume of the trunk of a Corolla", value=0.34, units="m3")
 iphone_mass = ExampleValue("iPhone", "mass", "battery", called = "Mass of an iPhone battery", value=50, units="g")
 titanic_mass = ExampleValue("titanic", "mass", called = "Mass of the Titanic", value=4.2e10, units="g")
+anger_volume = ExampleValue("anger", "volume", called="NO", value=18, units="m3")
 
-example_1 = Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* placed end to end would it take to reach the top of the *Eiffel tower*? A: (answer) Golf balls")
+example_1 = Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* placed end to end would it take to reach the top of the *Eiffel Tower*? A: (answer) Golf balls")
 example_2 = Example(water_bottle_volume, corolla_trunk_volume, "Q: How many *water bottles* could fit in the *trunk of a Corolla*? A: (answer) Water bottles")
 example_3 = Example(iphone_mass, titanic_mass, "Q: The *titanic* weighs as much as how many *iPhone batteries*? A: (answer) iPhone batteries")
-example_4 = Example(eiffel_tower_length, earth_circumference, "Q: How many *eiffel towers* would it take to wrap all the way around *the Earth's equator*? A: (answer) Eiffel towers")
+example_4 = Example(eiffel_tower_length, earth_circumference, "Q: How many *Eiffel Towers* would it take to wrap all the way around *the Earth's equator*? A: (answer) Eiffel towers")
 
 full_example_1 = examples(example_1, example_2, example_3)
 full_example_2 = examples(example_2, example_3, example_1)
 
-calling_example_1 = examples(golf_ball_diameter, eiffel_tower_length, titanic_mass, corolla_trunk_volume)
+calling_example_1 = examples(golf_ball_diameter, eiffel_tower_length, anger_volume, titanic_mass, corolla_trunk_volume)
 
 def completion(example: Example):
     return examples(example_1, example_2, example_3, example_4, example)
