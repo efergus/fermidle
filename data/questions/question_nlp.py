@@ -7,13 +7,13 @@ import math
 import os
 from dataclasses import dataclass, field
 import random
-from typing import Dict, List, Set
+from typing import Dict, List, Set, Tuple
 import click
 
 import openai
 from dotenv import load_dotenv
 import examples
-from examples import Example, ExampleValue, example_1
+from examples import Example, ExampleValue, example_1, scientific
 import json
 import sys
 from datetime import datetime, timezone
@@ -34,6 +34,13 @@ OPENAI_MODELS = {
 # SYSTEM = """
 # Given data of the from:
 # """.strip()
+
+def system_message(message: str):
+    return {
+        "role": "system",
+        "content": message,
+    }
+
 SYSTEM = "Convert data to what you'd call it. Don't include any values"
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
 START_MESSAGE = {
@@ -121,10 +128,9 @@ def complete(example: Example, context: CompletionContext) -> None:
     return response
 
 
-def create_called():
+def create_called(context: OpenAICompletionContext):
     values = load_values("./values.json")
     named = load_names("./names.json")
-    context = OpenAICompletionContext()
     added = []
     try:
         for values in values.values():
@@ -169,11 +175,10 @@ def random_value(values: List[ExampleValue]):
     TODO: Actually implement in a way that works lol
     """
     # values = [value for value in values if value not in exclude]
+    value = random.choice(values)
+    return value
     if(not values):
        raise ValueError("No values available to choose from")
-    for value in values:
-        if value.value <= 0:
-            print(f"Skipping {value}")
     logged = [math.log(value.value) for value in values if value.value > 0]
     min_value = min(logged)
     max_value = max(logged)
@@ -181,35 +186,104 @@ def random_value(values: List[ExampleValue]):
     point = random.random()*delta + min_value
     while True:
         value = random.choice(values)
-        scale = math.fabs(point-math.log(value.value))/delta
+        scale = math.fabs(point-math.log(value.value))/delta*0.8
         if random.random() > scale:
             return value
+
+def random_ordered_pair(values: List[ExampleValue]):
+    values = random.sample(values, 2)
+    return minmax_value(*values)
 
 def minmax_value(value_1, value_2):
     if value_1.value <= value_2.value:
         return (value_1, value_2)
     return (value_2, value_1)
 
-def create_questions(values_by_measurement: ValuesByMeasurement, seed: str = ""):
+# def load_questions(filename: str):
+    
+
+def create_question(values, context, example_questions):
+    smaller, larger = minmax_value(random_value(values), random_value(values))
+    example = Example(smaller, larger)
+    messages = [
+        system_message(f"Choose the most appropriate example question for the given items.\nExample questions:\n{example_questions}"),
+        *examples.completion(example)
+    ]
+    # for message in messages:
+    #     print(message)
+    response = context.complete(messages)
+    print(messages[-1])
+    print(response)
+    print(scientific(larger.value / smaller.value, 2))
+
+def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1):
+    with open("./length/questions.txt") as f:
+        example_questions = f.read().strip()
     if seed:
         random.seed(seed)
     values = values_by_measurement["length"]
-    smaller, larger = minmax_value(random_value(values), random_value(values))
-    print(smaller, larger)
-    # print(list(values_by_measurement.values())[0][:10])
+    values = [value for value in values if value.value > 0]
+    for _ in range(count):
+        create_question(values, context, example_questions)
+
+def create_manual_questions(values_by_measurement: ValuesByMeasurement, seed: str = ""):
+    if seed:
+        random.seed(seed)
+    values = values_by_measurement["length"]
+    values = [value for value in values if value.value > 0]
+    examples = []
+    try:
+        while True:
+            smaller, larger = random_ordered_pair(values)
+            example = Example(smaller, larger)
+            print(example.to_prompt())
+            question = input("Question: ")
+            example.question = question
+            print()
+            examples.append(example)
+    except KeyboardInterrupt:
+        pass
+    print("Done")
+    data = [example.to_dict() for example in examples]
+    data_string = json.dumps(data, indent=2)
+    print(data_string)
+
+# @dataclass
+# class QuestionItem:
+#     measurement: str
+#     units: str
+
+# @dataclass
+# class QuestionFormat:
+#     items: List[QuestionItem]
+#     questions: List[str]
+
+#     @staticmethod
+#     def new(items: List[Tuple[str, str]], *questions: str):
+#         return QuestionFormat([QuestionItem(*item) for item in items], questions)
+
+# length_question_format = QuestionFormat.new([('length', 'm'), ('length', 'm')],
+#                                             "How many *X* would it take ")
 
 @click.command()
 @click.option('--names', default=False)
-@click.option('--seed', default="")
-def main(names, seed):
+@click.option('--seed', '-s', default="")
+@click.option('--count', '-c', default=1)
+@click.option('--manual', '-m', is_flag=True)
+def main(names, seed, count, manual):
+    context = OpenAICompletionContext()
     if names:
-        create_called()
+        create_called(context)
     names = load_names("./names.json")
     values_by_measurement = defaultdict(list)
     for value_dict in names.values():
         value = ExampleValue.from_dict(value_dict)
         values_by_measurement[value.measurement].append(value)
-    create_questions(dict(values_by_measurement), seed)
+    values = dict(values_by_measurement)
+    # create_questions(dict(values_by_measurement), context, seed, count=count)
+    # print(manual)
+    if manual:
+        create_manual_questions(values, seed)
 
 if __name__ == "__main__":
     main()

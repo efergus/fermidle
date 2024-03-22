@@ -9,7 +9,9 @@ def scientific(num: float, precision: int=None, pad=False):
         num *= 10**(precision - magnitude - 1)
         num = round(num)/10**(precision - 1)
         num_str = str(num)
-        if pad:
+        if precision == 1:
+            num_str = str(int(num))
+        elif pad:
             num_str = num_str.ljust(precision+1, '0')
         return f"{num_str}e{magnitude}"
     return f"{num / 10**magnitude}e{magnitude}"
@@ -24,7 +26,10 @@ class ExampleValue:
     called: str = ""
 
     def value_string(self):
-        return f"{scientific(self.value, 1)} {self.units}"
+        formatted = scientific(self.value, 2)
+        if not self.units:
+            return formatted
+        return f"{formatted} {self.units}"
 
     def to_string(self, thing_key: str="thing"):
         return "\n".join(f"{key}: {value}" for key, value in self.to_dict(thing_key).items() if value)
@@ -44,10 +49,8 @@ class ExampleValue:
         }
         if self.name:
             data["name"] = self.name
-        if self.value and self.units:
+        if self.value:
             data["value"] = f"{self.value_string()}"
-        elif self.value:
-            data["value"] = scientific(self.value, 1)
         if self.called:
             data["called"] = self.called
         return data
@@ -81,9 +84,19 @@ class Example:
     larger: ExampleValue
     question: str = ""
 
+    def to_prompt(self):
+        return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}"
+
+    def to_dict(self):
+        return {
+            "smaller": self.smaller.to_dict(),
+            "larger": self.larger.to_dict(),
+            "question": self.question
+        }
+
     def to_messages(self, include_question=True):
         messages = []
-        user_content = f"smaller: {self.smaller.called}\nvalue: {self.smaller.value_string()}\nlarger: {self.larger.called}\nvalue: {self.larger.value_string()}"
+        user_content = self.to_prompt()
         # user_content = f"{self.smaller.to_string('smaller')}\n{self.larger.to_string('larger')}"
         # user_content = f"1. {self.smaller.to_string()}\n2. {self.larger.to_string()}"
         # user_content = json.dumps([self.smaller.to_dict(), self.larger.to_dict()])
@@ -114,10 +127,28 @@ iphone_mass = ExampleValue("iPhone", "mass", "battery", called = "Mass of an iPh
 titanic_mass = ExampleValue("titanic", "mass", called = "Mass of the Titanic", value=4.2e10, units="g")
 anger_volume = ExampleValue("anger", "volume", called="NO", value=18, units="m3")
 
-example_1 = Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* placed end to end would it take to reach the top of the *Eiffel Tower*? A: (answer) Golf balls")
-example_2 = Example(water_bottle_volume, corolla_trunk_volume, "Q: How many *water bottles* could fit in the *trunk of a Corolla*? A: (answer) Water bottles")
-example_3 = Example(iphone_mass, titanic_mass, "Q: The *titanic* weighs as much as how many *iPhone batteries*? A: (answer) iPhone batteries")
-example_4 = Example(eiffel_tower_length, earth_circumference, "Q: How many *Eiffel Towers* would it take to wrap all the way around *the Earth's equator*? A: (answer) Eiffel towers")
+example_1 = Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* tall is the *Eiffel Tower*?\nA: (answer) Golf balls")
+example_2 = Example(water_bottle_volume, corolla_trunk_volume, "Q: How many *water bottles* could fit in the *trunk of a Corolla*?\nA: (answer) Water bottles")
+example_3 = Example(iphone_mass, titanic_mass, "Q: The *titanic* weighs as much as how many *iPhone batteries*?\nA: (answer) iPhone batteries")
+example_4 = Example(eiffel_tower_length, earth_circumference, "Q: How many *Eiffel Towers* would it take to wrap all the way around *the Earth's equator*?\nA: (answer) Eiffel towers")
+
+orange_diameter = ExampleValue("orange", "length", "diameter", called="Diameter of an orange", value=7.2e-2, units="m")
+pacific_depth = ExampleValue("Pacific ocean", "length", "max depth", called="Maximum depth of the Pacific Ocean", value=10.9e3, units="m")
+giza_height = ExampleValue("Pyramid of Giza", "length", "height", called="Height of the Pyramid of Giza", value=1.0e2, units="m")
+great_white_length = ExampleValue("great white shark", "length", called="Length of a great white shark", value=5, units="m")
+moon_circumference = ExampleValue("Moon", "length", "circumference", called="Circumference of the moon", value=1e7, units="m")
+
+length = [
+    Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* tall is the *Eiffel Tower*?\nA: (answer) Golf balls"),
+    Example(orange_diameter, pacific_depth, "Q: How many *orange circumferences* deep is the *Pacific Ocean*?\nA: (answer) Oranges"),
+    Example(great_white_length, giza_height, "Q: How many *Great white sharks* tall is the *Pyramid of Giza*?\nA: (answer) Sharks"),
+]
+# length = [
+#     Example(golf_ball_diameter, eiffel_tower_length, "How many *X* tall is the *Y*?"),
+#     Example(orange_diameter, pacific_depth, "How many *X* deep is the *Y*?"),
+#     ExampleValue(orange_diameter, moon_circumference, "How many *X* would it take to wrap around *Y*"),
+#     Example(great_white_length, giza_height, "How many *X* tall is the *Y*?")
+# ]
 
 full_example_1 = examples(example_1, example_2, example_3)
 full_example_2 = examples(example_2, example_3, example_1)
@@ -125,7 +156,7 @@ full_example_2 = examples(example_2, example_3, example_1)
 calling_example_1 = examples(golf_ball_diameter, eiffel_tower_length, anger_volume, titanic_mass, corolla_trunk_volume)
 
 def completion(example: Example):
-    return examples(example_1, example_2, example_3, example_4, example)
+    return examples(*length, example)
 
 def completion_called(example: ExampleValue):
     return examples(golf_ball_diameter, titanic_mass, earth_circumference, corolla_trunk_volume, example)
