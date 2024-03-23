@@ -223,19 +223,30 @@ def create_question(example, context, example_questions, manual_quality=False):
     print(scientific(example.larger.value / example.smaller.value, 2))
     example.question = response
     if manual_quality:
-        quality = int(input("Input quality (1-5): "))
-        example.quality = (quality-1)/4*0.95
+        quality = float(input("Quality (0-5): "))
+        example.quality = min(quality/5, 0.99)
     return example
 
-def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1, manual_quality = False):
-    with open("./length/questions.txt") as f:
-        example_questions = f.read().strip()
+def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1, sample: int = 10, manual_quality = False, measurement='length'):
+    # with open("./length/questions.txt") as f:
+    #     example_questions = f.read().strip()
     questions = load_questions()
     if seed:
         random.seed(seed)
-    values = values_by_measurement["length"]
+    values = values_by_measurement[measurement]
     values = [value for value in values if value.value > 0]
-    chosen_examples = random.sample([question for question in questions.values() if question.quality > 0.9], 6)
+    example_questions = [question for question in questions.values() if question.quality >= 1.0 and question.measurement == measurement]
+    for question in questions.values():
+        if len(example_questions) >= sample:
+            break
+        if question.measurement == measurement and question.quality <= 0.9 and question not in example_questions:
+            example_questions.append(question)
+    if len(example_questions) < sample:
+        example_questions = [question for question in questions.values() if question.quality > 0.9]
+    if len(example_questions) < sample:
+        raise ValueError("Insufficient number of quality example questions")
+
+    chosen_examples = random.sample(example_questions, sample)
     try:
         for _ in range(count):
             smaller, larger = random_ordered_pair(values)
@@ -297,10 +308,12 @@ def create_manual_questions(values_by_measurement: ValuesByMeasurement, seed: st
 @click.command()
 @click.option('--names', default=False)
 @click.option('--seed', '-s', default="")
+@click.option('--measurement', '-x', default='length')
 @click.option('--count', '-c', default=1)
+@click.option('--sample', '-p', default=10)
 @click.option('--manual', '-m', is_flag=True)
 @click.option('--quality', '-q', is_flag=True)
-def main(names, seed, count, manual, quality):
+def main(names, seed, measurement: str, count: int, sample: int, manual, quality):
     context = OpenAICompletionContext()
     if names:
         create_called(context)
@@ -314,7 +327,7 @@ def main(names, seed, count, manual, quality):
     if manual:
         create_manual_questions(values, seed)
     else:
-        create_questions(dict(values_by_measurement), context, seed, count=count, manual_quality=quality)
+        create_questions(dict(values_by_measurement), context, seed, measurement=measurement.lower(), count=count, sample=sample, manual_quality=quality)
 
 
 if __name__ == "__main__":

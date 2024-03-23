@@ -87,6 +87,11 @@ class Question:
     larger: ExampleValue
     question: str = ""
     quality: float = 0.0
+    measurement: str = ""
+
+    def __post_init__(self):
+        if not self.measurement:
+            self.measurement = self.smaller.measurement
 
     def key(self):
         return (self.smaller.key(), self.larger.key())
