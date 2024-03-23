@@ -13,7 +13,7 @@ import click
 import openai
 from dotenv import load_dotenv
 import examples
-from examples import Example, ExampleValue, example_1, scientific
+from examples import Question, ExampleValue, example_1, scientific
 import json
 import sys
 from datetime import datetime, timezone
@@ -97,7 +97,7 @@ def load_values(filename: str):
 
 def name_key(value: dict | ExampleValue):
     if type(value) == ExampleValue:
-        return (value.thing, value.measurement, value.name)
+        return value.key()
     return (value["thing"], value["measurement"], value.get('name', ''))
 
 def load_names(filename: str):
@@ -118,7 +118,7 @@ def complete_called(example: ExampleValue, context: CompletionContext):
     print(response)
     return response
 
-def complete(example: Example, context: CompletionContext) -> None:
+def complete(example: Question, context: CompletionContext) -> None:
     """Create a question using LLM completion"""
     messages = examples.completion(example)
     # for message in messages:
@@ -199,54 +199,83 @@ def minmax_value(value_1, value_2):
         return (value_1, value_2)
     return (value_2, value_1)
 
-# def load_questions(filename: str):
-    
+def question_key(value: Question):
+    return (name_key(value.smaller), name_key(value.larger))
 
-def create_question(values, context, example_questions):
-    smaller, larger = minmax_value(random_value(values), random_value(values))
-    example = Example(smaller, larger)
+def load_questions(filename: str = "./questions.json"):
+    try:
+        with open(filename, "r") as f:
+            examples = [Question.from_dict(data) for data in json.load(f)]
+        return {example.key(): example for example in examples}
+    except FileNotFoundError:
+        return {}
+
+def create_question(example, context, example_questions, manual_quality=False):
     messages = [
-        system_message(f"Choose the most appropriate example question for the given items.\nExample questions:\n{example_questions}"),
-        *examples.completion(example)
+        system_message(f"Create a fermi question based on the given items"),
+        *examples.examples(*example_questions, example)
     ]
     # for message in messages:
-    #     print(message)
+    print(messages[-1]['content'].replace('\n', '  |  '))
     response = context.complete(messages)
     print(messages[-1])
     print(response)
-    print(scientific(larger.value / smaller.value, 2))
+    print(scientific(example.larger.value / example.smaller.value, 2))
+    example.question = response
+    if manual_quality:
+        quality = int(input("Input quality (1-5): "))
+        example.quality = (quality-1)/4*0.95
+    return example
 
-def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1):
+def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1, manual_quality = False):
     with open("./length/questions.txt") as f:
         example_questions = f.read().strip()
+    questions = load_questions()
     if seed:
         random.seed(seed)
     values = values_by_measurement["length"]
     values = [value for value in values if value.value > 0]
-    for _ in range(count):
-        create_question(values, context, example_questions)
+    chosen_examples = random.sample([question for question in questions.values() if question.quality > 0.9], 6)
+    try:
+        for _ in range(count):
+            smaller, larger = random_ordered_pair(values)
+            example = Question(smaller, larger)
+            if example.key() in questions:
+                continue
+            question = create_question(example, context, chosen_examples, manual_quality=manual_quality)
+            questions[question.key()] = question
+    except KeyboardInterrupt:
+        pass
+    data = [data.to_dict() for data in questions.values()]
+    with open("./questions.json", "w") as f:
+        json.dump(data, f, indent=2)
 
 def create_manual_questions(values_by_measurement: ValuesByMeasurement, seed: str = ""):
     if seed:
         random.seed(seed)
     values = values_by_measurement["length"]
     values = [value for value in values if value.value > 0]
-    examples = []
+    examples = load_questions()
     try:
         while True:
             smaller, larger = random_ordered_pair(values)
-            example = Example(smaller, larger)
+            example = Question(smaller, larger, quality=1.0)
+            if example.key() in examples:
+                continue
             print(example.to_prompt())
             question = input("Question: ")
             example.question = question
             print()
-            examples.append(example)
+            examples[example.key()] = example
     except KeyboardInterrupt:
         pass
     print("Done")
-    data = [example.to_dict() for example in examples]
-    data_string = json.dumps(data, indent=2)
-    print(data_string)
+    data = [example.to_dict() for example in examples.values()]
+    with open("./questions.json", "w") as f:
+        json.dump(data, f, indent=2)
+    # data_string = json.dumps(data, indent=2)
+    # print(data_string)
+    # with open()
 
 # @dataclass
 # class QuestionItem:
@@ -270,7 +299,8 @@ def create_manual_questions(values_by_measurement: ValuesByMeasurement, seed: st
 @click.option('--seed', '-s', default="")
 @click.option('--count', '-c', default=1)
 @click.option('--manual', '-m', is_flag=True)
-def main(names, seed, count, manual):
+@click.option('--quality', '-q', is_flag=True)
+def main(names, seed, count, manual, quality):
     context = OpenAICompletionContext()
     if names:
         create_called(context)
@@ -280,10 +310,12 @@ def main(names, seed, count, manual):
         value = ExampleValue.from_dict(value_dict)
         values_by_measurement[value.measurement].append(value)
     values = dict(values_by_measurement)
-    # create_questions(dict(values_by_measurement), context, seed, count=count)
     # print(manual)
     if manual:
         create_manual_questions(values, seed)
+    else:
+        create_questions(dict(values_by_measurement), context, seed, count=count, manual_quality=quality)
+
 
 if __name__ == "__main__":
     main()

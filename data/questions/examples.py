@@ -1,6 +1,6 @@
 import json
 from dataclasses import dataclass
-from typing import List
+from typing import Dict, List
 from math import floor, log10
 
 def scientific(num: float, precision: int=None, pad=False):
@@ -24,6 +24,9 @@ class ExampleValue:
     value: float = 0
     units: str = ""
     called: str = ""
+
+    def key(self):
+        return (self.thing, self.measurement, self.name)
 
     def value_string(self):
         formatted = scientific(self.value, 2)
@@ -79,10 +82,14 @@ class ExampleValue:
         return messages
 
 @dataclass
-class Example:
+class Question:
     smaller: ExampleValue
     larger: ExampleValue
     question: str = ""
+    quality: float = 0.0
+
+    def key(self):
+        return (self.smaller.key(), self.larger.key())
 
     def to_prompt(self):
         return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}"
@@ -91,8 +98,19 @@ class Example:
         return {
             "smaller": self.smaller.to_dict(),
             "larger": self.larger.to_dict(),
-            "question": self.question
+            "question": self.question,
+            "quality": self.quality
         }
+    
+    @staticmethod
+    def from_dict(data: Dict):
+        smaller = data["smaller"]
+        larger = data["larger"]
+        if type(smaller) == dict:
+            smaller = ExampleValue.from_dict(smaller)
+        if type(larger) == dict:
+            larger = ExampleValue.from_dict(larger)
+        return Question(smaller, larger, data["question"], data.get("quality", 1.0))
 
     def to_messages(self, include_question=True):
         messages = []
@@ -107,11 +125,11 @@ class Example:
         if include_question and self.question:
             messages.append({
                 "role": "assistant",
-                "content": self.question
+                "content": f"Q: {self.question}"
             })
         return messages
 
-def examples(*examples: Example | ExampleValue):
+def examples(*examples: Question | ExampleValue):
     res = []
     for example in examples[:-1]:
         res.extend(example.to_messages())
@@ -127,10 +145,10 @@ iphone_mass = ExampleValue("iPhone", "mass", "battery", called = "Mass of an iPh
 titanic_mass = ExampleValue("titanic", "mass", called = "Mass of the Titanic", value=4.2e10, units="g")
 anger_volume = ExampleValue("anger", "volume", called="NO", value=18, units="m3")
 
-example_1 = Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* tall is the *Eiffel Tower*?\nA: (answer) Golf balls")
-example_2 = Example(water_bottle_volume, corolla_trunk_volume, "Q: How many *water bottles* could fit in the *trunk of a Corolla*?\nA: (answer) Water bottles")
-example_3 = Example(iphone_mass, titanic_mass, "Q: The *titanic* weighs as much as how many *iPhone batteries*?\nA: (answer) iPhone batteries")
-example_4 = Example(eiffel_tower_length, earth_circumference, "Q: How many *Eiffel Towers* would it take to wrap all the way around *the Earth's equator*?\nA: (answer) Eiffel towers")
+example_1 = Question(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* tall is the *Eiffel Tower*?\nA: (answer) Golf balls")
+example_2 = Question(water_bottle_volume, corolla_trunk_volume, "Q: How many *water bottles* could fit in the *trunk of a Corolla*?\nA: (answer) Water bottles")
+example_3 = Question(iphone_mass, titanic_mass, "Q: The *titanic* weighs as much as how many *iPhone batteries*?\nA: (answer) iPhone batteries")
+example_4 = Question(eiffel_tower_length, earth_circumference, "Q: How many *Eiffel Towers* would it take to wrap all the way around *the Earth's equator*?\nA: (answer) Eiffel towers")
 
 orange_diameter = ExampleValue("orange", "length", "diameter", called="Diameter of an orange", value=7.2e-2, units="m")
 pacific_depth = ExampleValue("Pacific ocean", "length", "max depth", called="Maximum depth of the Pacific Ocean", value=10.9e3, units="m")
@@ -139,9 +157,9 @@ great_white_length = ExampleValue("great white shark", "length", called="Length 
 moon_circumference = ExampleValue("Moon", "length", "circumference", called="Circumference of the moon", value=1e7, units="m")
 
 length = [
-    Example(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* tall is the *Eiffel Tower*?\nA: (answer) Golf balls"),
-    Example(orange_diameter, pacific_depth, "Q: How many *orange circumferences* deep is the *Pacific Ocean*?\nA: (answer) Oranges"),
-    Example(great_white_length, giza_height, "Q: How many *Great white sharks* tall is the *Pyramid of Giza*?\nA: (answer) Sharks"),
+    Question(golf_ball_diameter, eiffel_tower_length, "Q: How many *golf balls* tall is the *Eiffel Tower*?\nA: (answer) Golf balls"),
+    Question(orange_diameter, pacific_depth, "Q: How many *orange circumferences* deep is the *Pacific Ocean*?\nA: (answer) Oranges"),
+    Question(great_white_length, giza_height, "Q: How many *Great white sharks* tall is the *Pyramid of Giza*?\nA: (answer) Sharks"),
 ]
 # length = [
 #     Example(golf_ball_diameter, eiffel_tower_length, "How many *X* tall is the *Y*?"),
@@ -155,7 +173,7 @@ full_example_2 = examples(example_2, example_3, example_1)
 
 calling_example_1 = examples(golf_ball_diameter, eiffel_tower_length, anger_volume, titanic_mass, corolla_trunk_volume)
 
-def completion(example: Example):
+def completion(example: Question):
     return examples(*length, example)
 
 def completion_called(example: ExampleValue):
