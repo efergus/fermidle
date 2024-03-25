@@ -111,13 +111,14 @@ class Question:
         return (self.smaller.key(), self.larger.key())
 
     def to_prompt(self):
-        return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}"
+        answer = scientific(self.larger.value/self.smaller.value, 2)
+        return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}\nAnswer: {answer}"
 
     def to_dict(self):
         return {
             "smaller": self.smaller.to_dict(),
             "larger": self.larger.to_dict(),
-            "question": self.question,
+            "question": self.question.removeprefix("Q: "),
             "quality": self.quality
         }
     
@@ -129,7 +130,7 @@ class Question:
             smaller = ExampleValue.from_dict(smaller)
         if type(larger) == dict:
             larger = ExampleValue.from_dict(larger)
-        return Question(smaller, larger, data["question"], data.get("quality", 1.0))
+        return Question(smaller, larger, data["question"].removeprefix("Q: "), data.get("quality", 1.0))
 
     def to_messages(self, include_question=True):
         messages = []

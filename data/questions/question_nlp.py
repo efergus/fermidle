@@ -137,6 +137,7 @@ def create_called(context: OpenAICompletionContext, sample_size: int = 10, manua
     all_named = list(named.values())
     random.shuffle(all_named)
     all_named.sort(key=lambda x: x.quality, reverse=True)
+    print("To generate:", len(randomized_values)-len(all_named))
     named_examples = all_named[:sample_size]
     named_example_messages = [message for example in named_examples for message in example.to_messages()]
     added = []
@@ -241,7 +242,7 @@ def load_questions(filename: str = "./questions.json"):
 
 def create_question(example, context, example_questions, manual_quality=False):
     messages = [
-        system_message(f"Create a fermi question based on the given items"),
+        system_message(f"Create a fermi question based on the given items. It should be short. Don't make it fancy."),
         *examples.examples(*example_questions, example)
     ]
     # for message in messages:
@@ -264,26 +265,30 @@ def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAI
         random.seed(seed)
     values = values_by_measurement[measurement]
     values = [value for value in values if value.value > 0]
-    example_questions = [question for question in questions.values() if question.quality >= 1.0 and question.measurement == measurement]
-    for question in questions.values():
-        if len(example_questions) >= sample:
-            break
-        if question.measurement == measurement and question.quality <= 0.9 and question not in example_questions:
-            example_questions.append(question)
-    if len(example_questions) < sample:
-        example_questions = [question for question in questions.values() if question.quality > 0.9]
+    example_questions = [question for question in questions.values() if question.quality > 0.8]
+    example_questions.sort(key=lambda x: x.quality if x.measurement == measurement else x.quality * 0.9, reverse=True)
+    chosen_examples = example_questions[:sample]
     if len(example_questions) < sample:
         raise ValueError("Insufficient number of quality example questions")
+    for example in example_questions:
+        for message in example.to_messages():
+            print(message)
 
-    chosen_examples = random.sample(example_questions, sample)
+    random.shuffle(chosen_examples)
     try:
-        for _ in range(count):
+        i = 0
+        tries = 0
+        while i < count and tries < 100:
             smaller, larger = random_ordered_pair(values)
             example = Question(smaller, larger)
             if example.key() in questions:
+                tries += 1
                 continue
+            print()
             question = create_question(example, context, chosen_examples, manual_quality=manual_quality)
             questions[question.key()] = question
+            i += 1
+            tries = 0
     except KeyboardInterrupt:
         pass
     data = [data.to_dict() for data in questions.values()]
@@ -355,13 +360,14 @@ def main(names, seed, measurement: str, count: int, sample: int, manual: bool, q
         else:
             create_called(context, sample, manual_quality=quality)
         return
-    names = load_names("./names.json")
+    existing_values = load_names("./names.json")
     values_by_measurement = defaultdict(list)
-    for value in names.values():
+    for value in existing_values.values():
         values_by_measurement[value.measurement].append(value)
         # if value.measurement == measurement:
         #     print(value.called, value.value, value_dict)
     values = dict(values_by_measurement)
+    print(manual, names)
     if manual:
         if not names:
             create_questions_manual(values, seed, measurement=measurement)
