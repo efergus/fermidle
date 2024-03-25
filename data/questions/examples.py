@@ -1,5 +1,6 @@
+from datetime import datetime, timezone
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, List
 from math import floor, log10
 
@@ -16,14 +17,19 @@ def scientific(num: float, precision: int=None, pad=False):
         return f"{num_str}e{magnitude}"
     return f"{num / 10**magnitude}e{magnitude}"
 
+def now():
+    return datetime.now(tz=timezone.utc).replace(microsecond=0).isoformat()
+
 @dataclass
 class ExampleValue:
     thing: str
     measurement: str
     name: str = ""
-    value: float = 0
+    value: float = 0.0
     units: str = ""
     called: str = ""
+    quality: float = 0.0
+    generated: datetime = field(default_factory=now)
 
     def key(self):
         return (self.thing, self.measurement, self.name)
@@ -35,7 +41,15 @@ class ExampleValue:
         return f"{formatted} {self.units}"
 
     def to_string(self, thing_key: str="thing"):
-        return "\n".join(f"{key}: {value}" for key, value in self.to_dict(thing_key).items() if value)
+        data = {
+            thing_key: self.thing,
+            "measurement": self.measurement
+        }
+        if self.name:
+            data["name"] = self.name
+        if self.value:
+            data["value"] = self.value_string()
+        return "\n".join(f"{key}: {value}" for key, value in data.items() if value)
 
     # def to_string(self):
     #     if self.name:
@@ -47,15 +61,14 @@ class ExampleValue:
 
     def to_dict(self, thing_key: str = "thing"):
         data = {
-            thing_key: self.thing,
-            "measurement": self.measurement
+            "thing": self.thing,
+            "measurement": self.measurement,
+            "name": self.name,
+            "value": self.value_string(),
+            "called": self.called,
+            "quality": self.quality,
+            "generated": self.generated
         }
-        if self.name:
-            data["name"] = self.name
-        if self.value:
-            data["value"] = f"{self.value_string()}"
-        if self.called:
-            data["called"] = self.called
         return data
     
     @staticmethod
@@ -65,7 +78,7 @@ class ExampleValue:
             value = float(value)
         else:
             value = 0.0
-        return ExampleValue(data["thing"], data["measurement"], data.get("name", ""), value, units, data.get("called", ""))
+        return ExampleValue(data["thing"], data["measurement"], data.get("name", ""), value, units, data.get("called", ""), quality=data.get("quality", 0.0))
     
     def to_messages(self, include_called=True):
         messages = [
@@ -88,6 +101,7 @@ class Question:
     question: str = ""
     quality: float = 0.0
     measurement: str = ""
+    generated: datetime = field(default_factory=now)
 
     def __post_init__(self):
         if not self.measurement:
