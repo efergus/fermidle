@@ -267,14 +267,15 @@ def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAI
     values = [value for value in values if value.value > 0]
     example_questions = [question for question in questions.values() if question.quality > 0.8]
     example_questions.sort(key=lambda x: x.quality if x.measurement == measurement else x.quality * 0.9, reverse=True)
-    chosen_examples = example_questions[:sample]
-    if len(example_questions) < sample:
+    chosen_examples = example_questions[:sample].copy()
+    if len(chosen_examples) < sample:
         raise ValueError("Insufficient number of quality example questions")
-    for example in example_questions:
+    for example in chosen_examples:
         for message in example.to_messages():
             print(message)
 
     random.shuffle(chosen_examples)
+    print(len(chosen_examples), "examples")
     try:
         i = 0
         tries = 0
@@ -367,7 +368,6 @@ def main(names, seed, measurement: str, count: int, sample: int, manual: bool, q
         # if value.measurement == measurement:
         #     print(value.called, value.value, value_dict)
     values = dict(values_by_measurement)
-    print(manual, names)
     if manual:
         if not names:
             create_questions_manual(values, seed, measurement=measurement)
