@@ -7,7 +7,7 @@
       "value": "2.0e1 m",
       "called": "Length of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -16,7 +16,7 @@
       "value": "2.0e12 m",
       "called": "Circumference of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *F-35s* laid end to end would it take to wrap around the *Circumference of Betelgeuse*?",
     "quality": 1.0
@@ -29,7 +29,7 @@
       "value": "1.0e-1 m",
       "called": "Circumference of a golf ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "all paved roads in the US",
@@ -38,7 +38,7 @@
       "value": "4.0e9 m",
       "called": "Total length of all paved roads in the US",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *golf ball circumferences* would it take to span the length of *all paved roads in the US*?",
     "quality": 1.0
@@ -51,7 +51,7 @@
       "value": "1.0e-1 m",
       "called": "Length of an iPhone 15",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Bluetooth",
@@ -60,7 +60,7 @@
       "value": "1.0e1 m",
       "called": "Range of Bluetooth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *iPhone 15s* would it take to span *the range of a Bluetooth device*?",
     "quality": 1.0
@@ -73,7 +73,7 @@
       "value": "2.0e7 m",
       "called": "Shoreline length of the Great Lakes",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -82,7 +82,7 @@
       "value": "3.0e27 m",
       "called": "Circumference of the observable universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "If you were to walk along the *shoreline of the Great Lakes*, how many *trips around the observable universe* would you need to cover?",
     "quality": 0.0
@@ -95,7 +95,7 @@
       "value": "3.0e3 m",
       "called": "Diameter of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -104,7 +104,7 @@
       "value": "9.0e26 m",
       "called": "Diameter of the observable universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *moons* would fit along the *diameter of the observable universe*?",
     "quality": 0.0
@@ -117,7 +117,7 @@
       "value": "1.0e2 m",
       "called": "Rotor length of the largest wind turbine in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Curiosity Rover",
@@ -126,7 +126,7 @@
       "value": "3.0e4 m",
       "called": "Distance driven by the Curiosity Rover",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "If you laid *the rotors of the largest wind turbine in the world* end to end, how many would it take to reach *the distance driven by the Curiosity Rover*?",
     "quality": 1.0
@@ -139,7 +139,7 @@
       "value": "1.0e1 m",
       "called": "Range of Bluetooth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Great lakes",
@@ -148,7 +148,7 @@
       "value": "2.0e7 m",
       "called": "Shoreline length of the Great Lakes",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "If you placed *Bluetooth devices* end to end, how many would be needed to cover the *shoreline length of the Great Lakes*?",
     "quality": 0.25
@@ -161,7 +161,7 @@
       "value": "3.0e3 m",
       "called": "Diameter of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -170,7 +170,7 @@
       "value": "3.0e27 m",
       "called": "Circumference of the observable universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Moons* would fit into the *Circumference of the observable universe*?",
     "quality": 0.5
@@ -183,7 +183,7 @@
       "value": "3.0e1 m",
       "called": "Length of the Enola Gay",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -192,7 +192,7 @@
       "value": "9.0e26 m",
       "called": "Diameter of the observable universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Enola Gays* laid end to end would it take to span *the diameter of the observable universe*?",
     "quality": 1.0
@@ -205,7 +205,7 @@
       "value": "3.0e4 m",
       "called": "Distance driven by the Curiosity Rover",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mercury",
@@ -214,7 +214,7 @@
       "value": "5.0e6 m",
       "called": "Diameter of Mercury",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *Curiosity Rover* need to drive its total distance to match *the diameter of Mercury*?",
     "quality": 0.75
@@ -227,7 +227,7 @@
       "value": "3.0e1 m",
       "called": "Length of the Enola Gay",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest wind turbine in the world",
@@ -236,7 +236,7 @@
       "value": "1.0e2 m",
       "called": "Rotor length of the largest wind turbine in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *rotor length of the largest wind turbine in the world* compared to the *length of the Enola Gay*?",
     "quality": 1.0
@@ -249,7 +249,7 @@
       "value": "1.0e7 m",
       "called": "Diameter of the planet Venus",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "all paved roads in the US",
@@ -258,7 +258,7 @@
       "value": "4.0e9 m",
       "called": "Total length of all paved roads in the US",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would *the diameter of Venus* fit into *the total length of all paved roads in the US*?",
     "quality": 1.0
@@ -271,7 +271,7 @@
       "value": "2.0e2 m",
       "called": "Tower height of the largest wind turbine in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "English channel",
@@ -280,7 +280,7 @@
       "value": "3.0e4 m",
       "called": "Width of the narrowest stretch of the English Channel",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *tower heights of the largest wind turbine in the world* would it take to bridge *the narrowest stretch of the English Channel*?",
     "quality": 1.0
@@ -293,7 +293,7 @@
       "value": "3.0e-1 m",
       "called": "Length of a football",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Statue of Liberty",
@@ -302,7 +302,7 @@
       "value": "9.0e1 m",
       "called": "Length of the Statue of Liberty",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *football lengths* would it take to reach from the *base to the tip of the Statue of Liberty*?",
     "quality": 0.75
@@ -315,7 +315,7 @@
       "value": "1.0e2 m",
       "called": "Length of the International Space Station",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Eiffel Tower",
@@ -324,7 +324,7 @@
       "value": "3.0e2 m",
       "called": "Height of the Eiffel Tower",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *International Space Stations* stacked vertically would it take to match the *height of the Eiffel Tower*?",
     "quality": 1.0
@@ -337,7 +337,7 @@
       "value": "2.0e2 m",
       "called": "Tower height of the largest wind turbine in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "all paved roads in the US",
@@ -346,7 +346,7 @@
       "value": "4.0e9 m",
       "called": "Total length of all paved roads in the US",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *tower heights of the largest wind turbine in the world* would it take to match the *total length of all paved roads in the US*?",
     "quality": 0.95
@@ -359,7 +359,7 @@
       "value": "3.0e-1 m",
       "called": "Length of a football",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "English channel",
@@ -368,7 +368,7 @@
       "value": "3.0e4 m",
       "called": "Width of the narrowest stretch of the English Channel",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *footballs* laid side by side would it take to span the *width of the narrowest stretch of the English Channel*?",
     "quality": 0.475
@@ -381,7 +381,7 @@
       "value": "9.0e1 m",
       "called": "Length of the Statue of Liberty",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Eiffel Tower",
@@ -390,7 +390,7 @@
       "value": "3.0e2 m",
       "called": "Height of the Eiffel Tower",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times taller is the *Eiffel Tower* compared to the *Statue of Liberty's length*?",
     "quality": 0.7124999999999999
@@ -403,7 +403,7 @@
       "value": "1.0e2 m",
       "called": "Length of the International Space Station",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Boeing 747",
@@ -412,7 +412,7 @@
       "value": "9.0e6 m",
       "called": "Range of a Boeing 747",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times can you lay the *International Space Station* end to end in the *range of a Boeing 747*?",
     "quality": 0.95
@@ -425,7 +425,7 @@
       "value": "3.0e-1 m",
       "called": "Length of a hair dryer",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "lake Ontario",
@@ -434,7 +434,7 @@
       "value": "3.0e5 m",
       "called": "Length of Lake Ontario",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *hair dryers* would it take to span *the length of Lake Ontario*?",
     "quality": 0.95
@@ -447,7 +447,7 @@
       "value": "4.0e-1 m3",
       "called": "Volume of the trunk of a Civic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pluto",
@@ -456,7 +456,7 @@
       "value": "7.0e18 m3",
       "called": "Volume of Pluto",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Honda Civic trunks* would it take to fit the *volume of Pluto*?",
     "quality": 0.99
@@ -469,7 +469,7 @@
       "value": "1.0e21 m3",
       "called": "Volume of Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -478,7 +478,7 @@
       "value": "4.0e80 m3",
       "called": "Volume of the Observable Universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *Volume of Earth* fit into the *Volume of the Observable Universe*?",
     "quality": 0.99
@@ -491,7 +491,7 @@
       "value": "1.0e18 m3",
       "called": "Volume of water in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -500,7 +500,7 @@
       "value": "4.0e80 m3",
       "called": "Volume of the Observable Universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of water in the world* fit into *the volume of the Observable Universe*?",
     "quality": 0.99
@@ -513,7 +513,7 @@
       "value": "1.0e8 g",
       "called": "Fuel capacity of the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Internet",
@@ -522,7 +522,7 @@
       "value": "2.0e23 bytes",
       "called": "Volume of the Internet",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *fuel capacity of the Concorde* fill up the *volume of the Internet*?",
     "quality": -0.2
@@ -535,7 +535,7 @@
       "value": "9.0e1 m3",
       "called": "Volume of a blue whale",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Water in the world",
@@ -544,7 +544,7 @@
       "value": "1.0e18 m3",
       "called": "Volume of water in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *blue whales* would it take to hold the same volume as *the water in the world*?",
     "quality": 0.2
@@ -557,7 +557,7 @@
       "value": "7.0e-3 m3",
       "called": "Volume of a basketball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Concorde",
@@ -566,7 +566,7 @@
       "value": "1.0e8 g",
       "called": "Fuel capacity of the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *basketballs* filled with the same volume would it take to hold the *fuel capacity of the Concorde*?",
     "quality": 0.2
@@ -579,7 +579,7 @@
       "value": "4.0e15 m3",
       "called": "Volume of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Indian Ocean",
@@ -588,7 +588,7 @@
       "value": "3.0e17 m3",
       "called": "Volume of the Indian Ocean",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of the Mediterranean Sea* fit into the *volume of the Indian Ocean*?",
     "quality": 0.99
@@ -601,7 +601,7 @@
       "value": "2.0e2 m3",
       "called": "Volume of the cargo space on a Boeing 747",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Olympic swimming pool",
@@ -610,7 +610,7 @@
       "value": "2.0e3 m3",
       "called": "Volume of an Olympic swimming pool",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *cargo spaces of a Boeing 747* could fit inside *an Olympic swimming pool* in terms of volume?",
     "quality": 0.6
@@ -623,7 +623,7 @@
       "value": "9.0e5 m3",
       "called": "Total container volume of the largest container ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pluto",
@@ -632,7 +632,7 @@
       "value": "7.0e18 m3",
       "called": "Volume of Pluto",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *largest container ships* full of cargo would it take to match the *volume of Pluto*?",
     "quality": 0.6
@@ -645,7 +645,7 @@
       "value": "5.0e5 m3",
       "called": "Volume of the Taj Mahal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest hydroelectric plant (Three Gorges Dam)",
@@ -654,7 +654,7 @@
       "value": "4.0e10 m3",
       "called": "Reservoir volume of the Three Gorges Dam",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Taj Mahals* would fit into the *reservoir volume of the Three Gorges Dam*?",
     "quality": 0.99
@@ -667,7 +667,7 @@
       "value": "4.0e1 m2",
       "called": "Wing area of an F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -676,7 +676,7 @@
       "value": "2.0e54 m2",
       "called": "Surface area of the observable universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *F-35 wing areas* would it take to cover *the surface area of the observable universe*?",
     "quality": 0.99
@@ -689,7 +689,7 @@
       "value": "7.0e-2 m2",
       "called": "Surface area of the top of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pyramid of Giza",
@@ -698,7 +698,7 @@
       "value": "1.0e5 m2",
       "called": "Surface area of the Pyramid of Giza including the base",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *MacBook tops* would it take to cover the *surface area of the Pyramid of Giza, including the base*?",
     "quality": 0.99
@@ -711,7 +711,7 @@
       "value": "4.0e1 m2",
       "called": "Wing area of an F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Taj Mahal",
@@ -720,7 +720,7 @@
       "value": "4.0e4 m2",
       "called": "Surface area of the Taj Mahal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *F-35s* with their wings fully expanded would it take to cover the *surface area of the Taj Mahal*?",
     "quality": 0.4
@@ -733,7 +733,7 @@
       "value": "7.0e-2 m2",
       "called": "Surface area of the top of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "India",
@@ -742,7 +742,7 @@
       "value": "3.0e12 m2",
       "called": "Surface area of India",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *MacBook tops* would it take to cover the *surface area of India*?",
     "quality": 0.99
@@ -755,7 +755,7 @@
       "value": "8.0e12 m2",
       "called": "Surface area of Australia",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Africa",
@@ -764,7 +764,7 @@
       "value": "3.0e13 m2",
       "called": "Surface area of Africa",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Australia's* would fit into the *surface area of Africa*?",
     "quality": 0.8
@@ -777,7 +777,7 @@
       "value": "2.0e1 m2",
       "called": "Mirror area of the James Webb Space Telescope",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mediterranean Sea",
@@ -786,7 +786,7 @@
       "value": "2.0e12 m2",
       "called": "Surface area of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *James Webb Space Telescope mirrors* would be needed to cover the *surface area of the Mediterranean Sea*?",
     "quality": 0.99
@@ -799,7 +799,7 @@
       "value": "9.0e-30 m2",
       "called": "Surface area of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "AMD Ryzen Threadripper PRO 7995WX",
@@ -808,7 +808,7 @@
       "value": "8.0e-4 m2",
       "called": "Surface area of an AMD Ryzen Threadripper PRO 7995WX",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *surface areas of a proton* would it take to cover the *surface area of an AMD Ryzen Threadripper PRO 7995WX*?",
     "quality": 0.99
@@ -821,7 +821,7 @@
       "value": "3.0e12 m2",
       "called": "Basin size of the Nile River",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "North America",
@@ -830,7 +830,7 @@
       "value": "2.0e13 m2",
       "called": "Surface area of North America",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *basin size of the Nile River* fit into the *surface area of North America*?",
     "quality": 0.8
@@ -843,7 +843,7 @@
       "value": "1.0e-2 m2",
       "called": "Surface area of the top of an iPhone 15",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pluto",
@@ -852,7 +852,7 @@
       "value": "2.0e13 m2",
       "called": "Surface area of Pluto",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *iPhone 15 top surfaces* would it take to cover the *surface area of Pluto*?",
     "quality": 0.8
@@ -865,7 +865,7 @@
       "value": "4.0e0 m2",
       "called": "Collecting area of the Hubble Space Telescope",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "lake Michigan",
@@ -874,7 +874,7 @@
       "value": "6.0e10 m2",
       "called": "Surface area of Lake Michigan",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Hubble Space Telescope collecting areas* would it take to cover the entire *surface area of Lake Michigan*?",
     "quality": 0.99
@@ -887,7 +887,7 @@
       "value": "2.0e-3 m3",
       "called": "Volume of the GeForce RTX 4090",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Titanic",
@@ -896,7 +896,7 @@
       "value": "1.0e5 m3",
       "called": "Volume of the Titanic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *GeForce RTX 4090 graphics cards* could fit inside the *volume of the Titanic*?",
     "quality": 0.99
@@ -909,7 +909,7 @@
       "value": "4.0e-6 m3",
       "called": "Volume of ink in an HP ink cartridge",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Little Boy bomb",
@@ -918,7 +918,7 @@
       "value": "1.0e0 m3",
       "called": "Volume of the Little Boy bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many HP ink cartridges would you need to fill the volume of the *Little Boy bomb*?",
     "quality": 0.8
@@ -931,7 +931,7 @@
       "value": "2.0e3 m3",
       "called": "Volume of an Olympic swimming pool",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Total amount of gold ever mined",
@@ -940,7 +940,7 @@
       "value": "1.0e4 m3",
       "called": "Volume of total gold ever mined",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Olympic swimming pools* could the *volume of total gold ever mined* fill?",
     "quality": 0.8
@@ -953,7 +953,7 @@
       "value": "6.0e-3 m3",
       "called": "Volume of a soccer ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pyramid of Giza",
@@ -962,7 +962,7 @@
       "value": "3.0e6 m3",
       "called": "Volume of the Pyramid of Giza",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *soccer balls* could fit inside the *Volume of the Pyramid of Giza*?",
     "quality": 0.99
@@ -975,7 +975,7 @@
       "value": "2.0e5 m3/ship",
       "called": "Volume of the Panama Canal per ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Milky Way",
@@ -984,7 +984,7 @@
       "value": "7.0e60 m3",
       "called": "Volume of the Milky Way",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *ships each filled with the volume of the Panama Canal* would it take to match the *volume of the Milky Way*?",
     "quality": 0.2
@@ -997,7 +997,7 @@
       "value": "2.0e-45 m3",
       "called": "Neutron volume",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Frozen fresh water in the world",
@@ -1006,7 +1006,7 @@
       "value": "2.0e16 m3",
       "called": "Volume of frozen fresh water in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of a neutron* fit into the *volume of frozen fresh water in the world*?",
     "quality": 0.99
@@ -1019,7 +1019,7 @@
       "value": "6.0e22 m3",
       "called": "Volume of Neptune",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -1028,7 +1028,7 @@
       "value": "1.0e30 m3",
       "called": "Volume of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Neptunes* could fit into the *volume of Betelgeuse*?",
     "quality": 0.99
@@ -1041,7 +1041,7 @@
       "value": "5.0e-1 m3/s",
       "called": "Rate of gasoline production",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest Redwood",
@@ -1050,7 +1050,7 @@
       "value": "5.0e2 m3",
       "called": "Volume of the largest Redwood",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many seconds would it take to produce a volume of gasoline equal to the *volume of the largest Redwood* given a constant *rate of gasoline production*?",
     "quality": 0.4
@@ -1063,7 +1063,7 @@
       "value": "2.0e-3 m3",
       "called": "Volume of the GeForce RTX 4090",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Honda CR-V",
@@ -1072,7 +1072,7 @@
       "value": "5.0e-2 m3",
       "called": "Volume of the gas tank of a Honda CR-V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *gas tanks of a Honda CR-V* would it take to hold the *volume of a GeForce RTX 4090*?",
     "quality": 0.2
@@ -1085,7 +1085,7 @@
       "value": "9.0e5 m3",
       "called": "Total container volume of the largest container ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Moon",
@@ -1094,7 +1094,7 @@
       "value": "2.0e19 m3",
       "called": "Volume of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *total container volume of the largest container ship* fit into the *volume of the Moon*?",
     "quality": 0.9
@@ -1107,7 +1107,7 @@
       "value": "5.0e-2 m3",
       "called": "Volume of the gas tank of a Corolla",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Little Boy bomb",
@@ -1116,7 +1116,7 @@
       "value": "1.0e0 m3",
       "called": "Volume of the Little Boy bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of the gas tank of a Corolla* fit into the *volume of the Little Boy bomb*?",
     "quality": 0.99
@@ -1129,7 +1129,7 @@
       "value": "7.0e-4 m3",
       "called": "Volume of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest Redwood",
@@ -1138,7 +1138,7 @@
       "value": "5.0e2 m3",
       "called": "Volume of the largest Redwood",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *MacBooks* could fit into the *volume of the largest Redwood* tree?",
     "quality": 0.99
@@ -1151,7 +1151,7 @@
       "value": "2.0e5 m3/ship",
       "called": "Volume of the Panama Canal per ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pyramid of Giza",
@@ -1160,7 +1160,7 @@
       "value": "3.0e6 m3",
       "called": "Volume of the Pyramid of Giza",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many ships, at capacity, would it take to fill the *volume of the Pyramid of Giza*?",
     "quality": 0.0
@@ -1173,7 +1173,7 @@
       "value": "2.0e-45 m3",
       "called": "Neutron volume",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Milky Way",
@@ -1182,7 +1182,7 @@
       "value": "7.0e60 m3",
       "called": "Volume of the Milky Way",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *neutrons* could fit into the *volume of the Milky Way galaxy*?",
     "quality": 0.99
@@ -1195,7 +1195,7 @@
       "value": "2.0e16 m3",
       "called": "Volume of frozen fresh water in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -1204,7 +1204,7 @@
       "value": "1.0e30 m3",
       "called": "Volume of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *world's volumes of frozen fresh water* could fit into the *volume of Betelgeuse*?",
     "quality": 0.8
@@ -1217,7 +1217,7 @@
       "value": "5.0e2 m3",
       "called": "Volume of the largest Redwood",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Neptune",
@@ -1226,7 +1226,7 @@
       "value": "6.0e22 m3",
       "called": "Volume of Neptune",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of the largest Redwood tree* fit into the *volume of Neptune*?",
     "quality": 0.99
@@ -1239,7 +1239,7 @@
       "value": "2.0e-3 m3",
       "called": "Volume of the GeForce RTX 4090",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "gasoline production",
@@ -1248,7 +1248,7 @@
       "value": "5.0e-1 m3/s",
       "called": "Rate of gasoline production",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "If we could convert the *volume of the GeForce RTX 4090* graphics card to gasoline at the *rate of gasoline production*, how long would it take?",
     "quality": 0.0
@@ -1261,7 +1261,7 @@
       "value": "5.0e-2 m3",
       "called": "Volume of the gas tank of a Honda CR-V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "largest container ship",
@@ -1270,7 +1270,7 @@
       "value": "9.0e5 m3",
       "called": "Total container volume of the largest container ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of the gas tank of a Honda CR-V* fit into the *total container volume of the largest container ship*?",
     "quality": 0.99
@@ -1283,7 +1283,7 @@
       "value": "5.0e-2 m3",
       "called": "Volume of the gas tank of a Corolla",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Moon",
@@ -1292,7 +1292,7 @@
       "value": "2.0e19 m3",
       "called": "Volume of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of the gas tank of a Corolla* fit into the *volume of the Moon*?",
     "quality": 0.99
@@ -1305,7 +1305,7 @@
       "value": "7.0e-4 m3",
       "called": "Volume of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Little Boy bomb",
@@ -1314,7 +1314,7 @@
       "value": "1.0e0 m3",
       "called": "Volume of the Little Boy bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the volume of a *MacBook* fit into the *volume of the Little Boy bomb*?",
     "quality": 0.99
@@ -1327,7 +1327,7 @@
       "value": "1.0e-4 m3",
       "called": "Volume of a tennis ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest Redwood",
@@ -1336,7 +1336,7 @@
       "value": "5.0e2 m3",
       "called": "Volume of the largest Redwood",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *tennis balls* could fit inside the *volume of the largest Redwood* tree?",
     "quality": 0.9800000000000001
@@ -1349,7 +1349,7 @@
       "value": "5.0e-2 m3",
       "called": "Volume of the gas tank of a Civic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Honda CR-V",
@@ -1358,7 +1358,7 @@
       "value": "2.0e0 m3",
       "called": "Volume of the trunk of a Honda CR-V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of the gas tank of a Civic* fit into the *volume of the trunk of a Honda CR-V*?",
     "quality": 0.99
@@ -1371,7 +1371,7 @@
       "value": "2.0e1 m2",
       "called": "Mirror area of the James Webb Space Telescope",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Concorde",
@@ -1380,7 +1380,7 @@
       "value": "4.0e2 m2",
       "called": "Wing area of the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *mirror area of the James Webb Space Telescope* fit into the *wing area of the Concorde*?",
     "quality": 0.99
@@ -1393,7 +1393,7 @@
       "value": "1.0e13 m2",
       "called": "Surface area of the United States",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Americas",
@@ -1402,7 +1402,7 @@
       "value": "4.0e13 m2",
       "called": "Surface area of the Americas",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *surface area of the United States* fit into the *surface area of the Americas*?",
     "quality": 0.99
@@ -1415,7 +1415,7 @@
       "value": "1.0e-4 m2",
       "called": "Surface area of the Apple M1",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Sun",
@@ -1424,7 +1424,7 @@
       "value": "6.0e18 m2",
       "called": "Surface area of the Sun",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *surface areas of the Apple M1 chip* would it take to cover the *surface area of the Sun*?",
     "quality": 0.99
@@ -1437,7 +1437,7 @@
       "value": "3.0e6 m2",
       "called": "Surface area of nuclear power",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Indian Ocean",
@@ -1446,7 +1446,7 @@
       "value": "7.0e13 m2",
       "called": "Surface area of the Indian Ocean",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *surface area of nuclear power* fit into the *surface area of the Indian Ocean*?",
     "quality": 0.0
@@ -1459,7 +1459,7 @@
       "value": "1.0e-20 m2",
       "called": "Surface area of a hydrogen atom",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -1468,7 +1468,7 @@
       "value": "9.0e23 m2",
       "called": "Surface area of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you lay out the *surface area of a hydrogen atom* to cover the *surface area of Betelgeuse*?",
     "quality": 0.6
@@ -1481,7 +1481,7 @@
       "value": "2.0e-5 m2",
       "called": "The die surface area of an Intel 8086",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "orange",
@@ -1490,7 +1490,7 @@
       "value": "2.0e-2 m2",
       "called": "Surface area of an orange",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Intel 8086 chips* could fit into the *surface area of an orange*?",
     "quality": 0.8
@@ -1503,7 +1503,7 @@
       "value": "2.0e13 m2",
       "called": "Surface area of Pluto",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "mars",
@@ -1512,7 +1512,7 @@
       "value": "1.0e14 m2",
       "called": "Surface area of Mars",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Pluto surface areas* would fit into the *surface area of Mars*?",
     "quality": 0.99
@@ -1525,7 +1525,7 @@
       "value": "4.0e4 units",
       "called": "Number of Cessna 172 units",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "gasoline production",
@@ -1534,7 +1534,7 @@
       "value": "9.0e7 barrels",
       "called": "Number of barrels of gasoline produced per year",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Cessna 172 units* are produced for every *barrel of gasoline* produced per year?",
     "quality": 0.2
@@ -1547,7 +1547,7 @@
       "value": "4.0e4 units",
       "called": "Number of Cessna 172 units",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Internet",
@@ -1556,7 +1556,7 @@
       "value": "1.0e9 websites",
       "called": "Number of websites on the internet",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *number of Cessna 172 units* fit into the *number of websites on the internet*?",
     "quality": 0.6
@@ -1569,7 +1569,7 @@
       "value": "4.0e-4 ships/s",
       "called": "Number of ships passing through the Panama Canal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Cessna 172",
@@ -1578,7 +1578,7 @@
       "value": "4.0e4 units",
       "called": "Number of Cessna 172 units",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Cessna 172 units* would need to pass through the Panama Canal per second to match the *number of ships passing through the Panama Canal*?",
     "quality": 0.0
@@ -1591,7 +1591,7 @@
       "value": "1.0e5 employees",
       "called": "Employee count at Google",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "gasoline production",
@@ -1600,7 +1600,7 @@
       "value": "9.0e7 barrels",
       "called": "Number of barrels of gasoline produced per year",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times does the *employee count at Google* surpass the *number of barrels of gasoline produced per year*?",
     "quality": 0.2
@@ -1613,7 +1613,7 @@
       "value": "9.0e7 barrels",
       "called": "Number of barrels of gasoline produced per year",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Internet",
@@ -1622,7 +1622,7 @@
       "value": "1.0e9 websites",
       "called": "Number of websites on the internet",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many barrels of gasoline produced per year are needed to power all the websites on the internet for a year?",
     "quality": 0.0
@@ -1635,7 +1635,7 @@
       "value": "1.0e5 employees",
       "called": "Employee count at Google",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Internet",
@@ -1644,7 +1644,7 @@
       "value": "1.0e9 websites",
       "called": "Number of websites on the internet",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *websites* are there for every *employee at Google*?",
     "quality": 1.0
@@ -1657,7 +1657,7 @@
       "value": "1.0e1 m",
       "called": "Wingspan of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Niagra Falls",
@@ -1666,7 +1666,7 @@
       "value": "8.0e2 m",
       "called": "Width of Niagara Falls",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *width of Niagara Falls* compared to the *wingspan of the F-35*?",
     "quality": 0.0
@@ -1679,7 +1679,7 @@
       "value": "7.0e1 m",
       "called": "Length of a Boeing 747",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Oort cloud",
@@ -1688,7 +1688,7 @@
       "value": "3.0e16 m",
       "called": "The given values are associated with the Oort cloud.",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *distance encompassed by the Oort cloud* compared to the *length of a Boeing 747*?",
     "quality": 0.0
@@ -1701,7 +1701,7 @@
       "value": "4.0e3 m",
       "called": "Length of the Daytona 500 circuit",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 2",
@@ -1710,7 +1710,7 @@
       "value": "5.0e6 m",
       "called": "Voyager 2's closest distance to Neptune",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *Daytona 500 circuit* wrap around *Voyager 2's closest distance to Neptune*?",
     "quality": 0.0
@@ -1723,7 +1723,7 @@
       "value": "5.8e-2 m",
       "called": "Length of a .50 cal rifle bullet",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Las Vegas Sphere",
@@ -1732,7 +1732,7 @@
       "value": "1.6e2 m",
       "called": "Diameter of the Las Vegas Sphere",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *.50 cal rifle bullets* placed end to end would it take to equal the *diameter of the Las Vegas Sphere*?",
     "quality": 0.0
@@ -1745,7 +1745,7 @@
       "value": "4.0e2 m",
       "called": "Length of the largest container ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Opportunity Rover",
@@ -1754,7 +1754,7 @@
       "value": "4.5e4 m",
       "called": "Distance driven by the Opportunity Rover",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *largest container ship's length* fit into the *distance driven by the Opportunity Rover*?",
     "quality": 0.0
@@ -1767,7 +1767,7 @@
       "value": "5.8e-2 m",
       "called": "Length of a .50 cal rifle bullet",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "evergiven",
@@ -1776,7 +1776,7 @@
       "value": "4.0e2 m",
       "called": "Length of the Ever Given",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *.50 cal rifle bullets* laid end to end would it take to match the *length of the Ever Given ship*?",
     "quality": 0.0
@@ -1789,7 +1789,7 @@
       "value": "4.7e-7 m",
       "called": "Wavelength of the color blue",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "soccer ball",
@@ -1798,10 +1798,10 @@
       "value": "6.9e-1 m",
       "called": "Circumference of a soccer ball",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *wavelength of the color blue* fit into *the circumference of a soccer ball*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -1811,7 +1811,7 @@
       "value": "4.0e2 m",
       "called": "Length of the Ever Given",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Daytona 500",
@@ -1820,10 +1820,10 @@
       "value": "4.0e3 m",
       "called": "Length of the Daytona 500 circuit",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *length of the Daytona 500 circuit* compared to the *length of the Ever Given ship*?",
-    "quality": 0.0
+    "quality": 0.8
   },
   {
     "smaller": {
@@ -1833,7 +1833,7 @@
       "value": "4.0e2 m",
       "called": "Length of the largest container ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mediterranean Sea",
@@ -1842,7 +1842,7 @@
       "value": "1.5e3 m",
       "called": "Average length of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *largest container ships* laid end to end would it take to bridge the *average length of the Mediterranean Sea*?",
     "quality": 0.0
@@ -1855,7 +1855,7 @@
       "value": "1.5e-1 m",
       "called": "Length of a mouse (including its tail)",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "lion",
@@ -1864,7 +1864,7 @@
       "value": "1.0e0 m",
       "called": "Height of a Lion",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *mice (including their tails)* stacked vertically would it take to reach the *height of a Lion*?",
     "quality": 0.0
@@ -1877,7 +1877,7 @@
       "value": "1.5e3 m",
       "called": "Average length of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth",
@@ -1886,7 +1886,7 @@
       "value": "6.3e6 m",
       "called": "Diameter of Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *Diameter of Earth* compared to the *Average length of the Mediterranean Sea*?",
     "quality": 0.0
@@ -1899,7 +1899,7 @@
       "value": "1.5e3 m",
       "called": "Average length of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 2",
@@ -1908,7 +1908,7 @@
       "value": "5.0e6 m",
       "called": "Voyager 2's closest distance to Neptune",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is *Voyager 2's closest distance to Neptune* compared to the *average length of the Mediterranean Sea*?",
     "quality": 0.0
@@ -1921,7 +1921,7 @@
       "value": "7.2e-2 m",
       "called": "Diameter of an orange",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mercury",
@@ -1930,7 +1930,7 @@
       "value": "4.9e6 m",
       "called": "Diameter of the planet Mercury",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *oranges* could fit across the *diameter of the planet Mercury*?",
     "quality": 0.0
@@ -1943,7 +1943,7 @@
       "value": "6.1e1 m",
       "called": "Width of the world's largest container ship",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Moon",
@@ -1952,7 +1952,7 @@
       "value": "3.5e3 m",
       "called": "Diameter of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times wider is *the world's largest container ship* compared to *the diameter of the Moon*?",
     "quality": 0.0
@@ -1965,7 +1965,7 @@
       "value": "1.1e1 m",
       "called": "Wingspan of the F-35 aircraft",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Moon",
@@ -1974,7 +1974,7 @@
       "value": "1.1e4 m",
       "called": "Circumference of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *circumference of the Moon* compared to the *wingspan of the F-35 aircraft*?",
     "quality": 0.0
@@ -1987,7 +1987,7 @@
       "value": "1.3e2 m",
       "called": "Focal length of the James Webb Space Telescope",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "largest container ship",
@@ -1996,7 +1996,7 @@
       "value": "4.0e2 m",
       "called": "Length of the world's largest container ship",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *length of the world's largest container ship* compared to the *focal length of the James Webb Space Telescope*?",
     "quality": 0.0
@@ -2009,7 +2009,7 @@
       "value": "2.8e6 m",
       "called": "Range of an F-35 plane",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 1",
@@ -2018,7 +2018,7 @@
       "value": "1.2e8 m",
       "called": "Closest distance to Saturn by Voyager 1",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times is the *range of an F-35 plane* greater than the *closest distance to Saturn by Voyager 1*?",
     "quality": 0.0
@@ -2031,7 +2031,7 @@
       "value": "5.9e1 m",
       "called": "Width of the Ever Given ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "5g",
@@ -2040,7 +2040,7 @@
       "value": "8.3e1 /m",
       "called": "Wavelength of 5g",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times can the *width of the Ever Given ship* fit into the *wavelength of 5G*?",
     "quality": 0.0
@@ -2053,7 +2053,7 @@
       "value": "5.4e5 m",
       "called": "Distance of the Hubble Space Telescope from Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Concorde",
@@ -2062,7 +2062,7 @@
       "value": "7.2e6 m",
       "called": "Range of the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times farther is the *distance of the Hubble Space Telescope from Earth* compared to the *range of the Concorde*?",
     "quality": 0.0
@@ -2075,7 +2075,7 @@
       "value": "5.1e1 m",
       "called": "Height of Niagara Falls",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mediterranean Sea",
@@ -2084,7 +2084,7 @@
       "value": "1.5e3 m",
       "called": "Average length of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times taller is the *height of Niagara Falls* compared to the *average length of the Mediterranean Sea*?",
     "quality": 0.0
@@ -2097,7 +2097,7 @@
       "value": "2.2e-1 m",
       "called": "Diameter of a soccer ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Titanic",
@@ -2106,7 +2106,7 @@
       "value": "9.2e1 m",
       "called": "Width of the Titanic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *diameter of a soccer ball* fit into the *width of the Titanic*?",
     "quality": 0.0
@@ -2119,7 +2119,7 @@
       "value": "5.3e-15 m",
       "called": "Circumference of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pluto's Pseudo-moon, Charon",
@@ -2128,7 +2128,7 @@
       "value": "6.1e5 m",
       "called": "Diameter of Pluto's Pseudo-moon, Charon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *diameter of Pluto's Pseudo-moon, Charon* fit into the *circumference of a proton*?",
     "quality": 0.0
@@ -2141,7 +2141,7 @@
       "value": "1.0e1 m",
       "called": "Diameter of the Saturn V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 1",
@@ -2150,7 +2150,7 @@
       "value": "6.5e6 m",
       "called": "Closest distance of Voyager 1 to Titan",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could *the diameter of the Saturn V* fit between *the closest distance of Voyager 1 to Titan*?",
     "quality": 0.0
@@ -2163,7 +2163,7 @@
       "value": "2.4e6 m",
       "called": "Diameter of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "mars",
@@ -2172,7 +2172,7 @@
       "value": "6.4e6 m",
       "called": "Diameter of Mars",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *diameter of Mars* fit into the *diameter of Earth's core*?",
     "quality": 0.0
@@ -2185,7 +2185,7 @@
       "value": "5.8e-2 m",
       "called": "Length of a .50 cal rifle bullet",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 1",
@@ -2194,7 +2194,7 @@
       "value": "6.5e6 m",
       "called": "Closest distance of Voyager 1 to Titan",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would *the length of a .50 cal rifle bullet* go into *the closest distance of Voyager 1 to Titan*?",
     "quality": 0.0
@@ -2207,7 +2207,7 @@
       "value": "1.0e1 m",
       "called": "Diameter of the Saturn V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "mars",
@@ -2216,7 +2216,7 @@
       "value": "6.4e6 m",
       "called": "Diameter of Mars",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you fit the *diameter of Mars* into the *diameter of the Saturn V rocket*?",
     "quality": 0.0
@@ -2229,7 +2229,7 @@
       "value": "2.4e6 m",
       "called": "Diameter of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 1",
@@ -2238,7 +2238,7 @@
       "value": "6.5e6 m",
       "called": "Closest distance of Voyager 1 to Titan",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *diameter of Earth's core* fit into the *closest distance of Voyager 1 to Titan*?",
     "quality": 0.0
@@ -2251,7 +2251,7 @@
       "value": "1.0e-1 m",
       "called": "Length of a mantis shrimp",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Atlantic Ocean",
@@ -2260,7 +2260,7 @@
       "value": "3.6e3 m",
       "called": "Average length of the Atlantic Ocean",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *mantis shrimps* would need to be lined up to match the *average length of the Atlantic Ocean*?",
     "quality": 0.0
@@ -2273,7 +2273,7 @@
       "value": "3.0e-1 m",
       "called": "Length of a hair dryer",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "panama canal",
@@ -2282,7 +2282,7 @@
       "value": "8.2e4 m",
       "called": "Length of the Panama Canal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *hair dryers* laid end to end would it take to match the *length of the Panama Canal*?",
     "quality": 0.0
@@ -2295,7 +2295,7 @@
       "value": "1.2e2 m",
       "called": "Height of the largest Redwood tree",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Oort cloud",
@@ -2304,7 +2304,7 @@
       "value": "3.0e16 m",
       "called": "Size of the Oort Cloud",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the height of *the largest Redwood tree* fit into *the size of the Oort Cloud*?",
     "quality": 0.0
@@ -2317,7 +2317,7 @@
       "value": "3.0e-7 m",
       "called": "Wavelength of UVB radiation",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "space shuttle",
@@ -2326,7 +2326,7 @@
       "value": "5.6e1 m",
       "called": "Length of a space shuttle",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *wavelengths of UVB radiation* could fit along the *length of a space shuttle*?",
     "quality": 0.0
@@ -2339,7 +2339,7 @@
       "value": "1.5e-9 m",
       "called": "Length of a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "largest container ship",
@@ -2348,7 +2348,7 @@
       "value": "4.0e2 m",
       "called": "Length of the world's largest container ship",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *glucose molecules* laid end-to-end would it take to match the *length of the world's largest container ship*?",
     "quality": 0.0
@@ -2361,7 +2361,7 @@
       "value": "5.4e5 m",
       "called": "Distance of the Hubble Space Telescope from Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Uranus",
@@ -2370,10 +2370,10 @@
       "value": "1.6e8 m",
       "called": "Circumference of Uranus",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times bigger is the *circumference of Uranus* compared to the *distance of the Hubble Space Telescope from Earth*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -2383,7 +2383,7 @@
       "value": "6.2e-11 m",
       "called": "Diameter of a hydrogen atom",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "space shuttle",
@@ -2392,7 +2392,7 @@
       "value": "2.4e1 m",
       "called": "Wingspan of the space shuttle",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *hydrogen atom diameters* would it take to span the *wingspan of the space shuttle*?",
     "quality": 0.0
@@ -2405,7 +2405,7 @@
       "value": "3.0e1 m",
       "called": "Length of a blue whale",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Milky Way",
@@ -2414,7 +2414,7 @@
       "value": "9.5e20 m",
       "called": "Diameter of the Milky Way",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *diameter of the Milky Way* compared to the *length of a blue whale*?",
     "quality": 0.0
@@ -2427,7 +2427,7 @@
       "value": "6.7e-2 m",
       "called": "Diameter of a tennis ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Titanic",
@@ -2436,7 +2436,7 @@
       "value": "2.7e2 m",
       "called": "Length of the Titanic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *diameters of a tennis ball* would it take to equal *the length of the Titanic*?",
     "quality": 0.0
@@ -2449,7 +2449,7 @@
       "value": "6.0e1 m",
       "called": "Wingspan of a Boeing 747",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mediterranean Sea",
@@ -2458,7 +2458,7 @@
       "value": "5.1e3 m",
       "called": "Maximum length of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times larger is the *wingspan of a Boeing 747* compared to the *maximum length of the Mediterranean Sea*?",
     "quality": 0.0
@@ -2471,7 +2471,7 @@
       "value": "6.4e5 m",
       "called": "Length of Lake Baikal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -2480,7 +2480,7 @@
       "value": "1.7e12 m",
       "called": "Circumference of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *Circumference of Betelgeuse* compared to the *Length of Lake Baikal*?",
     "quality": 0.0
@@ -2493,7 +2493,7 @@
       "value": "2.1e-1 m",
       "called": "Circumference of a tennis ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "f-35",
@@ -2502,7 +2502,7 @@
       "value": "1.6e1 m",
       "called": "Length of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you place the *circumference of a tennis ball* along the *length of an F-35 jet*?",
     "quality": 0.0
@@ -2515,7 +2515,7 @@
       "value": "7.1e-1 m",
       "called": "Diameter of the Fat Man bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest wind turbine in the world",
@@ -2524,7 +2524,7 @@
       "value": "1.3e2 m",
       "called": "Rotor length of the world's largest wind turbine",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *diameter of the Fat Man bomb* fit into the *rotor length of the world's largest wind turbine*?",
     "quality": 0.0
@@ -2537,7 +2537,7 @@
       "value": "5.0e4 m",
       "called": "Thickness of the stratosphere",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Uranus",
@@ -2546,10 +2546,10 @@
       "value": "5.1e7 m",
       "called": "Diameter of Uranus",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *thickness of the stratosphere* wrap around the *diameter of Uranus*?",
-    "quality": 0.0
+    "quality": 0.8
   },
   {
     "smaller": {
@@ -2559,7 +2559,7 @@
       "value": "3.3e2 m",
       "called": "Height of the Eiffel Tower",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mediterranean Sea",
@@ -2568,7 +2568,7 @@
       "value": "5.1e3 m",
       "called": "Maximum length of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times taller is the *Eiffel Tower* compared to the *maximum length of the Mediterranean Sea*?",
     "quality": 0.0
@@ -2581,7 +2581,7 @@
       "value": "9.4e-1 m",
       "called": "Circumference of a watermelon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Las Vegas Sphere",
@@ -2590,7 +2590,7 @@
       "value": "1.1e2 m",
       "called": "Height of the Las Vegas Sphere",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you wrap the *circumference of a watermelon* around the *height of the Las Vegas Sphere*?",
     "quality": 0.0
@@ -2603,7 +2603,7 @@
       "value": "7.1e-1 m",
       "called": "Diameter of the Fat Man bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Saturn V",
@@ -2612,7 +2612,7 @@
       "value": "1.1e2 m",
       "called": "Length of the Saturn V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *diameter of the Fat Man bomb* fit into the *length of the Saturn V rocket*?",
     "quality": 0.0
@@ -2625,7 +2625,7 @@
       "value": "1.7e-15 m",
       "called": "Diameter of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Concorde",
@@ -2634,7 +2634,7 @@
       "value": "7.2e6 m",
       "called": "Range of the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *diameters of a proton* would fit into the *range of the Concorde*?",
     "quality": 0.0
@@ -2647,7 +2647,7 @@
       "value": "1.5e-1 m",
       "called": "Length of a mouse (including its tail)",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Moon",
@@ -2656,7 +2656,7 @@
       "value": "3.5e3 m",
       "called": "Diameter of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *mice* laid end to end would it take to span the *diameter of the Moon*?",
     "quality": 0.0
@@ -2669,7 +2669,7 @@
       "value": "1.0e0 m",
       "called": "Height of a Lion",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Fat Man bomb",
@@ -2678,10 +2678,10 @@
       "value": "3.3e0 m",
       "called": "Length of the Fat Man bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times longer is the *length of the Fat Man bomb* compared to the *height of a Lion*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -2691,7 +2691,7 @@
       "value": "1.0e1 m",
       "called": "Range of Bluetooth signal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "voyager 2",
@@ -2700,7 +2700,7 @@
       "value": "5.7e8 m",
       "called": "Closest distance of Voyager 2 to Jupiter",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Bluetooth signal ranges* would it take to cover the closest distance *Voyager 2* came to *Jupiter*?",
     "quality": 0.0
@@ -2713,7 +2713,7 @@
       "value": "7.3e25 g",
       "called": "Mass of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Observable Universe",
@@ -2722,7 +2722,7 @@
       "value": "1.5e56 g",
       "called": "Total mass of the Observable Universe",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times does the *mass of the Moon* fit into the *total mass of the Observable Universe*?",
     "quality": 0.0
@@ -2735,7 +2735,7 @@
       "value": "2.1e11 g",
       "called": "Total mass of gold ever mined",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "evergiven",
@@ -2744,7 +2744,7 @@
       "value": "2.4e11 g",
       "called": "Mass of the Ever Given",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How does the *mass of gold ever mined* compare to the *mass of the Ever Given* container ship?",
     "quality": 0.0
@@ -2757,7 +2757,7 @@
       "value": "4.4e6 g",
       "called": "Mass of the Little Boy bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Pyramid of Giza",
@@ -2766,7 +2766,7 @@
       "value": "6.0e12 g",
       "called": "Mass of the Pyramid of Giza",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Little Boy bombs* would it take to equal the *mass of the Pyramid of Giza*?",
     "quality": 0.0
@@ -2779,7 +2779,7 @@
       "value": "1.6e6 g",
       "called": "Mass of a Honda CR-V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Taj Mahal",
@@ -2788,7 +2788,7 @@
       "value": "1.2e10 g",
       "called": "Weight of the Taj Mahal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Honda CR-Vs* would it take to match the weight of *the Taj Mahal*?",
     "quality": 0.0
@@ -2801,7 +2801,7 @@
       "value": "2.2e7 g",
       "called": "Gross weight of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Humans",
@@ -2810,7 +2810,7 @@
       "value": "3.9e14 g",
       "called": "Total mass of all humans",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is *the total mass of all humans* compared to *the gross weight of the F-35 aircraft*?",
     "quality": 0.0
@@ -2823,7 +2823,7 @@
       "value": "2.0e8 g",
       "called": "Mass of the Statue of Liberty",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "lake Michigan",
@@ -2832,7 +2832,7 @@
       "value": "4.9e18 g",
       "called": "Mass of Lake Michigan",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is *Lake Michigan* compared to the *Statue of Liberty*?",
     "quality": 0.0
@@ -2845,7 +2845,7 @@
       "value": "1.8e3 g",
       "called": "Mass of the Mars Helicopter Ingenuity",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Michael Phelps",
@@ -2854,7 +2854,7 @@
       "value": "8.8e4 g",
       "called": "Mass of Michael Phelps",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is *Michael Phelps* compared to the *Mars Helicopter Ingenuity*?",
     "quality": 0.0
@@ -2867,7 +2867,7 @@
       "value": "3.0e-23 g",
       "called": "Mass of one water molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Humans",
@@ -2876,7 +2876,7 @@
       "value": "3.9e14 g",
       "called": "Total mass of all humans",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *water molecules* are equivalent in mass to the *total mass of all humans*?",
     "quality": 0.0
@@ -2889,7 +2889,7 @@
       "value": "1.7e-24 g",
       "called": "Mass of a hydrogen atom",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Atlantic Ocean",
@@ -2898,7 +2898,7 @@
       "value": "3.1e29 m3",
       "called": "Volume of the Atlantic Ocean",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *hydrogen atoms* are estimated to fit into *the volume of the Atlantic Ocean* based on their individual masses?",
     "quality": 0.0
@@ -2911,7 +2911,7 @@
       "value": "3.0e-22 g",
       "called": "Mass of a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "neutron star",
@@ -2920,7 +2920,7 @@
       "value": "2.2e33 g",
       "called": "Minimum mass of a neutron star",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *glucose molecules* would need to combine to match the *minimum mass of a neutron star*?",
     "quality": 0.0
@@ -2933,7 +2933,7 @@
       "value": "1.6e24 g",
       "called": "Mass of Charon, Pluto's pseudo-moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -2942,7 +2942,7 @@
       "value": "3.3e34 g",
       "called": "Mass of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is *Betelgeuse* compared to *Charon, Pluto's pseudo-moon*, in terms of their mass?",
     "quality": 0.6
@@ -2955,7 +2955,7 @@
       "value": "1.8e5 g",
       "called": "Mass of the Opportunity Rover",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Milky Way",
@@ -2964,7 +2964,7 @@
       "value": "3.0e45 g",
       "called": "Mass of the Milky Way",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Opportunity Rovers* would it take to match the *mass of the Milky Way* galaxy?",
     "quality": 0.99
@@ -2977,7 +2977,7 @@
       "value": "3.0e-22 g",
       "called": "Mass of a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mercury (Element)",
@@ -2986,7 +2986,7 @@
       "value": "3.3e-22 g",
       "called": "Mass of one atom of Mercury (Element)",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How does the *mass of a glucose molecule* compare to the *mass of one atom of Mercury* in terms of order of magnitude?",
     "quality": 0.6
@@ -2999,7 +2999,7 @@
       "value": "3.2e6 g",
       "called": "Mass of an Asian elephant",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Concorde",
@@ -3008,7 +3008,7 @@
       "value": "9.6e7 g",
       "called": "Fuel capacity of the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Asian elephants* would it take to have the same total *fuel capacity as the Concorde*?",
     "quality": 0.4
@@ -3021,7 +3021,7 @@
       "value": "1.7e2 g",
       "called": "Mass of an iPhone 15",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -3030,7 +3030,7 @@
       "value": "5.8e8 g",
       "called": "Maximum take-off weight of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *iPhone 15s* could an *Airbus A380* carry?",
     "quality": 1.0
@@ -3043,7 +3043,7 @@
       "value": "1.0e6 g",
       "called": "Mass of a kiloton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -3052,7 +3052,7 @@
       "value": "5.8e8 g",
       "called": "Mass of an Airbus A380",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *kilotons* does an *Airbus A380* weigh?",
     "quality": 1.0
@@ -3065,7 +3065,7 @@
       "value": "3.3e-22 g",
       "called": "Mass of one atom of Mercury (Element)",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mars Helicopter Ingenuity",
@@ -3074,7 +3074,7 @@
       "value": "1.8e3 g",
       "called": "Mass of the Mars Helicopter Ingenuity",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "The *Mars Helicopter Ingenuity* weighs as much as how many *atoms of Mercury*?",
     "quality": 1.0
@@ -3087,7 +3087,7 @@
       "value": "1.7e-24 g",
       "called": "Mass of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "f-35",
@@ -3096,7 +3096,7 @@
       "value": "3.0e7 g",
       "called": "Maximum mass of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "An *F-35 jet* weighs as much as how many *protons*?",
     "quality": 1.0
@@ -3109,7 +3109,7 @@
       "value": "1.6e7 g",
       "called": "Maximum payload to the International Space Station (ISS) of the space shuttle",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "All rivers in the world",
@@ -3118,7 +3118,7 @@
       "value": "2.1e18 g",
       "called": "Total mass of all the rivers in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *space shuttle flights* would it take to get the mass of *all the rivers in the world* to the *ISS*?",
     "quality": 1.0
@@ -3131,7 +3131,7 @@
       "value": "1.6e6 g",
       "called": "Mass of a Honda CR-V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -3140,7 +3140,7 @@
       "value": "5.8e8 g",
       "called": "Maximum take-off weight of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Honda CR-Vs* could an *Airbus A380* carry, assuming the CR-Vs take up no volume?",
     "quality": 1.0
@@ -3153,7 +3153,7 @@
       "value": "3.0e-23 g",
       "called": "Mass of one water molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Empire State Building",
@@ -3162,7 +3162,7 @@
       "value": "3.3e11 g",
       "called": "Mass of the Empire State Building",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "The *Empire State Building* weighs as much as how many *water molecules*?",
     "quality": 1.0
@@ -3175,7 +3175,7 @@
       "value": "9.6e1 g",
       "called": "Mass of an orange",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Frozen fresh water in the world",
@@ -3184,7 +3184,7 @@
       "value": "2.4e22 g",
       "called": "Total mass of frozen fresh water in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "What is the mass of *all frozen fresh water in the world*, measured in *oranges*?",
     "quality": 1.0
@@ -3197,7 +3197,7 @@
       "value": "3.0e-23 g",
       "called": "Mass of one water molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -3206,7 +3206,7 @@
       "value": "5.8e8 g",
       "called": "Maximum take-off weight of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *water molecules* would it take to equal the *maximum take-off weight of an Airbus A380*?",
     "quality": 0.0
@@ -3219,7 +3219,7 @@
       "value": "9.6e1 g",
       "called": "Mass of an orange",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Empire State Building",
@@ -3228,7 +3228,7 @@
       "value": "3.3e11 g",
       "called": "Mass of the Empire State Building",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *oranges* would it take to match the *mass of the Empire State Building*?",
     "quality": 0.0
@@ -3241,7 +3241,7 @@
       "value": "4.2e2 g",
       "called": "Mass of a football",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Frozen fresh water in the world",
@@ -3250,7 +3250,7 @@
       "value": "2.4e22 g",
       "called": "Total mass of frozen fresh water in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *football balls* could be made from the *total mass of frozen fresh water in the world*?",
     "quality": 0.0
@@ -3263,7 +3263,7 @@
       "value": "1.5e8 g",
       "called": "Mass of a Blue Whale",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Liquid fresh water in the world",
@@ -3272,7 +3272,7 @@
       "value": "1.1e22 g",
       "called": "Mass of liquid fresh water on Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Blue Whales* would it take to weigh the same as the *mass of liquid fresh water on Earth*?",
     "quality": 0.0
@@ -3285,7 +3285,7 @@
       "value": "1.9e8 g",
       "called": "Mass of the Trinity Test",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth's core",
@@ -3294,7 +3294,7 @@
       "value": "9.9e25 g",
       "called": "Mass of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is the mass of *Earth's core* compared to the mass of the *Trinity Test*?",
     "quality": 0.0
@@ -3307,7 +3307,7 @@
       "value": "1.7e-24 g",
       "called": "Mass of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "macbook (which?)",
@@ -3316,7 +3316,7 @@
       "value": "1.4e3 g",
       "called": "Mass of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *protons* are there in the mass of a *MacBook*?",
     "quality": 0.0
@@ -3329,7 +3329,7 @@
       "value": "1.8e3 g",
       "called": "Mass of the Mars Helicopter Ingenuity",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "neutron star",
@@ -3338,7 +3338,7 @@
       "value": "4.3e33 g",
       "called": "Maximum mass of a neutron star",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Mars Helicopter Ingenuity* drones would need to be combined to match the *maximum mass of a neutron star*?",
     "quality": 0.0
@@ -3351,7 +3351,7 @@
       "value": "5.8e8 g",
       "called": "Maximum take-off weight of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth's core",
@@ -3360,7 +3360,7 @@
       "value": "9.9e25 g",
       "called": "Mass of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Airbus A380s* would it take to equal the *mass of Earth's core*?",
     "quality": 0.0
@@ -3373,7 +3373,7 @@
       "value": "4.2e2 g",
       "called": "Mass of a football",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Taj Mahal",
@@ -3382,10 +3382,10 @@
       "value": "1.2e10 g",
       "called": "Weight of the Taj Mahal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *football* balls would it take to match the *weight of the Taj Mahal*?",
-    "quality": 0.0
+    "quality": 0.6
   },
   {
     "smaller": {
@@ -3395,7 +3395,7 @@
       "value": "3.4e8 g",
       "called": "Maximum take-off weight of a Boeing 747",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Oort cloud",
@@ -3404,7 +3404,7 @@
       "value": "3.0e28 g",
       "called": "Mass of the Oort Cloud",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Boeing 747s* would need to take off to match the *mass of the Oort Cloud*?",
     "quality": 0.0
@@ -3417,7 +3417,7 @@
       "value": "4.2e2 g",
       "called": "Mass of a football",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Liquid fresh water in the world",
@@ -3426,7 +3426,7 @@
       "value": "1.1e22 g",
       "called": "Mass of liquid fresh water on Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *football masses* would it take to equate the *mass of liquid fresh water on Earth*?",
     "quality": 0.0
@@ -3439,7 +3439,7 @@
       "value": "1.5e8 g",
       "called": "Mass of a Blue Whale",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth's core",
@@ -3448,7 +3448,7 @@
       "value": "9.9e25 g",
       "called": "Mass of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Blue Whales* would it take to match the *mass of Earth's core*?",
     "quality": 0.0
@@ -3461,7 +3461,7 @@
       "value": "1.7e-24 g",
       "called": "Mass of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "trinity test",
@@ -3470,7 +3470,7 @@
       "value": "1.9e8 g",
       "called": "Mass of the Trinity Test",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *protons* would weigh the same as the *mass of the Trinity Test*?",
     "quality": 0.0
@@ -3483,7 +3483,7 @@
       "value": "1.4e3 g",
       "called": "Mass of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "neutron star",
@@ -3492,10 +3492,10 @@
       "value": "4.3e33 g",
       "called": "Maximum mass of a neutron star",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *MacBooks* would it take to match the *maximum mass of a neutron star*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -3505,7 +3505,7 @@
       "value": "1.8e3 g",
       "called": "Mass of the Mars Helicopter Ingenuity",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth's core",
@@ -3514,7 +3514,7 @@
       "value": "9.9e25 g",
       "called": "Mass of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is Earth's core compared to the *Mars Helicopter Ingenuity*?",
     "quality": 0.0
@@ -3527,7 +3527,7 @@
       "value": "5.8e8 g",
       "called": "Maximum take-off weight of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Taj Mahal",
@@ -3536,7 +3536,7 @@
       "value": "1.2e10 g",
       "called": "Weight of the Taj Mahal",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Taj Mahals* would it take to equal the *maximum take-off weight of an Airbus A380*?",
     "quality": 0.0
@@ -3549,7 +3549,7 @@
       "value": "4.2e2 g",
       "called": "Mass of a football",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Oort cloud",
@@ -3558,7 +3558,7 @@
       "value": "3.0e28 g",
       "called": "Mass of the Oort Cloud",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "If each *football* represented a standard unit of mass, how many *footballs* would it take to match the mass of the *Oort Cloud*?",
     "quality": 0.0
@@ -3571,7 +3571,7 @@
       "value": "3.4e8 g",
       "called": "Maximum take-off weight of a Boeing 747",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Liquid fresh water in the world",
@@ -3580,7 +3580,7 @@
       "value": "1.1e22 g",
       "called": "Mass of liquid fresh water on Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times does the *maximum take-off weight of a Boeing 747* compare to the *mass of liquid fresh water on Earth*?",
     "quality": 0.0
@@ -3593,7 +3593,7 @@
       "value": "4.3e2 g",
       "called": "Mass of a soccer ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "neutron star",
@@ -3602,7 +3602,7 @@
       "value": "4.3e33 g",
       "called": "Maximum mass of a neutron star",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *soccer balls* would it take to match the *maximum mass of a neutron star*?",
     "quality": 0.0
@@ -3615,7 +3615,7 @@
       "value": "1.8e3 g",
       "called": "Mass of the Mars Helicopter Ingenuity",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "James Webb Space Telescope",
@@ -3624,10 +3624,10 @@
       "value": "6.5e6 g",
       "called": "Mass of the James Webb Space Telescope",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times heavier is the *James Webb Space Telescope* compared to the *Mars Helicopter Ingenuity*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -3637,7 +3637,7 @@
       "value": "2.1e0 g",
       "called": "Mass of a .22 caliber rifle bullet",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Honda CR-V",
@@ -3646,7 +3646,7 @@
       "value": "1.6e6 g",
       "called": "Mass of a Honda CR-V",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *.22 caliber rifle bullets* would it take to match the *mass of a Honda CR-V*?",
     "quality": 0.0
@@ -3659,7 +3659,7 @@
       "value": "5.8e5 g",
       "called": "Maximum weight lifted in the largest deadlift",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Liquid fresh water in the world",
@@ -3668,7 +3668,7 @@
       "value": "1.1e22 g",
       "called": "Mass of liquid fresh water on Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *repetitions* of the largest deadlift weight would it take to lift the *mass of liquid fresh water on Earth*?",
     "quality": 0.0
@@ -3681,7 +3681,7 @@
       "value": "9.6e1 g",
       "called": "Mass of an orange",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Saturn",
@@ -3690,7 +3690,7 @@
       "value": "1.3e16 s",
       "called": "Incorrectly shared measurement information for Saturn with value from another category.",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How much heavier is an *orange* in grams compared to the *altered measurement data* mistakenly given for Saturn in another unit?",
     "quality": 0.0
@@ -3703,7 +3703,7 @@
       "value": "1.7e-24 g",
       "called": "Mass of a hydrogen atom",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "ping pong ball",
@@ -3712,10 +3712,10 @@
       "value": "2.7e0 g",
       "called": "Mass of a ping pong ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *ping pong balls* are equivalent in mass to a *hydrogen atom*?",
-    "quality": 0.0
+    "quality": 0.01
   },
   {
     "smaller": {
@@ -3725,7 +3725,7 @@
       "value": "1.1e7 g",
       "called": "Mass of the Hubble Space Telescope",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Atmosphere",
@@ -3734,10 +3734,10 @@
       "value": "5.2e21 g",
       "called": "Mass of the Earth's atmosphere",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Hubble Space Telescopes* would it take to match the *mass of the Earth's atmosphere*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -3747,7 +3747,7 @@
       "value": "5.0e1 g",
       "called": "Mass of the battery in an iPhone 15",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Moon",
@@ -3756,7 +3756,7 @@
       "value": "7.3e25 g",
       "called": "Mass of the Moon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *iPhone 15 battery masses* would it take to match the mass of the *Moon*?",
     "quality": 0.0
@@ -3769,7 +3769,7 @@
       "value": "1.8e3 g",
       "called": "Mass of the Mars Helicopter Ingenuity",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Atmosphere",
@@ -3778,7 +3778,7 @@
       "value": "5.2e21 g",
       "called": "Mass of the Earth's atmosphere",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Mars Helicopter Ingenuity* would it take to match the *mass of the Earth's atmosphere*?",
     "quality": 0.0
@@ -3791,7 +3791,7 @@
       "value": "5.4e1 tons",
       "called": "Mass of each blade of the largest wind turbine in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -3800,7 +3800,7 @@
       "value": "5.8e8 g",
       "called": "Mass of an Airbus A380",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *blades of the largest wind turbine* would it take to equal the *mass of an Airbus A380*?",
     "quality": 0.0
@@ -3813,7 +3813,7 @@
       "value": "1.4e3 g",
       "called": "Mass of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "enola gay",
@@ -3822,7 +3822,7 @@
       "value": "3.4e7 g",
       "called": "Mass of the Enola Gay",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *MacBooks* weigh the same as the *Enola Gay* aircraft?",
     "quality": 0.0
@@ -3835,7 +3835,7 @@
       "value": "3.0e7 g",
       "called": "Maximum mass of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Liquid fresh water in the world",
@@ -3844,7 +3844,7 @@
       "value": "1.1e22 g",
       "called": "Mass of liquid fresh water on Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *F-35s* would it take to weigh the same as *all the liquid fresh water on Earth*?",
     "quality": 0.0
@@ -3857,7 +3857,7 @@
       "value": "5.0e1 g",
       "called": "Mass of the battery in an iPhone 15",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Water in the world",
@@ -3866,10 +3866,10 @@
       "value": "1.4e24 g",
       "called": "Mass of all water in the world",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *iPhone 15 battery masses* does the *mass of all water in the world* equal?",
-    "quality": 0.0
+    "quality": 0.9199999999999999
   },
   {
     "smaller": {
@@ -3879,7 +3879,7 @@
       "value": "3.0e-23 g",
       "called": "Mass of one water molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "house cat",
@@ -3888,7 +3888,7 @@
       "value": "4.0e3 g",
       "called": "Mass of a house cat",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *water molecules* would it take to match the *mass of a house cat*?",
     "quality": 0.0
@@ -3901,7 +3901,7 @@
       "value": "3.8e5 g/s",
       "called": "Rate of gasoline production",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "neutron star",
@@ -3910,10 +3910,10 @@
       "value": "2.2e33 g",
       "called": "Minimum mass of a neutron star",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *seconds* would it take to produce the minimum mass of a *neutron star* at the given *rate of gasoline production*?",
-    "quality": 0.0
+    "quality": 0.2
   },
   {
     "smaller": {
@@ -3923,7 +3923,7 @@
       "value": "9.4e4 g",
       "called": "Mass of Usain Bolt",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "f-35",
@@ -3932,7 +3932,7 @@
       "value": "8.0e6 g",
       "called": "Fuel capacity of the F-35",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Usain Bolts* could the *F-35* fuel capacity weigh?",
     "quality": 0.0
@@ -3945,7 +3945,7 @@
       "value": "9.6e1 g",
       "called": "Mass of an orange",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -3954,10 +3954,10 @@
       "value": "5.8e8 g",
       "called": "Maximum take-off weight of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *oranges* would fit into the *maximum take-off weight of an Airbus A380*?",
-    "quality": 0.0
+    "quality": 0.9
   },
   {
     "smaller": {
@@ -3967,7 +3967,7 @@
       "value": "1.6e18 g",
       "called": "Mass of Lake Ontario",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "All rivers in the world",
@@ -3976,7 +3976,7 @@
       "value": "2.1e18 g",
       "called": "Total mass of all the rivers in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Lake Ontarios* weigh the same as *all the rivers in the world*?",
     "quality": 0.0
@@ -3989,7 +3989,7 @@
       "value": "8.5e4 m2",
       "called": "Surface area of the Pyramid of Giza",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest solar plant",
@@ -3998,10 +3998,10 @@
       "value": "5.6e7 m2",
       "called": "Surface area of the largest solar plant",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *surface area of the Pyramid of Giza* fit into the *surface area of the largest solar plant*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -4011,7 +4011,7 @@
       "value": "5.7e-3 m2",
       "called": "Surface area of a golf ball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth",
@@ -4020,7 +4020,7 @@
       "value": "3.6e14 m2",
       "called": "Surface area of water on Earth",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *golf ball surface areas* would it take to cover the *surface area of water on Earth*?",
     "quality": 0.0
@@ -4033,7 +4033,7 @@
       "value": "2.8e-4 m2",
       "called": "Surface area of the face of a penny",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Americas",
@@ -4042,7 +4042,7 @@
       "value": "4.2e13 m2",
       "called": "Total surface area of the Americas",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *penny face surface areas* would it take to match the *total surface area of the Americas*?",
     "quality": 0.0
@@ -4055,7 +4055,7 @@
       "value": "3.4e6 m2",
       "called": "Surface area of a nuclear power plant",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Mediterranean Sea",
@@ -4064,7 +4064,7 @@
       "value": "2.5e12 m2",
       "called": "Surface area of the Mediterranean Sea",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *surface area of a nuclear power plant* fit into the *surface area of the Mediterranean Sea*?",
     "quality": 0.0
@@ -4077,7 +4077,7 @@
       "value": "8.7e1 m3",
       "called": "Volume of a blue whale",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Sun",
@@ -4086,7 +4086,7 @@
       "value": "1.4e27 m3",
       "called": "Volume of the Sun",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of a blue whale* fit into the *volume of the Sun*?",
     "quality": 0.0
@@ -4099,7 +4099,7 @@
       "value": "7.3e-4 m3",
       "called": "Volume of a MacBook",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Olympic swimming pool",
@@ -4108,7 +4108,7 @@
       "value": "2.5e3 m3",
       "called": "Volume of an Olympic-sized swimming pool",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of a MacBook* fit into an *Olympic-sized swimming pool*?",
     "quality": 0.0
@@ -4121,7 +4121,7 @@
       "value": "7.1e18 m3",
       "called": "Volume of Pluto",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Milky Way",
@@ -4130,7 +4130,7 @@
       "value": "6.7e60 m3",
       "called": "Volume of the Milky Way",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *volume of Pluto* fit into the *volume of the Milky Way galaxy*?",
     "quality": 0.0
@@ -4143,7 +4143,7 @@
       "value": "1.8e0 m3",
       "called": "Volume of the Fat Man bomb",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Betelgeuse",
@@ -4152,7 +4152,7 @@
       "value": "1.1e30 m3",
       "called": "Volume of Betelgeuse",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Fat Man bombs* could fit into the *volume of Betelgeuse*?",
     "quality": 0.0
@@ -4165,7 +4165,7 @@
       "value": "1.5e-9 m",
       "called": "Length of a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Neptune",
@@ -4174,7 +4174,7 @@
       "value": "7.7e7 m",
       "called": "Circumference of Neptune",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *glucose molecules* laid end to end would it take to circumnavigate *Neptune*?",
     "quality": 0.0
@@ -4187,7 +4187,7 @@
       "value": "1.9e-2 m",
       "called": "Diameter of a Penny",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest Redwood",
@@ -4196,7 +4196,7 @@
       "value": "1.2e2 m",
       "called": "Height of the largest Redwood tree",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *penny diameters* would it take to match the *height of the largest Redwood tree*?",
     "quality": 0.0
@@ -4209,7 +4209,7 @@
       "value": "7.5e-1 m",
       "called": "Circumference of a basketball",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Titanic",
@@ -4218,7 +4218,7 @@
       "value": "2.7e2 m",
       "called": "Length of the Titanic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you wrap *the circumference of a basketball* around the *length of the Titanic*?",
     "quality": 0.0
@@ -4231,7 +4231,7 @@
       "value": "1.9e-2 m",
       "called": "Diameter of a Penny",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Nile River",
@@ -4240,7 +4240,7 @@
       "value": "6.7e6 m",
       "called": "Length of the Nile River",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *penny diameters* would it take to span *the length of the Nile River*?",
     "quality": 0.0
@@ -4253,7 +4253,7 @@
       "value": "6.0e0",
       "called": "Number of Little Boy bombs",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "glucose molecule",
@@ -4262,7 +4262,7 @@
       "value": "1.2e1",
       "called": "Number of hydrogen atoms in a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *hydrogen atoms in a glucose molecule* does each *Little Boy bomb* have?",
     "quality": 0.0
@@ -4275,7 +4275,7 @@
       "value": "9.8e1",
       "called": "Number of flavors of Ben & Jerry's Ice Cream",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Humans",
@@ -4284,7 +4284,7 @@
       "value": "8.1e9",
       "called": "World population of humans",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *flavors of Ben & Jerry's Ice Cream* are there for every *person on Earth*?",
     "quality": 0.0
@@ -4297,7 +4297,7 @@
       "value": "9.0e4",
       "called": "Number of wind turbines in the United States for wind power",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "year",
@@ -4306,7 +4306,7 @@
       "value": "1.4e9",
       "called": "Duration of 1.4 billion years",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *years* would each *wind turbine in the United States for wind power* have to operate in order to cover a *duration of 1.4 billion years*?",
     "quality": 0.0
@@ -4319,7 +4319,7 @@
       "value": "1.5e5",
       "called": "Number of times the ISS has orbited Earth",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "grains of sand",
@@ -4328,7 +4328,7 @@
       "value": "7.5e18",
       "called": "Number of grains of sand",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *grains of sand* are there for each *orbit of the International Space Station around Earth*?",
     "quality": 0.0
@@ -4341,7 +4341,7 @@
       "value": "1.7e-15 m",
       "called": "Diameter of a proton",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Water",
@@ -4350,7 +4350,7 @@
       "value": "3.0e-10",
       "called": "Size of a water molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *proton diameters* would fit across the *size of a water molecule*?",
     "quality": 0.0
@@ -4363,7 +4363,7 @@
       "value": "1.1e1 m",
       "called": "Wingspan of a Cessna 172",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Las Vegas Sphere",
@@ -4372,7 +4372,7 @@
       "value": "1.6e2 m",
       "called": "Diameter of the Las Vegas Sphere",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you fit the *wingspan of a Cessna 172* into the *diameter of the Las Vegas Sphere*?",
     "quality": 0.0
@@ -4385,7 +4385,7 @@
       "value": "5.1e1 m",
       "called": "Height of Niagara Falls",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Largest wind turbine in the world",
@@ -4394,7 +4394,7 @@
       "value": "1.5e2 m",
       "called": "Tower height of the largest wind turbine in the world",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times taller is *the tower height of the largest wind turbine in the world* compared to *the height of Niagara Falls*?",
     "quality": 0.0
@@ -4407,7 +4407,7 @@
       "value": "5.0e0 /m",
       "called": "Wavelength of 4G LTE",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "oak tree",
@@ -4416,7 +4416,7 @@
       "value": "3.0e1 m",
       "called": "Height of an oak tree",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would the *wavelength of 4G LTE* fit into the *height of an oak tree*?",
     "quality": 0.0
@@ -4429,7 +4429,7 @@
       "value": "1.9e-10 m",
       "called": "Circumference of a hydrogen atom",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "orange",
@@ -4438,7 +4438,7 @@
       "value": "7.2e-2 m",
       "called": "Diameter of an orange",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *hydrogen atom circumferences* would fit across the *diameter of an orange* if they were lined up side by side?",
     "quality": 0.0
@@ -4451,7 +4451,7 @@
       "value": "8.3e0 m",
       "called": "Length of a Cessna 172",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Saturn",
@@ -4460,7 +4460,7 @@
       "value": "2.8e5",
       "called": "Diameter of Saturn's rings",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could you lay out the *length of a Cessna 172* to match the *diameter of Saturn's rings*?",
     "quality": 0.0
@@ -4473,7 +4473,7 @@
       "value": "5.3e-7 m",
       "called": "Wavelength of green light",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Earth's core",
@@ -4482,7 +4482,7 @@
       "value": "2.4e6 m",
       "called": "Diameter of Earth's core",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *wavelengths of green light* would it take to span the *diameter of Earth's core*?",
     "quality": 0.0
@@ -4495,7 +4495,7 @@
       "value": "1.9e-2 m",
       "called": "Diameter of a Penny",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "lake Ontario",
@@ -4504,7 +4504,7 @@
       "value": "1.0e6 m",
       "called": "Shoreline length of Lake Ontario",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *pennies* laid side by side would it take to cover the entire *shoreline length of Lake Ontario*?",
     "quality": 0.0
@@ -4517,7 +4517,7 @@
       "value": "9.2e1 m",
       "called": "Width of the Titanic",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Uranus",
@@ -4526,10 +4526,10 @@
       "value": "5.1e7 m",
       "called": "Diameter of Uranus",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times could the *width of the Titanic* fit into the *diameter of Uranus*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -4539,7 +4539,7 @@
       "value": "8.3e1 /m",
       "called": "Wavelength of 5g",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "lake Michigan",
@@ -4548,7 +4548,7 @@
       "value": "2.3e7 m",
       "called": "Shoreline length of Lake Michigan",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times would you need to stack the *wavelength of 5g* to match the *shoreline length of Lake Michigan*?",
     "quality": 0.0
@@ -4561,7 +4561,7 @@
       "value": "8.3e0 m",
       "called": "Length of a Cessna 172",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Nile River",
@@ -4570,7 +4570,7 @@
       "value": "6.7e6 m",
       "called": "Length of the Nile River",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Cessna 172s* placed end to end would it take to match the *length of the Nile River*?",
     "quality": 0.0
@@ -4583,7 +4583,7 @@
       "value": "3.0e1 m",
       "called": "Height of an oak tree",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Boeing 747",
@@ -4592,7 +4592,7 @@
       "value": "6.0e1 m",
       "called": "Wingspan of a Boeing 747",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times does the *wingspan of a Boeing 747* exceed the *height of an oak tree*?",
     "quality": 0.0
@@ -4605,7 +4605,7 @@
       "value": "2.3e2 m",
       "called": "Length of the base of the Pyramid of Giza",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -4614,10 +4614,10 @@
       "value": "1.4e7 m",
       "called": "Range of an Airbus A380",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *bases of the Pyramid of Giza* would fit within the *range of an Airbus A380*?",
-    "quality": 0.0
+    "quality": 0.99
   },
   {
     "smaller": {
@@ -4627,7 +4627,7 @@
       "value": "1.5e-1 m",
       "called": "Length of an iPhone 15",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The Louvre Pyramid",
@@ -4636,7 +4636,7 @@
       "value": "2.2e1 m",
       "called": "Height of The Louvre Pyramid",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *iPhone 15s* laid end to end would it take to reach the *height of The Louvre Pyramid*?",
     "quality": 0.0
@@ -4649,7 +4649,7 @@
       "value": "4.0e0",
       "called": "Number of engines on the Enola Gay",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Humans",
@@ -4658,7 +4658,7 @@
       "value": "8.1e9",
       "called": "World population of humans",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *humans* are there for every *engine on the Enola Gay*?",
     "quality": 1.0
@@ -4671,7 +4671,7 @@
       "value": "5.0e4",
       "called": "Population of Asian Elephants",
       "quality": 1.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The louvre",
@@ -4680,7 +4680,7 @@
       "value": "8.9e6",
       "called": "Number of visitors to the Louvre per year",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *yearly visitors to the Louvre* are there for *every Asian Elephant on Earth*?",
     "quality": 1.0
@@ -4693,7 +4693,7 @@
       "value": "2.3e4",
       "called": "TEU capacity of the largest container ship",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Amazon",
@@ -4702,7 +4702,7 @@
       "value": "5.0e8",
       "called": "Number of Alexa-enabled devices sold by Amazon",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times greater is *the number of Alexa-enabled devices* compared to *the TEU capacity of the world's largest container ship*?",
     "quality": 1.0
@@ -4715,7 +4715,7 @@
       "value": "4.0e5",
       "called": "Number of African Bull Elephants",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "grains of sand",
@@ -4724,7 +4724,7 @@
       "value": "7.5e18",
       "called": "Number of grains of sand",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *grains of sand* are there for every *African Bull Elephant* in the world?",
     "quality": 1.0
@@ -4737,7 +4737,7 @@
       "value": "2.5e4",
       "called": "Number of lions",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Humans",
@@ -4746,7 +4746,7 @@
       "value": "1.2e11",
       "called": "Total number of humans throughout history",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *humans have ever lived* for each *lion alive today*?",
     "quality": 1.0
@@ -4759,7 +4759,7 @@
       "value": "6.0e0",
       "called": "Number of Little Boy bombs",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Airbus A380",
@@ -4768,7 +4768,7 @@
       "value": "2.5e2",
       "called": "Number of Airbus A380s built",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many times more *Airbus A380s* were built than *Little Boy bombs*?",
     "quality": 1.0
@@ -4781,7 +4781,7 @@
       "value": "1.2e1",
       "called": "Number of hydrogen atoms in a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Ben & Jerry's Ice Cream",
@@ -4790,7 +4790,7 @@
       "value": "9.8e1",
       "called": "Number of flavors of Ben & Jerry's Ice Cream",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *flavors of Ben & Jerry's* are there for every *hydrogen atom in a glucose molecule*?",
     "quality": 1.0
@@ -4803,7 +4803,7 @@
       "value": "9.0e4",
       "called": "Number of wind turbines in the United States for wind power",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Humans",
@@ -4812,7 +4812,7 @@
       "value": "8.1e9",
       "called": "World population of humans",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *humans* are there for every *wind turbine in the United States*?",
     "quality": 1.0
@@ -4825,7 +4825,7 @@
       "value": "4.0e2",
       "called": "Number of seats in a Boeing 747",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "China",
@@ -4834,7 +4834,7 @@
       "value": "1.4e9",
       "called": "Population of China",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Chinese citizens* are there for every *seat in a Boeing 747*?",
     "quality": 0.0
@@ -4847,7 +4847,7 @@
       "value": "6.0e0",
       "called": "Number of oxygen atoms in a glucose molecule",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "The louvre",
@@ -4856,7 +4856,7 @@
       "value": "8.9e6",
       "called": "Number of visitors to the Louvre per year",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *visitors to the Louvre* are there for every *oxygen atom in a glucose molecule*?",
     "quality": 0.0
@@ -4869,7 +4869,7 @@
       "value": "3.4e8",
       "called": "Population of the United States",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "apple m3",
@@ -4878,7 +4878,7 @@
       "value": "2.5e9",
       "called": "Number of Apple M3 units",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *Apple M3 units* are there for every *person in the United States*?",
     "quality": 0.0
@@ -4891,7 +4891,7 @@
       "value": "1.2e2",
       "called": "Number of passengers on the Concorde",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "larger": {
       "thing": "Penny",
@@ -4900,9 +4900,845 @@
       "value": "1.5e11",
       "called": "Number of pennies in circulation",
       "quality": 0.0,
-      "generated": "2024-03-25T22:29:35+00:00"
+      "generated": "2024-03-26T12:33:24+00:00"
     },
     "question": "How many *pennies in circulation* are there for each *passenger who flew on the Concorde*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "largest container ship",
+      "measurement": "count",
+      "name": "teu capacity",
+      "value": "2.3e4",
+      "called": "TEU capacity of the largest container ship",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Tesla model s",
+      "measurement": "count",
+      "name": "sold",
+      "value": "3.5e5",
+      "called": "Number of Tesla Model S cars sold",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Tesla Model S cars* were sold for every *TEU capacity of the largest container ship*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "glucose molecule",
+      "measurement": "count",
+      "name": "oxygen atoms",
+      "value": "6.0e0",
+      "called": "Number of oxygen atoms in a glucose molecule",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Boeing 747",
+      "measurement": "count",
+      "name": "seats",
+      "value": "4.0e2",
+      "called": "Number of seats in a Boeing 747",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *seats in a Boeing 747* are there for each *oxygen atom in a glucose molecule*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "glucose molecule",
+      "measurement": "count",
+      "name": "atoms",
+      "value": "2.4e1",
+      "called": "Number of atoms in a glucose molecule",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Amazon",
+      "measurement": "count",
+      "name": "alexa-enabled devices sold",
+      "value": "5.0e8",
+      "called": "Number of Alexa-enabled devices sold by Amazon",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Alexa-enabled devices* have been sold for each *atom in a glucose molecule*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Titanic",
+      "measurement": "count",
+      "name": "crew",
+      "value": "8.7e2",
+      "called": "Number of crew members on the Titanic",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Penny",
+      "measurement": "count",
+      "name": "in circulation",
+      "value": "1.5e11",
+      "called": "Number of pennies in circulation",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *pennies in circulation* are there for every *crew member on the Titanic*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "blue whale",
+      "measurement": "count",
+      "name": "",
+      "value": "2.0e4",
+      "called": "Estimate of blue whales in existence",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Humans",
+      "measurement": "count",
+      "name": "population",
+      "value": "8.1e9",
+      "called": "World population of humans",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *humans* are there for every *blue whale in existence*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "glucose molecule",
+      "measurement": "count",
+      "name": "oxygen atoms",
+      "value": "6.0e0",
+      "called": "Number of oxygen atoms in a glucose molecule",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "gps satellites",
+      "measurement": "count",
+      "name": "",
+      "value": "3.1e1",
+      "called": "Number of GPS satellites",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *GPS satellites* are there for every *oxygen atom in a glucose molecule*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "hydrogen atom",
+      "measurement": "length",
+      "name": "circumference",
+      "value": "1.9e-10 m",
+      "called": "Circumference of a hydrogen atom",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Titanic",
+      "measurement": "length",
+      "name": "width",
+      "value": "9.2e1 m",
+      "called": "Width of the Titanic",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could you wrap the *circumference of a hydrogen atom* around the *width of the Titanic*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "largest container ship",
+      "measurement": "length",
+      "name": "width",
+      "value": "6.1e1 m",
+      "called": "Width of the world's largest container ship",
+      "quality": 1.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Neptune",
+      "measurement": "length",
+      "name": "diameter",
+      "value": "2.5e7 m",
+      "called": "Diameter of Neptune",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times can you fit the *width of the world's largest container ship* into the *diameter of Neptune*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "enola gay",
+      "measurement": "length",
+      "name": "",
+      "value": "3.0e1 m",
+      "called": "Length of the Enola Gay",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Uranus",
+      "measurement": "length",
+      "name": "diameter",
+      "value": "5.1e7 m",
+      "called": "Diameter of Uranus",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times would the *length of the Enola Gay* fit into the *diameter of Uranus*?",
+    "quality": 0.99
+  },
+  {
+    "smaller": {
+      "thing": "Golf ball",
+      "measurement": "length",
+      "name": "circumference",
+      "value": "1.3e-1 m",
+      "called": "Circumference of a golf ball",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Titanic",
+      "measurement": "length",
+      "name": "",
+      "value": "2.7e2 m",
+      "called": "Length of the Titanic",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times does the *circumference of a golf ball* fit into the *length of the Titanic*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Titanic",
+      "measurement": "length",
+      "name": "height",
+      "value": "5.3e1 m",
+      "called": "Height of the Titanic",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Saturn",
+      "measurement": "length",
+      "name": "circumference",
+      "value": "3.8e8 m",
+      "called": "Circumference of Saturn",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times would the *height of the Titanic* fit into the *circumference of Saturn*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Pyramid of Giza",
+      "measurement": "length",
+      "name": "height",
+      "value": "1.5e2 m",
+      "called": "Height of the Pyramid of Giza",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Venus",
+      "measurement": "length",
+      "name": "circumference",
+      "value": "3.8e7 m",
+      "called": "Circumference of Venus",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *height of the Pyramid of Giza* fit into the *circumference of Venus*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "hydrogen atom",
+      "measurement": "length",
+      "name": "circumference",
+      "value": "1.9e-10 m",
+      "called": "Circumference of a hydrogen atom",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "22 cal rifle",
+      "measurement": "length",
+      "name": "diameter",
+      "value": "5.6e-3 m",
+      "called": "Diameter of a .22 caliber rifle",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *hydrogen atom circumferences* would it take to match the *diameter of a .22 caliber rifle*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Concorde",
+      "measurement": "length",
+      "name": "",
+      "value": "6.2e1 m",
+      "called": "Length of the Concorde",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Las Vegas Sphere",
+      "measurement": "length",
+      "name": "diameter",
+      "value": "1.6e2 m",
+      "called": "Diameter of the Las Vegas Sphere",
+      "quality": 1.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Concordes* laid end to end would it take to match the *diameter of the Las Vegas Sphere*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Titanic",
+      "measurement": "count",
+      "name": "lifeboats",
+      "value": "2.0e1",
+      "called": "Number of lifeboats on the Titanic",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "apple m3",
+      "measurement": "count",
+      "name": "",
+      "value": "2.5e9",
+      "called": "Number of Apple M3 units",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Apple M3 units* exist for every *lifeboat on the Titanic*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "glucose molecule",
+      "measurement": "count",
+      "name": "oxygen atoms",
+      "value": "6.0e0",
+      "called": "Number of oxygen atoms in a glucose molecule",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "evergiven",
+      "measurement": "count",
+      "name": "teu capacity",
+      "value": "2.0e4",
+      "called": "TEU capacity of the Ever Given",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could *the TEU capacity of the Ever Given* hold *the number of oxygen atoms in a glucose molecule*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "International Space Station",
+      "measurement": "count",
+      "name": "orbits",
+      "value": "1.5e5",
+      "called": "Number of times the ISS has orbited Earth",
+      "quality": 1.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Amazon",
+      "measurement": "count",
+      "name": "alexa-enabled devices sold",
+      "value": "5.0e8",
+      "called": "Number of Alexa-enabled devices sold by Amazon",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Alexa-enabled devices* have been sold for each *orbit of the International Space Station around Earth*?",
+    "quality": 0.99
+  },
+  {
+    "smaller": {
+      "thing": "The louvre",
+      "measurement": "count",
+      "name": "collection size",
+      "value": "6.2e5",
+      "called": "Size of the collection at the Louvre",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "apple m1",
+      "measurement": "count",
+      "name": "",
+      "value": "1.6e9",
+      "called": "Number of Apple M1 chips",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Apple M1 chips* are there for every *item in the Louvre's collection*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "The Internet",
+      "measurement": "count",
+      "name": "",
+      "value": "1.1e9 websites",
+      "called": "Number of websites on the Internet",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "AMD Ryzen Threadripper PRO 7995WX",
+      "measurement": "count",
+      "name": "transistors",
+      "value": "7.9e10",
+      "called": "Number of transistors in the AMD Ryzen Threadripper PRO 7995WX",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *transistors in the AMD Ryzen Threadripper PRO 7995WX* are there for every *website on the Internet*?",
+    "quality": 0.99
+  },
+  {
+    "smaller": {
+      "thing": "Einstein",
+      "measurement": "count",
+      "name": "awards",
+      "value": "9.0e0",
+      "called": "Number of awards won by Albert Einstein",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Boeing 747",
+      "measurement": "count",
+      "name": "built",
+      "value": "1.6e3",
+      "called": "Number of Boeing 747s built",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Boeing 747s* were built for each *award won by Albert Einstein*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Boeing 747",
+      "measurement": "count",
+      "name": "seats",
+      "value": "4.0e2",
+      "called": "Number of seats in a Boeing 747",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "year",
+      "measurement": "count",
+      "name": "",
+      "value": "1.4e9",
+      "called": "Duration of 1.4 billion years",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *years* is each *seat in a Boeing 747* theoretically allocated for in a duration of *1.4 billion years*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "International Space Station",
+      "measurement": "count",
+      "name": "orbits",
+      "value": "1.5e5",
+      "called": "Number of times the ISS has orbited Earth",
+      "quality": 1.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "apple m1",
+      "measurement": "count",
+      "name": "transistors",
+      "value": "1.6e9",
+      "called": "Number of transistors in the Apple M1",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *transistors in the Apple M1* are there for every *orbit of the ISS around Earth*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "orange",
+      "measurement": "volume",
+      "name": "",
+      "value": "2.0e-4 m3",
+      "called": "Volume of an orange",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Largest hydroelectric plant (Three Gorges Dam)",
+      "measurement": "volume",
+      "name": "reservoir volume",
+      "value": "3.9e10 m3",
+      "called": "Volume of the reservoir of the Three Gorges Dam",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *oranges* could fit into the *volume of the reservoir of the Three Gorges Dam*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Oort cloud",
+      "measurement": "volume",
+      "name": "",
+      "value": "1.3e18 m3",
+      "called": "Volume of the Oort Cloud",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Sun",
+      "measurement": "volume",
+      "name": "",
+      "value": "1.4e27 m3",
+      "called": "Volume of the Sun",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *volume of the Oort Cloud* fit into the *volume of the Sun*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Moon",
+      "measurement": "volume",
+      "name": "",
+      "value": "2.2e19 m3",
+      "called": "Volume of the Moon",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Milky Way",
+      "measurement": "volume",
+      "name": "",
+      "value": "6.7e60 m3",
+      "called": "Volume of the Milky Way",
+      "quality": 1.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Moons* could fit into the *volume of the Milky Way galaxy*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "crude oil production ",
+      "measurement": "volume",
+      "name": "",
+      "value": "1.7e2 m3/s",
+      "called": "Crude oil production volume",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Taj Mahal",
+      "measurement": "volume",
+      "name": "",
+      "value": "4.5e5 m3",
+      "called": "Volume of the Taj Mahal",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Taj Mahals* could be filled by the *crude oil production volume in one second*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "proton",
+      "measurement": "surface area",
+      "name": "",
+      "value": "8.9e-30 m2",
+      "called": "Surface area of a proton",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "The louvre",
+      "measurement": "surface area",
+      "name": "exhibit area",
+      "value": "7.3e4 m2",
+      "called": "Exhibit area of the Louvre",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *protons* could fit into the *exhibit area of the Louvre*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Largest solar plant",
+      "measurement": "surface area",
+      "name": "",
+      "value": "5.6e7 m2",
+      "called": "Surface area of the largest solar plant",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Australia",
+      "measurement": "surface area",
+      "name": "",
+      "value": "7.7e12 m2",
+      "called": "Surface area of Australia",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *surface area of the largest solar plant* fit into the *surface area of Australia*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Penny",
+      "measurement": "surface area",
+      "name": "face area",
+      "value": "2.8e-4 m2",
+      "called": "Surface area of the face of a penny",
+      "quality": 1.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Las Vegas Sphere",
+      "measurement": "surface area",
+      "name": "",
+      "value": "5.4e4 m2",
+      "called": "Surface area of the Las Vegas Sphere",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *surface area of the face of a penny* fit into the *surface area of the Las Vegas Sphere*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Airbus A380",
+      "measurement": "surface area",
+      "name": "wing area",
+      "value": "8.4e2 m2",
+      "called": "Wing area of an Airbus A380",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Pluto",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.8e13 m2",
+      "called": "Surface area of Pluto",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *wing area of an Airbus A380* fit into the *surface area of Pluto*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Cessna 172",
+      "measurement": "surface area",
+      "name": "wing area",
+      "value": "1.6e1 m2",
+      "called": "Wing area of a Cessna 172",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Average American household",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.9e2 m2",
+      "called": "Surface area of an average American household",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *wing area of a Cessna 172* fit into the *surface area of an average American household*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "soccer ball",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.5e-1 m2",
+      "called": "Surface area of a soccer ball",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Betelgeuse",
+      "measurement": "surface area",
+      "name": "",
+      "value": "8.9e23 m2",
+      "called": "Surface area of Betelgeuse",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *surface area of a soccer ball* fit into the *surface area of Betelgeuse*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Hubble Space Telescope",
+      "measurement": "surface area",
+      "name": "collecting area",
+      "value": "4.0e0 m2",
+      "called": "Collecting area of the Hubble Space Telescope",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Antarctica",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.4e13 m2",
+      "called": "Surface area of Antarctica",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Hubble Space Telescope collecting areas* would fit into the *surface area of Antarctica*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Earth's core",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.8e13 m2",
+      "called": "Surface area of Earth's core",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Pluto",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.8e13 m2",
+      "called": "Surface area of Pluto",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "Is the *surface area of Earth's core* greater or less than the *surface area of Pluto*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Cessna 172",
+      "measurement": "surface area",
+      "name": "wing area",
+      "value": "1.6e1 m2",
+      "called": "Wing area of a Cessna 172",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Land",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.5e14 m2",
+      "called": "Total surface area of land on Earth",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *wing area of a Cessna 172* fit into the *total surface area of land on Earth*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Australia",
+      "measurement": "surface area",
+      "name": "",
+      "value": "7.7e12 m2",
+      "called": "Surface area of Australia",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Antarctica",
+      "measurement": "surface area",
+      "name": "",
+      "value": "1.4e13 m2",
+      "called": "Surface area of Antarctica",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *surface area of Australia* fit into the *surface area of Antarctica*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Cessna 172",
+      "measurement": "surface area",
+      "name": "wing area",
+      "value": "1.6e1 m2",
+      "called": "Wing area of a Cessna 172",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Japan",
+      "measurement": "surface area",
+      "name": "",
+      "value": "3.8e11 m2",
+      "called": "Total surface area of Japan",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many times could the *wing area of a Cessna 172* fit into the *total surface area of Japan*?",
+    "quality": 0.0
+  },
+  {
+    "smaller": {
+      "thing": "Empire State Building",
+      "measurement": "surface area",
+      "name": "floor area",
+      "value": "2.1e5 m2",
+      "called": "Floor area of the Empire State Building",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "larger": {
+      "thing": "Nile River",
+      "measurement": "surface area",
+      "name": "basin size",
+      "value": "3.3e12 m2",
+      "called": "Basin size of the Nile River",
+      "quality": 0.0,
+      "generated": "2024-03-26T12:33:24+00:00"
+    },
+    "question": "How many *Empire State Building floor areas* would fit in the *basin size of the Nile River*?",
     "quality": 0.0
   }
 ]

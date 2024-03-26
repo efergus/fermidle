@@ -112,7 +112,7 @@ class Question:
 
     def to_prompt(self):
         answer = scientific(self.larger.value/self.smaller.value, 2)
-        return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}\nAnswer: {answer}"
+        return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}\n{self.smaller.called} < {self.larger.called}"
 
     def to_dict(self):
         return {

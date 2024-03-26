@@ -7,7 +7,7 @@ import math
 import os
 from dataclasses import dataclass, field
 import random
-from typing import Dict, List, Set, Tuple
+from typing import Dict, Iterable, List, Set, Tuple
 import click
 
 import openai
@@ -239,6 +239,13 @@ def load_questions(filename: str = "./questions.json"):
         return {example.key(): example for example in examples}
     except FileNotFoundError:
         return {}
+    
+def save_questions(questions: Iterable[Question] | Dict[Tuple[str, str, str], Question], filename: str = "./questions.json"):
+    if type(questions) == dict:
+        questions = questions.values()
+    data = [data.to_dict() for data in questions]
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=2)
 
 def create_question(example, context, example_questions, manual_quality=False):
     messages = [
@@ -257,7 +264,7 @@ def create_question(example, context, example_questions, manual_quality=False):
         example.quality = min(quality/5, 0.99)
     return example
 
-def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1, sample: int = 10, manual_quality = False, measurement='length'):
+def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1, sample: int = 10, measurement='length'):
     # with open("./length/questions.txt") as f:
     #     example_questions = f.read().strip()
     questions = load_questions()
@@ -286,15 +293,13 @@ def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAI
                 tries += 1
                 continue
             print()
-            question = create_question(example, context, chosen_examples, manual_quality=manual_quality)
+            question = create_question(example, context, chosen_examples)
             questions[question.key()] = question
             i += 1
             tries = 0
     except KeyboardInterrupt:
         pass
-    data = [data.to_dict() for data in questions.values()]
-    with open("./questions.json", "w") as f:
-        json.dump(data, f, indent=2)
+    save_questions(questions)
 
 def create_questions_manual(values_by_measurement: ValuesByMeasurement, seed: str = "", measurement='length'):
     if seed:
@@ -303,12 +308,12 @@ def create_questions_manual(values_by_measurement: ValuesByMeasurement, seed: st
     print(len(values))
     values = [value for value in values if value.value > 0]
     print(len(values))
-    examples = load_questions()
+    questions = load_questions()
     try:
         while True:
             smaller, larger = random_ordered_pair(values)
             example = Question(smaller, larger, quality=1.0)
-            if example.key() in examples:
+            if example.key() in questions:
                 continue
             print(example.to_prompt())
             question = input("Question: ")
@@ -316,33 +321,11 @@ def create_questions_manual(values_by_measurement: ValuesByMeasurement, seed: st
                 continue
             example.question = question
             print()
-            examples[example.key()] = example
+            questions[example.key()] = example
     except KeyboardInterrupt:
         pass
     print("Done")
-    data = [example.to_dict() for example in examples.values()]
-    with open("./questions.json", "w") as f:
-        json.dump(data, f, indent=2)
-    # data_string = json.dumps(data, indent=2)
-    # print(data_string)
-    # with open()
-
-# @dataclass
-# class QuestionItem:
-#     measurement: str
-#     units: str
-
-# @dataclass
-# class QuestionFormat:
-#     items: List[QuestionItem]
-#     questions: List[str]
-
-#     @staticmethod
-#     def new(items: List[Tuple[str, str]], *questions: str):
-#         return QuestionFormat([QuestionItem(*item) for item in items], questions)
-
-# length_question_format = QuestionFormat.new([('length', 'm'), ('length', 'm')],
-#                                             "How many *X* would it take ")
+    save_questions(questions)
 
 @click.command()
 @click.option('--names', '-n', is_flag=True)
@@ -351,8 +334,8 @@ def create_questions_manual(values_by_measurement: ValuesByMeasurement, seed: st
 @click.option('--count', '-c', default=1)
 @click.option('--sample', '-p', default=10)
 @click.option('--manual', '-m', is_flag=True)
-@click.option('--quality', '-q', is_flag=True)
-def main(names, seed, measurement: str, count: int, sample: int, manual: bool, quality: bool):
+@click.option('--rate', '-r', is_flag=True)
+def main(names, seed, measurement: str, count: int, sample: int, manual: bool, rate: bool):
     context = OpenAICompletionContext()
     measurement = measurement.lower()
     if names:
@@ -368,11 +351,31 @@ def main(names, seed, measurement: str, count: int, sample: int, manual: bool, q
         # if value.measurement == measurement:
         #     print(value.called, value.value, value_dict)
     values = dict(values_by_measurement)
-    if manual:
+    if rate:
+        questions = load_questions()
+        all_questions = list(questions.values())
+        if seed:
+            random.seed(seed)
+        random.shuffle(all_questions)
+        try:
+            for question in all_questions:
+                if question.quality:
+                    continue
+                print(question.to_prompt())
+                print(question.question)
+                try:
+                    quality = float(input("Quality (0-5): "))
+                    question.quality = min(quality/5, 0.99) if quality != 0 else 0.01
+                except ValueError:
+                    pass
+        except KeyboardInterrupt:
+            pass
+        save_questions(questions)
+    elif manual:
         if not names:
             create_questions_manual(values, seed, measurement=measurement)
     else:
-        create_questions(dict(values_by_measurement), context, seed, measurement=measurement, count=count, sample=sample, manual_quality=quality)
+        create_questions(dict(values_by_measurement), context, seed, measurement=measurement, count=count, sample=sample)
 
 
 if __name__ == "__main__":
