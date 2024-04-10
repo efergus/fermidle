@@ -10,6 +10,7 @@ import numpy as np
 from typing import Dict, List, Callable
 import json
 import click
+from data import Value, Thing
 
 import units
 import alter
@@ -22,63 +23,6 @@ note_regex = r"\(.*\)"
 value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})\s*({note_regex})?$")
 
 
-def default(fn):
-    return field(default_factory=fn)
-
-
-@dataclass
-class Value:
-    value: units.Quantity
-    name: str = ""  # ie Max height, population, etc
-    kind: str = ""  # ie legth, volume, density
-    thing: str = ""  # ie Eiffel tower, Pacific ocean
-    note: str = ""
-    original: str = ""
-
-    def serialize(self):
-        return {
-            'value': self.value.serialize(),
-            'name': self.name,
-            'kind': self.kind,
-            'thing': self.thing,
-            'note': self.note
-        }
-
-@dataclass
-class Thing:
-    name: str  # ie Eiffel tower, Pacific ocean
-    tags: List[str]  # ie sphere, building
-    values: Dict[str, List[Value]] = default(dict)
-    broken: Dict[str, List[str]] = default(dict)
-
-    def canonical(self, kind, single=False):
-        """Return the canonical value of a given kind, if it exists"""
-        values = self.values.get(kind, [])
-        if single and len(values) == 1:
-            return values[0]
-        for value in values:
-            if not value.name:
-                return value
-        return None
-
-    def alter(self, fns: List[Callable[[Thing], List[Value] | None]]):
-        for fn in fns:
-            extra = fn(self) or []
-            for value in extra:
-                value.thing = self.name
-                if value.kind in self.values:
-                    self.values[value.kind].append(value)
-                else:
-                    self.values[value.kind] = [value]
-
-    def serialize(self):
-        return {
-            'name': self.name,
-            'tags': self.tags,
-            'values': {
-                key: [value.serialize() for value in values] for key, values in self.values.items()
-            },
-        }
 
 
 def drop_empty(df: DataFrame, log=False):
@@ -125,6 +69,42 @@ def get_things(df: DataFrame) -> List[Thing]:
         thing.broken = dict(broken)
         things.append(thing)
     return things
+
+def clean(file):
+    df = pandas.read_csv(file, sep="\t")
+    df = df.rename(columns=lambda x: x.strip().lower())
+    df = df[
+        [
+            "thing",
+            "volume",
+            "surface area",
+            "length",
+            "mass",
+            "time/age",
+            "count",
+            "speed",
+            "temperature",
+            "density",
+            "frequency",
+            "energy",
+            "power",
+            "loudness",
+            "charge",
+            "other",
+            "tags",
+        ]
+    ].copy()
+    df = drop_empty(df)
+
+    df = df.set_index("thing", drop=True)
+    things = get_things(df)
+    for thing in things:
+        thing.alter(alter.alter_map.get('', []))
+        for tag in thing.tags:
+            thing.alter(alter.alter_map.get(tag, []))
+
+    values: List[Value] = [value for thing in things for values in thing.values.values() for value in values]
+    return values
 
 @click.command()
 @click.argument("input", type=click.File("r"), default="Fermidle - Values.tsv")

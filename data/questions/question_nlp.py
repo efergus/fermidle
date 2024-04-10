@@ -85,9 +85,8 @@ class OpenAICompletionContext(CompletionContext):
 
 # Utilities
 
-def load_values(filename: str):
-    with open(filename, "r") as file:
-        data = json.load(file)
+def load_values(file):
+    data = json.load(file)
     example_values = defaultdict(list)
     for thing in data:
         for values in thing["values"].values():
@@ -100,12 +99,8 @@ def name_key(value: dict | ExampleValue):
         return value.key()
     return (value["thing"], value["measurement"], value.get('name', ''))
 
-def load_names(filename: str):
-    try:
-        with open(filename, "r") as f:
-            named = json.load(f)
-    except FileNotFoundError:
-        named = []
+def load_names(file):
+    named = json.load(file)
     named_dict = {name_key(value): ExampleValue.from_dict(value) for value in named}
     return named_dict
     
@@ -124,11 +119,11 @@ def complete(example: Question, context: CompletionContext) -> None:
     return response
 
 
-def create_called(context: OpenAICompletionContext, sample_size: int = 10, manual_quality: bool = False):
-    values = load_values("./values.json")
+def create_names(context: OpenAICompletionContext, values_file: str = "./values.json", labels_file: str = "./names.json", sample_size: int = 10, manual_quality: bool = False):
+    values = load_values(values_file)
     randomized_values = [value for vals in values.values() for value in vals]
     random.shuffle(randomized_values)
-    named = load_names("./names.json")
+    named = load_names(labels_file)
     existing_values = set(value.key() for value in randomized_values)
     for key in list(named.keys()):
         if key not in existing_values:
@@ -165,7 +160,7 @@ def create_called(context: OpenAICompletionContext, sample_size: int = 10, manua
         named[value.key()] = value
         # print(value)
     if len(named):
-        with open('./names.json', 'w') as f:
+        with open(labels_file, 'w') as f:
             json.dump([value.to_dict() for value in named.values()], f, indent=2)
     return named
 
@@ -243,7 +238,7 @@ def load_questions(filename: str = "./questions.json"):
 def save_questions(questions: Iterable[Question] | Dict[Tuple[str, str, str], Question], filename: str = "./questions.json"):
     if type(questions) == dict:
         questions = questions.values()
-    data = [data.to_dict() for data in questions]
+    data = sorted((data.to_dict() for data in questions), key=lambda x: (1-x.quality, x.question))
     with open(filename, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -342,7 +337,7 @@ def main(names, seed, measurement: str, count: int, sample: int, manual: bool, r
         if manual:
             create_called_manual()
         else:
-            create_called(context, sample, manual_quality=quality)
+            create_names(context, sample, manual_quality=quality)
         return
     existing_values = load_names("./names.json")
     values_by_measurement = defaultdict(list)
