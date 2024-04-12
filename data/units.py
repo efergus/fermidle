@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 from typing import Dict, List
 from dataclasses import InitVar, dataclass, field, asdict
@@ -22,9 +21,8 @@ prefixes = {
     "p": -12,
 }
 
-prefixes_by_magnitude = {
-    val: key for key, val in prefixes.items()
-}
+prefixes_by_magnitude = {val: key for key, val in prefixes.items()}
+
 
 @dataclass
 class Unit:
@@ -34,14 +32,14 @@ class Unit:
 
     @staticmethod
     def _parse(string: str, known):
-        m = re.match(r'^(\D+)(-?\d*)$', string)
+        m = re.match(r"^(\D+)(-?\d*)$", string)
         if not m:
             raise ValueError(f"Could not parse unit '{string}'")
         name, power = m.group(1, 2)
         power = int(power) if power else 1
         magnitude = 0
         while name not in known:
-            if name[-1] == 's' and name[:-1] in known:
+            if name[-1] == "s" and name[:-1] in known:
                 name = name[:-1]
                 continue
             if name[0] in prefixes and name[1:] in known:
@@ -50,32 +48,35 @@ class Unit:
                 continue
             break
         return Unit(name, power, magnitude)
-    
+
     def __str__(self):
         return f"{prefixes_by_magnitude.get(self.magnitude, '')}{self.name}{self.power}"
-    
+
     def __pow__(self, power):
         return Unit(self.name, self.power * power, self.magnitude)
-    
+
     def powerless(self):
         return Unit(self.name, 1, self.magnitude)
-    
+
     def magnitudeless(self):
         return Unit(self.name, self.power)
 
-def scientific(num: float, precision: int=None):
+
+def scientific(num: float, precision: int = None):
     magnitude = floor(log10(num))
     if precision != None:
-        num *= 10**(precision - magnitude - 1)
-        num = round(num)/10**(precision - 1)
+        num *= 10 ** (precision - magnitude - 1)
+        num = round(num) / 10 ** (precision - 1)
         return f"{num}e{magnitude}"
     return f"{num / 10**magnitude}e{magnitude}"
+
 
 def combine_units(preferred_units):
     ratios = [ratio for ratio, _, _ in preferred_units]
     magnitudes = [magnitude for _, magnitude, _ in preferred_units]
     units = [unit for _, _, units in preferred_units for unit in units]
     return (prod(ratios), sum(magnitudes), units)
+
 
 @dataclass
 class Units:
@@ -85,40 +86,48 @@ class Units:
     def parse(string: str, known: ConversionMap) -> List[Unit]:
         string = string.replace("^", "")
         positive, _, negative = string.partition("/")
+
         def helper(string: str):
-            unit_strings = re.findall(r'([^\d/*]+\d*)', string)
+            unit_strings = re.findall(r"([^\d/*]+\d*)", string)
             return [Unit._parse(s, known) for s in unit_strings]
+
         positive = helper(positive)
         negative = helper(negative)
         for unit in negative:
             unit.power *= -1
         return Units(positive + negative)
-    
+
     def mul(self, units: Units):
         units = Units(self.units + units.units)
         units.simplify()
         return units
-    
+
     def simplify(self):
         units = defaultdict(int)
         for unit in self.units:
             units[(unit.name, unit.magnitude)] += unit.power
-        self.units = [Unit(name, power, magnitude) for (name, magnitude), power in units.items() if power != 0]
+        self.units = [
+            Unit(name, power, magnitude)
+            for (name, magnitude), power in units.items()
+            if power != 0
+        ]
 
     def sort(self):
         self.units.sort(key=lambda x: (x.power, x.name, x.magnitude))
 
     def single(self):
-        return (len(self.units) == 1 and self.units[0].power == 1 and self.units[0].name) or None
+        return (
+            len(self.units) == 1 and self.units[0].power == 1 and self.units[0].name
+        ) or None
 
     def __len__(self):
         return len(self.units)
 
     def __mul__(self, other):
         return self.mul(other)
-    
+
     def __pow__(self, power):
-        return Units([unit ** power for unit in self.units])
+        return Units([unit**power for unit in self.units])
 
     def __str__(self):
         units = sorted(self.units, key=lambda x: -x.power)
@@ -140,10 +149,11 @@ class Units:
         if negative:
             string += "/" + "".join(negative)
         return string
-    
+
     def __iter__(self):
         return self.units.__iter__()
-    
+
+
 @dataclass
 class Conversion:
     from_name: str
@@ -155,7 +165,10 @@ class Conversion:
         single = quantity.units.single()
         if not single or single != self.from_name:
             return None
-        return Quantity((quantity.value + self.offset) * self.ratio, Units([Unit(self.to_name)]))
+        return Quantity(
+            (quantity.value + self.offset) * self.ratio, Units([Unit(self.to_name)])
+        )
+
 
 @dataclass
 class Quantity:
@@ -171,7 +184,11 @@ class Quantity:
             print(f"Could not parse quantity '{string}'")
         number, units = match.group(1, 2)
         units = Units.parse(units, preferred)
-        return Quantity(float(number or '1'), units)
+        return Quantity(float(number or "1"), units)
+
+    @staticmethod
+    def deserialize(string: str):
+        return Quantity.from_str(string)
 
     def standardized(self, map: ConversionMap, limit=100):
         res = deepcopy(self)
@@ -186,9 +203,12 @@ class Quantity:
             for unit in res.units:
                 name = unit.name
                 if unit.magnitude:
-                    simplifier *= Quantity(10**(unit.magnitude*unit.power), Units([unit.magnitudeless(), unit**-1]))
+                    simplifier *= Quantity(
+                        10 ** (unit.magnitude * unit.power),
+                        Units([unit.magnitudeless(), unit**-1]),
+                    )
                 elif name in map and map[name] and type(map[name]) == Quantity:
-                    simplifier *= map[name]**unit.power
+                    simplifier *= map[name] ** unit.power
             if len(simplifier.units):
                 res *= simplifier
             else:
@@ -196,7 +216,7 @@ class Quantity:
         if i == 100:
             raise ValueError("AAAH")
         return res
-    
+
     def close(self, other, eps=1e-5):
         if self.units != other.units:
             return False
@@ -206,14 +226,17 @@ class Quantity:
         b = min(self.value, other.value)
         if not b:
             return False
-        return a/b < eps
-    
+        return a / b < eps
+
     def mul(self, other: Quantity):
         value = self.value
         units = self.units
         value = value * other.value
         units = units * other.units
         return Quantity(value, units)
+
+    def to_string(self, precision=None):
+        return f"{scientific(self.value, precision)} {str(self.units)}".strip()
 
     def __mul__(self, other):
         t = type(other)
@@ -223,25 +246,23 @@ class Quantity:
             return self.mul(Quantity(1, Units([other])))
         if t == float:
             return Quantity(self.value * other, self.units)
-    
+
     def __rmul__(self, other):
         return self.__mul__(other)
-        
+
     def __truediv__(self, other):
-        return self * other ** -1
-        
+        return self * other**-1
+
     def __pow__(self, power):
-        return Quantity(self.value ** power, self.units ** power)
-        
+        return Quantity(self.value**power, self.units**power)
+
     def __str__(self):
-        return f"{scientific(self.value, 3)} {self.units}"
-    
+        return self.to_string()
+
     def serialize(self):
-        return {
-            'value': self.value,
-            'units': str(self.units)
-        }
-        
+        return self.to_string()
+
+
 def canonicalize_quantity_map(unit, quantity) -> Quantity:
     if not quantity:
         return
@@ -250,7 +271,7 @@ def canonicalize_quantity_map(unit, quantity) -> Quantity:
     if type(quantity) == Conversion:
         return quantity
     return quantity * Unit(unit) ** -1
-    
+
 
 ConversionMap = Dict[str, Quantity | Conversion | None]
 
@@ -276,23 +297,25 @@ preferred = {
     "picometer": "pm",
     # "kph": Quantity.from_str("km/h"),
     "ly": "9.461e15 m",
-
     "h": "hour",
     "hour": "3600 s",
     "day": "86400 s",
     "yr": "year",
-    "year": Quantity(365*24*60*60, Units([Unit("s")])),
-
+    "year": Quantity(365 * 24 * 60 * 60, Units([Unit("s")])),
     "db": "dB",
     "C": Conversion("C", "K", 273.15),
-    "F": Conversion("F", "C", -32, 5/9),
+    "F": Conversion("F", "C", -32, 5 / 9),
     "W": "J/s",
     "Wh": "W*h",
     "L": "1e-3 m3",
-    "Hz": "/s"
+    "Hz": "/s",
 }
 
-preferred = {unit: canonicalize_quantity_map(unit, quantity) for unit, quantity in preferred.items()}
+preferred = {
+    unit: canonicalize_quantity_map(unit, quantity)
+    for unit, quantity in preferred.items()
+}
+
 
 def test(value1: str, value2: str = "1"):
     quant1 = Quantity.from_str(value1)
@@ -301,6 +324,7 @@ def test(value1: str, value2: str = "1"):
     print("Quantity:", quant3)
     standardized = quant3.standardized(preferred)
     print("Standardized:", standardized)
+
 
 if __name__ == "__main__":
     test("1 km^2/s", "0.5 ly/yr")

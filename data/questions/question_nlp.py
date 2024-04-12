@@ -29,17 +29,19 @@ OPENAI_MODELS = {
     "gpt-3.5": "gpt-3.5",
     "gpt-3.5-turbo": "gpt-3.5-turbo",
     "gpt-4": "gpt-4",
-    "gpt-4-turbo": "gpt-4-turbo-preview"
+    "gpt-4-turbo": "gpt-4-turbo-preview",
 }
 # SYSTEM = """
 # Given data of the from:
 # """.strip()
+
 
 def system_message(message: str):
     return {
         "role": "system",
         "content": message,
     }
+
 
 SYSTEM = "Convert data to what you'd call it. Don't include any values"
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
@@ -48,11 +50,13 @@ START_MESSAGE = {
     "content": SYSTEM,
 }
 
+
 class CompletionContext(ABC):
 
     @abstractmethod
     def complete(self, messages: List[dict]):
         pass
+
 
 @dataclass
 class OpenAICompletionContext(CompletionContext):
@@ -83,7 +87,9 @@ class OpenAICompletionContext(CompletionContext):
             print(f"An API error occurred: {e}")
         return response
 
+
 # Utilities
+
 
 def load_values(file):
     data = json.load(file)
@@ -91,25 +97,37 @@ def load_values(file):
     for thing in data:
         for values in thing["values"].values():
             for value in values:
-                example_values[value["kind"]].append(examples.ExampleValue(thing["name"], value["kind"], value["name"], value=value["value"]["value"], units=value["value"]["units"].replace('1', '')))
+                example_values[value["kind"]].append(
+                    examples.ExampleValue(
+                        thing["name"],
+                        value["kind"],
+                        value["name"],
+                        value=value["value"]["value"],
+                        units=value["value"]["units"].replace("1", ""),
+                    )
+                )
     return dict(example_values)
+
 
 def name_key(value: dict | ExampleValue):
     if type(value) == ExampleValue:
         return value.key()
-    return (value["thing"], value["measurement"], value.get('name', ''))
+    return (value["thing"], value["measurement"], value.get("name", ""))
+
 
 def load_names(file):
     named = json.load(file)
     named_dict = {name_key(value): ExampleValue.from_dict(value) for value in named}
     return named_dict
-    
+
+
 def complete_called(example: ExampleValue, context: CompletionContext):
     """Detrmine a value's name using LLM completion"""
     messages = [START_MESSAGE, *examples.completion_called(example)]
     response = context.complete(messages)
     print(response)
     return response
+
 
 def complete(example: Question, context: CompletionContext) -> None:
     """Create a question using LLM completion"""
@@ -119,7 +137,13 @@ def complete(example: Question, context: CompletionContext) -> None:
     return response
 
 
-def create_names(context: OpenAICompletionContext, values_file: str = "./values.json", labels_file: str = "./names.json", sample_size: int = 10, manual_quality: bool = False):
+def create_names(
+    context: OpenAICompletionContext,
+    values_file: str = "./values.json",
+    labels_file: str = "./names.json",
+    sample_size: int = 10,
+    manual_quality: bool = False,
+):
     values = load_values(values_file)
     randomized_values = [value for vals in values.values() for value in vals]
     random.shuffle(randomized_values)
@@ -132,9 +156,11 @@ def create_names(context: OpenAICompletionContext, values_file: str = "./values.
     all_named = list(named.values())
     random.shuffle(all_named)
     all_named.sort(key=lambda x: x.quality, reverse=True)
-    print("To generate:", len(randomized_values)-len(all_named))
+    print("To generate:", len(randomized_values) - len(all_named))
     named_examples = all_named[:sample_size]
-    named_example_messages = [message for example in named_examples for message in example.to_messages()]
+    named_example_messages = [
+        message for example in named_examples for message in example.to_messages()
+    ]
     added = []
     try:
         for value in randomized_values:
@@ -142,15 +168,13 @@ def create_names(context: OpenAICompletionContext, values_file: str = "./values.
             if key in named:
                 continue
             # print(value.to_string())
-            called = context.complete([
-                START_MESSAGE,
-                *named_example_messages,
-                *value.to_messages()
-            ])
+            called = context.complete(
+                [START_MESSAGE, *named_example_messages, *value.to_messages()]
+            )
             print(called)
             if manual_quality:
                 quality = float(input("Quality (0-5): "))
-                value.quality = min(quality/5, 0.99)
+                value.quality = min(quality / 5, 0.99)
             value.called = called
             value.generated = now()
             added.append(value)
@@ -160,9 +184,10 @@ def create_names(context: OpenAICompletionContext, values_file: str = "./values.
         named[value.key()] = value
         # print(value)
     if len(named):
-        with open(labels_file, 'w') as f:
+        with open(labels_file, "w") as f:
             json.dump([value.to_dict() for value in named.values()], f, indent=2)
     return named
+
 
 def create_called_manual():
     values = load_values("./values.json")
@@ -190,10 +215,12 @@ def create_called_manual():
         named[name_key(value)] = value
         # print(value)
     if len(named):
-        with open('./names.json', 'w') as f:
+        with open("./names.json", "w") as f:
             json.dump(list(named.values()), f, indent=2)
 
+
 ValuesByMeasurement = Dict[str, List[ExampleValue]]
+
 
 def random_value(values: List[ExampleValue]):
     """Choose a value with a random magnitude
@@ -202,30 +229,34 @@ def random_value(values: List[ExampleValue]):
     # values = [value for value in values if value not in exclude]
     value = random.choice(values)
     return value
-    if(not values):
-       raise ValueError("No values available to choose from")
+    if not values:
+        raise ValueError("No values available to choose from")
     logged = [math.log(value.value) for value in values if value.value > 0]
     min_value = min(logged)
     max_value = max(logged)
     delta = max_value - min_value
-    point = random.random()*delta + min_value
+    point = random.random() * delta + min_value
     while True:
         value = random.choice(values)
-        scale = math.fabs(point-math.log(value.value))/delta*0.8
+        scale = math.fabs(point - math.log(value.value)) / delta * 0.8
         if random.random() > scale:
             return value
+
 
 def random_ordered_pair(values: List[ExampleValue]):
     values = random.sample(values, 2)
     return minmax_value(*values)
+
 
 def minmax_value(value_1, value_2):
     if value_1.value <= value_2.value:
         return (value_1, value_2)
     return (value_2, value_1)
 
+
 def question_key(value: Question):
     return (name_key(value.smaller), name_key(value.larger))
+
 
 def load_questions(filename: str = "./questions.json"):
     try:
@@ -234,21 +265,31 @@ def load_questions(filename: str = "./questions.json"):
         return {example.key(): example for example in examples}
     except FileNotFoundError:
         return {}
-    
-def save_questions(questions: Iterable[Question] | Dict[Tuple[str, str, str], Question], filename: str = "./questions.json"):
+
+
+def save_questions(
+    questions: Iterable[Question] | Dict[Tuple[str, str, str], Question],
+    filename: str = "./questions.json",
+):
     if type(questions) == dict:
         questions = questions.values()
-    data = sorted((data.to_dict() for data in questions), key=lambda x: (1-x.quality, x.question))
+    data = sorted(
+        (data.to_dict() for data in questions),
+        key=lambda x: (1 - x.quality, x.question),
+    )
     with open(filename, "w") as f:
         json.dump(data, f, indent=2)
 
+
 def create_question(example, context, example_questions, manual_quality=False):
     messages = [
-        system_message(f"Create a fermi question based on the given items. It should be short. Don't make it fancy."),
-        *examples.examples(*example_questions, example)
+        system_message(
+            f"Create a fermi question based on the given items. It should be short. Don't make it fancy."
+        ),
+        *examples.examples(*example_questions, example),
     ]
     # for message in messages:
-    print(messages[-1]['content'].replace('\n', '  |  '))
+    print(messages[-1]["content"].replace("\n", "  |  "))
     response = context.complete(messages)
     print(messages[-1])
     print(response)
@@ -256,10 +297,18 @@ def create_question(example, context, example_questions, manual_quality=False):
     example.question = response
     if manual_quality:
         quality = float(input("Quality (0-5): "))
-        example.quality = min(quality/5, 0.99)
+        example.quality = min(quality / 5, 0.99)
     return example
 
-def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAICompletionContext, seed: str = "", count: int = 1, sample: int = 10, measurement='length'):
+
+def create_questions(
+    values_by_measurement: ValuesByMeasurement,
+    context: OpenAICompletionContext,
+    seed: str = "",
+    count: int = 1,
+    sample: int = 10,
+    measurement="length",
+):
     # with open("./length/questions.txt") as f:
     #     example_questions = f.read().strip()
     questions = load_questions()
@@ -267,8 +316,13 @@ def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAI
         random.seed(seed)
     values = values_by_measurement[measurement]
     values = [value for value in values if value.value > 0]
-    example_questions = [question for question in questions.values() if question.quality > 0.8]
-    example_questions.sort(key=lambda x: x.quality if x.measurement == measurement else x.quality * 0.9, reverse=True)
+    example_questions = [
+        question for question in questions.values() if question.quality > 0.8
+    ]
+    example_questions.sort(
+        key=lambda x: x.quality if x.measurement == measurement else x.quality * 0.9,
+        reverse=True,
+    )
     chosen_examples = example_questions[:sample].copy()
     if len(chosen_examples) < sample:
         raise ValueError("Insufficient number of quality example questions")
@@ -296,7 +350,10 @@ def create_questions(values_by_measurement: ValuesByMeasurement, context: OpenAI
         pass
     save_questions(questions)
 
-def create_questions_manual(values_by_measurement: ValuesByMeasurement, seed: str = "", measurement='length'):
+
+def create_questions_manual(
+    values_by_measurement: ValuesByMeasurement, seed: str = "", measurement="length"
+):
     if seed:
         random.seed(seed)
     values = values_by_measurement[measurement]
@@ -322,15 +379,18 @@ def create_questions_manual(values_by_measurement: ValuesByMeasurement, seed: st
     print("Done")
     save_questions(questions)
 
+
 @click.command()
-@click.option('--names', '-n', is_flag=True)
-@click.option('--seed', '-s', default="")
-@click.option('--measurement', '-x', default='length')
-@click.option('--count', '-c', default=1)
-@click.option('--sample', '-p', default=10)
-@click.option('--manual', '-m', is_flag=True)
-@click.option('--rate', '-r', is_flag=True)
-def main(names, seed, measurement: str, count: int, sample: int, manual: bool, rate: bool):
+@click.option("--names", "-n", is_flag=True)
+@click.option("--seed", "-s", default="")
+@click.option("--measurement", "-x", default="length")
+@click.option("--count", "-c", default=1)
+@click.option("--sample", "-p", default=10)
+@click.option("--manual", "-m", is_flag=True)
+@click.option("--rate", "-r", is_flag=True)
+def main(
+    names, seed, measurement: str, count: int, sample: int, manual: bool, rate: bool
+):
     context = OpenAICompletionContext()
     measurement = measurement.lower()
     if names:
@@ -360,7 +420,7 @@ def main(names, seed, measurement: str, count: int, sample: int, manual: bool, r
                 print(question.question)
                 try:
                     quality = float(input("Quality (0-5): "))
-                    question.quality = min(quality/5, 0.99) if quality != 0 else 0.01
+                    question.quality = min(quality / 5, 0.99) if quality != 0 else 0.01
                 except ValueError:
                     pass
         except KeyboardInterrupt:
@@ -370,7 +430,14 @@ def main(names, seed, measurement: str, count: int, sample: int, manual: bool, r
         if not names:
             create_questions_manual(values, seed, measurement=measurement)
     else:
-        create_questions(dict(values_by_measurement), context, seed, measurement=measurement, count=count, sample=sample)
+        create_questions(
+            dict(values_by_measurement),
+            context,
+            seed,
+            measurement=measurement,
+            count=count,
+            sample=sample,
+        )
 
 
 if __name__ == "__main__":

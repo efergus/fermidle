@@ -1,12 +1,13 @@
-
-
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
+import json
 import random
 from typing import List
 from dotenv import load_dotenv
 
 import openai
+
+from value import Value
 
 # Load environment variables
 load_dotenv()
@@ -17,14 +18,16 @@ OPENAI_MODELS = {
     "gpt-3.5": "gpt-3.5",
     "gpt-3.5-turbo": "gpt-3.5-turbo",
     "gpt-4": "gpt-4",
-    "gpt-4-turbo": "gpt-4-turbo-preview"
+    "gpt-4-turbo": "gpt-4-turbo-preview",
 }
+
 
 class CompletionContext(ABC):
     @abstractmethod
     def complete(self, messages: List[dict]):
         pass
-    
+
+
 @dataclass
 class OpenAICompletionContext(CompletionContext):
     model: str = "3"
@@ -54,47 +57,47 @@ class OpenAICompletionContext(CompletionContext):
             print(f"An API error occurred: {e}")
         return response
 
-def create_names(values, context: OpenAICompletionContext, sample_size: int = 12):
+
+SYSTEM = "Convert data to what you'd call it. Don't include any values"
+# SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
+START_MESSAGE = {
+    "role": "system",
+    "content": SYSTEM,
+}
+
+
+def create_names(
+    values: List[Value],
+    sample_size: int = 12,
+    start_message=START_MESSAGE,
+    manual_quality=False,
+):
     context = OpenAICompletionContext()
-    randomized_values = [value for vals in values.values() for value in vals]
+    randomized_values = values.copy()
     random.shuffle(randomized_values)
-    named_values = {value.key(): value for value in randomized_values if value.name}
-    existing_values = set(value.key() for value in randomized_values)
-    for key in list(named_values.keys()):
-        if key not in existing_values:
-            print(key)
-            del named[key]
-    all_named = list(named.values())
-    random.shuffle(all_named)
+    all_named = [value for value in randomized_values if value.name]
     all_named.sort(key=lambda x: x.quality, reverse=True)
-    print("To generate:", len(randomized_values)-len(all_named))
-    named_examples = all_named[:sample_size]
-    named_example_messages = [message for example in named_examples for message in example.to_messages()]
-    added = []
+    print("To generate:", len(randomized_values) - len(all_named))
+    named_examples = all_named[:sample_size].copy()
+    random.shuffle(named_examples)
+    named_example_messages = [
+        message for example in named_examples for message in example.to_messages()
+    ]
+    for message in named_example_messages:
+        print(json.dumps(message, indent=2))
     try:
         for value in randomized_values:
-            key = name_key(value)
-            if key in named:
+            if value.name:
                 continue
-            # print(value.to_string())
-            called = context.complete([
-                START_MESSAGE,
-                *named_example_messages,
-                *value.to_messages()
-            ])
-            print(called)
+
+            name = context.complete(
+                [START_MESSAGE, *named_example_messages, *value.to_messages()]
+            )
+            print(name)
             if manual_quality:
                 quality = float(input("Quality (0-5): "))
-                value.quality = min(quality/5, 0.99)
-            value.called = called
-            value.generated = now()
-            added.append(value)
+                value.quality = min(quality / 5, 0.99)
+            value.name = name
     except KeyboardInterrupt:
         pass
-    for value in added:
-        named[value.key()] = value
-        # print(value)
-    if len(named):
-        with open(labels_file, 'w') as f:
-            json.dump([value.to_dict() for value in named.values()], f, indent=2)
-    return named
+    return values

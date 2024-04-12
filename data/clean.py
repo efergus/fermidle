@@ -10,7 +10,7 @@ import numpy as np
 from typing import Dict, List, Callable
 import json
 import click
-from data import Value, Thing
+from value import Value, Thing
 
 import units
 import alter
@@ -20,9 +20,9 @@ range_regex = f"{number_regex}(?:-{number_regex})*"
 unit_regex = r"[^\s]*"
 note_regex = r"\(.*\)"
 
-value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})\s*({note_regex})?$")
-
-
+value_regex = re.compile(
+    f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})\s*({note_regex})?$"
+)
 
 
 def drop_empty(df: DataFrame, log=False):
@@ -43,32 +43,44 @@ def get_things(df: DataFrame) -> List[Thing]:
         row = df.loc[thing_name].dropna()
         cols = row.index
         thing = Thing(
-            thing_name, tags=[tag.lower().strip() for tag in row.get("tags", "").split(", ") if tag]
+            thing_name,
+            tags=[
+                tag.lower().strip() for tag in row.get("tags", "").split(", ") if tag
+            ],
         )
         values = defaultdict(list)
         broken = defaultdict(list)
-        for kind in cols:
-            if kind in ("tags", "thing"):
+        for measurement in cols:
+            if measurement in ("tags", "thing"):
                 continue
-            vals = row[kind]
+            vals = row[measurement]
             for val in vals.split(","):
                 val = val.strip()
                 m = value_regex.match(val)
                 if not m:
-                    broken[kind].append(val)
+                    broken[measurement].append(val)
                     continue
-                (name, number, unit, note) = m.group(1, 2, 3, 4)
+                (specifier, number, unit, note) = m.group(1, 2, 3, 4)
                 num, uncertainty = parse_number(number)
                 if not num:
-                    broken[kind].append(val)
+                    broken[measurement].append(val)
                     continue
-                values[kind].append(Value(
-                    units.Quantity.from_str(f"{num} {unit}").standardized(units.preferred), (name or "").lower(), kind, thing_name, original=val
-                ))
+                values[measurement].append(
+                    Value(
+                        units.Quantity.from_str(f"{num} {unit}").standardized(
+                            units.preferred
+                        ),
+                        specifier=(specifier or "").lower(),
+                        measurement=measurement,
+                        thing=thing_name,
+                        original=val,
+                    )
+                )
         thing.values = dict(values)
         thing.broken = dict(broken)
         things.append(thing)
     return things
+
 
 def clean(file):
     df = pandas.read_csv(file, sep="\t")
@@ -99,12 +111,18 @@ def clean(file):
     df = df.set_index("thing", drop=True)
     things = get_things(df)
     for thing in things:
-        thing.alter(alter.alter_map.get('', []))
+        thing.alter(alter.alter_map.get("", []))
         for tag in thing.tags:
             thing.alter(alter.alter_map.get(tag, []))
 
-    values: List[Value] = [value for thing in things for values in thing.values.values() for value in values]
+    values: List[Value] = [
+        value
+        for thing in things
+        for values in thing.values.values()
+        for value in values
+    ]
     return values
+
 
 @click.command()
 @click.argument("input", type=click.File("r"), default="Fermidle - Values.tsv")
@@ -140,11 +158,16 @@ def main(input, output):
     df = df.set_index("thing", drop=True)
     things = get_things(df)
     for thing in things:
-        thing.alter(alter.alter_map.get('', []))
+        thing.alter(alter.alter_map.get("", []))
         for tag in thing.tags:
             thing.alter(alter.alter_map.get(tag, []))
 
-    values: List[Value] = [value for thing in things for values in thing.values.values() for value in values]
+    values: List[Value] = [
+        value
+        for thing in things
+        for values in thing.values.values()
+        for value in values
+    ]
 
     broken = [value.name for value in values if value.value is None]
     values_by_kind = defaultdict(list)
@@ -170,8 +193,11 @@ def main(input, output):
         #     print(f"{value.name or value.kind} of {value.thing}:")
         #     print(value.value)
         all_units[str(value.value.units)] += 1
-    
-    units_by_frequency = [f"{x[0]}\t{x[1]}" for x in sorted(all_units.items(), reverse=True, key=lambda x: x[1])]
+
+    units_by_frequency = [
+        f"{x[0]}\t{x[1]}"
+        for x in sorted(all_units.items(), reverse=True, key=lambda x: x[1])
+    ]
     print("\n".join(units_by_frequency))
 
     things_serial = [thing.serialize() for thing in things]
