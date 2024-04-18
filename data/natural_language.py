@@ -90,9 +90,10 @@ def create_names(
             if value.name:
                 continue
 
-            name = context.complete(
-                [START_MESSAGE, *named_example_messages, *value.to_messages()]
-            )
+            messages = value.to_messages()
+            print()
+            print(messages[-1]["content"])
+            name = context.complete([START_MESSAGE, *named_example_messages, *messages])
             print(name)
             if manual_quality:
                 quality = float(input("Quality (0-5): "))
