@@ -4,7 +4,7 @@ from units import scientific
 
 from value import Value
 from data import default, now
-
+import uuid
 
 @dataclass
 class Question:
@@ -15,10 +15,13 @@ class Question:
     measurement: str = ""
     generated: str = default(now)
     style: str = ""
+    qid: str = ""
 
     def __post_init__(self):
         if not self.measurement:
             self.measurement = self.values[0].measurement
+        if not self.qid:
+            self.qid = uuid.uuid4().hex
 
     def key(self):
         return (self.style, *[value.key() for value in self.values])
@@ -37,6 +40,7 @@ class Question:
             "quality": self.quality,
             "generated": self.generated,
             "style": self.style,
+            "id": self.qid
         }
 
     @staticmethod
@@ -49,6 +53,7 @@ class Question:
             quality=data.get("quality", 1.0),
             generated=data["generated"],
             style=data["style"],
+            qid=data.get("id", "")
         )
 
     def to_messages(self, include_question=True):

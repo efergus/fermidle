@@ -189,6 +189,9 @@ class Quantity:
     @staticmethod
     def deserialize(string: str):
         return Quantity.from_str(string)
+    
+    def scalar(self):
+        return self.value
 
     def standardized(self, map: ConversionMap, limit=100):
         res = deepcopy(self)

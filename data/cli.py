@@ -1,4 +1,5 @@
 import json
+import math
 import random
 from typing import List
 import click
@@ -60,7 +61,9 @@ def create_questions(values: List[Value], questions_filename, count=20):
     keys = {question.key() for question in questions}
     print(keys)
     generated = 0
-    while generated < count:
+    tries = 0
+    while generated < count and tries < 1e6:
+        tries += 1
         matches = []
         while not matches:
             value1 = random.choice(values)
@@ -73,6 +76,11 @@ def create_questions(values: List[Value], questions_filename, count=20):
             ]
         value2 = random.choice(matches)
         answer = value1.value / value2.value
+        answer_magnitude = math.log10(answer.value)
+        if answer_magnitude < -3 and random.random() > 2**(answer_magnitude/4):
+            value1, value2 = value2, value1
+        answer = value1.value / value2.value
+        answer_magnitude = math.log10(answer.value)
         question = Question(
             [value1, value2],
             f"What is the ratio of the *{value1.name}* to the *{value2.name}*",
@@ -82,13 +90,15 @@ def create_questions(values: List[Value], questions_filename, count=20):
             style="ratio",
         )
         key = question.key()
-        print(key)
         if key not in keys:
+            print(key)
             questions.append(question)
             keys.add(key)
             generated += 1
+            tries = 0
     with open(questions_filename, "w") as questions_file:
         save_questions(questions, questions_file)
+    return questions
 
 
 @click.command()
@@ -97,13 +107,14 @@ def create_questions(values: List[Value], questions_filename, count=20):
 @click.option("--values", type=click.Path(), default="values.json")
 @click.option("--seed", "-s", default="")
 @click.option("--judge", "-j", is_flag=True)
-def main(input, output, values, seed, judge):
+@click.option("--count", "-c", default=20)
+def main(input, output, values, seed, judge, count):
     if seed:
         random.seed(seed)
     named_values = create_values(input, values)
     if seed:
         random.seed(seed)
-    questions = create_questions(named_values, output)
+    questions = create_questions(named_values, output, count=count)
 
 
 if __name__ == "__main__":

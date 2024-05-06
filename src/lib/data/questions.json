@@ -1,0 +1,6202 @@
+[
+	{
+		"values": [
+			{
+				"value": "4.404e3 K1",
+				"name": "Boiling point of Uranium-235",
+				"measurement": "temperature",
+				"thing": "U-235",
+				"specifier": "boiling point",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "3.33e2 K1",
+				"name": "Air temperature of a hair dryer",
+				"measurement": "temperature",
+				"thing": "hair dryer",
+				"specifier": "air temperature?",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Boiling point of Uranium-235* to the *Air temperature of a hair dryer*",
+		"answer": 13.225225225225225,
+		"measurement": "temperature",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c72ad8eca23e40cfaade45f090e6abe0"
+	},
+	{
+		"values": [
+			{
+				"value": "1.02e13 m2",
+				"name": "Surface area of Europe",
+				"measurement": "surface area",
+				"thing": "Europe",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.47e13 m2",
+				"name": "Surface area of North America",
+				"measurement": "surface area",
+				"thing": "North America",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface area of Europe* to the *Surface area of North America*",
+		"answer": 0.4129554655870445,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ab2a54a8e62844d9a63a69e39b2d19e7"
+	},
+	{
+		"values": [
+			{
+				"value": "3.0e0",
+				"name": "Number of children Einstein had",
+				"measurement": "count",
+				"thing": "Einstein",
+				"specifier": "children",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.4e3",
+				"name": "Number of coal power productions",
+				"measurement": "count",
+				"thing": "coal power production",
+				"specifier": "",
+				"note": "",
+				"quality": 0.2,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of children Einstein had* to the *Number of coal power productions*",
+		"answer": 0.00125,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "58e5331e09ae4dd1abb2c1392648809f"
+	},
+	{
+		"values": [
+			{
+				"value": "1.45e4 J1/g1",
+				"name": "Heat of combustion of TNT",
+				"measurement": "energy",
+				"thing": "tnt",
+				"specifier": "heat of combustion",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.0e10 J1/g1",
+				"name": "Energy of U-235",
+				"measurement": "energy",
+				"thing": "U-235",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Heat of combustion of TNT* to the *Energy of U-235*",
+		"answer": 1.8125e-7,
+		"measurement": "energy",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "4ff60f415af14d1dbe8fa89861b458ae"
+	},
+	{
+		"values": [
+			{
+				"value": "2.2222222222222223e1 m1/s1",
+				"name": "Speed of a Lion",
+				"measurement": "speed",
+				"thing": "lion",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.0e-2 m1/s1",
+				"name": "Maximum speed of the Opportunity Rover",
+				"measurement": "speed",
+				"thing": "Opportunity Rover",
+				"specifier": "max speed",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Speed of a Lion* to the *Maximum speed of the Opportunity Rover*",
+		"answer": 444.44444444444446,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "87932eb74d2d43739c25653baa0ba915"
+	},
+	{
+		"values": [
+			{
+				"value": "4.0e1 MPG1",
+				"name": "Fuel efficiency of a Toyota Corolla",
+				"measurement": "energy",
+				"thing": "Corolla",
+				"specifier": "fuel efficiency",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.4e1 MPG1",
+				"name": "Fuel efficiency of a Honda CR-V",
+				"measurement": "energy",
+				"thing": "Honda CR-V",
+				"specifier": "fuel efficiency",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Fuel efficiency of a Toyota Corolla* to the *Fuel efficiency of a Honda CR-V*",
+		"answer": 1.1764705882352942,
+		"measurement": "energy",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8e06e0d3074347ac9fa434d502e5eaff"
+	},
+	{
+		"values": [
+			{
+				"value": "2.64e17 m3",
+				"name": "Volume of the Indian Ocean",
+				"measurement": "volume",
+				"thing": "Indian Ocean",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.6e-3 m3",
+				"name": "Volume of a soccer ball",
+				"measurement": "volume",
+				"thing": "soccer ball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the Indian Ocean* to the *Volume of a soccer ball*",
+		"answer": 4.714285714285715e19,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b5bfa452d3c24b619bc4014f7890fc1c"
+	},
+	{
+		"values": [
+			{
+				"value": "3.7313e2 K1",
+				"name": "Boiling point of water",
+				"measurement": "temperature",
+				"thing": "Water",
+				"specifier": "boiling point",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "3.1e2 K1",
+				"name": "Temperature of a mouse",
+				"measurement": "temperature",
+				"thing": "mouse",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Boiling point of water* to the *Temperature of a mouse*",
+		"answer": 1.2036451612903225,
+		"measurement": "temperature",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "751d11b25a2d4ad2bdf261c74d12f7e9"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0e5 N1",
+				"name": "Thrust generated by each engine of a Boeing 747",
+				"measurement": "other",
+				"thing": "Boeing 747",
+				"specifier": "thrust (each engine)",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.5e5 N1",
+				"name": "Thrust of each engine of an Airbus A380",
+				"measurement": "other",
+				"thing": "Airbus A380",
+				"specifier": "thrust (each engine)",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Thrust generated by each engine of a Boeing 747* to the *Thrust of each engine of an Airbus A380*",
+		"answer": 0.5714285714285714,
+		"measurement": "other",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d0a412bde8be424c81e8404ef1928921"
+	},
+	{
+		"values": [
+			{
+				"value": "2.29e3 J1/mol1",
+				"name": "Heat of fusion of Mercury (Element)",
+				"measurement": "energy",
+				"thing": "Mercury (Element)",
+				"specifier": "heat of fusion",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "1.795e5 J1/mol1",
+				"name": "Heat of vaporization of lead",
+				"measurement": "energy",
+				"thing": "Lead",
+				"specifier": "heat of vaporization",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Heat of fusion of Mercury (Element)* to the *Heat of vaporization of lead*",
+		"answer": 0.01275766016713092,
+		"measurement": "energy",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "401d01ccc1894850a29ec66b85abd19a"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e6 g1/m3",
+				"name": "Average density of an Olympic swimming pool",
+				"measurement": "density",
+				"thing": "Olympic swimming pool",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "8.1e5 g1/m3",
+				"name": "Density of an orange",
+				"measurement": "density",
+				"thing": "orange",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of an Olympic swimming pool* to the *Density of an orange*",
+		"answer": 1.2345679012345678,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7379334a13bc4b64bef9ae251437bed9"
+	},
+	{
+		"values": [
+			{
+				"value": "3.5e16 m3",
+				"name": "Volume of fresh water in the world",
+				"measurement": "volume",
+				"thing": "Fresh water in the world",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "7.1000000000000005e-3 m3",
+				"name": "Volume of a basketball",
+				"measurement": "volume",
+				"thing": "basketball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of fresh water in the world* to the *Volume of a basketball*",
+		"answer": 4.929577464788732e18,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8c16da54308d403c895d9c53597e65e2"
+	},
+	{
+		"values": [
+			{
+				"value": "1.34e18 m3",
+				"name": "Volume of the oceans",
+				"measurement": "volume",
+				"thing": "Oceans",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.3e-5 m3",
+				"name": "Volume of a ping pong ball",
+				"measurement": "volume",
+				"thing": "ping pong ball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the oceans* to the *Volume of a ping pong ball*",
+		"answer": 4.06060606060606e22,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "be291924e38c4318add5a53968cad191"
+	},
+	{
+		"values": [
+			{
+				"value": "6.0e19 m3",
+				"name": "Volume of the planet Mercury",
+				"measurement": "volume",
+				"thing": "Mercury",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.3e5 m3",
+				"name": "Volume of the Titanic",
+				"measurement": "volume",
+				"thing": "Titanic",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the planet Mercury* to the *Volume of the Titanic*",
+		"answer": 461538461538461.5,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b49a6ecba39f488db0333d0dae526831"
+	},
+	{
+		"values": [
+			{
+				"value": "3.47e6 m1",
+				"name": "Diameter of the Moon",
+				"measurement": "length",
+				"thing": "Moon",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "3.11e5 m1",
+				"name": "Length of Lake Ontario",
+				"measurement": "length",
+				"thing": "lake Ontario",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of the Moon* to the *Length of Lake Ontario*",
+		"answer": 11.157556270096462,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "73d9406d92154fe68d0e387c05e3a60d"
+	},
+	{
+		"values": [
+			{
+				"value": "7.539822368615503e-1 m1",
+				"name": "Circumference of a basketball",
+				"measurement": "length",
+				"thing": "basketball",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "5.340707511102647e-15 m1",
+				"name": "Circumference of a proton",
+				"measurement": "length",
+				"thing": "proton",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of a basketball* to the *Circumference of a proton*",
+		"answer": 141176470588235.28,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "da628d8db92744fb83c1c902d65e1e4a"
+	},
+	{
+		"values": [
+			{
+				"value": "1.4e8",
+				"name": "Number of average American households",
+				"measurement": "count",
+				"thing": "Average American household",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.02e2",
+				"name": "Number of floors in the Empire State Building",
+				"measurement": "count",
+				"thing": "Empire State Building",
+				"specifier": "floors",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of average American households* to the *Number of floors in the Empire State Building*",
+		"answer": 1372549.0196078431,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6d781869cc874abca35f38bc44d13c7a"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2e4 m1",
+				"name": "Height of the Stratosphere from the ground",
+				"measurement": "length",
+				"thing": "Stratosphere",
+				"specifier": "from the ground",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "7.44e2 m1",
+				"name": "Average depth of Lake Baikal",
+				"measurement": "length",
+				"thing": "lake Baikal",
+				"specifier": "avg depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Height of the Stratosphere from the ground* to the *Average depth of Lake Baikal*",
+		"answer": 16.129032258064516,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "602241031ca341ba9933676a9136af52"
+	},
+	{
+		"values": [
+			{
+				"value": "1.52e2 m1",
+				"name": "Tower height of the largest wind turbine in the world",
+				"measurement": "length",
+				"thing": "Largest wind turbine in the world",
+				"specifier": "tower height",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "9.79e2 m1",
+				"name": "Height of Angel Falls",
+				"measurement": "length",
+				"thing": "Angel Falls",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Tower height of the largest wind turbine in the world* to the *Height of Angel Falls*",
+		"answer": 0.15526046986721145,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "00d186621032424591f6e3e7ec31de4c"
+	},
+	{
+		"values": [
+			{
+				"value": "4.166666666666667e-10 s1",
+				"name": "Period of wifi signal",
+				"measurement": "time/age",
+				"thing": "wifi",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.0e-15 s1",
+				"name": "Period of UVB radiation",
+				"measurement": "time/age",
+				"thing": "uvb",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Period of wifi signal* to the *Period of UVB radiation*",
+		"answer": 416666.6666666666,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "11be9a7148f744e88728dc72e71e37fd"
+	},
+	{
+		"values": [
+			{
+				"value": "1.7e7 m1",
+				"name": "Total shoreline length of the Great Lakes",
+				"measurement": "length",
+				"thing": "Great lakes",
+				"specifier": "shoreline length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.9e6 m1",
+				"name": "Diameter of the planet Mercury",
+				"measurement": "length",
+				"thing": "Mercury",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total shoreline length of the Great Lakes* to the *Diameter of the planet Mercury*",
+		"answer": 3.4693877551020407,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6128c2104ca44f73a1cab8edffbc0afc"
+	},
+	{
+		"values": [
+			{
+				"value": "6.1e1 m1",
+				"name": "Width of the world's largest container ship",
+				"measurement": "length",
+				"thing": "largest container ship",
+				"specifier": "width",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "7.6e-2 m1",
+				"name": "Length of a house cat from head to tail",
+				"measurement": "length",
+				"thing": "house cat",
+				"specifier": "head to tail",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Width of the world's largest container ship* to the *Length of a house cat from head to tail*",
+		"answer": 802.6315789473684,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0704d075ba854c24a67835f7c4200a17"
+	},
+	{
+		"values": [
+			{
+				"value": "7.34e25 g1",
+				"name": "Mass of the Moon",
+				"measurement": "mass",
+				"thing": "Moon",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.0e1 g1",
+				"name": "Mass of the battery in an iPhone 15",
+				"measurement": "mass",
+				"thing": "iphone 15",
+				"specifier": "battery",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Moon* to the *Mass of the battery in an iPhone 15*",
+		"answer": 1.468e24,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "466e8dad8fac4d838c0e73020bc03316"
+	},
+	{
+		"values": [
+			{
+				"value": "1.89216e8 s1",
+				"name": "Age of the Evergiven",
+				"measurement": "time/age",
+				"thing": "evergiven",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.266512e9 s1",
+				"name": "Duration of gasoline production",
+				"measurement": "time/age",
+				"thing": "gasoline production",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of the Evergiven* to the *Duration of gasoline production*",
+		"answer": 0.03592814371257485,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c53bf4230aa6453d980b81547ad4f343"
+	},
+	{
+		"values": [
+			{
+				"value": "7.884e8 s1",
+				"name": "Age of the International Space Station",
+				"measurement": "time/age",
+				"thing": "International Space Station",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.356048e11 s1",
+				"name": "The year crude oil was discovered",
+				"measurement": "time/age",
+				"thing": "crude oil production ",
+				"specifier": "discovered",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of the International Space Station* to the *The year crude oil was discovered*",
+		"answer": 0.005813953488372093,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b64eaeffd2eb49a89012fb3505cf248b"
+	},
+	{
+		"values": [
+			{
+				"value": "6.24e2 g1",
+				"name": "Mass of a basketball",
+				"measurement": "mass",
+				"thing": "basketball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e6 g1",
+				"name": "Mass of a kiloton",
+				"measurement": "mass",
+				"thing": "kiloton",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of a basketball* to the *Mass of a kiloton*",
+		"answer": 0.000624,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a84cf2e28f6c43049a317bd2188e0cea"
+	},
+	{
+		"values": [
+			{
+				"value": "6.4e10 m1",
+				"name": "Total length of all roads in the world",
+				"measurement": "length",
+				"thing": "all roads in the world",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.2e2 m1",
+				"name": "Width of Niagara Falls",
+				"measurement": "length",
+				"thing": "Niagra Falls",
+				"specifier": "width",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total length of all roads in the world* to the *Width of Niagara Falls*",
+		"answer": 78048780.48780487,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "5cb8b146ed63444a80da891a9cf8d6cc"
+	},
+	{
+		"values": [
+			{
+				"value": "1.5e9 m1",
+				"name": "Distance of the James Webb Space Telescope from Earth",
+				"measurement": "length",
+				"thing": "James Webb Space Telescope",
+				"specifier": "distance from earth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.28e3 m1",
+				"name": "Average depth of the Pacific Ocean",
+				"measurement": "length",
+				"thing": "Pacific Ocean",
+				"specifier": "avg depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Distance of the James Webb Space Telescope from Earth* to the *Average depth of the Pacific Ocean*",
+		"answer": 350467.2897196262,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "bb8a20876dbc4c00bb746ea9b358a88f"
+	},
+	{
+		"values": [
+			{
+				"value": "9.42477796076938e-1 m1",
+				"name": "Circumference of a watermelon",
+				"measurement": "length",
+				"thing": "watermelon",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "6.44652e1 m1",
+				"name": "Longest throw of a football",
+				"measurement": "length",
+				"thing": "football",
+				"specifier": "longest throw",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of a watermelon* to the *Longest throw of a football*",
+		"answer": 0.014619946825216364,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d9cc48a7c3944a3c922de2d78c9cc553"
+	},
+	{
+		"values": [
+			{
+				"value": "1.56e4 m2",
+				"name": "Base area of the Eiffel Tower",
+				"measurement": "surface area",
+				"thing": "Eiffel Tower",
+				"specifier": "base area",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.8499999999999996e-4 m2",
+				"name": "Surface area of a penny's face",
+				"measurement": "surface area",
+				"thing": "Penny",
+				"specifier": "face area",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Base area of the Eiffel Tower* to the *Surface area of a penny's face*",
+		"answer": 54736842.10526316,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "91bf70fcf64c44ef8022b7a9e373b4c8"
+	},
+	{
+		"values": [
+			{
+				"value": "7.44e2 m1",
+				"name": "Average depth of Lake Baikal",
+				"measurement": "length",
+				"thing": "lake Baikal",
+				"specifier": "avg depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.8e-2 m1",
+				"name": "Length of a .50 cal rifle bullet",
+				"measurement": "length",
+				"thing": "50 cal rifle",
+				"specifier": "bullet length",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average depth of Lake Baikal* to the *Length of a .50 cal rifle bullet*",
+		"answer": 12827.586206896553,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c5bc95e9fe164bcf925d7bdcf13d3670"
+	},
+	{
+		"values": [
+			{
+				"value": "2.7e7",
+				"name": "Population of Australia",
+				"measurement": "count",
+				"thing": "Australia",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "2.0e10",
+				"name": "Population of mice",
+				"measurement": "count",
+				"thing": "mouse",
+				"specifier": "population?",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of Australia* to the *Population of mice*",
+		"answer": 0.00135,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8a376ded8f904766837520aeb26e827e"
+	},
+	{
+		"values": [
+			{
+				"value": "1.43e9",
+				"name": "Population of India",
+				"measurement": "count",
+				"thing": "India",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "3.0e9",
+				"name": "Number of devices using the Java programming language",
+				"measurement": "count",
+				"thing": "Java Language",
+				"specifier": "number of devices?",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of India* to the *Number of devices using the Java programming language*",
+		"answer": 0.4766666666666666,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f71a1941619740648e8374778a4ee8f1"
+	},
+	{
+		"values": [
+			{
+				"value": "1.8577118483835866e6 g1/m3",
+				"name": "Average density of a MacBook",
+				"measurement": "density",
+				"thing": "macbook (which?)",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "4.2063937184520475e-25 g1/m3",
+				"name": "Average density of the Observable Universe",
+				"measurement": "density",
+				"thing": "Observable Universe",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of a MacBook* to the *Average density of the Observable Universe*",
+		"answer": 4.4164003008905795e30,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7c23ba8bd566438297c46c217f622f17"
+	},
+	{
+		"values": [
+			{
+				"value": "7.5e13 m2",
+				"name": "Surface area of Mercury",
+				"measurement": "surface area",
+				"thing": "Mercury",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.11e2 m2",
+				"name": "Wing area of a Boeing 747",
+				"measurement": "surface area",
+				"thing": "Boeing 747",
+				"specifier": "wing area",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface area of Mercury* to the *Wing area of a Boeing 747*",
+		"answer": 146771037181.99606,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "218a2f30a2d14e6088af1a417615d04f"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0853658536585367e6 g1/m3",
+				"name": "Average density of the iPhone 15",
+				"measurement": "density",
+				"thing": "iphone 15",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "4.477611940298508e-16 g1/m3",
+				"name": "Average density of the Milky Way",
+				"measurement": "density",
+				"thing": "Milky Way",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of the iPhone 15* to the *Average density of the Milky Way*",
+		"answer": 4.657317073170731e21,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c655a864662b4037a40cdd3be1877358"
+	},
+	{
+		"values": [
+			{
+				"value": "4.5e14 /s1",
+				"name": "Frequency of red light",
+				"measurement": "frequency",
+				"thing": "red light",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:10+00:00"
+			},
+			{
+				"value": "2.5e10 /s1",
+				"name": "Frequency of a 5g signal",
+				"measurement": "frequency",
+				"thing": "5g",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Frequency of red light* to the *Frequency of a 5g signal*",
+		"answer": 18000.0,
+		"measurement": "frequency",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "08bd17b2bd25438199ac58e92189ef14"
+	},
+	{
+		"values": [
+			{
+				"value": "3.0e9",
+				"name": "Number of devices using the Java programming language",
+				"measurement": "count",
+				"thing": "Java Language",
+				"specifier": "number of devices?",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.5e9",
+				"name": "Number of transistors in the Apple M3",
+				"measurement": "count",
+				"thing": "apple m3",
+				"specifier": "transistors",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:11+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of devices using the Java programming language* to the *Number of transistors in the Apple M3*",
+		"answer": 1.2,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "30df0f44f2c3499ebb7a42529296cc9b"
+	},
+	{
+		"values": [
+			{
+				"value": "4.9e0 m1",
+				"name": "Length of a Great White Shark",
+				"measurement": "length",
+				"thing": "great white shark",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.0e4 m1",
+				"name": "Length of the Channel Tunnel",
+				"measurement": "length",
+				"thing": "channel tunnel",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of a Great White Shark* to the *Length of the Channel Tunnel*",
+		"answer": 9.800000000000001e-5,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "fda5417f761e4c7ab74cb1d2e12bca6a"
+	},
+	{
+		"values": [
+			{
+				"value": "6.06e5 m1",
+				"name": "Diameter of Pluto's Pseudo-moon Charon",
+				"measurement": "length",
+				"thing": "Pluto's Pseudo-moon, Charon",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "7.2e6 m1",
+				"name": "Range of the Concorde",
+				"measurement": "length",
+				"thing": "Concorde",
+				"specifier": "range",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of Pluto's Pseudo-moon Charon* to the *Range of the Concorde*",
+		"answer": 0.08416666666666667,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7946c03f8fca458f8810387c5937862b"
+	},
+	{
+		"values": [
+			{
+				"value": "3.3e11 g1",
+				"name": "Mass of the Empire State Building",
+				"measurement": "mass",
+				"thing": "Empire State Building",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "9.0e3 g1",
+				"name": "Mass of a watermelon",
+				"measurement": "mass",
+				"thing": "watermelon",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Empire State Building* to the *Mass of a watermelon*",
+		"answer": 36666666.66666667,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b9cf0196eb4a48b0b2e9f1c3cdbb4b7b"
+	},
+	{
+		"values": [
+			{
+				"value": "5.1e7 m1",
+				"name": "Diameter of Uranus",
+				"measurement": "length",
+				"thing": "Uranus",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "7.6e-2 m1",
+				"name": "Length of a house cat from head to tail",
+				"measurement": "length",
+				"thing": "house cat",
+				"specifier": "head to tail",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of Uranus* to the *Length of a house cat from head to tail*",
+		"answer": 671052631.5789474,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a1a81cb198d540b38c871085b0883b38"
+	},
+	{
+		"values": [
+			{
+				"value": "1.8e2 dB1",
+				"name": "Blue whale's loudness",
+				"measurement": "loudness",
+				"thing": "blue whale",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.4e2 dB1",
+				"name": "Loudness of an F1 racecar",
+				"measurement": "loudness",
+				"thing": "f1 racecar",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Blue whale's loudness* to the *Loudness of an F1 racecar*",
+		"answer": 1.2857142857142856,
+		"measurement": "loudness",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d337cd100a964c2db03a53e88b7e77f5"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0106192982974673e7 m1",
+				"name": "Circumference of Mars",
+				"measurement": "length",
+				"thing": "mars",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "2.1048670779051615e-1 m1",
+				"name": "Circumference of a tennis ball",
+				"measurement": "length",
+				"thing": "tennis ball",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of Mars* to the *Circumference of a tennis ball*",
+		"answer": 95522388.05970149,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b2168f3d176e4677a41343712da9535a"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e5 J1/s1",
+				"name": "Power output of an FM radio",
+				"measurement": "power",
+				"thing": "FM radio",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.2e8 J1/s1",
+				"name": "Power consumption of New York",
+				"measurement": "power",
+				"thing": "New York",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Power output of an FM radio* to the *Power consumption of New York*",
+		"answer": 0.0008333333333333334,
+		"measurement": "power",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0c0ed9b0fedc4e10b002cb6e5e91aa04"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2e5 m3/s1",
+				"name": "Flow capacity of the Three Gorges Dam",
+				"measurement": "speed",
+				"thing": "Largest hydroelectric plant (Three Gorges Dam)",
+				"specifier": "flow capacity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.5e5 m3/s1",
+				"name": "Water discharge of the Amazon River into the Atlantic",
+				"measurement": "speed",
+				"thing": "Amazon river",
+				"specifier": "water discharge in the atlantic",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Flow capacity of the Three Gorges Dam* to the *Water discharge of the Amazon River into the Atlantic*",
+		"answer": 0.48,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "774363a3dd51436492dcfaedb6093f90"
+	},
+	{
+		"values": [
+			{
+				"value": "1.356048e11 s1",
+				"name": "The year crude oil was discovered",
+				"measurement": "time/age",
+				"thing": "crude oil production ",
+				"specifier": "discovered",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "7.992e6 s1",
+				"name": "Planned mission length of the Opportunity Rover",
+				"measurement": "time/age",
+				"thing": "Opportunity Rover",
+				"specifier": "planned mission length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *The year crude oil was discovered* to the *Planned mission length of the Opportunity Rover*",
+		"answer": 16967.567567567567,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "165e074eb78d4c9898a9df8d0f9aedc0"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e3 m1/s1",
+				"name": "Orbital speed of the Moon",
+				"measurement": "speed",
+				"thing": "Moon",
+				"specifier": "orbital speed",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.1e4 m1/s1",
+				"name": "Escape velocity of Uranus",
+				"measurement": "speed",
+				"thing": "Uranus",
+				"specifier": "escape velocity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Orbital speed of the Moon* to the *Escape velocity of Uranus*",
+		"answer": 0.04761904761904762,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a69fe2e4b2db4aef834d3496debb1e86"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2e-2 g1/m3",
+				"name": "Density of Betelguese",
+				"measurement": "density",
+				"thing": "Betelgeuse",
+				"specifier": "",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.3e5 g1/m3",
+				"name": "Average density of the Empire State Building",
+				"measurement": "density",
+				"thing": "Empire State Building",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Density of Betelguese* to the *Average density of the Empire State Building*",
+		"answer": 3.636363636363637e-8,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "fd9961ee858a4fa395527a3dabe09858"
+	},
+	{
+		"values": [
+			{
+				"value": "1.9000000000000001e30 g1",
+				"name": "Mass of Jupiter",
+				"measurement": "mass",
+				"thing": "Jupiter",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.8e5 g1",
+				"name": "Mass of the Opportunity Rover",
+				"measurement": "mass",
+				"thing": "Opportunity Rover",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of Jupiter* to the *Mass of the Opportunity Rover*",
+		"answer": 1.0555555555555556e25,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "2224fe231b8c4701b8ad44eeac697e4b"
+	},
+	{
+		"values": [
+			{
+				"value": "3.564e17 J1",
+				"name": "Energy produced by the Three Gorges Dam in 2014",
+				"measurement": "energy",
+				"thing": "Largest hydroelectric plant (Three Gorges Dam)",
+				"specifier": "produced in 2014",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e14 J1",
+				"name": "Energy released by the Fat Man bomb",
+				"measurement": "energy",
+				"thing": "Fat Man bomb",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Energy produced by the Three Gorges Dam in 2014* to the *Energy released by the Fat Man bomb*",
+		"answer": 3564.0,
+		"measurement": "energy",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d5854fb0e52d4fcbac19ea210dda9099"
+	},
+	{
+		"values": [
+			{
+				"value": "7.56864e11 s1",
+				"name": "Half-life of Pu-239",
+				"measurement": "time/age",
+				"thing": "Pu-239",
+				"specifier": "half life",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "1.52064e7 s1",
+				"name": "Length of a day on Mercury",
+				"measurement": "time/age",
+				"thing": "Mercury",
+				"specifier": "day length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Half-life of Pu-239* to the *Length of a day on Mercury*",
+		"answer": 49772.72727272727,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a41fd7b23eb44906879059505b76bf19"
+	},
+	{
+		"values": [
+			{
+				"value": "4.5e1 g1",
+				"name": "Mass of a .50 caliber bullet",
+				"measurement": "mass",
+				"thing": "50 cal rifle",
+				"specifier": "bullet",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.7000000000000002e-24 g1",
+				"name": "Mass of a proton",
+				"measurement": "mass",
+				"thing": "proton",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of a .50 caliber bullet* to the *Mass of a proton*",
+		"answer": 2.647058823529412e25,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "39e9c9fd404b4399865a6fe276676fe8"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0106192982974673e7 m1",
+				"name": "Circumference of Mars",
+				"measurement": "length",
+				"thing": "mars",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "2.9999999999999996e-1 m1",
+				"name": "Diameter of a watermelon",
+				"measurement": "length",
+				"thing": "watermelon",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of Mars* to the *Diameter of a watermelon*",
+		"answer": 67020643.27658225,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0d0ef734820341be8aee32a8f4706dcc"
+	},
+	{
+		"values": [
+			{
+				"value": "1.1111111111111112e1 m1/s1",
+				"name": "Speed of an African bull elephant",
+				"measurement": "speed",
+				"thing": "African bull elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.5972222222222223e2 m1/s1",
+				"name": "Maximum speed of the Enola Gay",
+				"measurement": "speed",
+				"thing": "enola gay",
+				"specifier": "max: speed",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Speed of an African bull elephant* to the *Maximum speed of the Enola Gay*",
+		"answer": 0.06956521739130433,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8d673412956a4cad81e9f114af65e523"
+	},
+	{
+		"values": [
+			{
+				"value": "2.023e3 date1",
+				"name": "Year the largest container ship was built",
+				"measurement": "time/age",
+				"thing": "largest container ship",
+				"specifier": "built",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.879e3 date1",
+				"name": "The year Albert Einstein was born",
+				"measurement": "time/age",
+				"thing": "Einstein",
+				"specifier": "born",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Year the largest container ship was built* to the *The year Albert Einstein was born*",
+		"answer": 1.0766365087812666,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "e934f428563e4bc3976e91806a750ea5"
+	},
+	{
+		"values": [
+			{
+				"value": "5.1e7 m1",
+				"name": "Diameter of Uranus",
+				"measurement": "length",
+				"thing": "Uranus",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.2566370614359172e-1 m1",
+				"name": "Circumference of a ping pong ball",
+				"measurement": "length",
+				"thing": "ping pong ball",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of Uranus* to the *Circumference of a ping pong ball*",
+		"answer": 405845104.8843331,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ca9904be855741fea44a7ba3c86622f0"
+	},
+	{
+		"values": [
+			{
+				"value": "8.4e3 K1",
+				"name": "Temperature of the Trinity Test",
+				"measurement": "temperature",
+				"thing": "trinity test",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.5e3 K1",
+				"name": "Temperature of Betelgeuse",
+				"measurement": "temperature",
+				"thing": "Betelgeuse",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Temperature of the Trinity Test* to the *Temperature of Betelgeuse*",
+		"answer": 2.4000000000000004,
+		"measurement": "temperature",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7a9c0aeac8cb476f9e29bf4553ef4ab2"
+	},
+	{
+		"values": [
+			{
+				"value": "2.5e9 g1",
+				"name": "Mass of an Olympic swimming pool",
+				"measurement": "mass",
+				"thing": "Olympic swimming pool",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.5e1 g1",
+				"name": "Mass of a .50 caliber bullet",
+				"measurement": "mass",
+				"thing": "50 cal rifle",
+				"specifier": "bullet",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of an Olympic swimming pool* to the *Mass of a .50 caliber bullet*",
+		"answer": 55555555.55555556,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "704126f01c0549ae8f359ea583b390e4"
+	},
+	{
+		"values": [
+			{
+				"value": "2.3e7 m1",
+				"name": "Shoreline length of Lake Michigan",
+				"measurement": "length",
+				"thing": "lake Michigan",
+				"specifier": "shoreline length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.0e2 m1",
+				"name": "Length of the Ever Given",
+				"measurement": "length",
+				"thing": "evergiven",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Shoreline length of Lake Michigan* to the *Length of the Ever Given*",
+		"answer": 57500.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ccfc16f68edc46f39599f80d29b9f94a"
+	},
+	{
+		"values": [
+			{
+				"value": "1.4e7 m1",
+				"name": "Range of an Airbus A380",
+				"measurement": "length",
+				"thing": "Airbus A380",
+				"specifier": "range",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.9038051480754146e6 m1",
+				"name": "Circumference of Charon, Pluto's Pseudo-moon",
+				"measurement": "length",
+				"thing": "Pluto's Pseudo-moon, Charon",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Range of an Airbus A380* to the *Circumference of Charon, Pluto's Pseudo-moon*",
+		"answer": 7.353693740219587,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "eb54ba7b00e54a15929d196e1965948b"
+	},
+	{
+		"values": [
+			{
+				"value": "1.1e2 dB1",
+				"name": "The loudness of a lion",
+				"measurement": "loudness",
+				"thing": "lion",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.4e2 dB1",
+				"name": "Loudness of an F1 racecar",
+				"measurement": "loudness",
+				"thing": "f1 racecar",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *The loudness of a lion* to the *Loudness of an F1 racecar*",
+		"answer": 0.7857142857142857,
+		"measurement": "loudness",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "18c481bddfc348c4839097925cfc0b10"
+	},
+	{
+		"values": [
+			{
+				"value": "2.5e9 /s1",
+				"name": "Frequency of the AMD Ryzen Threadripper PRO 7995WX",
+				"measurement": "frequency",
+				"thing": "AMD Ryzen Threadripper PRO 7995WX",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.2e9 /s1",
+				"name": "Frequency of the Apple M1 processor",
+				"measurement": "frequency",
+				"thing": "apple m1",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Frequency of the AMD Ryzen Threadripper PRO 7995WX* to the *Frequency of the Apple M1 processor*",
+		"answer": 0.78125,
+		"measurement": "frequency",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d8cb5102d2fd4bf09ec85d14ce80659a"
+	},
+	{
+		"values": [
+			{
+				"value": "6.0e6 g1",
+				"name": "Mass of an African bull elephant",
+				"measurement": "mass",
+				"thing": "African bull elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.1e7 g1",
+				"name": "Mass of the Hubble Space Telescope",
+				"measurement": "mass",
+				"thing": "Hubble Space Telescope",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of an African bull elephant* to the *Mass of the Hubble Space Telescope*",
+		"answer": 0.5454545454545455,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "57d010c3df014ac2b23e7f1b28117591"
+	},
+	{
+		"values": [
+			{
+				"value": "2.3e9 J1/s1",
+				"name": "Capacity of the largest solar plant",
+				"measurement": "power",
+				"thing": "Largest solar plant",
+				"specifier": "capacity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.5e2 J1/s1",
+				"name": "Power consumption of the AMD Ryzen Threadripper PRO 7995WX",
+				"measurement": "power",
+				"thing": "AMD Ryzen Threadripper PRO 7995WX",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Capacity of the largest solar plant* to the *Power consumption of the AMD Ryzen Threadripper PRO 7995WX*",
+		"answer": 6571428.571428572,
+		"measurement": "power",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "e1730fd83c3d4a2cadb28cc81e674958"
+	},
+	{
+		"values": [
+			{
+				"value": "2.764601535159018e27 m1",
+				"name": "Circumference of the Observable Universe",
+				"measurement": "length",
+				"thing": "Observable Universe",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "9.3e1 m1",
+				"name": "Height of the Statue of Liberty",
+				"measurement": "length",
+				"thing": "Statue of Liberty",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of the Observable Universe* to the *Height of the Statue of Liberty*",
+		"answer": 2.9726898227516324e25,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6201da6e7ad542cdb430748f38b73d68"
+	},
+	{
+		"values": [
+			{
+				"value": "6.7e-2 m1",
+				"name": "Diameter of a tennis ball",
+				"measurement": "length",
+				"thing": "tennis ball",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "4.2700000000000005e-2 m1",
+				"name": "Diameter of a Golf Ball",
+				"measurement": "length",
+				"thing": "Golf ball",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of a tennis ball* to the *Diameter of a Golf Ball*",
+		"answer": 1.5690866510538641,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "95d190a8c9cf42c186ee2ed93e115541"
+	},
+	{
+		"values": [
+			{
+				"value": "8.3e0 m1",
+				"name": "Length of a Cessna 172",
+				"measurement": "length",
+				"thing": "Cessna 172",
+				"specifier": "length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.1e2 m1",
+				"name": "Length of the International Space Station",
+				"measurement": "length",
+				"thing": "International Space Station",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of a Cessna 172* to the *Length of the International Space Station*",
+		"answer": 0.07545454545454545,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "4e98d7e0e5c6429db704305846b7806e"
+	},
+	{
+		"values": [
+			{
+				"value": "1.1474999999999997e6 g1/m3",
+				"name": "Average density of a golf ball",
+				"measurement": "density",
+				"thing": "Golf ball",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "3.8666666666666667e5 g1/m3",
+				"name": "Average density of a tennis ball",
+				"measurement": "density",
+				"thing": "tennis ball",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of a golf ball* to the *Average density of a tennis ball*",
+		"answer": 2.9676724137931028,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "877415fd416e40d58de79e23bfda66af"
+	},
+	{
+		"values": [
+			{
+				"value": "1.6e7",
+				"name": "Total number of American soldiers in World War II",
+				"measurement": "count",
+				"thing": "Number of American soldiers in WWII",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "4.34e8",
+				"name": "Population of South America",
+				"measurement": "count",
+				"thing": "South America",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total number of American soldiers in World War II* to the *Population of South America*",
+		"answer": 0.03686635944700461,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "2435eede23804e1c9a15dcba6d500399"
+	},
+	{
+		"values": [
+			{
+				"value": "3.0e1 dB1",
+				"name": "Loudness of a whisper",
+				"measurement": "loudness",
+				"thing": "whispering ",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.8e2 dB1",
+				"name": "Blue whale's loudness",
+				"measurement": "loudness",
+				"thing": "blue whale",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Loudness of a whisper* to the *Blue whale's loudness*",
+		"answer": 0.16666666666666669,
+		"measurement": "loudness",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "dc3fb11ee0c64a898ee6525c5611228b"
+	},
+	{
+		"values": [
+			{
+				"value": "1.6e0 m1/s2",
+				"name": "Gravity on the Moon",
+				"measurement": "other",
+				"thing": "Moon",
+				"specifier": "gravity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.69e0 m1/s2",
+				"name": "Surface gravity of Uranus",
+				"measurement": "other",
+				"thing": "Uranus",
+				"specifier": "gravity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Gravity on the Moon* to the *Surface gravity of Uranus*",
+		"answer": 0.1841196777905639,
+		"measurement": "other",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0f0dfaad754d4cd2ad28bba3992e44ad"
+	},
+	{
+		"values": [
+			{
+				"value": "7.728317927830891e7 m1",
+				"name": "Circumference of Neptune",
+				"measurement": "length",
+				"thing": "Neptune",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "7.5398223686155035e6 m1",
+				"name": "Circumference of Earth's core",
+				"measurement": "length",
+				"thing": "Earth's core",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of Neptune* to the *Circumference of Earth's core*",
+		"answer": 10.250000000000002,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "265cdc08951e4328ae7e4bf2a0dbf6c6"
+	},
+	{
+		"values": [
+			{
+				"value": "4.0e3 m1",
+				"name": "Length of the Daytona 500 circuit",
+				"measurement": "length",
+				"thing": "Daytona 500",
+				"specifier": "circuit",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "1.16e2 m1",
+				"name": "Height of the largest Redwood tree",
+				"measurement": "length",
+				"thing": "Largest Redwood",
+				"specifier": "height",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of the Daytona 500 circuit* to the *Height of the largest Redwood tree*",
+		"answer": 34.48275862068965,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "623a58708a924f9c8801b376d3d1ed28"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e8 m1",
+				"name": "Voyager 2's closest distance to Saturn",
+				"measurement": "length",
+				"thing": "voyager 2",
+				"specifier": "closest distance to saturn",
+				"note": "",
+				"quality": 0.99,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.44652e1 m1",
+				"name": "Longest throw of a football",
+				"measurement": "length",
+				"thing": "football",
+				"specifier": "longest throw",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Voyager 2's closest distance to Saturn* to the *Longest throw of a football*",
+		"answer": 1551224.5366492309,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f4c7a77cd2b14505be83d5d80b268b51"
+	},
+	{
+		"values": [
+			{
+				"value": "2.5e4",
+				"name": "Number of lions",
+				"measurement": "count",
+				"thing": "lion",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.0e0",
+				"name": "Number of Little Boy bombs",
+				"measurement": "count",
+				"thing": "Little Boy bomb",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of lions* to the *Number of Little Boy bombs*",
+		"answer": 4166.666666666666,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "326ded70fe0c4c9a9fdecdeb7407654f"
+	},
+	{
+		"values": [
+			{
+				"value": "1.57e2 m1",
+				"name": "diameter",
+				"measurement": "length",
+				"thing": "Las Vegas Sphere",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "3.0e0 m1",
+				"name": "Length of the Little Boy bomb",
+				"measurement": "length",
+				"thing": "Little Boy bomb",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *diameter* to the *Length of the Little Boy bomb*",
+		"answer": 52.33333333333333,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "5cc8502fabcd4de881e50099c29329dc"
+	},
+	{
+		"values": [
+			{
+				"value": "1.5e11",
+				"name": "Number of pennies in circulation",
+				"measurement": "count",
+				"thing": "Penny",
+				"specifier": "in circulation",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.0e9",
+				"name": "Number of objects in the Oort cloud",
+				"measurement": "count",
+				"thing": "Oort cloud",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of pennies in circulation* to the *Number of objects in the Oort cloud*",
+		"answer": 75.0,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6e89b04b7d254217bc2512270ae2ba83"
+	},
+	{
+		"values": [
+			{
+				"value": "1.1e16 m3",
+				"name": "Volume of liquid fresh water in the world",
+				"measurement": "volume",
+				"thing": "Liquid fresh water in the world",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.1e12 m3",
+				"name": "Total volume of all rivers in the world",
+				"measurement": "volume",
+				"thing": "All rivers in the world",
+				"specifier": "total volume",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of liquid fresh water in the world* to the *Total volume of all rivers in the world*",
+		"answer": 5238.095238095238,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "4d7f5b2d07df4834bba73e9ea7de0c33"
+	},
+	{
+		"values": [
+			{
+				"value": "2.9e14 g1",
+				"name": "Total mass of all adult humans",
+				"measurement": "mass",
+				"thing": "Humans",
+				"specifier": "mass of all adult humans",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.0e6 g1",
+				"name": "Mass of a great white shark",
+				"measurement": "mass",
+				"thing": "great white shark",
+				"specifier": "",
+				"note": "",
+				"quality": 0.99,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total mass of all adult humans* to the *Mass of a great white shark*",
+		"answer": 145000000.0,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "505c3a1c7d874178a797a8f6e68a0f2c"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2566370614359172e-1 m1",
+				"name": "Circumference of a ping pong ball",
+				"measurement": "length",
+				"thing": "ping pong ball",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.93e0 m1",
+				"name": "Height of Michael Phelps",
+				"measurement": "length",
+				"thing": "Michael Phelps",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of a ping pong ball* to the *Height of Michael Phelps*",
+		"answer": 0.0651107285718092,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a06240f958f842dea2d6ec13acfb4b9b"
+	},
+	{
+		"values": [
+			{
+				"value": "6.2e5",
+				"name": "Size of the collection at the Louvre",
+				"measurement": "count",
+				"thing": "The louvre",
+				"specifier": "collection size",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "5.5e11",
+				"name": "Total number of pennies produced",
+				"measurement": "count",
+				"thing": "Penny",
+				"specifier": "produced",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Size of the collection at the Louvre* to the *Total number of pennies produced*",
+		"answer": 1.1272727272727273e-6,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a170f52bdade40d4a67e80e0c9a897e3"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2566370614359172e-1 m1",
+				"name": "Circumference of a ping pong ball",
+				"measurement": "length",
+				"thing": "ping pong ball",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "3.5e0 m1",
+				"name": "Height of an African bull elephant",
+				"measurement": "length",
+				"thing": "African bull elephant",
+				"specifier": "height",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of a ping pong ball* to the *Height of an African bull elephant*",
+		"answer": 0.03590391604102621,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "dc8110cd438547db9de4e38b9412a3d7"
+	},
+	{
+		"values": [
+			{
+				"value": "1.01e9",
+				"name": "Population of the Americas",
+				"measurement": "count",
+				"thing": "Americas",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "6.0e0",
+				"name": "Number of carbon atoms in a glucose molecule",
+				"measurement": "count",
+				"thing": "glucose molecule",
+				"specifier": "carbon atoms",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of the Americas* to the *Number of carbon atoms in a glucose molecule*",
+		"answer": 168333333.3333333,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d4ee4e366d54474c904e7639790c3a02"
+	},
+	{
+		"values": [
+			{
+				"value": "1.41e27 m3",
+				"name": "Volume of the Sun",
+				"measurement": "volume",
+				"thing": "Sun",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.3e2 m3",
+				"name": "Volume of the largest Redwood tree",
+				"measurement": "volume",
+				"thing": "Largest Redwood",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the Sun* to the *Volume of the largest Redwood tree*",
+		"answer": 2.6603773584905657e24,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ec9efdfe71b644d083b75702189644d1"
+	},
+	{
+		"values": [
+			{
+				"value": "3.78e11 m2",
+				"name": "Total surface area of Japan",
+				"measurement": "surface area",
+				"thing": "Japan",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.5e14 m2",
+				"name": "Surface area of the land on Earth",
+				"measurement": "surface area",
+				"thing": "Earth",
+				"specifier": "land",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total surface area of Japan* to the *Surface area of the land on Earth*",
+		"answer": 0.00252,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f36374d20bc2441d84dd8186b8d9dd53"
+	},
+	{
+		"values": [
+			{
+				"value": "6.0e0",
+				"name": "Number of carbon atoms in a glucose molecule",
+				"measurement": "count",
+				"thing": "glucose molecule",
+				"specifier": "carbon atoms",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.0e9",
+				"name": "Number of devices using the Java programming language",
+				"measurement": "count",
+				"thing": "Java Language",
+				"specifier": "number of devices?",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of carbon atoms in a glucose molecule* to the *Number of devices using the Java programming language*",
+		"answer": 1.9999999999999997e-9,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "71c0fd32af354830b019cb59df8f9761"
+	},
+	{
+		"values": [
+			{
+				"value": "1.5e56 g1",
+				"name": "Total mass of the Observable Universe",
+				"measurement": "mass",
+				"thing": "Observable Universe",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.2e6 g1",
+				"name": "Mass of an Asian elephant",
+				"measurement": "mass",
+				"thing": "asian elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total mass of the Observable Universe* to the *Mass of an Asian elephant*",
+		"answer": 4.6875e49,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "298a4065893644f6897af6d272fe386e"
+	},
+	{
+		"values": [
+			{
+				"value": "4.0e5",
+				"name": "Number of African Bull Elephants",
+				"measurement": "count",
+				"thing": "African bull elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.9e6",
+				"name": "Number of visitors per year to The Louvre",
+				"measurement": "count",
+				"thing": "The louvre",
+				"specifier": "visitors per year",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of African Bull Elephants* to the *Number of visitors per year to The Louvre*",
+		"answer": 0.0449438202247191,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6c3ed9b79beb40e89016b8aef8f08798"
+	},
+	{
+		"values": [
+			{
+				"value": "2.56e1 m1",
+				"name": "Wingspan of the Concorde",
+				"measurement": "length",
+				"thing": "Concorde",
+				"specifier": "wingspan",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.1e3 m1",
+				"name": "Maximum length of the Mediterranean Sea",
+				"measurement": "length",
+				"thing": "Mediterranean Sea",
+				"specifier": "max length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Wingspan of the Concorde* to the *Maximum length of the Mediterranean Sea*",
+		"answer": 0.005019607843137255,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "93c31a80168e43e79f46d5dac41615a4"
+	},
+	{
+		"values": [
+			{
+				"value": "1.12e2 m1",
+				"name": "Height of the Las Vegas Sphere",
+				"measurement": "length",
+				"thing": "Las Vegas Sphere",
+				"specifier": "height",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.1e1 m1",
+				"name": "Length of the fastest steam train",
+				"measurement": "length",
+				"thing": "fastest steam train",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Height of the Las Vegas Sphere* to the *Length of the fastest steam train*",
+		"answer": 5.333333333333333,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c367a1bf0bdc42dcae7467c9fe9c263d"
+	},
+	{
+		"values": [
+			{
+				"value": "6.8e22 m3",
+				"name": "Volume of Uranus",
+				"measurement": "volume",
+				"thing": "Uranus",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.3e-5 m3",
+				"name": "Volume of a ping pong ball",
+				"measurement": "volume",
+				"thing": "ping pong ball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of Uranus* to the *Volume of a ping pong ball*",
+		"answer": 2.0606060606060605e27,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "75eb900a39604267837749cd197b7021"
+	},
+	{
+		"values": [
+			{
+				"value": "3.5e22 g1",
+				"name": "Mass of all fresh water in the world",
+				"measurement": "mass",
+				"thing": "Fresh water in the world",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.4e6 g1",
+				"name": "Mass of the Little Boy bomb",
+				"measurement": "mass",
+				"thing": "Little Boy bomb",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of all fresh water in the world* to the *Mass of the Little Boy bomb*",
+		"answer": 7954545454545455.0,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ba2e0772c8b24066bff91fde4e2c90a0"
+	},
+	{
+		"values": [
+			{
+				"value": "1.8e2 dB1",
+				"name": "Blue whale's loudness",
+				"measurement": "loudness",
+				"thing": "blue whale",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.0e1 dB1",
+				"name": "Loudness of a whisper",
+				"measurement": "loudness",
+				"thing": "whispering ",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Blue whale's loudness* to the *Loudness of a whisper*",
+		"answer": 6.0,
+		"measurement": "loudness",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "389ca1ac211e40028e804a75f37be4e2"
+	},
+	{
+		"values": [
+			{
+				"value": "8.0e0 m1",
+				"name": "Length of Tsar Bomba",
+				"measurement": "length",
+				"thing": "tsar bomba",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.0e0 m1",
+				"name": "Depth of an Olympic swimming pool",
+				"measurement": "length",
+				"thing": "Olympic swimming pool",
+				"specifier": "depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of Tsar Bomba* to the *Depth of an Olympic swimming pool*",
+		"answer": 4.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ae0f579fc1be4eb28459e07f0426640a"
+	},
+	{
+		"values": [
+			{
+				"value": "7.0e12 m2",
+				"name": "Area of the Amazon River Basin",
+				"measurement": "surface area",
+				"thing": "Amazon river",
+				"specifier": "basin size",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.44e14 m2",
+				"name": "Surface area of Mars",
+				"measurement": "surface area",
+				"thing": "mars",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Area of the Amazon River Basin* to the *Surface area of Mars*",
+		"answer": 0.04861111111111111,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d4a5cdfaf9f44701be21457f20e5a60b"
+	},
+	{
+		"values": [
+			{
+				"value": "8.0e5 g1",
+				"name": "Minimum mass of an F1 racecar",
+				"measurement": "mass",
+				"thing": "f1 racecar",
+				"specifier": "minimum",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.24e2 g1",
+				"name": "Mass of a basketball",
+				"measurement": "mass",
+				"thing": "basketball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Minimum mass of an F1 racecar* to the *Mass of a basketball*",
+		"answer": 1282.051282051282,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1cc84fc9c2a54f3dbb0ba213aad456d4"
+	},
+	{
+		"values": [
+			{
+				"value": "2.5e10 /s1",
+				"name": "Frequency of a 5g signal",
+				"measurement": "frequency",
+				"thing": "5g",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.57142857142857e14 /s1",
+				"name": "Frequency of UVA radiation",
+				"measurement": "frequency",
+				"thing": "uva",
+				"specifier": "",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Frequency of a 5g signal* to the *Frequency of UVA radiation*",
+		"answer": 2.9166666666666673e-5,
+		"measurement": "frequency",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b3b01fba62af422991c35b6e0690dfd0"
+	},
+	{
+		"values": [
+			{
+				"value": "4.9e27 g1",
+				"name": "Mass of Venus",
+				"measurement": "mass",
+				"thing": "Venus",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "7.34e25 g1",
+				"name": "Mass of the Moon",
+				"measurement": "mass",
+				"thing": "Moon",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of Venus* to the *Mass of the Moon*",
+		"answer": 66.75749318801088,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "e92d605718534460a8f73b332013b81f"
+	},
+	{
+		"values": [
+			{
+				"value": "1.8095573684677206e13 m2",
+				"name": "Surface area of Earth's core",
+				"measurement": "surface area",
+				"thing": "Earth's core",
+				"specifier": "",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e-2 m2",
+				"name": "Surface area of the top of the iPhone 15",
+				"measurement": "surface area",
+				"thing": "iphone 15",
+				"specifier": "top",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface area of Earth's core* to the *Surface area of the top of the iPhone 15*",
+		"answer": 1809557368467720.8,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ef7018b8ed40424f80c9e1d897d9fed5"
+	},
+	{
+		"values": [
+			{
+				"value": "6.0e6",
+				"name": "Number of Honda CR-Vs sold",
+				"measurement": "count",
+				"thing": "Honda CR-V",
+				"specifier": "sold",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.0e0",
+				"name": "Number of carbon atoms in a glucose molecule",
+				"measurement": "count",
+				"thing": "glucose molecule",
+				"specifier": "carbon atoms",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of Honda CR-Vs sold* to the *Number of carbon atoms in a glucose molecule*",
+		"answer": 1000000.0,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "3e6c9b640ebf4e00918a66e450306f7e"
+	},
+	{
+		"values": [
+			{
+				"value": "9.899999999999999e25 g1",
+				"name": "Mass of Earth's core",
+				"measurement": "mass",
+				"thing": "Earth's core",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.7e7 g1",
+				"name": "Mass of Tsar Bomba",
+				"measurement": "mass",
+				"thing": "tsar bomba",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of Earth's core* to the *Mass of Tsar Bomba*",
+		"answer": 3.6666666666666665e18,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "eb965463365940568241e836652efe40"
+	},
+	{
+		"values": [
+			{
+				"value": "3.566e80 m3",
+				"name": "Volume of the Observable Universe",
+				"measurement": "volume",
+				"thing": "Observable Universe",
+				"specifier": "",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.5e-45 m3",
+				"name": "Volume of a proton",
+				"measurement": "volume",
+				"thing": "proton",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the Observable Universe* to the *Volume of a proton*",
+		"answer": 1.4264e125,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "99048609b5bc4de79e3b4484d7c894ec"
+	},
+	{
+		"values": [
+			{
+				"value": "1.6e18 g1",
+				"name": "Mass of Lake Ontario",
+				"measurement": "mass",
+				"thing": "lake Ontario",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.0e6 g1",
+				"name": "Mass of an African bull elephant",
+				"measurement": "mass",
+				"thing": "African bull elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of Lake Ontario* to the *Mass of an African bull elephant*",
+		"answer": 266666666666.6667,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "fd7bd95c31014eef9624f49b81b81a38"
+	},
+	{
+		"values": [
+			{
+				"value": "9.6e12 m2",
+				"name": "Total surface area of China",
+				"measurement": "surface area",
+				"thing": "China",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.79e6 m2",
+				"name": "Surface area of the Moon",
+				"measurement": "surface area",
+				"thing": "Moon",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total surface area of China* to the *Surface area of the Moon*",
+		"answer": 2532981.530343008,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f801805506ec42fa8ee338613cd55713"
+	},
+	{
+		"values": [
+			{
+				"value": "8.9e6",
+				"name": "Number of visitors per year to The Louvre",
+				"measurement": "count",
+				"thing": "The louvre",
+				"specifier": "visitors per year",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "4.0e2",
+				"name": "Number of dimples on a golf ball",
+				"measurement": "count",
+				"thing": "Golf ball",
+				"specifier": "dimples",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of visitors per year to The Louvre* to the *Number of dimples on a golf ball*",
+		"answer": 22250.0,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "54f33a3c086d4892aa62dee8fb021e87"
+	},
+	{
+		"values": [
+			{
+				"value": "4.2e10 g1",
+				"name": "Mass of the Titanic",
+				"measurement": "mass",
+				"thing": "Titanic",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:14+00:00"
+			},
+			{
+				"value": "8.2e5 g1",
+				"name": "Mass of Voyager 1",
+				"measurement": "mass",
+				"thing": "voyager 1",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Titanic* to the *Mass of Voyager 1*",
+		"answer": 51219.51219512195,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "dd1ab0a82cbd42c697d2d569e82a6b8f"
+	},
+	{
+		"values": [
+			{
+				"value": "3.3000000000000003e26 g1",
+				"name": "Mass of the planet Mercury",
+				"measurement": "mass",
+				"thing": "Mercury",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.3607772e6 g1",
+				"name": "Mass of a Honda Civic",
+				"measurement": "mass",
+				"thing": "Civic",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the planet Mercury* to the *Mass of a Honda Civic*",
+		"answer": 2.4250847236417546e20,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "978d076b18fa46cb980fd77d37443cbb"
+	},
+	{
+		"values": [
+			{
+				"value": "4.6e9",
+				"name": "Population of Asia",
+				"measurement": "count",
+				"thing": "Asia",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "5.2e2",
+				"name": "Number of species of mantis shrimp",
+				"measurement": "count",
+				"thing": "mantis shrimp",
+				"specifier": "species",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of Asia* to the *Number of species of mantis shrimp*",
+		"answer": 8846153.846153846,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "cf208db053cf4ac1bfc7a77fcb6abf1a"
+	},
+	{
+		"values": [
+			{
+				"value": "5.1e7 m1",
+				"name": "Diameter of Uranus",
+				"measurement": "length",
+				"thing": "Uranus",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.0e1 m1",
+				"name": "Diameter of the Saturn V",
+				"measurement": "length",
+				"thing": "Saturn V",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of Uranus* to the *Diameter of the Saturn V*",
+		"answer": 5100000.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "12e7b2f66cb14ef19b489404abb8b1fe"
+	},
+	{
+		"values": [
+			{
+				"value": "9.46e20 m1",
+				"name": "Diameter of the Milky Way",
+				"measurement": "length",
+				"thing": "Milky Way",
+				"specifier": "d",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.12e2 m1",
+				"name": "Height of the Las Vegas Sphere",
+				"measurement": "length",
+				"thing": "Las Vegas Sphere",
+				"specifier": "height",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of the Milky Way* to the *Height of the Las Vegas Sphere*",
+		"answer": 8.446428571428571e18,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "398ef996a0af4ee5bd229c952fc12557"
+	},
+	{
+		"values": [
+			{
+				"value": "2.20752e9 s1",
+				"name": "Lifespan of a Great White Shark",
+				"measurement": "time/age",
+				"thing": "great white shark",
+				"specifier": "lifespan",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.666666666666666e-16 s1",
+				"name": "Period of UVC radiation",
+				"measurement": "time/age",
+				"thing": "uvc",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Lifespan of a Great White Shark* to the *Period of UVC radiation*",
+		"answer": 3.31128e24,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a81c4ce325b0422b93bfb29d45142eb7"
+	},
+	{
+		"values": [
+			{
+				"value": "2.1168e6 s1",
+				"name": "Length of a day on Mars",
+				"measurement": "time/age",
+				"thing": "mars",
+				"specifier": "day length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.856544e9 s1",
+				"name": "Age of the ping pong ball",
+				"measurement": "time/age",
+				"thing": "ping pong ball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of a day on Mars* to the *Age of the ping pong ball*",
+		"answer": 0.000435865504358655,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "58f449984cea489db8f1b8a541b90a9d"
+	},
+	{
+		"values": [
+			{
+				"value": "1.9000000000000001e30 g1",
+				"name": "Mass of Jupiter",
+				"measurement": "mass",
+				"thing": "Jupiter",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e16 g1",
+				"name": "Annual carbon dioxide emissions from coal power production",
+				"measurement": "mass",
+				"thing": "coal power production",
+				"specifier": "carbon dioxide emitted each year",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of Jupiter* to the *Annual carbon dioxide emissions from coal power production*",
+		"answer": 190000000000000.0,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ea94c3accd5f4116b9b2b39ed0991a0e"
+	},
+	{
+		"values": [
+			{
+				"value": "2.3e1 m1/s1",
+				"name": "Speed of a mantis shrimp's punch",
+				"measurement": "speed",
+				"thing": "mantis shrimp",
+				"specifier": "punch",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.1111111111111112e1 m1/s1",
+				"name": "Speed of an African bull elephant",
+				"measurement": "speed",
+				"thing": "African bull elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Speed of a mantis shrimp's punch* to the *Speed of an African bull elephant*",
+		"answer": 2.07,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9528195a1d94464b9315a44dbd7a50d9"
+	},
+	{
+		"values": [
+			{
+				"value": "2.3e3 m1",
+				"name": "Height of the Three Gorges Dam",
+				"measurement": "length",
+				"thing": "Largest hydroelectric plant (Three Gorges Dam)",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.0000000000000004e-7 m1",
+				"name": "Wavelength of UVB radiation",
+				"measurement": "length",
+				"thing": "uvb",
+				"specifier": "wavelength",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Height of the Three Gorges Dam* to the *Wavelength of UVB radiation*",
+		"answer": 7666666666.666666,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "eede8d8a6f25454b95a5e63b6a47616e"
+	},
+	{
+		"values": [
+			{
+				"value": "1.26144e10 s1",
+				"name": "Age of New York State",
+				"measurement": "time/age",
+				"thing": "New York",
+				"specifier": "age of state",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.3333333333333335e-14 s1",
+				"name": "Period of IR camera wavelength",
+				"measurement": "time/age",
+				"thing": "ir camera wavelength",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of New York State* to the *Period of IR camera wavelength*",
+		"answer": 3.78432e23,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9065eab47fad47219ef683ffe535046b"
+	},
+	{
+		"values": [
+			{
+				"value": "2.20752e16 s1",
+				"name": "Half-life of Uranium-235",
+				"measurement": "time/age",
+				"thing": "U-235",
+				"specifier": "half life",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "5.67648e9 s1",
+				"name": "Time since Neptune's discovery",
+				"measurement": "time/age",
+				"thing": "Neptune",
+				"specifier": "discovered",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Half-life of Uranium-235* to the *Time since Neptune's discovery*",
+		"answer": 3888888.888888889,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "e761ecb984ed46fba07d508da22d01f5"
+	},
+	{
+		"values": [
+			{
+				"value": "7.34e25 g1",
+				"name": "Mass of the Moon",
+				"measurement": "mass",
+				"thing": "Moon",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.8e2 g1",
+				"name": "Mass of 1 mol of a glucose molecule",
+				"measurement": "mass",
+				"thing": "glucose molecule",
+				"specifier": "1 mol",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Moon* to the *Mass of 1 mol of a glucose molecule*",
+		"answer": 4.077777777777778e23,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "044cb2b01c5e49329eb4fd56db057db7"
+	},
+	{
+		"values": [
+			{
+				"value": "2.94e2 K1",
+				"name": "Temperature of the Amazon rainforest",
+				"measurement": "temperature",
+				"thing": "Amazon rainforest",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.7314999999999996e2 K1",
+				"name": "Melting point of water",
+				"measurement": "temperature",
+				"thing": "Water",
+				"specifier": "melting point",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Temperature of the Amazon rainforest* to the *Melting point of water*",
+		"answer": 1.0763316858868754,
+		"measurement": "temperature",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f57a9e2ec6934ba6a9b774fddfbc98ed"
+	},
+	{
+		"values": [
+			{
+				"value": "7.56864e11 s1",
+				"name": "Half-life of Pu-239",
+				"measurement": "time/age",
+				"thing": "Pu-239",
+				"specifier": "half life",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "3.1536e7 s1",
+				"name": "Age of an apple",
+				"measurement": "time/age",
+				"thing": "apple m3",
+				"specifier": "",
+				"note": "",
+				"quality": -0.2,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Half-life of Pu-239* to the *Age of an apple*",
+		"answer": 24000.0,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "38b502b4239a4cc7b9524ba7d428fc25"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0853658536585367e6 g1/m3",
+				"name": "Average density of the iPhone 15",
+				"measurement": "density",
+				"thing": "iphone 15",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.98e7 g1/m3",
+				"name": "Density of Pu-239",
+				"measurement": "density",
+				"thing": "Pu-239",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of the iPhone 15* to the *Density of Pu-239*",
+		"answer": 0.10532150776053215,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6508e945ebfa4f0fa2e6271d51d68045"
+	},
+	{
+		"values": [
+			{
+				"value": "6.6e9 m1",
+				"name": "Total length of all roads in the US",
+				"measurement": "length",
+				"thing": "all roads in the US",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e0 m1",
+				"name": "Height of a Lion",
+				"measurement": "length",
+				"thing": "lion",
+				"specifier": "height",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total length of all roads in the US* to the *Height of a Lion*",
+		"answer": 6600000000.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b94a08184cbf4370a3dc7d9406588e23"
+	},
+	{
+		"values": [
+			{
+				"value": "1.5393804002589986e7 m1",
+				"name": "Circumference of Mercury",
+				"measurement": "length",
+				"thing": "Mercury",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "0.9999999999999998e-5 m1",
+				"name": "Wavelength of an infrared camera",
+				"measurement": "length",
+				"thing": "ir camera wavelength",
+				"specifier": "wavelength",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of Mercury* to the *Wavelength of an infrared camera*",
+		"answer": 1539380400258.9988,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0e7e927a6d454b7ab13b351dceb3cce6"
+	},
+	{
+		"values": [
+			{
+				"value": "2.491344e9 s1",
+				"name": "Age of the Fat Man bomb",
+				"measurement": "time/age",
+				"thing": "Fat Man bomb",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.26e4 s1",
+				"name": "Duration of a Daytona 500 race",
+				"measurement": "time/age",
+				"thing": "Daytona 500",
+				"specifier": "duration",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of the Fat Man bomb* to the *Duration of a Daytona 500 race*",
+		"answer": 197725.7142857143,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7a7dc028f0194a3f89689ede21ad4c66"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0e13 m1",
+				"name": "Distance of Voyager 2 from Earth",
+				"measurement": "length",
+				"thing": "voyager 2",
+				"specifier": "distance from earth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.0e0 m1",
+				"name": "Depth of an Olympic swimming pool",
+				"measurement": "length",
+				"thing": "Olympic swimming pool",
+				"specifier": "depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Distance of Voyager 2 from Earth* to the *Depth of an Olympic swimming pool*",
+		"answer": 10000000000000.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0434de8b7f0543bebbca60a90be5450d"
+	},
+	{
+		"values": [
+			{
+				"value": "2.04e8 g1",
+				"name": "Mass of the Statue of Liberty",
+				"measurement": "mass",
+				"thing": "Statue of Liberty",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.8e3 g1",
+				"name": "Mass of the Mars Helicopter Ingenuity",
+				"measurement": "mass",
+				"thing": "Mars Helicopter Ingenuity",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Statue of Liberty* to the *Mass of the Mars Helicopter Ingenuity*",
+		"answer": 113333.33333333333,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7adaa08c24b04fdcb3a338da4286ccdc"
+	},
+	{
+		"values": [
+			{
+				"value": "4.6e9",
+				"name": "Population of Asia",
+				"measurement": "count",
+				"thing": "Asia",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "2.4e3",
+				"name": "Number of coal power productions",
+				"measurement": "count",
+				"thing": "coal power production",
+				"specifier": "",
+				"note": "",
+				"quality": 0.2,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of Asia* to the *Number of coal power productions*",
+		"answer": 1916666.6666666667,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ed0eaccf19c7458c8e4e3ed8cf3d3b38"
+	},
+	{
+		"values": [
+			{
+				"value": "3.333333333333333e-20 s1",
+				"name": "Period of gamma rays",
+				"measurement": "time/age",
+				"thing": "gamma rays",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.797552e11 s1",
+				"name": "Half-life of Carbon-14",
+				"measurement": "time/age",
+				"thing": "C-14",
+				"specifier": "half life",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Period of gamma rays* to the *Half-life of Carbon-14*",
+		"answer": 1.8543738002201512e-31,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c5da2d7658f8433b84e558e471957ee4"
+	},
+	{
+		"values": [
+			{
+				"value": "3.8999999999999995e26 J1/s1",
+				"name": "Power output of the Sun",
+				"measurement": "power",
+				"thing": "Sun",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.4e12 J1/s1",
+				"name": "Worldwide capacity of hydro power",
+				"measurement": "power",
+				"thing": "hydro power",
+				"specifier": "worldwide capacity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Power output of the Sun* to the *Worldwide capacity of hydro power*",
+		"answer": 278571428571428.53,
+		"measurement": "power",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "635cb97d83af4304a0142fd9caae0b18"
+	},
+	{
+		"values": [
+			{
+				"value": "2.4e13 m3",
+				"name": "Volume of Lake Baikal",
+				"measurement": "volume",
+				"thing": "lake Baikal",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.3e-5 m3",
+				"name": "Volume of a ping pong ball",
+				"measurement": "volume",
+				"thing": "ping pong ball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of Lake Baikal* to the *Volume of a ping pong ball*",
+		"answer": 7.272727272727272e17,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1b6702aa074f4ac6ba097adf4890b3d7"
+	},
+	{
+		"values": [
+			{
+				"value": "8.19936e8 s1",
+				"name": "Age of Google",
+				"measurement": "time/age",
+				"thing": "Google",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.8181818181818181e-15 s1",
+				"name": "Period of green light",
+				"measurement": "time/age",
+				"thing": "green light",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of Google* to the *Period of green light*",
+		"answer": 4.5096479999999996e23,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7d576a6343134b51870db69389533099"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0e5 N1",
+				"name": "Thrust of the F-35",
+				"measurement": "power",
+				"thing": "f-35",
+				"specifier": "thrust",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.5e3 N1",
+				"name": "Force exerted by a mantis shrimp",
+				"measurement": "power",
+				"thing": "mantis shrimp",
+				"specifier": "force",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Thrust of the F-35* to the *Force exerted by a mantis shrimp*",
+		"answer": 133.33333333333334,
+		"measurement": "power",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b586fbfbeb6a41f5b6b4366950c40a95"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e6 g1/m3",
+				"name": "Average density of an Olympic swimming pool",
+				"measurement": "density",
+				"thing": "Olympic swimming pool",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.3e6 g1/m3",
+				"name": "Density of Jupiter",
+				"measurement": "density",
+				"thing": "Jupiter",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of an Olympic swimming pool* to the *Density of Jupiter*",
+		"answer": 0.7692307692307693,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "eed7072c22a547478f4893dbff6ac5d7"
+	},
+	{
+		"values": [
+			{
+				"value": "8.200000000000001e23 m3",
+				"name": "Volume of Saturn",
+				"measurement": "volume",
+				"thing": "Saturn",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.6939084e-2 m3",
+				"name": "Gas tank volume of a Honda Civic",
+				"measurement": "volume",
+				"thing": "Civic",
+				"specifier": "gas tank",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of Saturn* to the *Gas tank volume of a Honda Civic*",
+		"answer": 1.7469450405125078e25,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1fd708be40e04fdc9b49fabd61170567"
+	},
+	{
+		"values": [
+			{
+				"value": "4.28e3 m1",
+				"name": "Average depth of the Pacific Ocean",
+				"measurement": "length",
+				"thing": "Pacific Ocean",
+				"specifier": "avg depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.0e0 m1",
+				"name": "Length of a lion from head to tail",
+				"measurement": "length",
+				"thing": "lion",
+				"specifier": "head to tail",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average depth of the Pacific Ocean* to the *Length of a lion from head to tail*",
+		"answer": 2140.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "714c43389e41430c87d1c25f98eb9b48"
+	},
+	{
+		"values": [
+			{
+				"value": "2.7e7",
+				"name": "Number of Honda Civics sold",
+				"measurement": "count",
+				"thing": "Civic",
+				"specifier": "sold",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.0e3",
+				"name": "Number of parking spaces in the Burj Khalifa",
+				"measurement": "count",
+				"thing": "Burj Khalifa",
+				"specifier": "parking spaces",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of Honda Civics sold* to the *Number of parking spaces in the Burj Khalifa*",
+		"answer": 9000.0,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "48011760f68c4080b84a4bdd45227f9d"
+	},
+	{
+		"values": [
+			{
+				"value": "7.5398223686155035e7 m1",
+				"name": "Circumference of Pluto",
+				"measurement": "length",
+				"thing": "Pluto",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "3.4e1 m1",
+				"name": "Length of the base of The Louvre Pyramid",
+				"measurement": "length",
+				"thing": "The Louvre Pyramid",
+				"specifier": "base",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of Pluto* to the *Length of the base of The Louvre Pyramid*",
+		"answer": 2217594.8142986777,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "0ce85eb2437d4d7784c28418eff38cbb"
+	},
+	{
+		"values": [
+			{
+				"value": "9.6e7 g1",
+				"name": "Fuel capacity of the Concorde",
+				"measurement": "mass",
+				"thing": "Concorde",
+				"specifier": "fuel capacity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.0e6 g1",
+				"name": "Fuel capacity of the F-35",
+				"measurement": "mass",
+				"thing": "f-35",
+				"specifier": "fuel capacity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Fuel capacity of the Concorde* to the *Fuel capacity of the F-35*",
+		"answer": 12.0,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "741393c68df642e398e660290376f02d"
+	},
+	{
+		"values": [
+			{
+				"value": "4.3e1 m2",
+				"name": "Wing area of an F-35",
+				"measurement": "surface area",
+				"thing": "f-35",
+				"specifier": "wing area",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.11e2 m2",
+				"name": "Wing area of a Boeing 747",
+				"measurement": "surface area",
+				"thing": "Boeing 747",
+				"specifier": "wing area",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Wing area of an F-35* to the *Wing area of a Boeing 747*",
+		"answer": 0.08414872798434442,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9d7a5385071948bbb4326ffe030b55ef"
+	},
+	{
+		"values": [
+			{
+				"value": "3.35e8",
+				"name": "Population of the United States",
+				"measurement": "count",
+				"thing": "United States",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "3.4e10",
+				"name": "Annual production of crude oil in barrels",
+				"measurement": "count",
+				"thing": "crude oil production ",
+				"specifier": "barrels produced per year",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of the United States* to the *Annual production of crude oil in barrels*",
+		"answer": 0.009852941176470589,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "a0b201fd152045bd93ba3e2f75298364"
+	},
+	{
+		"values": [
+			{
+				"value": "3.1536e11 s1",
+				"name": "Age of the Great Lakes",
+				"measurement": "time/age",
+				"thing": "Great lakes",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.491344e9 s1",
+				"name": "Age of the Little Boy bomb",
+				"measurement": "time/age",
+				"thing": "Little Boy bomb",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of the Great Lakes* to the *Age of the Little Boy bomb*",
+		"answer": 126.58227848101265,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "2e0e6e1fd35e4c5da5416a62b844f785"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e6 g1/m3",
+				"name": "Density of a Great White Shark",
+				"measurement": "density",
+				"thing": "great white shark",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "8.1e5 g1/m3",
+				"name": "Density of an orange",
+				"measurement": "density",
+				"thing": "orange",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Density of a Great White Shark* to the *Density of an orange*",
+		"answer": 1.2345679012345678,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d9a948f85ecb4126867c8390cb6c7737"
+	},
+	{
+		"values": [
+			{
+				"value": "4.2e10 g1",
+				"name": "Mass of the Titanic",
+				"measurement": "mass",
+				"thing": "Titanic",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:14+00:00"
+			},
+			{
+				"value": "4.59e1 g1",
+				"name": "Mass of a golf ball",
+				"measurement": "mass",
+				"thing": "Golf ball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Titanic* to the *Mass of a golf ball*",
+		"answer": 915032679.7385621,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6760448f38fd402fb94dbc6fdeb846c2"
+	},
+	{
+		"values": [
+			{
+				"value": "1.8e13 m2",
+				"name": "Surface area of Pluto",
+				"measurement": "surface area",
+				"thing": "Pluto",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.56e4 m2",
+				"name": "Base area of the Eiffel Tower",
+				"measurement": "surface area",
+				"thing": "Eiffel Tower",
+				"specifier": "base area",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface area of Pluto* to the *Base area of the Eiffel Tower*",
+		"answer": 1153846153.8461537,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "84d6c3d7dd08418c93daa7b535c2f0af"
+	},
+	{
+		"values": [
+			{
+				"value": "6.111111111111111e2 m1/s1",
+				"name": "Speed of the Concorde",
+				"measurement": "speed",
+				"thing": "Concorde",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.5972222222222223e2 m1/s1",
+				"name": "Maximum speed of the Enola Gay",
+				"measurement": "speed",
+				"thing": "enola gay",
+				"specifier": "max: speed",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Speed of the Concorde* to the *Maximum speed of the Enola Gay*",
+		"answer": 3.826086956521739,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9bff1d4b2db24c9c853e53c8bbd5c308"
+	},
+	{
+		"values": [
+			{
+				"value": "0.9999999999999999e6 g1/m3",
+				"name": "Average density of Lake Ontario",
+				"measurement": "density",
+				"thing": "lake Ontario",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "4.2063937184520475e-25 g1/m3",
+				"name": "Average density of the Observable Universe",
+				"measurement": "density",
+				"thing": "Observable Universe",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of Lake Ontario* to the *Average density of the Observable Universe*",
+		"answer": 2.377333333333333e30,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "2bd3a677b5c44262bb3010d3a78e097c"
+	},
+	{
+		"values": [
+			{
+				"value": "4.77e3 J1/mol1",
+				"name": "Heat of fusion of lead",
+				"measurement": "energy",
+				"thing": "Lead",
+				"specifier": "heat of fusion",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.29e3 J1/mol1",
+				"name": "Heat of fusion of Mercury (Element)",
+				"measurement": "energy",
+				"thing": "Mercury (Element)",
+				"specifier": "heat of fusion",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Heat of fusion of lead* to the *Heat of fusion of Mercury (Element)*",
+		"answer": 2.0829694323144103,
+		"measurement": "energy",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7a7ebe3c6f8f4a9b8d92ff8d95df3d34"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e2 m3",
+				"name": "Fuel tank volume of an F-35",
+				"measurement": "volume",
+				"thing": "f-35",
+				"specifier": "fuel tank",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.64e17 m3",
+				"name": "Volume of the Indian Ocean",
+				"measurement": "volume",
+				"thing": "Indian Ocean",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Fuel tank volume of an F-35* to the *Volume of the Indian Ocean*",
+		"answer": 3.7878787878787876e-16,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "933a7b25104a4709aba25ccbff92d793"
+	},
+	{
+		"values": [
+			{
+				"value": "5.9e1 m1",
+				"name": "Width of the Ever Given ship",
+				"measurement": "length",
+				"thing": "evergiven",
+				"specifier": "width",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.4e2 m1",
+				"name": "Range of a 22 caliber rifle",
+				"measurement": "length",
+				"thing": "22 cal rifle",
+				"specifier": "range",
+				"note": "",
+				"quality": 0.96,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Width of the Ever Given ship* to the *Range of a 22 caliber rifle*",
+		"answer": 0.42142857142857143,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6af0142d96e143928f3ea679adf5db31"
+	},
+	{
+		"values": [
+			{
+				"value": "7.1e-1 m1",
+				"name": "Diameter of the Fat Man bomb",
+				"measurement": "length",
+				"thing": "Fat Man bomb",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.700000000000001e-7 m1",
+				"name": "Wavelength of blue light",
+				"measurement": "length",
+				"thing": "blue light",
+				"specifier": "wavelength",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of the Fat Man bomb* to the *Wavelength of blue light*",
+		"answer": 1510638.2978723403,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1eac128eaaee4a7f9b993ae3b86f2294"
+	},
+	{
+		"values": [
+			{
+				"value": "1.35e2",
+				"name": "Number of launches of the space shuttle",
+				"measurement": "count",
+				"thing": "space shuttle",
+				"specifier": "launches",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.73e2",
+				"name": "Number of glass panes in The Louvre Pyramid",
+				"measurement": "count",
+				"thing": "The Louvre Pyramid",
+				"specifier": "number of panes of glass",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of launches of the space shuttle* to the *Number of glass panes in The Louvre Pyramid*",
+		"answer": 0.20059435364041603,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "e3ae6b81a28f40d9ba0c358b9305538e"
+	},
+	{
+		"values": [
+			{
+				"value": "3.5e2 J1/s1",
+				"name": "Power consumption of the AMD Ryzen Threadripper PRO 7995WX",
+				"measurement": "power",
+				"thing": "AMD Ryzen Threadripper PRO 7995WX",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.5e2 J1/s1",
+				"name": "Power consumption of the GeForce RTX 4090",
+				"measurement": "power",
+				"thing": "GeForce rtx 4090",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Power consumption of the AMD Ryzen Threadripper PRO 7995WX* to the *Power consumption of the GeForce RTX 4090*",
+		"answer": 0.7777777777777778,
+		"measurement": "power",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d3c5761e789a43c1bc46a73cb0d63445"
+	},
+	{
+		"values": [
+			{
+				"value": "1.34e18 m3",
+				"name": "Volume of the oceans",
+				"measurement": "volume",
+				"thing": "Oceans",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.1e21 m3",
+				"name": "Volume of the Earth",
+				"measurement": "volume",
+				"thing": "Earth",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the oceans* to the *Volume of the Earth*",
+		"answer": 0.0012181818181818181,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8a655c3c6349471e89fe397ef2df8895"
+	},
+	{
+		"values": [
+			{
+				"value": "4.41504e17 s1",
+				"name": "Half-life of Thorium-232",
+				"measurement": "time/age",
+				"thing": "Th-232",
+				"specifier": "half life",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "7.992e6 s1",
+				"name": "Planned mission length of the Opportunity Rover",
+				"measurement": "time/age",
+				"thing": "Opportunity Rover",
+				"specifier": "planned mission length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Half-life of Thorium-232* to the *Planned mission length of the Opportunity Rover*",
+		"answer": 55243243243.24324,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "41baaf3b9842469f8e7d9dbb9aaff18c"
+	},
+	{
+		"values": [
+			{
+				"value": "4.0e2 m1",
+				"name": "Length of the world's largest container ship",
+				"measurement": "length",
+				"thing": "largest container ship",
+				"specifier": "",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "9.8e3 m1",
+				"name": "Characteristic circular size of the first discovered pulsar, PSR B1919+21",
+				"measurement": "length",
+				"thing": "First discovered pulsar (PSR B1919+21)",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of the world's largest container ship* to the *Characteristic circular size of the first discovered pulsar, PSR B1919+21*",
+		"answer": 0.04081632653061225,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "29fc562807f440a590aaeaf569fb6ac6"
+	},
+	{
+		"values": [
+			{
+				"value": "3.33e2 J1/g1",
+				"name": "Heat of fusion of water",
+				"measurement": "energy",
+				"thing": "Water",
+				"specifier": "heat of fusion",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "1.45e4 J1/g1",
+				"name": "Heat of combustion of TNT",
+				"measurement": "energy",
+				"thing": "tnt",
+				"specifier": "heat of combustion",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Heat of fusion of water* to the *Heat of combustion of TNT*",
+		"answer": 0.02296551724137931,
+		"measurement": "energy",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9c8dce315f734c7eb8e295ba676dffc5"
+	},
+	{
+		"values": [
+			{
+				"value": "9.4608e12 s1",
+				"name": "Age of humans",
+				"measurement": "time/age",
+				"thing": "Humans",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "1.482192e9 s1",
+				"name": "Age of Voyager 2",
+				"measurement": "time/age",
+				"thing": "voyager 2",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of humans* to the *Age of Voyager 2*",
+		"answer": 6382.978723404255,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "4d491a77c400475583df6995e6fa4a60"
+	},
+	{
+		"values": [
+			{
+				"value": "3.78432e9 s1",
+				"name": "Age of AM radio",
+				"measurement": "time/age",
+				"thing": "AM radio",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e-15 s1",
+				"name": "Period of UVB radiation",
+				"measurement": "time/age",
+				"thing": "uvb",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of AM radio* to the *Period of UVB radiation*",
+		"answer": 3.7843199999999993e24,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "651da764a2dc4446aca770cc50bb89ab"
+	},
+	{
+		"values": [
+			{
+				"value": "1.4699999999999998e-1 m1",
+				"name": "Length of an iPhone 15",
+				"measurement": "length",
+				"thing": "iphone 15",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.0e1 m1",
+				"name": "Height of an oak tree",
+				"measurement": "length",
+				"thing": "oak tree",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Length of an iPhone 15* to the *Height of an oak tree*",
+		"answer": 0.0049,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "383c1e02ec0d4153b11204894c59853c"
+	},
+	{
+		"values": [
+			{
+				"value": "2.7900000000000005e33 g1",
+				"name": "Mass of the first discovered pulsar",
+				"measurement": "mass",
+				"thing": "First discovered pulsar (PSR B1919+21)",
+				"specifier": "?",
+				"note": "",
+				"quality": 1.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.2e6 g1",
+				"name": "Mass of an Asian elephant",
+				"measurement": "mass",
+				"thing": "asian elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the first discovered pulsar* to the *Mass of an Asian elephant*",
+		"answer": 8.718750000000001e26,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "188e528899724901acd0a6ca8fd9c6dd"
+	},
+	{
+		"values": [
+			{
+				"value": "5.32e11 m1",
+				"name": "Diameter of Betelgeuse",
+				"measurement": "length",
+				"thing": "Betelgeuse",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "4.5e4 m1",
+				"name": "Distance driven by the Opportunity Rover",
+				"measurement": "length",
+				"thing": "Opportunity Rover",
+				"specifier": "distance driven",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of Betelgeuse* to the *Distance driven by the Opportunity Rover*",
+		"answer": 11822222.222222222,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8366d5e5afd44bc0a3fd2a83277d07f2"
+	},
+	{
+		"values": [
+			{
+				"value": "4.7304e8 s1",
+				"name": "Age of the Android Operating System",
+				"measurement": "time/age",
+				"thing": "Android OS",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "1.89216e8 s1",
+				"name": "Age of the Evergiven",
+				"measurement": "time/age",
+				"thing": "evergiven",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of the Android Operating System* to the *Age of the Evergiven*",
+		"answer": 2.5,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "745de2d431b74b8980e87103b2d64445"
+	},
+	{
+		"values": [
+			{
+				"value": "2.20752e8 s1",
+				"name": "Duration of experiencing 5g",
+				"measurement": "time/age",
+				"thing": "5g",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.26144e8 s1",
+				"name": "Age of the Apple M1 chip",
+				"measurement": "time/age",
+				"thing": "apple m1",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Duration of experiencing 5g* to the *Age of the Apple M1 chip*",
+		"answer": 1.75,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "d035e3be9b7d47eeb68f1684b02a4284"
+	},
+	{
+		"values": [
+			{
+				"value": "3.5e5",
+				"name": "Number of Tesla Model S cars sold",
+				"measurement": "count",
+				"thing": "Tesla model s",
+				"specifier": "sold",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.6e9",
+				"name": "Population of Asia",
+				"measurement": "count",
+				"thing": "Asia",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Number of Tesla Model S cars sold* to the *Population of Asia*",
+		"answer": 7.608695652173912e-5,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6d1d7550f58e421baeb584656c43e50f"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e3 g1/m3",
+				"name": "Density of the atmosphere at Standard Temperature and Pressure (STP)",
+				"measurement": "density",
+				"thing": "The Atmosphere",
+				"specifier": "at stp",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "0.9999999999999999e6 g1/m3",
+				"name": "Average density of frozen fresh water in the world",
+				"measurement": "density",
+				"thing": "Frozen fresh water in the world",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Density of the atmosphere at Standard Temperature and Pressure (STP)* to the *Average density of frozen fresh water in the world*",
+		"answer": 0.0010000000000000002,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ea02b16864b049b0a4ec3ad38a16a99a"
+	},
+	{
+		"values": [
+			{
+				"value": "1.5e3 m1",
+				"name": "Average length of the Mediterranean Sea",
+				"measurement": "length",
+				"thing": "Mediterranean Sea",
+				"specifier": "avg",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.1e4 m1",
+				"name": "Distance driven by the Curiosity Rover",
+				"measurement": "length",
+				"thing": "Curiosity Rover",
+				"specifier": "distance driven",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average length of the Mediterranean Sea* to the *Distance driven by the Curiosity Rover*",
+		"answer": 0.04838709677419355,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "c99acdf91085402682fe89e27cc50852"
+	},
+	{
+		"values": [
+			{
+				"value": "7.884e8 s1",
+				"name": "Age of Bluetooth",
+				"measurement": "time/age",
+				"thing": "Bluetooth",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.986768e9 s1",
+				"name": "Detonation time of the Tsar Bomba",
+				"measurement": "time/age",
+				"thing": "tsar bomba",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of Bluetooth* to the *Detonation time of the Tsar Bomba*",
+		"answer": 0.3968253968253968,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "07a695fb2e1c4a49959752c83f77372a"
+	},
+	{
+		"values": [
+			{
+				"value": "8.1e15 m2",
+				"name": "Surface area of Uranus",
+				"measurement": "surface area",
+				"thing": "Uranus",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "7.5e13 m2",
+				"name": "Surface area of Mercury",
+				"measurement": "surface area",
+				"thing": "Mercury",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface area of Uranus* to the *Surface area of Mercury*",
+		"answer": 108.0,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1640c60cc19d4114858aa5f31624b876"
+	},
+	{
+		"values": [
+			{
+				"value": "1.34e18 m3",
+				"name": "Volume of the oceans",
+				"measurement": "volume",
+				"thing": "Oceans",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.1e12 m3",
+				"name": "Total volume of all rivers in the world",
+				"measurement": "volume",
+				"thing": "All rivers in the world",
+				"specifier": "total volume",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Volume of the oceans* to the *Total volume of all rivers in the world*",
+		"answer": 638095.2380952381,
+		"measurement": "volume",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "4d8d006cffd74520935117c431166fd9"
+	},
+	{
+		"values": [
+			{
+				"value": "4.5e13 m2",
+				"name": "Surface area of Asia",
+				"measurement": "surface area",
+				"thing": "Asia",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.7999999999999998e-1 m2",
+				"name": "Surface area of a basketball",
+				"measurement": "surface area",
+				"thing": "basketball",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface area of Asia* to the *Surface area of a basketball*",
+		"answer": 250000000000000.0,
+		"measurement": "surface area",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f11eb049ac0649fd92fa06fe0b823afb"
+	},
+	{
+		"values": [
+			{
+				"value": "2.1865484868984963e9 m1",
+				"name": "Circumference of the Sun",
+				"measurement": "length",
+				"thing": "Sun",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "1.0e-11 m1",
+				"name": "Wavelength of gamma rays",
+				"measurement": "length",
+				"thing": "gamma rays",
+				"specifier": "wavelength",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of the Sun* to the *Wavelength of gamma rays*",
+		"answer": 2.1865484868984963e20,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6e779d61b92848fa8fe3d6e83807f3f3"
+	},
+	{
+		"values": [
+			{
+				"value": "1.12e4 m1/s1",
+				"name": "Escape velocity of Earth",
+				"measurement": "speed",
+				"thing": "Earth",
+				"specifier": "escape velocity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.1111111111111112e1 m1/s1",
+				"name": "Speed of an African bull elephant",
+				"measurement": "speed",
+				"thing": "African bull elephant",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Escape velocity of Earth* to the *Speed of an African bull elephant*",
+		"answer": 1008.0,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "ba780693f23f43b99bcb3dc1f48f989b"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2e8 m1",
+				"name": "Closest distance to Saturn by Voyager 1",
+				"measurement": "length",
+				"thing": "voyager 1",
+				"specifier": "closest distance to saturn",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.9e1 m1",
+				"name": "Width of the Ever Given ship",
+				"measurement": "length",
+				"thing": "evergiven",
+				"specifier": "width",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Closest distance to Saturn by Voyager 1* to the *Width of the Ever Given ship*",
+		"answer": 2033898.3050847459,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "87c27c44f48a4660ace04fe6fdb210c1"
+	},
+	{
+		"values": [
+			{
+				"value": "3.4e7 g1",
+				"name": "Mass of the Enola Gay",
+				"measurement": "mass",
+				"thing": "enola gay",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.05e8 g1",
+				"name": "Mass of the fastest steam train",
+				"measurement": "mass",
+				"thing": "fastest steam train",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Enola Gay* to the *Mass of the fastest steam train*",
+		"answer": 0.3238095238095238,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "3fad1c9dbe134152a8b5d6d6d03ff5ce"
+	},
+	{
+		"values": [
+			{
+				"value": "6.177e5 m1/s1",
+				"name": "Escape velocity of the Sun",
+				"measurement": "speed",
+				"thing": "Sun",
+				"specifier": "escape velocity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.705583333333334e1 m1/s1",
+				"name": "Speed of the Tesla Model S",
+				"measurement": "speed",
+				"thing": "Tesla model s",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Escape velocity of the Sun* to the *Speed of the Tesla Model S*",
+		"answer": 9211.726546286054,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8d65ed6586b14bbca82ba5c29c39098b"
+	},
+	{
+		"values": [
+			{
+				"value": "1.1e7 g1",
+				"name": "Mass of the Hubble Space Telescope",
+				"measurement": "mass",
+				"thing": "Hubble Space Telescope",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.9999999999999996e-22 g1",
+				"name": "Mass of a glucose molecule",
+				"measurement": "mass",
+				"thing": "glucose molecule",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Mass of the Hubble Space Telescope* to the *Mass of a glucose molecule*",
+		"answer": 3.666666666666667e28,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f3e49443f21b45219e5969fabf53eed2"
+	},
+	{
+		"values": [
+			{
+				"value": "1.41912e17 s1",
+				"name": "Age of Uranus",
+				"measurement": "time/age",
+				"thing": "Uranus",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.36112e8 s1",
+				"name": "Total flight hours of an F-35 aircraft",
+				"measurement": "time/age",
+				"thing": "f-35",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of Uranus* to the *Total flight hours of an F-35 aircraft*",
+		"answer": 264705882.35294116,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "168175d775b948f7944e131038642e54"
+	},
+	{
+		"values": [
+			{
+				"value": "1.450656e17 s1",
+				"name": "Age of Jupiter",
+				"measurement": "time/age",
+				"thing": "Jupiter",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.712096e9 s1",
+				"name": "Age of the fastest steam train",
+				"measurement": "time/age",
+				"thing": "fastest steam train",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of Jupiter* to the *Age of the fastest steam train*",
+		"answer": 53488372.093023255,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f52196056df642a8ab6cc06aeca52986"
+	},
+	{
+		"values": [
+			{
+				"value": "3.43e2 K1",
+				"name": "Operating temperature of the Intel 8086",
+				"measurement": "temperature",
+				"thing": "Intel 8086",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "7.37e2 K1",
+				"name": "Average temperature of Venus",
+				"measurement": "temperature",
+				"thing": "Venus",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Operating temperature of the Intel 8086* to the *Average temperature of Venus*",
+		"answer": 0.4654002713704206,
+		"measurement": "temperature",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1927f23e41cc4e119cd16ee9e6c0060d"
+	},
+	{
+		"values": [
+			{
+				"value": "1.2e4 m1",
+				"name": "Height of the Stratosphere from the ground",
+				"measurement": "length",
+				"thing": "Stratosphere",
+				"specifier": "from the ground",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.0000000000000004e-7 m1",
+				"name": "Wavelength of UVC radiation",
+				"measurement": "length",
+				"thing": "uvc",
+				"specifier": "wavelength",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Height of the Stratosphere from the ground* to the *Wavelength of UVC radiation*",
+		"answer": 60000000000.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "bd97e42a346b42ffb1e99ac5511f81c3"
+	},
+	{
+		"values": [
+			{
+				"value": "3.5e5 N1",
+				"name": "Thrust of each engine of an Airbus A380",
+				"measurement": "other",
+				"thing": "Airbus A380",
+				"specifier": "thrust (each engine)",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.0e5 N1",
+				"name": "Thrust generated by each engine of a Boeing 747",
+				"measurement": "other",
+				"thing": "Boeing 747",
+				"specifier": "thrust (each engine)",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Thrust of each engine of an Airbus A380* to the *Thrust generated by each engine of a Boeing 747*",
+		"answer": 1.7500000000000002,
+		"measurement": "other",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9d26b284bced443a803b07927b9e604d"
+	},
+	{
+		"values": [
+			{
+				"value": "9.4608e12 s1",
+				"name": "Age of humans",
+				"measurement": "time/age",
+				"thing": "Humans",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			},
+			{
+				"value": "2.2222222222222223e-15 s1",
+				"name": "Period of red light",
+				"measurement": "time/age",
+				"thing": "red light",
+				"specifier": "period",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of humans* to the *Period of red light*",
+		"answer": 4.257359999999999e27,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "2400a6940e914c8abccfcd9e6dcef982"
+	},
+	{
+		"values": [
+			{
+				"value": "2.0e12 J1/s1",
+				"name": "Worldwide capacity of power production from coal",
+				"measurement": "power",
+				"thing": "coal power production",
+				"specifier": "worldwide capacity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.0e2 J1/s1",
+				"name": "Power of the Curiosity Rover",
+				"measurement": "power",
+				"thing": "Curiosity Rover",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T20:31:04+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Worldwide capacity of power production from coal* to the *Power of the Curiosity Rover*",
+		"answer": 20000000000.0,
+		"measurement": "power",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b6563345d6004e2f81350f72ae7b2b11"
+	},
+	{
+		"values": [
+			{
+				"value": "1.072224e9 s1",
+				"name": "Age of the Hubble Space Telescope",
+				"measurement": "time/age",
+				"thing": "Hubble Space Telescope",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "9.4608e8 s1",
+				"name": "Age of the Channel Tunnel",
+				"measurement": "time/age",
+				"thing": "channel tunnel",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of the Hubble Space Telescope* to the *Age of the Channel Tunnel*",
+		"answer": 1.1333333333333333,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b200f5a77d80439ca0b5a2eee8c3225f"
+	},
+	{
+		"values": [
+			{
+				"value": "8.69e0 m1/s2",
+				"name": "Surface gravity of Uranus",
+				"measurement": "other",
+				"thing": "Uranus",
+				"specifier": "gravity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.7e0 m1/s2",
+				"name": "Gravity on the surface of Mercury",
+				"measurement": "other",
+				"thing": "Mercury",
+				"specifier": "gravity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Surface gravity of Uranus* to the *Gravity on the surface of Mercury*",
+		"answer": 2.348648648648648,
+		"measurement": "other",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "8c096752341f477183a7bbc85ce5c048"
+	},
+	{
+		"values": [
+			{
+				"value": "3.230769230769231e5 g1/m3",
+				"name": "Average density of the Titanic",
+				"measurement": "density",
+				"thing": "Titanic",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "5.4e6 g1/m3",
+				"name": "Density of Mercury",
+				"measurement": "density",
+				"thing": "Mercury",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Average density of the Titanic* to the *Density of Mercury*",
+		"answer": 0.059829059829059825,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "97a7c563933240a8a0b2458f4e4fa0f3"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e3 m1/s1",
+				"name": "Orbital speed of the Moon",
+				"measurement": "speed",
+				"thing": "Moon",
+				"specifier": "orbital speed",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.35e4 m1/s1",
+				"name": "Escape velocity of Neptune",
+				"measurement": "speed",
+				"thing": "Neptune",
+				"specifier": "escape velocity",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Orbital speed of the Moon* to the *Escape velocity of Neptune*",
+		"answer": 0.0425531914893617,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "767f4a7bade44d669815bcc9989ce780"
+	},
+	{
+		"values": [
+			{
+				"value": "1.3e2 m1",
+				"name": "Focal length of the James Webb Space Telescope",
+				"measurement": "length",
+				"thing": "James Webb Space Telescope",
+				"specifier": "focal length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.8e1 m1",
+				"name": "Focal length of the Hubble Space Telescope",
+				"measurement": "length",
+				"thing": "Hubble Space Telescope",
+				"specifier": "focal length",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Focal length of the James Webb Space Telescope* to the *Focal length of the Hubble Space Telescope*",
+		"answer": 2.2413793103448274,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "7c60ff5583c344d4982ddc18db3746ac"
+	},
+	{
+		"values": [
+			{
+				"value": "9.46e20 m1",
+				"name": "Diameter of the Milky Way",
+				"measurement": "length",
+				"thing": "Milky Way",
+				"specifier": "d",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "3.7699111843077517e8 m1",
+				"name": "Circumference of Saturn",
+				"measurement": "length",
+				"thing": "Saturn",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of the Milky Way* to the *Circumference of Saturn*",
+		"answer": 2509342936082.217,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "6a31881f8b364b7b826216b60a394870"
+	},
+	{
+		"values": [
+			{
+				"value": "1.9038051480754146e6 m1",
+				"name": "Circumference of Charon, Pluto's Pseudo-moon",
+				"measurement": "length",
+				"thing": "Pluto's Pseudo-moon, Charon",
+				"specifier": "circumference",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "2.3e2 m1",
+				"name": "Length of the base of the Pyramid of Giza",
+				"measurement": "length",
+				"thing": "Pyramid of Giza",
+				"specifier": "base",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Circumference of Charon, Pluto's Pseudo-moon* to the *Length of the base of the Pyramid of Giza*",
+		"answer": 8277.413687284412,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "1acb0290f7fd4a208fa52d5a8c62fb24"
+	},
+	{
+		"values": [
+			{
+				"value": "1.5e4 m1/s1",
+				"name": "Speed of Voyager 2",
+				"measurement": "speed",
+				"thing": "voyager 2",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "6.3e1 m1/s1",
+				"name": "Cruise speed of the Cessna 172",
+				"measurement": "speed",
+				"thing": "Cessna 172",
+				"specifier": "cruise speed",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Speed of Voyager 2* to the *Cruise speed of the Cessna 172*",
+		"answer": 238.09523809523807,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "9f03d61fa2e54cfa926fbfa1e8d11b42"
+	},
+	{
+		"values": [
+			{
+				"value": "1.4e8 m1",
+				"name": "Diameter of Jupiter",
+				"measurement": "length",
+				"thing": "Jupiter",
+				"specifier": "diameter",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "2.0e0 m1",
+				"name": "Depth of an Olympic swimming pool",
+				"measurement": "length",
+				"thing": "Olympic swimming pool",
+				"specifier": "depth",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Diameter of Jupiter* to the *Depth of an Olympic swimming pool*",
+		"answer": 70000000.0,
+		"measurement": "length",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "f3693d110b044461b0b0a5f0fe9bf4d1"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e21 g1/m3",
+				"name": "Density of a proton",
+				"measurement": "density",
+				"thing": "proton",
+				"specifier": "",
+				"note": "",
+				"quality": 0.99,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.611111111111111e6 g1/m3",
+				"name": "Average density of the Fat Man bomb",
+				"measurement": "density",
+				"thing": "Fat Man bomb",
+				"specifier": "avg density",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Density of a proton* to the *Average density of the Fat Man bomb*",
+		"answer": 382978723404255.4,
+		"measurement": "density",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "43e8edd606904429aef2df3127cd9cf0"
+	},
+	{
+		"values": [
+			{
+				"value": "1.356048e9 s1",
+				"name": "Age of a space shuttle",
+				"measurement": "time/age",
+				"thing": "space shuttle",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.702944e9 s1",
+				"name": "Time elapsed since the start of Unix time",
+				"measurement": "time/age",
+				"thing": "time since start of unix time",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Age of a space shuttle* to the *Time elapsed since the start of Unix time*",
+		"answer": 0.7962962962962963,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "bc24f1ae18574b138657b1da39acd407"
+	},
+	{
+		"values": [
+			{
+				"value": "1.3055904e10 s1",
+				"name": "Time since Saturn was discovered",
+				"measurement": "time/age",
+				"thing": "Saturn",
+				"specifier": "time since discovered",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "1.292976e9 s1",
+				"name": "Age of the Internet",
+				"measurement": "time/age",
+				"thing": "The Internet",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Time since Saturn was discovered* to the *Age of the Internet*",
+		"answer": 10.097560975609756,
+		"measurement": "time/age",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "759add02f8bf4b488ab7c44dc3c3a823"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e0",
+				"name": "Total number of Observable Universes",
+				"measurement": "count",
+				"thing": "Observable Universe",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "2.5e4",
+				"name": "Number of lions",
+				"measurement": "count",
+				"thing": "lion",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Total number of Observable Universes* to the *Number of lions*",
+		"answer": 4e-5,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "b47a5f2f341148c9890ee3fc76b80898"
+	},
+	{
+		"values": [
+			{
+				"value": "1.01e9",
+				"name": "Population of the Americas",
+				"measurement": "count",
+				"thing": "Americas",
+				"specifier": "population",
+				"note": "auto",
+				"quality": 0.0,
+				"generated": "2024-04-12T21:06:35+00:00"
+			},
+			{
+				"value": "9.0e0",
+				"name": "Number of awards won by Albert Einstein",
+				"measurement": "count",
+				"thing": "Einstein",
+				"specifier": "awards",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Population of the Americas* to the *Number of awards won by Albert Einstein*",
+		"answer": 112222222.22222221,
+		"measurement": "count",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "e291215c36924085b349a53540963ac3"
+	},
+	{
+		"values": [
+			{
+				"value": "5.277777777777778e0 m1/s1",
+				"name": "Speed limit in the Panama Canal",
+				"measurement": "speed",
+				"thing": "panama canal",
+				"specifier": "speed limit",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "5.555555555555555e1 m1/s1",
+				"name": "Top speed of the fastest steam train",
+				"measurement": "speed",
+				"thing": "fastest steam train",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Speed limit in the Panama Canal* to the *Top speed of the fastest steam train*",
+		"answer": 0.09499999999999999,
+		"measurement": "speed",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "cb1149ccf5e64de2b742cf6ead257e51"
+	},
+	{
+		"values": [
+			{
+				"value": "1.0e16 g1",
+				"name": "Annual carbon dioxide emissions from coal power production",
+				"measurement": "mass",
+				"thing": "coal power production",
+				"specifier": "carbon dioxide emitted each year",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			},
+			{
+				"value": "4.15e2 g1",
+				"name": "Mass of a football",
+				"measurement": "mass",
+				"thing": "football",
+				"specifier": "",
+				"note": "",
+				"quality": 0.0,
+				"generated": "2024-03-26T11:59:09+00:00"
+			}
+		],
+		"question": "What is the ratio of the *Annual carbon dioxide emissions from coal power production* to the *Mass of a football*",
+		"answer": 24096385542168.676,
+		"measurement": "mass",
+		"quality": 1.0,
+		"generated": "2024-05-06T23:32:27+00:00",
+		"style": "ratio",
+		"id": "172f3cef094d42318925f5303e3bab3e"
+	}
+]
