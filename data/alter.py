@@ -4,21 +4,26 @@ from units import Quantity
 
 
 def sphere_volume_surface_area(thing: Thing):
+    """
+    If a sphere has a radius, add its surface area, volume, and circumference
+    """
     if "length" not in thing.values:
         print("No length", thing.values)
         return []
     radius = None
+    # find the sphere's radius
     diameter = thing.canonical("length", True)
     if diameter:
         diameter.specifier = "diameter"
         radius = diameter.value / 2
     else:
         for value in thing.values["length"]:
-            # print("length", value)
+            # if it has a diameter, r = d / 2
             if not value.specifier or value.specifier.lower() in ("d", "diameter"):
                 value.specifier = "diameter"
                 radius = value.value / 2
                 break
+            # if it has a radius, use that
             if value.specifier.lower() in ("r", "radius"):
                 value.specifier = "radius"
                 radius = value.value
@@ -26,14 +31,17 @@ def sphere_volume_surface_area(thing: Thing):
     if radius is None:
         return []
     extend = []
+    # if it does not have a volume, add it
     if "volume" not in thing.values:
         extend.append(
             Value(4 / 3 * math.pi * radius**3, measurement="volume", note="auto")
         )
+    # if it does not have a surface area, add it
     if "surface area" not in thing.values:
         extend.append(
             Value(4 * math.pi * radius**2, measurement="surface area", note="auto")
         )
+    # if it does not have a circumference, add it
     if "circumference" not in thing.values:
         extend.append(
             Value(
@@ -50,6 +58,9 @@ speed_of_light = Quantity.from_str("3.0e8 m/s")
 
 
 def em_radiation_values(thing: Thing):
+    """
+    Calculate period/frequency/wavelength given frequency/wavelength for em radiation
+    """
     extend = []
     length = thing.canonical("length")
     if length and not length.specifier:
@@ -82,6 +93,9 @@ def em_radiation_values(thing: Thing):
 
 
 def country_population(thing: Thing):
+    """
+    Specify that the default count for a country is population
+    """
     pop = thing.canonical("count")
     if not pop:
         return
@@ -90,6 +104,9 @@ def country_population(thing: Thing):
 
 
 def density(thing: Thing):
+    """
+    Calculate density based on mass and volume
+    """
     if "density" in thing.values:
         return []
     mass = thing.canonical("mass")
@@ -107,12 +124,15 @@ def density(thing: Thing):
 
 
 def minmax(thing: Thing):
+    """
+    Convert "min" to "min length" eg
+    """
     for values in thing.values.values():
         for value in values:
             if value.specifier in ("min", "max"):
                 value.specifier = f"{value.specifier} {value.measurement}"
 
-
+# A map of tags to apply these alterations to
 alter_map = {
     "sphere": [sphere_volume_surface_area],
     "radiation": [em_radiation_values],
