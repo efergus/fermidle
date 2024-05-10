@@ -169,29 +169,8 @@ def main(input, output):
         for value in values
     ]
 
-    broken = [value.name for value in values if value.value is None]
-    values_by_kind = defaultdict(list)
-    for value in values:
-        if value.value is None:
-            continue
-        values_by_kind[value.kind].append(value)
-
-    # units_by_kind = defaultdict(set)
-    # for kind, values in values_by_kind.items():
-    #     units_by_kind[kind] = set(value.unit for value in values)
-    # units_by_kind = dict(units_by_kind)
-    # print("Broken:", broken)
-    # pprint(units_by_kind)
-    # for x in units_by_kind.values():
-    #     for unit in x:
-    #         units.parse(unit)
     all_units = defaultdict(int)
     for value in values:
-        # print(f"{value.name or value.kind} of {value.thing}:")
-        # print(value.value)
-        # if value.kind == 'density':
-        #     print(f"{value.name or value.kind} of {value.thing}:")
-        #     print(value.value)
         all_units[str(value.value.units)] += 1
 
     units_by_frequency = [
