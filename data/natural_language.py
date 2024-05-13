@@ -57,6 +57,12 @@ class OpenAICompletionContext(CompletionContext):
             print(f"An API error occurred: {e}")
         return response
 
+class ManualCompletionContext(CompletionContext):
+    def complete(self, messages: List[dict]):
+        # print(messages[-1]["content"])
+        response = input("response: ")
+        return response
+
 
 SYSTEM = "Convert data to what you'd call it. Don't include any values"
 # SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
@@ -71,8 +77,9 @@ def create_names(
     sample_size: int = 12,
     start_message=START_MESSAGE,
     manual_quality=False,
+    manual = False
 ):
-    context = OpenAICompletionContext()
+    context = ManualCompletionContext() if manual else OpenAICompletionContext()
     randomized_values = values.copy()
     random.shuffle(randomized_values)
     all_named = [value for value in randomized_values if value.name]
@@ -95,6 +102,8 @@ def create_names(
             print(messages[-1]["content"])
             name = context.complete([START_MESSAGE, *named_example_messages, *messages])
             print(name)
+            if manual:
+                value.quality = 1.0
             if manual_quality:
                 quality = float(input("Quality (0-5): "))
                 value.quality = min(quality / 5, 0.99)

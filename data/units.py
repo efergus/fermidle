@@ -189,7 +189,7 @@ class Quantity:
     @staticmethod
     def deserialize(string: str):
         return Quantity.from_str(string)
-    
+
     def scalar(self):
         return self.value
 

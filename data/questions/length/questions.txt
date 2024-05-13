@@ -1,3 +1,0 @@
-How many *X* tall/deep/long is *Y*?
-How many *X* would it take to wrap around *Y*?
-How many *X* would it take to span *Y*?

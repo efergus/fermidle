@@ -132,6 +132,7 @@ def minmax(thing: Thing):
             if value.specifier in ("min", "max"):
                 value.specifier = f"{value.specifier} {value.measurement}"
 
+
 # A map of tags to apply these alterations to
 alter_map = {
     "sphere": [sphere_volume_surface_area],

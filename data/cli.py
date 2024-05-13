@@ -10,7 +10,7 @@ from natural_language import create_names
 
 
 def generate_names(values: List[Value], manual=False):
-    values = create_names(values)
+    values = create_names(values, manual=manual)
     return values
 
 
@@ -26,7 +26,7 @@ def save_values(values, file):
     json.dump([value.serialize() for value in values], file, indent=2)
 
 
-def create_values(input_file, values_filename):
+def create_values(input_file, values_filename, manual=False):
     values = clean.clean(input_file)
     existing_values = load_values(values_filename)
     existing_values = {value.key(): value for value in existing_values}
@@ -38,7 +38,7 @@ def create_values(input_file, values_filename):
             value.quality = existing.quality
             value.generated = existing.generated
 
-    values = generate_names(values)
+    values = generate_names(values, manual=manual)
     with open(values_filename, "w") as values_file:
         save_values(values, values_file)
     return [value for value in values if value.name]
@@ -59,7 +59,7 @@ def save_questions(questions: List[Question], file):
 def create_questions(values: List[Value], questions_filename, count=20):
     questions = load_questions(questions_filename)
     keys = {question.key() for question in questions}
-    print(keys)
+    # print(keys)
     generated = 0
     tries = 0
     while generated < count and tries < 1e6:
@@ -77,7 +77,7 @@ def create_questions(values: List[Value], questions_filename, count=20):
         value2 = random.choice(matches)
         answer = value1.value / value2.value
         answer_magnitude = math.log10(answer.value)
-        if answer_magnitude < -3 and random.random() > 2**(answer_magnitude/4):
+        if answer_magnitude < -3 and random.random() > 2 ** (answer_magnitude / 4):
             value1, value2 = value2, value1
         answer = value1.value / value2.value
         answer_magnitude = math.log10(answer.value)
@@ -91,7 +91,7 @@ def create_questions(values: List[Value], questions_filename, count=20):
         )
         key = question.key()
         if key not in keys:
-            print(key)
+            # print(key)
             questions.append(question)
             keys.add(key)
             generated += 1
@@ -106,12 +106,13 @@ def create_questions(values: List[Value], questions_filename, count=20):
 @click.argument("output", type=click.Path(), default="questions.json")
 @click.option("--values", type=click.Path(), default="values.json")
 @click.option("--seed", "-s", default="")
+@click.option("--manual", "-m", is_flag=True)
 @click.option("--judge", "-j", is_flag=True)
 @click.option("--count", "-c", default=20)
-def main(input, output, values, seed, judge, count):
+def main(input, output, values, seed, manual, judge, count):
     if seed:
         random.seed(seed)
-    named_values = create_values(input, values)
+    named_values = create_values(input, values, manual=manual)
     if seed:
         random.seed(seed)
     questions = create_questions(named_values, output, count=count)

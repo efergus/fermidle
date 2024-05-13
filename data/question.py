@@ -6,6 +6,7 @@ from value import Value
 from data import default, now
 import uuid
 
+
 @dataclass
 class Question:
     values: List[Value]
@@ -31,7 +32,6 @@ class Question:
     #     return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}\n{self.smaller.called} < {self.larger.called}"
 
     def serialize(self):
-        print(self, self.style)
         return {
             "values": [value.serialize() for value in self.values],
             "question": self.question,
@@ -40,7 +40,7 @@ class Question:
             "quality": self.quality,
             "generated": self.generated,
             "style": self.style,
-            "id": self.qid
+            "id": self.qid,
         }
 
     @staticmethod
@@ -50,10 +50,10 @@ class Question:
             answer=data["answer"],
             question=data["question"].removeprefix("Q: "),
             measurement=data.get("measurement", ""),
-            quality=data.get("quality", 1.0),
+            quality=data.get("quality", 0.0),
             generated=data["generated"],
             style=data["style"],
-            qid=data.get("id", "")
+            qid=data.get("id", ""),
         )
 
     def to_messages(self, include_question=True):
