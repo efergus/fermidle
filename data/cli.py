@@ -4,6 +4,7 @@ import random
 from typing import List
 import click
 import clean
+from images import image_search
 from question import Question
 from value import Value
 from natural_language import create_names
@@ -37,8 +38,23 @@ def create_values(input_file, values_filename, manual=False):
             value.name = existing.name
             value.quality = existing.quality
             value.generated = existing.generated
+            value.image = existing.image
 
     values = generate_names(values, manual=manual)
+    things = {}
+    for value in values:
+        things[value.thing] = value.image or things.get(value.thing, "")
+    try:
+        for thing in things.keys():
+            image = things[thing]
+            if not image:
+                image = image_search(thing) or "none"
+                things[thing] = image
+                print(thing, image)
+    except KeyboardInterrupt:
+        pass
+    for value in values:
+        value.image = things[value.thing]
     with open(values_filename, "w") as values_file:
         save_values(values, values_file)
     return [value for value in values if value.name]

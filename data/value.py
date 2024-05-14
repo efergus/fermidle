@@ -17,6 +17,7 @@ class Value:
     original: str = ""
     quality: float = 0.0
     generated: str = default(now)
+    image: str = ""
 
     def serialize(self):
         return {
@@ -28,6 +29,7 @@ class Value:
             "note": self.note,
             "quality": self.quality,
             "generated": self.generated,
+            "image": self.image
         }
 
     @staticmethod
