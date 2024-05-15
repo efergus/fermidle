@@ -1,7 +1,7 @@
-
 import requests
 
 URL = "https://en.wikipedia.org/w/api.php"
+
 
 def image_search(thing: str):
     session = requests.session()
@@ -11,14 +11,14 @@ def image_search(thing: str):
         "format": "json",
         "list": "search",
         "srlimit": 3,
-        "srsearch": thing
+        "srsearch": thing,
     }
 
     try:
         response = session.get(url=URL, params=params)
         data = response.json()
-        results = data['query']['search']
-        pageids = [str(result['pageid']) for result in results]
+        results = data["query"]["search"]
+        pageids = [str(result["pageid"]) for result in results]
 
         data = {}
         for pageid in pageids:
@@ -29,7 +29,7 @@ def image_search(thing: str):
                 "pithumbsize": 400,
                 "pilimit": 2,
                 "pageids": pageid,
-                "inprop": "url"
+                "inprop": "url",
             }
             response = session.get(url=URL, params=params)
             data = response.json()

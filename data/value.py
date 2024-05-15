@@ -29,7 +29,7 @@ class Value:
             "note": self.note,
             "quality": self.quality,
             "generated": self.generated,
-            "image": self.image
+            "image": self.image,
         }
 
     @staticmethod

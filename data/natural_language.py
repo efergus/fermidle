@@ -57,6 +57,7 @@ class OpenAICompletionContext(CompletionContext):
             print(f"An API error occurred: {e}")
         return response
 
+
 class ManualCompletionContext(CompletionContext):
     def complete(self, _messages: List[dict]):
         response = input("response: ")
@@ -75,7 +76,7 @@ def create_names(
     sample_size: int = 12,
     start_message=START_MESSAGE,
     manual_quality=False,
-    manual = False
+    manual=False,
 ):
     context = ManualCompletionContext() if manual else OpenAICompletionContext()
     randomized_values = values.copy()
