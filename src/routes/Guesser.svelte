@@ -10,6 +10,7 @@
 	export let guess = 0;
 	export let digit = 5;
 	export let unit = 'units';
+	export let placeholder = '?';
 
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
@@ -43,13 +44,14 @@
 
 <div class="vrt gap-4 w-full">
 	<div class="hrz items-start">
-		<div class="h-full vrt justify-end pt-8">
-			<b class="text-8xl">
+		<div class="h-full hrz justify-end pt-8 gap-4 text-7xl md:text-8xl">
+			<p class="text-6xl">=</p>
+			<b>
 				{digit} · 10
 			</b>
 		</div>
 		<div
-			class={clsx('vrt rounded')}
+			class={clsx('vrt rounded mt-[-4px]')}
 			bind:this={inputGroup}
 			on:focusin={() => {
 				focused = true;
@@ -69,7 +71,7 @@
 			<Increment show={focused} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput on:change bind:value={guess} />
+			<IntInput on:change bind:value={guess} {placeholder} />
 			<Increment show={focused} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>
@@ -84,6 +86,3 @@
 		</div>
 	</div>
 </div>
-
-<style>
-</style>

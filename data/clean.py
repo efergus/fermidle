@@ -1,4 +1,5 @@
 # import csv
+from __future__ import annotations
 import pandas
 import re
 from pandas import DataFrame, isna
@@ -6,36 +7,22 @@ from dataclasses import dataclass, field, asdict
 from collections import defaultdict
 from pprint import pprint
 import numpy as np
-from typing import Dict, List
+from typing import Dict, List, Callable
 import json
 import click
+from value import Value, Thing
+
+import units
+import alter
 
 number_regex = r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?"
-range_regex = f"{number_regex}(?:-{number_regex})?"
+range_regex = f"{number_regex}(?:-{number_regex})*"
 unit_regex = r"[^\s]*"
+note_regex = r"\(.*\)"
 
-value_regex = re.compile(f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})")
-
-
-def default(fn):
-    return field(default_factory=fn)
-
-
-@dataclass
-class Value:
-    name: str = ""  # ie Max height, population, etc
-    value: float = None  # The value
-    unit: str = ""  # ie g/cm^3
-    kind: str = ""  # ie legth, volume, density
-    thing: str = ""  # ie Eiffel tower, Pacific ocean
-    uncertainty: float = 0.0  # +/- how much
-
-
-@dataclass
-class Thing:
-    name: str  # ie Eiffel tower, Pacific ocean
-    tags: List[str]  # ie sphere, building
-    values: Dict[str, List[Value]] = default(dict)
+value_regex = re.compile(
+    f"(?:(.*):)?\s*({range_regex})\s*({unit_regex})\s*({note_regex})?$"
+)
 
 
 def drop_empty(df: DataFrame, log=False):
@@ -50,33 +37,91 @@ def parse_number(s: str):
         return None, 0
 
 
-def get_things(df: DataFrame):
+def get_things(df: DataFrame) -> List[Thing]:
     things = []
-    for row_name in df.index:
-        row = df.loc[row_name].dropna()
+    for thing_name in df.index:
+        row = df.loc[thing_name].dropna()
         cols = row.index
         thing = Thing(
-            row_name, tags=[tag.lower() for tag in row.get("tags", "").split(", ")]
+            thing_name,
+            tags=[
+                tag.lower().strip() for tag in row.get("tags", "").split(", ") if tag
+            ],
         )
-        for col_name in cols:
-            if col_name in ("tags", "thing"):
+        values = defaultdict(list)
+        broken = defaultdict(list)
+        for measurement in cols:
+            if measurement in ("tags", "thing"):
                 continue
-            vals = row[col_name]
-            values = defaultdict(list)
+            vals = row[measurement]
             for val in vals.split(","):
                 val = val.strip()
                 m = value_regex.match(val)
                 if not m:
-                    values[m] = Value(m)
+                    broken[measurement].append(val)
                     continue
-                (name, number, unit) = m.group(1, 2, 3)
+                (specifier, number, unit, note) = m.group(1, 2, 3, 4)
                 num, uncertainty = parse_number(number)
-                values[col_name] = Value(
-                    name, num, unit, col_name, row_name, uncertainty
+                if not num:
+                    broken[measurement].append(val)
+                    continue
+                values[measurement].append(
+                    Value(
+                        units.Quantity.from_str(f"{num} {unit}").standardized(
+                            units.preferred
+                        ),
+                        specifier=(specifier or "").lower(),
+                        measurement=measurement,
+                        thing=thing_name,
+                        original=val,
+                    )
                 )
-            thing.values = dict(values)
+        thing.values = dict(values)
+        thing.broken = dict(broken)
         things.append(thing)
     return things
+
+
+def clean(file):
+    df = pandas.read_csv(file, sep="\t")
+    df = df.rename(columns=lambda x: x.strip().lower())
+    df = df[
+        [
+            "thing",
+            "volume",
+            "surface area",
+            "length",
+            "mass",
+            "time/age",
+            "count",
+            "speed",
+            "temperature",
+            "density",
+            "frequency",
+            "energy",
+            "power",
+            "loudness",
+            "charge",
+            "other",
+            "tags",
+        ]
+    ].copy()
+    df = drop_empty(df)
+
+    df = df.set_index("thing", drop=True)
+    things = get_things(df)
+    for thing in things:
+        thing.alter(alter.alter_map.get("", []))
+        for tag in thing.tags:
+            thing.alter(alter.alter_map.get(tag, []))
+
+    values: List[Value] = [
+        value
+        for thing in things
+        for values in thing.values.values()
+        for value in values
+    ]
+    return values
 
 
 @click.command()
@@ -112,7 +157,29 @@ def main(input, output):
 
     df = df.set_index("thing", drop=True)
     things = get_things(df)
-    things_serial = [asdict(thing) for thing in things]
+    for thing in things:
+        thing.alter(alter.alter_map.get("", []))
+        for tag in thing.tags:
+            thing.alter(alter.alter_map.get(tag, []))
+
+    values: List[Value] = [
+        value
+        for thing in things
+        for values in thing.values.values()
+        for value in values
+    ]
+
+    all_units = defaultdict(int)
+    for value in values:
+        all_units[str(value.value.units)] += 1
+
+    units_by_frequency = [
+        f"{x[0]}\t{x[1]}"
+        for x in sorted(all_units.items(), reverse=True, key=lambda x: x[1])
+    ]
+    print("\n".join(units_by_frequency))
+
+    things_serial = [thing.serialize() for thing in things]
     json.dump(things_serial, output, indent=2)
 
 
