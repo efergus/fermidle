@@ -22,10 +22,7 @@
 
 <div class="w-full h-screen vrt justify-stretch bg-theme">
 	<div class="w-full hrz justify-end"><DarkModeButton /></div>
-	<div
-		class="w-full h-full gap-2 grow pb-6 overflow-auto"
-		style="scrollbar-gutter: stable both-edges;"
-	>
+	<div class="w-full h-full pb-6 px-2 overflow-auto" style="scrollbar-gutter: stable both-edges;">
 		<div class="vrt">
 			<Question {question} />
 			<Guesser

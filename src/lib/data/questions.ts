@@ -29,6 +29,10 @@ export type Hint =
 	| {
 			type: 'delta';
 			value: Question;
+	  }
+	| {
+			type: 'message';
+			value: string;
 	  };
 
 export function random_hint(guess_magnitude: number, answer_magnitude: number): Hint {
@@ -37,8 +41,15 @@ export function random_hint(guess_magnitude: number, answer_magnitude: number): 
 		const question_magnitude = Math.log10(queston.answer);
 		return Math.abs(question_magnitude - delta) < 1.5;
 	});
+	if (valid_questions.length > 0) {
+		return {
+			type: 'closer',
+			value: valid_questions[0]
+		};
+	}
+	const value = guess_magnitude > answer_magnitude ? '⬇️' : '⬆️';
 	return {
-		type: 'closer',
-		value: valid_questions[0]
+		type: 'message',
+		value
 	};
 }
