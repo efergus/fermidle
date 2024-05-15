@@ -58,14 +58,12 @@ class OpenAICompletionContext(CompletionContext):
         return response
 
 class ManualCompletionContext(CompletionContext):
-    def complete(self, messages: List[dict]):
-        # print(messages[-1]["content"])
+    def complete(self, _messages: List[dict]):
         response = input("response: ")
         return response
 
 
 SYSTEM = "Convert data to what you'd call it. Don't include any values"
-# SYSTEM = "You are a thesaurus. Respond 'synonym1, synonym2, ... | antonym1, antonym2, ...'."
 START_MESSAGE = {
     "role": "system",
     "content": SYSTEM,

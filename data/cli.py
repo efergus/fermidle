@@ -75,7 +75,6 @@ def save_questions(questions: List[Question], file):
 def create_questions(values: List[Value], questions_filename, count=20):
     questions = load_questions(questions_filename)
     keys = {question.key() for question in questions}
-    # print(keys)
     generated = 0
     tries = 0
     while generated < count and tries < 1e6:
@@ -107,7 +106,6 @@ def create_questions(values: List[Value], questions_filename, count=20):
         )
         key = question.key()
         if key not in keys:
-            # print(key)
             questions.append(question)
             keys.add(key)
             generated += 1

@@ -27,10 +27,6 @@ class Question:
     def key(self):
         return (self.style, *[value.key() for value in self.values])
 
-    # def to_prompt(self):
-    #     answer = scientific(self.larger.value / self.smaller.value, 2)
-    #     return f"{self.smaller.called}: {self.smaller.value_string()}\n{self.larger.called}: {self.larger.value_string()}\n{self.smaller.called} < {self.larger.called}"
-
     def serialize(self):
         return {
             "values": [value.serialize() for value in self.values],
@@ -59,9 +55,6 @@ class Question:
     def to_messages(self, include_question=True):
         messages = []
         user_content = self.to_prompt()
-        # user_content = f"{self.smaller.to_string('smaller')}\n{self.larger.to_string('larger')}"
-        # user_content = f"1. {self.smaller.to_string()}\n2. {self.larger.to_string()}"
-        # user_content = json.dumps([self.smaller.to_dict(), self.larger.to_dict()])
         messages.append({"role": "user", "content": user_content})
         if include_question and self.question:
             messages.append({"role": "assistant", "content": f"Q: {self.question}"})

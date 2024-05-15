@@ -7,11 +7,6 @@
 </script>
 
 <div class="flex vrt text-2xl md:text-3xl text-center">
-	<!-- <div class="max-w-xl">
-		{#each parts as part, i}
-			<span class={i % 2 ? 'font-bold' : ''}>{part}</span>
-		{/each}
-	</div> -->
 	<div class="flex hrz gap-1">
 		<p class="text-2xl">What is</p>
 		<div class="flex vrt p-2 font-serif italic max-w-md">
