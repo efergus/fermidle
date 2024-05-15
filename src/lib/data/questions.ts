@@ -36,6 +36,12 @@ export type Hint =
 	  };
 
 export function random_hint(guess_magnitude: number, answer_magnitude: number): Hint {
+	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
+		return {
+			type: 'message',
+			value: 'Correct!'
+		};
+	}
 	const delta = Math.abs(answer_magnitude - guess_magnitude);
 	const valid_questions = data.filter((queston) => {
 		const question_magnitude = Math.log10(queston.answer);

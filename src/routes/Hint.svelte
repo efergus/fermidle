@@ -3,6 +3,7 @@
 	import clsx from 'clsx';
 
 	export let hint: Hint | undefined;
+	console.log(hint);
 </script>
 
 <div class={clsx(hint ? 'h-36' : 'h-0', 'transition-all vrt justify-center w-full max-w-md')}>
@@ -18,6 +19,6 @@
 	{/if}
 
 	{#if hint?.type === 'message'}
-		<p>{hint.value}</p>
+		<p class="text-2xl">{hint.value}</p>
 	{/if}
 </div>

@@ -27,13 +27,9 @@
 			<Question {question} />
 			<Guesser
 				on:change={() => {
-					if (guess === magnitude) {
-						// hint = 'correct!';
-					} else {
-						guesses = [...guesses, guess];
-						console.log(question);
-						hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer));
-					}
+					guesses = [...guesses, guess];
+					console.log(question);
+					hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer));
 				}}
 				bind:guess
 				{digit}
