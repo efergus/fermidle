@@ -5,6 +5,7 @@
 
 	export let value = 0;
 	export let enabled = true;
+	export let placeholder = '0';
 
 	let input: HTMLInputElement | null = null;
 
@@ -146,7 +147,8 @@
 	type="text"
 	inputmode="numeric"
 	pattern="-?[0-9]*"
-	value="0"
+	value=""
+	{placeholder}
 	disabled={!enabled}
 	bind:this={input}
 	on:focus

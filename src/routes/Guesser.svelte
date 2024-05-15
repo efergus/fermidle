@@ -10,6 +10,7 @@
 	export let guess = 0;
 	export let digit = 5;
 	export let unit = 'units';
+	export let placeholder = '?';
 
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
@@ -70,7 +71,7 @@
 			<Increment show={focused} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput on:change bind:value={guess} />
+			<IntInput on:change bind:value={guess} {placeholder} />
 			<Increment show={focused} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>

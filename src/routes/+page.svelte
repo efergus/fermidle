@@ -23,24 +23,26 @@
 <div class="w-full h-screen vrt justify-stretch bg-theme">
 	<div class="w-full hrz justify-end"><DarkModeButton /></div>
 	<div
-		class="vrt center w-full h-full gap-2 grow pb-6 overflow-auto"
+		class="w-full h-full gap-2 grow pb-6 overflow-auto"
 		style="scrollbar-gutter: stable both-edges;"
 	>
-		<Question {question} />
-		<Guesser
-			on:change={() => {
-				if (guess === magnitude) {
-					// hint = 'correct!';
-				} else {
-					guesses = [...guesses, guess];
-					console.log(question);
-					hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer));
-				}
-			}}
-			bind:guess
-			{digit}
-		/>
-		<Hint {hint} />
-		<Answer values={guesses} bind:target={$answer} />
+		<div class="vrt">
+			<Question {question} />
+			<Guesser
+				on:change={() => {
+					if (guess === magnitude) {
+						// hint = 'correct!';
+					} else {
+						guesses = [...guesses, guess];
+						console.log(question);
+						hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer));
+					}
+				}}
+				bind:guess
+				{digit}
+			/>
+			<Hint {hint} />
+			<Answer values={guesses} bind:target={$answer} />
+		</div>
 	</div>
 </div>

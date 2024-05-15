@@ -21,10 +21,15 @@ export function random_question(): Question {
 	};
 }
 
-export type Hint = {
-	type: 'closer';
-	value: Question;
-};
+export type Hint =
+	| {
+			type: 'closer';
+			value: Question;
+	  }
+	| {
+			type: 'delta';
+			value: Question;
+	  };
 
 export function random_hint(guess_magnitude: number, answer_magnitude: number): Hint {
 	const delta = Math.abs(answer_magnitude - guess_magnitude);

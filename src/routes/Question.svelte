@@ -21,13 +21,17 @@
 		</div>
 		?
 	</div>
-	<div class="flex hrz gap-4 items-stretch max-w-full max-h-72">
-		<img src={values[0].image} class="object-cover h-full basis-1 flex-1" />
-		<img src={values[1].image} class="object-cover h-full basis-1 flex-1" />
-	</div>
 	<div class="flex vrt p-2 font-serif font-bold italic max-w-md">
 		<p class="p-2">{values[0].name}</p>
 		<hr class="border-y w-full border-solid border-secondary" />
 		<p class="p-2">{values[1].name}</p>
+	</div>
+	<div class="flex hrz gap-4 max-w-lg max-h-72">
+		<div class="max-h-full h-full aspect-square vrt">
+			<img src={values[0].image} class="object-cover h-full rounded-md" alt={values[0].name} />
+		</div>
+		<div class="max-h-full h-full aspect-square vrt">
+			<img src={values[1].image} class="h-full rounded-md" alt={values[1].name} />
+		</div>
 	</div>
 </div>
