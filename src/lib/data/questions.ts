@@ -1,3 +1,5 @@
+import random, { RNG, Random } from 'random';
+import seedrandom from 'seedrandom';
 import data from './questions.json';
 
 type Value = {
@@ -12,8 +14,15 @@ export type Question = {
 	values: Value[];
 };
 
+export function seed(value?: string) {
+	if (!value) {
+		value = new Date().toISOString().split('T')[0];
+	}
+	random.use(seedrandom(value) as unknown as RNG);
+}
+
 export function random_question(): Question {
-	const question = data[Math.floor(Math.random() * data.length)];
+	const question = random.choice(data)!;
 	return {
 		question: question.question,
 		answer: question.answer,
@@ -36,6 +45,7 @@ export type Hint =
 	  };
 
 export function random_hint(guess_magnitude: number, answer_magnitude: number): Hint {
+	console.log({ guess_magnitude, answer_magnitude });
 	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
 		return {
 			type: 'message',
@@ -50,7 +60,7 @@ export function random_hint(guess_magnitude: number, answer_magnitude: number): 
 	if (valid_questions.length > 0) {
 		return {
 			type: 'closer',
-			value: valid_questions[0]
+			value: random.choice(valid_questions)!
 		};
 	}
 	const value = guess_magnitude > answer_magnitude ? '⬇️' : '⬆️';

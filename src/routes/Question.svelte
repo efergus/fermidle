@@ -2,11 +2,12 @@
 	import type { Question } from '$lib/data/questions';
 
 	export let question: Question;
+	export let value: number = 1;
 
 	$: values = question.values;
 </script>
 
-<div class="flex vrt text-2xl md:text-3xl text-center">
+<div class="flex vrt text-2xl max-w-xl w-full md:text-3xl text-center">
 	<div class="flex hrz gap-1">
 		<p class="text-2xl">What is</p>
 		<div class="flex vrt p-2 font-serif italic max-w-md">
@@ -21,12 +22,15 @@
 		<hr class="border-y w-full border-solid border-secondary" />
 		<p class="p-1">{values[1].name}</p>
 	</div>
-	<div class="flex hrz gap-4 max-w-lg max-h-72">
-		<div class="max-h-full h-full aspect-square vrt">
-			<img src={values[0].image} class="object-contain h-full rounded-md" alt={values[0].name} />
-		</div>
-		<div class="max-h-full h-full aspect-square vrt">
-			<img src={values[1].image} class="object-contain h-full rounded-md" alt={values[1].name} />
-		</div>
+	<div class="flex hrz gap-4 max-w-xl h-52 max-h-[30vw] w-full">
+		<div
+			class="max-h-full h-full w-full vrt basis-1/2 bg-center"
+			style={`background-image: url(${values[0].image}); background-size: ${Math.min(2 ** (value / 2) * 0.98 + 0.02, 1) * 100}%`}
+		></div>
+		<div
+			class="max-h-full h-full w-full vrt basis-1/2 bg-center"
+			style={`background-image: url(${values[1].image}); background-size: ${Math.min(2 ** (-value / 2) * 0.98 + 0.02, 1) * 100}%`}
+		></div>
 	</div>
+	<div class="p-1 text-lg text-right w-full">*not to scale</div>
 </div>
