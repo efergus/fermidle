@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getAnswer, provideAnswer } from '$lib/context/answer';
-	import { random_hint, random_question, seed, type Hint as HintType } from '$lib/data/questions';
+	import { random_hint, random_question, type Hint as HintType } from '$lib/data/questions';
 	import '../app.css';
 	import Answer from './Answer.svelte';
 	import DarkModeButton from './DarkModeButton.svelte';
@@ -13,7 +13,6 @@
 	let guesses: number[] = [];
 
 	provideAnswer();
-	seed();
 
 	const answer = getAnswer();
 	let question = random_question();
@@ -22,6 +21,7 @@
 	let hint: HintType | undefined;
 
 	function reset() {
+		guess = 0;
 		guesses = [];
 		question = random_question();
 	}
@@ -43,7 +43,9 @@
 				on:change={() => {
 					guesses = [...guesses, guess];
 					console.log(question);
-					hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer));
+					hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer), {
+						direction_skew: hint?.type === 'direction' ? 0 : 0.4
+					});
 				}}
 				bind:guess
 				{digit}

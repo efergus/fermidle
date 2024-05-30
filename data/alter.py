@@ -63,8 +63,11 @@ def em_radiation_values(thing: Thing):
     """
     extend = []
     length = thing.canonical("length")
+    energy = thing.canonical("energy")
     if length and not length.specifier:
         length.specifier = "wavelength"
+    if energy and not energy.specifier:
+        energy.specifier = "single photon"
     frequency = thing.canonical("frequency")
     if length and not frequency:
         frequency = Value(
