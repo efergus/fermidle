@@ -17,7 +17,7 @@
 <div class="vrt items-stretch gap-2 w-full max-w-md">
 	{#if target}
 		{#each display as value, index (index)}
-			<div class={clsx('hrz min-h-[4rem] border rounded px-6 bg-theme')} out:fade={options}>
+			<div class={clsx('hrz min-h-[3rem] border rounded px-6 bg-theme')} out:fade={options}>
 				<p
 					in:fade={{
 						...options
@@ -35,6 +35,6 @@
 		{/each}
 	{/if}
 	{#each extra as _, i}
-		<div class={clsx('min-h-[4rem] border rounded')}></div>
+		<div class={clsx('min-h-[3rem] border border-secondary rounded')}></div>
 	{/each}
 </div>

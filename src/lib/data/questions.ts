@@ -22,8 +22,8 @@ function daily_prng(seed?: string) {
 	return random.clone(GLOBAL_SEED + (seed ?? ''));
 }
 
-const questionRng = daily_prng();
-const hintRng = daily_prng();
+const questionRng = daily_prng('question');
+const hintRng = daily_prng('hint');
 
 export function random_question(): Question {
 	const question = questionRng.choice(data)!;
@@ -73,7 +73,6 @@ export function random_hint(
 	options: HintOptions = {}
 ): Hint {
 	const { difficulty_skew = DIFFICULTY_SKEW, direction_skew = DIRECTION_SKEW } = options;
-	console.log({ guess_magnitude, answer_magnitude });
 	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
 		return {
 			type: 'message',
