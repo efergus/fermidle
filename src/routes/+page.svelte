@@ -34,6 +34,11 @@
 				><Rotate /></button
 			>
 		</div>
+		<div class="max-w-lg w-full hrz justify-between font-bold text-2xl">
+			<div />
+			<p>FERMIDLE</p>
+			<button class="px-3 hover:bg-primary active:bg-primary/80 rounded">?</button>
+		</div>
 		<DarkModeButton />
 	</div>
 	<div class="w-full h-full pb-6 px-2 overflow-auto" style="scrollbar-gutter: stable both-edges;">

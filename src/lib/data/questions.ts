@@ -48,15 +48,22 @@ export type Hint =
 			value: string;
 	  }
 	| {
+			type: 'hotcold';
+			value: string;
+	  }
+	| {
 			type: 'message';
 			value: string;
 	  };
 
 export function question_difficulty(question: Question) {
 	const value_sizes = question.values.map((value) =>
-		Math.log(parseFloat(value.value.split(' ')[0]))
+		Math.abs(Math.log10(parseFloat(value.value.split(' ')[0])))
 	);
-	return value_sizes.reduce((acc, v) => acc + v, 0) * Math.max(Math.log(question.answer), 1);
+	return (
+		value_sizes.reduce((acc, v) => acc + v, 0) *
+		Math.max(Math.log10(Math.abs(Math.log10(question.answer))), 1)
+	);
 }
 
 const DIFFICULTY_SKEW = 0.4; // Closer to 1 => likely to pick more difficult hints
@@ -85,7 +92,14 @@ export function random_hint(
 		return Math.abs(question_magnitude - delta) < Math.max(0.6, Math.min(delta / 4, 1.5));
 	});
 	valid_questions.sort((a, b) => question_difficulty(a) - question_difficulty(b));
-	if (valid_questions.length > 0 && hintRng.float() >= direction_skew) {
+	const easiest_hint = valid_questions[0];
+	const easiest_hint_difficulty = question_difficulty(easiest_hint);
+	console.log({ easiest_hint_difficulty, easiest_hint });
+	if (
+		valid_questions.length > 0 &&
+		hintRng.float() >= direction_skew &&
+		easiest_hint_difficulty < hintRng.float(2, 10 * (1 + difficulty_skew))
+	) {
 		for (let i = 0; ; i = (i + 1) % valid_questions.length) {
 			if (hintRng.float() > difficulty_skew) {
 				return {
