@@ -1,4 +1,6 @@
 <script lang="ts">
+	import X from '$lib/icons/X.svelte';
+
 	export let showModal = false;
 
 	let dialog: HTMLDialogElement;
@@ -13,10 +15,12 @@
 	on:click|self={() => dialog.close()}
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation>
+	<div on:click|stopPropagation class="relative min-h-72 min-w-96">
 		<slot name="header" />
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
-		<hr />
+		<button
+			class="absolute top-1 right-1 hover:bg-primary active:bg-primary/80 rounded"
+			on:click={() => dialog.close()}><X /></button
+		>
 		<slot />
 	</div>
 </dialog>
