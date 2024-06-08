@@ -13,7 +13,9 @@ export default {
 			secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
 			contrast: 'rgb(var(--color-contrast) / <alpha-value>)',
 			'contrast-secondary': 'rgb(var(--color-contrast-secondary) / <alpha-value>)',
-			theme: 'rgb(var(--color-theme) / <alpha-value>)'
+			theme: 'rgb(var(--color-theme) / <alpha-value>)',
+			white: '#ffffff',
+			black: '#000000'
 		}
 	},
 	plugins: []

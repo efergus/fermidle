@@ -13,27 +13,30 @@
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
+	class="bg-theme text-contrast relative"
 >
+	<button
+		class="absolute top-1 right-1 hover:bg-primary bg-theme active:bg-primary/80 rounded"
+		on:click={() => dialog.close()}><X /></button
+	>
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation class="relative min-h-72 min-w-96">
+	<div on:click|stopPropagation class="min-h-72">
 		<slot name="header" />
-		<button
-			class="absolute top-1 right-1 hover:bg-primary active:bg-primary/80 rounded"
-			on:click={() => dialog.close()}><X /></button
-		>
 		<slot />
 	</div>
 </dialog>
 
 <style>
 	dialog {
-		max-width: 32em;
+		max-width: 95vw;
+		max-height: 90vh;
+		width: 32em;
 		border-radius: 0.2em;
 		border: none;
 		padding: 0;
 	}
 	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.3);
+		background: rgba(80, 80, 80, 0.4);
 	}
 	dialog > div {
 		padding: 1em;

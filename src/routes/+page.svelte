@@ -7,6 +7,7 @@
 	import Guesser from './Guesser.svelte';
 	import Question from './Question.svelte';
 	import Hint from './Hint.svelte';
+	import Example from './Example.svelte';
 	import Rotate from '$lib/icons/Rotate.svelte';
 	import Modal from './Modal.svelte';
 
@@ -30,11 +31,10 @@
 </script>
 
 <Modal bind:showModal={showHelp}>
-	<div>What's goin on?</div>
-	
+	<Example />
 </Modal>
 
-<div class="w-full h-screen vrt justify-stretch bg-theme">
+<div class="w-full h-screen vrt justify-stretch bg-theme gap-4">
 	<div class="w-full hrz justify-between">
 		<div>
 			<button class="p-1 m-1 stroke-contrast hover:bg-primary rounded-lg" on:click={reset}
@@ -42,12 +42,14 @@
 			>
 		</div>
 		<div class="max-w-lg w-full hrz justify-between font-bold text-2xl">
-			<div />
-			<p>FERMIDLE</p>
-			<button
-				class="px-3 hover:bg-primary active:bg-primary/80 rounded"
-				on:click={() => (showHelp = true)}>?</button
-			>
+			<div class="basis-0 grow" />
+			<div><p>FERMIDLE</p></div>
+			<div class="flex justify-end basis-0 grow">
+				<button
+					class="px-3 hover:bg-primary active:bg-primary/80 rounded"
+					on:click={() => (showHelp = true)}>?</button
+				>
+			</div>
 		</div>
 		<DarkModeButton />
 	</div>
