@@ -8,9 +8,11 @@
 	import Question from './Question.svelte';
 	import Hint from './Hint.svelte';
 	import Rotate from '$lib/icons/Rotate.svelte';
+	import Modal from './Modal.svelte';
 
 	let guess = 0;
 	let guesses: number[] = [];
+	let showHelp = false;
 
 	provideAnswer();
 
@@ -27,6 +29,11 @@
 	}
 </script>
 
+<Modal bind:showModal={showHelp}>
+	<div>What's goin on?</div>
+	
+</Modal>
+
 <div class="w-full h-screen vrt justify-stretch bg-theme">
 	<div class="w-full hrz justify-between">
 		<div>
@@ -37,7 +44,10 @@
 		<div class="max-w-lg w-full hrz justify-between font-bold text-2xl">
 			<div />
 			<p>FERMIDLE</p>
-			<button class="px-3 hover:bg-primary active:bg-primary/80 rounded">?</button>
+			<button
+				class="px-3 hover:bg-primary active:bg-primary/80 rounded"
+				on:click={() => (showHelp = true)}>?</button
+			>
 		</div>
 		<DarkModeButton />
 	</div>

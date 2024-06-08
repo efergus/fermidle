@@ -1,7 +1,8 @@
 import random from 'random';
 import data from './questions.json';
+import { formatISO } from 'date-fns';
 
-type Value = {
+export type Value = {
 	value: string;
 	name: string;
 	image?: string;
@@ -14,7 +15,7 @@ export type Question = {
 };
 
 function globalSeed() {
-	return new Date().toISOString().split('T')[0];
+	return formatISO(new Date(), { representation: 'date' });
 }
 const GLOBAL_SEED = globalSeed();
 
