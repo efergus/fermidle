@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Question } from '$lib/data/questions';
-	import Frac from './Frac.svelte';
+	import Frac from './format/Frac.svelte';
 	import ValueImage from './ValueImage.svelte';
 
 	export let question: Question;

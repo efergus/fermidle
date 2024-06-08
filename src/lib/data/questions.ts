@@ -55,6 +55,10 @@ export type Hint =
 	| {
 			type: 'message';
 			value: string;
+	  }
+	| {
+			type: 'correct';
+			value: boolean;
 	  };
 
 export function question_difficulty(question: Question) {
@@ -83,8 +87,8 @@ export function random_hint(
 	const { difficulty_skew = DIFFICULTY_SKEW, direction_skew = DIRECTION_SKEW } = options;
 	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
 		return {
-			type: 'message',
-			value: 'Correct!'
+			type: 'correct',
+			value: true
 		};
 	}
 	const delta = Math.abs(answer_magnitude - guess_magnitude);

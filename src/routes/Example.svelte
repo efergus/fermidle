@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Frac from './Frac.svelte';
+	import Frac from './format/Frac.svelte';
 	import Question from './Question.svelte';
 </script>
 
@@ -35,9 +35,9 @@
 		value={0}
 	/>
 	<p>
-		Phrased another way, the question is "How many Golf Balls would it take to reach the top of the
-		Eiffel Tower"? Pretty easy if you know both those values. But what if you don't? Well, we can
-		make educated guesses and get close enough pretty quickly. Let's try.
+		In other words, "How many Golf Balls would it take to reach the top of the Eiffel Tower"? Pretty
+		easy if you know both those values. But what if you don't? Well, we can make educated guesses
+		and get close enough pretty quickly. Let's try!
 	</p>
 
 	<p class="bold">How tall is the Eiffel Tower?</p>
@@ -45,7 +45,7 @@
 		We can try guessing how many stories tall it is. I'd say probably bigger than 10 stories, but
 		smaller than 100. Let's make a guess of 30 stories for now. A story is a little over 4 meters
 		tall, so we'll guess that the Eiffel Tower is <i>30 · 4m = 120m</i> tall. In scientific notation
-		that is <i>1.2e2m</i>.
+		that's <i>1.2e2m</i>.
 	</p>
 	<p class="bold">What is the diameter of a golf ball?</p>
 	<p>
@@ -84,11 +84,8 @@
 		font-family: serif;
 	}
 
-	p {
-		padding-left: 1em;
-	}
 	p.bold {
-		padding-left: 0px;
+		padding-left: 1em;
 	}
 
 	.bold {

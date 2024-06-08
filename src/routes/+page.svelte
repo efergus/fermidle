@@ -11,6 +11,8 @@
 	import Rotate from '$lib/icons/Rotate.svelte';
 	import FermidleIcon from '$lib/icons/FermidleIcon.svelte';
 	import Modal from './Modal.svelte';
+	import { scientific } from '$lib/scientific';
+	import Explanation from './Explanation.svelte';
 
 	let guess = 0;
 	let guesses: number[] = [];
@@ -20,8 +22,7 @@
 
 	const answer = getAnswer();
 	let question = random_question();
-	$: magnitude = Math.floor(Math.log10(question.answer));
-	$: digit = Math.round(question.answer / 10 ** magnitude);
+	$: digit = scientific(question.answer).digit;
 	let hint: HintType | undefined;
 
 	function reset() {
@@ -68,7 +69,11 @@
 				bind:guess
 				{digit}
 			/>
-			<Hint {hint} />
+			{#if hint?.type === 'correct'}
+				<Explanation {question} />
+			{:else}
+				<Hint {hint} />
+			{/if}
 			<Answer values={guesses} bind:target={$answer} />
 		</div>
 	</div>
