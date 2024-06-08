@@ -76,8 +76,7 @@
 		the Eiffel Tower, our answer would be:
 	</p>
 	<p><i>3e-2m / 1.2e2m ≈ 3e-4</i></p>
-	<p>Which means the final answer would actually be <i>-4</i></p>
-	.
+	<p>Which means the final answer would actually be <i>-4</i>.</p>
 </div>
 
 <style>

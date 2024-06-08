@@ -9,6 +9,7 @@
 	import Hint from './Hint.svelte';
 	import Example from './Example.svelte';
 	import Rotate from '$lib/icons/Rotate.svelte';
+	import FermidleIcon from '$lib/icons/FermidleIcon.svelte';
 	import Modal from './Modal.svelte';
 
 	let guess = 0;
@@ -43,7 +44,7 @@
 		</div>
 		<div class="max-w-lg w-full hrz justify-between font-bold text-2xl">
 			<div class="basis-0 grow" />
-			<div><p>FERMIDLE</p></div>
+			<div><FermidleIcon /></div>
 			<div class="flex justify-end basis-0 grow">
 				<button
 					class="px-3 hover:bg-primary active:bg-primary/80 rounded"

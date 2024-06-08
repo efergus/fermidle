@@ -1,0 +1,168 @@
+<svg
+	width="180px"
+	height="32px"
+	viewBox="0 0 140.21902 27.694008"
+	version="1.1"
+	id="svg1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<defs id="defs1" />
+	<g id="layer1" transform="translate(-2.455216,-4.6638236)">
+		<text
+			xml:space="preserve"
+			style="font-size:29.1092px;fill:#000000;stroke-width:0.606439"
+			x="-0.16461192"
+			y="25.447792"
+			id="text1"
+			><tspan
+				id="tspan1"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29.1092px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.606439"
+				x="-0.16461192"
+				y="25.447792">FERMIDLE</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="1.9091913"
+			y="32.263687"
+			id="text2"
+			><tspan
+				id="tspan2"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="1.9091913"
+				y="32.263687">C</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="136.31964"
+			y="32.169544"
+			id="text3"
+			><tspan
+				id="tspan3"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="136.31964"
+				y="32.169544">H</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="7.9677725"
+			y="32.263687"
+			id="text4"
+			><tspan
+				id="tspan4"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="7.9677725"
+				y="32.263687">L</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="14.846932"
+			y="32.263687"
+			id="text5"
+			><tspan
+				id="tspan5"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="14.846932"
+				y="32.263687">O</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="25.95944"
+			y="32.263687"
+			id="text6"
+			><tspan
+				id="tspan6"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="25.95944"
+				y="32.263687">S</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="28.605276"
+			y="32.263687"
+			id="text7"
+			><tspan
+				id="tspan7"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="28.605276"
+				y="32.263687">E</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="71.467812"
+			y="32.263687"
+			id="text8"
+			><tspan
+				id="tspan8"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="71.467812"
+				y="32.263687">E</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="91.892105"
+			y="32.263687"
+			id="text9"
+			><tspan
+				id="tspan9"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="91.892105"
+				y="32.263687">N</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="118.03449"
+			y="32.263687"
+			id="text10"
+			><tspan
+				id="tspan10"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="118.03449"
+				y="32.263687">O</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="120.76972"
+			y="32.263687"
+			id="text11"
+			><tspan
+				id="tspan11"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="120.76972"
+				y="32.263687">U</tspan
+			></text
+		>
+		<text
+			xml:space="preserve"
+			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			x="130.20529"
+			y="32.263687"
+			id="text12"
+			><tspan
+				id="tspan12"
+				style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.41422px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.196129"
+				x="130.20529"
+				y="32.263687">G</tspan
+			></text
+		>
+	</g>
+</svg>
