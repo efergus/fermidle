@@ -7,14 +7,15 @@
 	$: sci = scientific(value, precision);
 </script>
 
-<div class="inline-flex">
+<div class="inline-flex flex-nowrap">
 	<slot name="base">{sci.base}·10</slot>
 	<div class="tall"><slot name="exp"><p>{sci.magnitude}</p></slot></div>
 </div>
 
 <style>
 	.tall {
-		height: 1.5em;
+		height: 100%;
+		transform: translate(0.25ch, -25%);
 		font-size: 0.7em;
 	}
 </style>

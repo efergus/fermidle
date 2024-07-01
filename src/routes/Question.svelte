@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Question } from '$lib/data/questions';
 	import Frac from './format/Frac.svelte';
+	import FracQuestion from './FracQuestion.svelte';
 	import ValueImage from './ValueImage.svelte';
 
 	export let question: Question;
@@ -30,10 +31,5 @@
 		<ValueImage value={values[1]} guess={-value} />
 	</div>
 	<div class="p-1 text-base text-right w-full">*not to scale</div>
-	<div class="flex vrt p-1 font-serif font-bold italic max-w-md">
-		<Frac>
-			<p slot="num">{values[0].name}</p>
-			<p slot="den">{values[1].name}</p>
-		</Frac>
-	</div>
+	<FracQuestion {question} />
 </div>

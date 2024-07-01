@@ -28,6 +28,7 @@
 	function reset() {
 		guess = 0;
 		guesses = [];
+		hint = undefined;
 		question = random_question();
 	}
 </script>
@@ -69,8 +70,8 @@
 				bind:guess
 				{digit}
 			/>
-			{#if hint?.type === 'correct'}
-				<Explanation {question} />
+			{#if hint?.type === 'correct' || guesses.length >= 6}
+				<Explanation {question} {reset} correct={hint?.type === 'correct'} />
 			{:else}
 				<Hint {hint} />
 			{/if}

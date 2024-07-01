@@ -5,7 +5,7 @@
 	export let units = '';
 
 	function power_pairs(units: string) {
-		const parts = units.split(/(\d+)/g);
+		const parts = units.split(/(\d+)/g).filter((x) => x);
 		const pairs = [];
 		let unit = '';
 		for (const part of parts) {
@@ -37,6 +37,8 @@
 	}
 
 	$: powers = unit_powers(units);
+
+	$: console.log({ powers });
 </script>
 
 <div class="inline">
@@ -53,6 +55,9 @@
 						{unit.unit}
 					{/if}
 				{/each}
+				{#if !powers?.num.length}
+					<p>1</p>
+				{/if}
 			</div>
 			<div slot="den">
 				{#each powers.den as unit}
