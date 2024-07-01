@@ -32,29 +32,28 @@ def create_values(input_file, values_filename, manual=False):
     existing_values = load_values(values_filename)
     existing_values = {value.key(): value for value in existing_values}
     for value in values:
-        key = value.key()
-        existing = existing_values.get(key)
+        existing = existing_values.get(value.key())
         if existing:
             value.name = existing.name
             value.quality = existing.quality
             value.generated = existing.generated
-            value.image = existing.image
+            value.image = existing.image or value.image
 
     values = generate_names(values, manual=manual)
-    things = {}
+    images = {}
     for value in values:
-        things[value.thing] = value.image or things.get(value.thing, "")
+        images[value.thing] = value.image or images.get(value.thing, "")
     try:
-        for thing in things.keys():
-            image = things[thing]
-            if not image:
-                image = image_search(thing) or "none"
-                things[thing] = image
-                print(thing, image)
+        for thing in images.keys():
+            image = images[thing]
+            if not image.startswith("http"):
+                image_url = image_search(image or thing) or ""
+                images[thing] = image_url
+                print(image, thing, image_url)
     except KeyboardInterrupt:
         pass
     for value in values:
-        value.image = things[value.thing]
+        value.image = images[value.thing]
     with open(values_filename, "w") as values_file:
         save_values(values, values_file)
     return [value for value in values if value.name]

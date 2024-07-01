@@ -3,11 +3,10 @@
 	import clsx from 'clsx';
 
 	export let hint: Hint | undefined;
-	console.log(hint);
 </script>
 
-<div class={clsx(hint ? 'h-36' : 'h-0', 'transition-all vrt justify-center w-full max-w-md')}>
-	{#if hint?.type === 'closer'}
+<div class={clsx(hint ? 'h-28' : 'h-0', 'transition-all vrt justify-center w-full max-w-md')}>
+	{#if hint?.type === 'delta'}
 		<p class="w-full max-w-sm">That's off by about:</p>
 		<div class="flex vrt w-full">
 			<div class="flex vrt font-serif italic">

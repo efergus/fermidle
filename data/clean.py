@@ -36,22 +36,35 @@ def parse_number(s: str):
     except:
         return None, 0
 
+def colon_separated_values(value: str):
+    parts = [str.strip().lower() for str in value.split(',')]
+    pairs = {}
+    for part in parts:
+        p1, _, p2 = part.partition(':')
+        p1 = p1.strip()
+        if not p1:
+            p2 = p1
+            p1 = ''
+        pairs[p1] = p2
+    return pairs
 
 def get_things(df: DataFrame) -> List[Thing]:
     things = []
     for thing_name in df.index:
         row = df.loc[thing_name].dropna()
+        sources = colon_separated_values(row.get("sources", ""))
+        image=sources.get("image", "")
         cols = row.index
         thing = Thing(
             thing_name,
             tags=[
                 tag.lower().strip() for tag in row.get("tags", "").split(", ") if tag
-            ],
+            ]
         )
         values = defaultdict(list)
         broken = defaultdict(list)
         for measurement in cols:
-            if measurement in ("tags", "thing"):
+            if measurement in ("tags", "sources", "thing"):
                 continue
             vals = row[measurement]
             for val in vals.split(","):
@@ -74,6 +87,7 @@ def get_things(df: DataFrame) -> List[Thing]:
                         measurement=measurement,
                         thing=thing_name,
                         original=val,
+                        image=image
                     )
                 )
         thing.values = dict(values)
@@ -104,6 +118,7 @@ def clean(file):
             "charge",
             "other",
             "tags",
+            "sources"
         ]
     ].copy()
     df = drop_empty(df)
