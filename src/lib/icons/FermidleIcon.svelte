@@ -10,7 +10,7 @@
 	<g id="layer1" transform="translate(-2.455216,-4.6638236)">
 		<text
 			xml:space="preserve"
-			style="font-size:29.1092px;fill:#000000;stroke-width:0.606439"
+			style="font-size:29.1092px;stroke-width:0.606439"
 			x="-0.16461192"
 			y="25.447792"
 			id="text1"
@@ -23,7 +23,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="1.9091913"
 			y="32.263687"
 			id="text2"
@@ -36,7 +36,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="136.31964"
 			y="32.169544"
 			id="text3"
@@ -49,7 +49,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="7.9677725"
 			y="32.263687"
 			id="text4"
@@ -62,7 +62,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="14.846932"
 			y="32.263687"
 			id="text5"
@@ -75,7 +75,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="25.95944"
 			y="32.263687"
 			id="text6"
@@ -88,7 +88,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="28.605276"
 			y="32.263687"
 			id="text7"
@@ -101,7 +101,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="71.467812"
 			y="32.263687"
 			id="text8"
@@ -114,7 +114,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="91.892105"
 			y="32.263687"
 			id="text9"
@@ -127,7 +127,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="118.03449"
 			y="32.263687"
 			id="text10"
@@ -140,7 +140,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="120.76972"
 			y="32.263687"
 			id="text11"
@@ -153,7 +153,7 @@
 		>
 		<text
 			xml:space="preserve"
-			style="font-size:9.41422px;fill:#000000;stroke-width:0.196129"
+			style="font-size:9.41422px;stroke-width:0.196129"
 			x="130.20529"
 			y="32.263687"
 			id="text12"
