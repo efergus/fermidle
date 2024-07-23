@@ -37,8 +37,6 @@
 	}
 
 	$: powers = unit_powers(units);
-
-	$: console.log({ powers });
 </script>
 
 <div class="inline">

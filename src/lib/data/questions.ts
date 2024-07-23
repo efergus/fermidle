@@ -19,15 +19,25 @@ function globalSeed() {
 }
 const GLOBAL_SEED = globalSeed();
 
-function daily_prng(seed?: string) {
-	return random.clone(GLOBAL_SEED + (seed ?? ''));
+function seeded_prng(...seed: (string | number)[]) {
+	let globalSeed = GLOBAL_SEED;
+	if (typeof window !== 'undefined') {
+		const params = new URLSearchParams(window.location.search);
+		let seed = params.get('s');
+		if (!seed) {
+			params.set('s', GLOBAL_SEED);
+			window.location.search = params.toString();
+		}
+		globalSeed = seed ?? GLOBAL_SEED;
+	}
+
+	const seedString = seed.map((x) => x.toString()).join('|') ?? '';
+	return random.clone(globalSeed + seedString);
 }
 
-const questionRng = daily_prng('question');
-const hintRng = daily_prng('hint');
-
-export function random_question(): Question {
-	const question = questionRng.choice(data)!;
+export function random_question(num: number): Question {
+	const rng = seeded_prng('question', num);
+	const question = rng.choice(data)!;
 	return {
 		question: question.question,
 		answer: question.answer,
@@ -77,6 +87,7 @@ const DIRECTION_SKEW = 0.3; // Chance to show a directional hint instead of a qu
 type HintOptions = {
 	difficulty_skew?: number;
 	direction_skew?: number;
+	num?: number;
 };
 
 export function random_hint(
@@ -84,6 +95,7 @@ export function random_hint(
 	answer_magnitude: number,
 	options: HintOptions = {}
 ): Hint {
+	const rng = seeded_prng('hint', options.num ?? 0);
 	const { difficulty_skew = DIFFICULTY_SKEW, direction_skew = DIRECTION_SKEW } = options;
 	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
 		return {
@@ -102,11 +114,11 @@ export function random_hint(
 	console.log({ easiest_hint_difficulty, easiest_hint });
 	if (
 		valid_questions.length > 0 &&
-		hintRng.float() >= direction_skew &&
-		easiest_hint_difficulty < hintRng.float(2, 10 * (1 + difficulty_skew))
+		rng.float() >= direction_skew &&
+		easiest_hint_difficulty < rng.float(2, 10 * (1 + difficulty_skew))
 	) {
 		for (let i = 0; ; i = (i + 1) % valid_questions.length) {
-			if (hintRng.float() > difficulty_skew) {
+			if (rng.float() > difficulty_skew) {
 				return {
 					type: 'delta',
 					value: valid_questions[i]
