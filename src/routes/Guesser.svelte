@@ -15,14 +15,7 @@
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
 
-	let focused = false;
-	let clearFocusTimeout = () => {};
-
 	let inputGroup: HTMLDivElement | null = null;
-
-	onMount(() => {
-		document.addEventListener('click', () => {});
-	});
 
 	const incrementer = (value: number) => () => {
 		guess += value;
@@ -50,24 +43,7 @@
 				{digit}·10
 			</b>
 		</div>
-		<div
-			class={clsx('vrt rounded mt-[-4px]')}
-			bind:this={inputGroup}
-			on:focusin={() => {
-				// focused = true;
-				// clearFocusTimeout();
-			}}
-			on:focusout={() => {
-				// if (!inputGroup?.contains(document.activeElement)) {
-				// 	clearFocusTimeout();
-				// 	const handle = setTimeout(() => (focused = false), 2000);
-				// 	clearFocusTimeout = () => {
-				// 		clearTimeout(handle);
-				// 		clearFocusTimeout = () => {};
-				// 	};
-				// }
-			}}
-		>
+		<div class={clsx('vrt rounded mt-[-4px]')} bind:this={inputGroup}>
 			<Increment show={true} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
