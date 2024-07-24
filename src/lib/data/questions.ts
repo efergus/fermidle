@@ -1,6 +1,6 @@
 import random from 'random';
 import data from './questions.json';
-import { formatISO } from 'date-fns';
+import { addDays, formatISO, isValid, parseISO } from 'date-fns';
 
 export type Value = {
 	value: string;
@@ -28,7 +28,13 @@ function seeded_prng(...seed: (string | number)[]) {
 			params.set('s', GLOBAL_SEED);
 			window.location.search = params.toString();
 		}
-		globalSeed = seed ?? GLOBAL_SEED;
+		let date = parseISO(seed || '');
+		if (!seed || !isValid(date) || date > new Date()) {
+			seed = GLOBAL_SEED;
+			params.set('s', GLOBAL_SEED);
+			window.location.search = params.toString();
+		}
+		globalSeed = seed;
 	}
 
 	const seedString = seed.map((x) => x.toString()).join('|') ?? '';

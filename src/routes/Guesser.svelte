@@ -45,7 +45,7 @@
 <div class="vrt gap-4 w-full">
 	<div class="hrz items-start">
 		<div class="h-full hrz justify-end pt-8 gap-4 text-7xl md:text-8xl">
-			<p class="text-6xl">=</p>
+			<p class="text-6xl">≈</p>
 			<b>
 				{digit}·10
 			</b>
@@ -54,25 +54,25 @@
 			class={clsx('vrt rounded mt-[-4px]')}
 			bind:this={inputGroup}
 			on:focusin={() => {
-				focused = true;
-				clearFocusTimeout();
+				// focused = true;
+				// clearFocusTimeout();
 			}}
 			on:focusout={() => {
-				if (!inputGroup?.contains(document.activeElement)) {
-					clearFocusTimeout();
-					const handle = setTimeout(() => (focused = false), 2000);
-					clearFocusTimeout = () => {
-						clearTimeout(handle);
-						clearFocusTimeout = () => {};
-					};
-				}
+				// if (!inputGroup?.contains(document.activeElement)) {
+				// 	clearFocusTimeout();
+				// 	const handle = setTimeout(() => (focused = false), 2000);
+				// 	clearFocusTimeout = () => {
+				// 		clearTimeout(handle);
+				// 		clearFocusTimeout = () => {};
+				// 	};
+				// }
 			}}
 		>
-			<Increment show={focused} on:click={incrementer(1)}>
+			<Increment show={true} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
 			<IntInput on:change bind:value={guess} {placeholder} />
-			<Increment show={focused} on:click={incrementer(-1)}>
+			<Increment show={true} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>
 		</div>

@@ -107,7 +107,7 @@ def clean(file):
             "length",
             "mass",
             "time/age",
-            "count",
+            "number",
             "speed",
             "temperature",
             "density",
@@ -135,6 +135,7 @@ def clean(file):
         for thing in things
         for values in thing.values.values()
         for value in values
+        if "?" not in value.specifier
     ]
     return values
 

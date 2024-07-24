@@ -44,7 +44,9 @@ def create_values(input_file, values_filename, manual=False):
     for value in values:
         images[value.thing] = value.image or images.get(value.thing, "")
     try:
-        for thing in images.keys():
+        image_keys = list(images.keys())
+        random.shuffle(image_keys)
+        for thing in image_keys:
             image = images[thing]
             if not image.startswith("http"):
                 image_url = image_search(image or thing) or ""
@@ -72,7 +74,7 @@ def save_questions(questions: List[Question], file):
 
 
 def create_questions(values: List[Value], questions_filename, count=20):
-    questions = load_questions(questions_filename)
+    questions = []
     keys = {question.key() for question in questions}
     generated = 0
     tries = 0
@@ -97,7 +99,7 @@ def create_questions(values: List[Value], questions_filename, count=20):
         answer_magnitude = math.log10(answer.value)
         question = Question(
             [value1, value2],
-            f"What is the ratio of the *{value1.name}* to the *{value2.name}*",
+            "",
             answer=answer.value,
             quality=1.0,
             measurement=value1.measurement,
@@ -128,7 +130,8 @@ def main(input, output, values, seed, manual, judge, count):
     named_values = create_values(input, values, manual=manual)
     if seed:
         random.seed(seed)
-    questions = create_questions(named_values, output, count=count)
+    if count:
+        questions = create_questions(named_values, output, count=count)
 
 
 if __name__ == "__main__":
