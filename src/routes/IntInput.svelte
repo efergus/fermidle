@@ -5,8 +5,8 @@
 	import { onMount } from 'svelte';
 
 	export let value = 0;
-	export let enabled = true;
 	export let placeholder = '0';
+	export let disabled = false;
 
 	let input: HTMLInputElement | null = null;
 
@@ -165,7 +165,7 @@
 		pattern="-?[0-9]*"
 		value=""
 		{placeholder}
-		disabled={!enabled}
+		{disabled}
 		bind:this={input}
 		on:focus
 		on:input
@@ -179,9 +179,10 @@
 	/>
 
 	<button
-		class="absolute top-0 right-0 translate-x-full h-full flex items-center px-2 rounded hover:bg-secondary"
+		class="absolute top-0 right-0 translate-x-full h-full flex items-center px-2 rounded enabled:hover:bg-secondary"
 		on:click={submit}
 		tabindex="-1"
+		{disabled}
 		><CheckIcon />
 	</button>
 </div>

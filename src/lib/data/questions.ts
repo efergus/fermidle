@@ -94,6 +94,7 @@ type HintOptions = {
 	difficulty_skew?: number;
 	direction_skew?: number;
 	num?: number;
+	previous_guess_magnitude?: number;
 };
 
 export function random_hint(
@@ -102,35 +103,51 @@ export function random_hint(
 	options: HintOptions = {}
 ): Hint {
 	const rng = seeded_prng('hint', options.num ?? 0);
-	const { difficulty_skew = DIFFICULTY_SKEW, direction_skew = DIRECTION_SKEW } = options;
-	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
+	// const { difficulty_skew = DIFFICULTY_SKEW, direction_skew = DIRECTION_SKEW } = options;
+	const int_answer = Math.floor(answer_magnitude);
+	const int_guess = Math.floor(guess_magnitude);
+	if (int_guess === int_answer) {
 		return {
 			type: 'correct',
 			value: true
 		};
 	}
 	const delta = Math.abs(answer_magnitude - guess_magnitude);
-	const valid_questions = data.filter((queston) => {
-		const question_magnitude = Math.log10(queston.answer);
-		return Math.abs(question_magnitude - delta) < Math.max(0.6, Math.min(delta / 4, 1.5));
-	});
-	valid_questions.sort((a, b) => question_difficulty(a) - question_difficulty(b));
-	const easiest_hint = valid_questions[0];
-	const easiest_hint_difficulty = question_difficulty(easiest_hint);
-	console.log({ easiest_hint_difficulty, easiest_hint });
-	if (
-		valid_questions.length > 0 &&
-		rng.float() >= direction_skew &&
-		easiest_hint_difficulty < rng.float(2, 10 * (1 + difficulty_skew))
-	) {
-		for (let i = 0; ; i = (i + 1) % valid_questions.length) {
-			if (rng.float() > difficulty_skew) {
-				return {
-					type: 'delta',
-					value: valid_questions[i]
-				};
-			}
-		}
+	let closer = 0;
+	if (options.previous_guess_magnitude !== undefined) {
+		console.log(options);
+		const prev_delta = Math.abs(int_answer - Math.floor(options.previous_guess_magnitude));
+		closer = prev_delta - Math.abs(int_answer - int_guess);
+	}
+	// const valid_questions = data.filter((queston) => {
+	// 	const question_magnitude = Math.log10(queston.answer);
+	// 	return Math.abs(question_magnitude - delta) < Math.max(0.6, Math.min(delta / 4, 1.5));
+	// });
+	// valid_questions.sort((a, b) => question_difficulty(a) - question_difficulty(b));
+	// const easiest_hint = valid_questions[0];
+	// const easiest_hint_difficulty = question_difficulty(easiest_hint);
+	// console.log({ easiest_hint_difficulty, easiest_hint });
+	// if (
+	// 	valid_questions.length > 0 &&
+	// 	rng.float() >= direction_skew &&
+	// 	easiest_hint_difficulty < rng.float(2, 10 * (1 + difficulty_skew))
+	// ) {
+	// 	for (let i = 0; ; i = (i + 1) % valid_questions.length) {
+	// 		if (rng.float() > difficulty_skew) {
+	// 			return {
+	// 				type: 'delta',
+	// 				value: valid_questions[i]
+	// 			};
+	// 		}
+	// 	}
+	// }
+
+	console.log({ closer });
+	if (closer && rng.float() < 0.5) {
+		return {
+			type: 'message',
+			value: closer > 0 ? 'Warmer 🔥' : 'Colder 🥶'
+		};
 	}
 	const value = guess_magnitude > answer_magnitude ? '⬇️' : '⬆️';
 	return {

@@ -11,6 +11,7 @@
 	export let digit = 5;
 	export let unit = 'units';
 	export let placeholder = '?';
+	export let disabled = false;
 
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
@@ -44,11 +45,11 @@
 			</b>
 		</div>
 		<div class={clsx('vrt rounded mt-[-4px]')} bind:this={inputGroup}>
-			<Increment show={true} on:click={incrementer(1)}>
+			<Increment {disabled} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput on:change bind:value={guess} {placeholder} />
-			<Increment show={true} on:click={incrementer(-1)}>
+			<IntInput on:change {disabled} bind:value={guess} {placeholder} />
+			<Increment {disabled} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>
 		</div>
