@@ -1,6 +1,6 @@
 import random from 'random';
 import data from './questions.json';
-import { formatISO } from 'date-fns';
+import { addDays, formatISO, isValid, parseISO } from 'date-fns';
 
 export type Value = {
 	value: string;
@@ -19,15 +19,31 @@ function globalSeed() {
 }
 const GLOBAL_SEED = globalSeed();
 
-function daily_prng(seed?: string) {
-	return random.clone(GLOBAL_SEED + (seed ?? ''));
+function seeded_prng(...seed: (string | number)[]) {
+	let globalSeed = GLOBAL_SEED;
+	if (typeof window !== 'undefined') {
+		const params = new URLSearchParams(window.location.search);
+		let seed = params.get('s');
+		if (!seed) {
+			params.set('s', GLOBAL_SEED);
+			window.location.search = params.toString();
+		}
+		let date = parseISO(seed || '');
+		if (!seed || !isValid(date) || date > new Date()) {
+			seed = GLOBAL_SEED;
+			params.set('s', GLOBAL_SEED);
+			window.location.search = params.toString();
+		}
+		globalSeed = seed;
+	}
+
+	const seedString = seed.map((x) => x.toString()).join('|') ?? '';
+	return random.clone(globalSeed + seedString);
 }
 
-const questionRng = daily_prng('question');
-const hintRng = daily_prng('hint');
-
-export function random_question(): Question {
-	const question = questionRng.choice(data)!;
+export function random_question(num: number): Question {
+	const rng = seeded_prng('question', num);
+	const question = rng.choice(data)!;
 	return {
 		question: question.question,
 		answer: question.answer,
@@ -77,6 +93,8 @@ const DIRECTION_SKEW = 0.3; // Chance to show a directional hint instead of a qu
 type HintOptions = {
 	difficulty_skew?: number;
 	direction_skew?: number;
+	num?: number;
+	previous_guess_magnitude?: number;
 };
 
 export function random_hint(
@@ -84,35 +102,27 @@ export function random_hint(
 	answer_magnitude: number,
 	options: HintOptions = {}
 ): Hint {
-	const { difficulty_skew = DIFFICULTY_SKEW, direction_skew = DIRECTION_SKEW } = options;
-	if (Math.floor(guess_magnitude) === Math.floor(answer_magnitude)) {
+	const rng = seeded_prng('hint', options.num ?? 0);
+	const int_answer = Math.floor(answer_magnitude);
+	const int_guess = Math.floor(guess_magnitude);
+	if (int_guess === int_answer) {
 		return {
 			type: 'correct',
 			value: true
 		};
 	}
 	const delta = Math.abs(answer_magnitude - guess_magnitude);
-	const valid_questions = data.filter((queston) => {
-		const question_magnitude = Math.log10(queston.answer);
-		return Math.abs(question_magnitude - delta) < Math.max(0.6, Math.min(delta / 4, 1.5));
-	});
-	valid_questions.sort((a, b) => question_difficulty(a) - question_difficulty(b));
-	const easiest_hint = valid_questions[0];
-	const easiest_hint_difficulty = question_difficulty(easiest_hint);
-	console.log({ easiest_hint_difficulty, easiest_hint });
-	if (
-		valid_questions.length > 0 &&
-		hintRng.float() >= direction_skew &&
-		easiest_hint_difficulty < hintRng.float(2, 10 * (1 + difficulty_skew))
-	) {
-		for (let i = 0; ; i = (i + 1) % valid_questions.length) {
-			if (hintRng.float() > difficulty_skew) {
-				return {
-					type: 'delta',
-					value: valid_questions[i]
-				};
-			}
-		}
+	let closer = 0;
+	if (options.previous_guess_magnitude !== undefined) {
+		const prev_delta = Math.abs(int_answer - Math.floor(options.previous_guess_magnitude));
+		closer = prev_delta - Math.abs(int_answer - int_guess);
+	}
+
+	if (closer && rng.float() < 0.5) {
+		return {
+			type: 'message',
+			value: closer > 0 ? 'Warmer 🔥' : 'Colder 🥶'
+		};
 	}
 	const value = guess_magnitude > answer_magnitude ? '⬇️' : '⬆️';
 	return {

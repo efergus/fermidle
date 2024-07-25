@@ -11,18 +11,12 @@
 	export let digit = 5;
 	export let unit = 'units';
 	export let placeholder = '?';
+	export let disabled = false;
 
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
 
-	let focused = false;
-	let clearFocusTimeout = () => {};
-
 	let inputGroup: HTMLDivElement | null = null;
-
-	onMount(() => {
-		document.addEventListener('click', () => {});
-	});
 
 	const incrementer = (value: number) => () => {
 		guess += value;
@@ -45,34 +39,17 @@
 <div class="vrt gap-4 w-full">
 	<div class="hrz items-start">
 		<div class="h-full hrz justify-end pt-8 gap-4 text-7xl md:text-8xl">
-			<p class="text-6xl">=</p>
+			<p class="text-6xl">≈</p>
 			<b>
 				{digit}·10
 			</b>
 		</div>
-		<div
-			class={clsx('vrt rounded mt-[-4px]')}
-			bind:this={inputGroup}
-			on:focusin={() => {
-				focused = true;
-				clearFocusTimeout();
-			}}
-			on:focusout={() => {
-				if (!inputGroup?.contains(document.activeElement)) {
-					clearFocusTimeout();
-					const handle = setTimeout(() => (focused = false), 2000);
-					clearFocusTimeout = () => {
-						clearTimeout(handle);
-						clearFocusTimeout = () => {};
-					};
-				}
-			}}
-		>
-			<Increment show={focused} on:click={incrementer(1)}>
+		<div class={clsx('vrt rounded mt-[-4px]')} bind:this={inputGroup}>
+			<Increment {disabled} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput on:change bind:value={guess} {placeholder} />
-			<Increment show={focused} on:click={incrementer(-1)}>
+			<IntInput on:change {disabled} bind:value={guess} {placeholder} />
+			<Increment {disabled} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>
 		</div>

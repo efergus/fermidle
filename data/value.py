@@ -3,6 +3,7 @@ from dataclasses import dataclass, field, asdict
 from typing import Dict, List, Callable
 from data import default, now
 
+from llmem import message_chain
 from units import Units, Quantity
 
 
@@ -51,10 +52,10 @@ class Value:
         return "\n".join(f"{key}: {value}" for key, value in data.items() if value)
 
     def to_messages(self, include_name=True):
-        messages = [{"role": "user", "content": self.to_string()}]
+        messages = [self.to_string()]
         if include_name and self.name:
-            messages.append({"role": "assistant", "content": self.name})
-        return messages
+            messages.append(self.name)
+        return message_chain(messages)
 
 
 @dataclass

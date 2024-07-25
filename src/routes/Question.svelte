@@ -7,6 +7,7 @@
 	export let question: Question;
 	export let value: number = 1;
 	export let describe = false;
+	export let loading = typeof window === 'undefined';
 
 	$: values = question.values;
 	$: repeat1 = value < 0 ? 'repeat' : 'no-repeat';
@@ -27,8 +28,10 @@
 		</div>
 	{/if}
 	<div class="flex hrz gap-4 max-w-lg h-44 max-h-[30vw] w-full bg-white rounded p-1">
-		<ValueImage value={values[0]} guess={value} />
-		<ValueImage value={values[1]} guess={-value} />
+		{#if !loading}
+			<ValueImage value={values[0]} guess={value} />
+			<ValueImage value={values[1]} guess={-value} />
+		{/if}
 	</div>
 	<div class="p-1 text-base text-right w-full">*not to scale</div>
 	<FracQuestion {question} />

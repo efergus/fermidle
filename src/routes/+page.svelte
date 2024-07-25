@@ -13,24 +13,30 @@
 	import Modal from './Modal.svelte';
 	import { scientific } from '$lib/scientific';
 	import Explanation from './Explanation.svelte';
+	import { onMount } from 'svelte';
 
 	let guess = 0;
 	let guesses: number[] = [];
 	let showHelp = false;
+	let questionNumber = 0;
 
 	provideAnswer();
 
 	const answer = getAnswer();
-	let question = random_question();
+	let question = random_question(questionNumber);
 	$: digit = scientific(question.answer).digit;
 	let hint: HintType | undefined;
+	let done = false;
 
 	function reset() {
+		questionNumber += 1;
 		guess = 0;
 		guesses = [];
 		hint = undefined;
-		question = random_question();
+		question = random_question(questionNumber);
 	}
+
+	$: done = hint?.type === 'correct' || guesses.length >= 6;
 </script>
 
 <Modal bind:showModal={showHelp}>
@@ -61,16 +67,25 @@
 			<Question {question} value={guess} />
 			<Guesser
 				on:change={() => {
+					if (done) {
+						return;
+					}
+					if (guesses.includes(guess)) {
+						return;
+					}
+					const prev = guesses.length ? guesses[guesses.length - 1] : undefined;
 					guesses = [...guesses, guess];
-					console.log(question);
 					hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer), {
-						direction_skew: hint?.type === 'direction' ? 0 : 0.4
+						direction_skew: hint?.type === 'direction' ? 0 : 0.4,
+						num: guesses.length,
+						previous_guess_magnitude: prev
 					});
 				}}
 				bind:guess
 				{digit}
+				disabled={done}
 			/>
-			{#if hint?.type === 'correct' || guesses.length >= 6}
+			{#if done}
 				<Explanation {question} {reset} correct={hint?.type === 'correct'} />
 			{:else}
 				<Hint {hint} />
