@@ -1,11 +1,10 @@
 <script lang="ts">
-	import Frac from './format/Frac.svelte';
-	import Question from './Question.svelte';
+	import Question from './QuestionView.svelte';
 </script>
 
 <div class="flex flex-col gap-2">
 	<h2 class="mb-2">What is Fermidle?</h2>
-	<p class="bold">Fermidle is a number-guessing game.</p>
+	<p class="bold">Guess the answer to the nearest power of ten!</p>
 	<p>
 		You'll see a question, and your goal is to guess the <i>magnitude</i> of the answer in 6 tries or
 		less. The questions will be hard, but you don't have to get them exactly right. You just have to
@@ -15,6 +14,7 @@
 	<Question
 		describe
 		question={{
+			id: 'fake',
 			question: '',
 			answer: 3.4e-4,
 			values: [

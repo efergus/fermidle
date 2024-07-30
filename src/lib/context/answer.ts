@@ -13,15 +13,15 @@ function get() {
 	return getContext<AnswerContext>(key);
 }
 
-export function getAnswer() {
+export function getAnswerElement() {
 	return get().element;
 }
 
-export function setAnswer(e: Element) {
+export function setAnswerElement(e: Element) {
 	get().setAnswer(e);
 }
 
-export function provideAnswer() {
+export function provideAnswerElement() {
 	const element = writable<Element | null>(null);
 	setContext<AnswerContext>(key, {
 		element,

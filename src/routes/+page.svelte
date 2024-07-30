@@ -1,11 +1,20 @@
 <script lang="ts">
-	import { getAnswer, provideAnswer } from '$lib/context/answer';
-	import { random_hint, random_question, type Hint as HintType } from '$lib/data/questions';
+	import { getAnswerElement, provideAnswerElement } from '$lib/context/answer';
+	import {
+		getGlobalSeed,
+		getTodaySeed,
+		random_hint,
+		random_question,
+		seeded_prng,
+		setGlobalSeed,
+		type Hint as HintType,
+		type Question
+	} from '$lib/data/questions';
 	import '../app.css';
 	import Answer from './Answer.svelte';
 	import DarkModeButton from './DarkModeButton.svelte';
 	import Guesser from './Guesser.svelte';
-	import Question from './Question.svelte';
+	import QuestionView from './QuestionView.svelte';
 	import Hint from './Hint.svelte';
 	import Example from './Example.svelte';
 	import Rotate from '$lib/icons/Rotate.svelte';
@@ -14,33 +23,100 @@
 	import { scientific } from '$lib/scientific';
 	import Explanation from './Explanation.svelte';
 	import { onMount } from 'svelte';
+	import { getAnswers, isComplete, setAnswers } from '$lib/data/store';
+	import GuessDisplay from './components/GuessDisplay.svelte';
 
 	let guess = 0;
 	let guesses: number[] = [];
 	let showHelp = false;
-	let questionNumber = 0;
+	let today = getTodaySeed();
+	let seed = today;
+	let daily: boolean | null = null;
 
-	provideAnswer();
+	provideAnswerElement();
 
-	const answer = getAnswer();
-	let question = random_question(questionNumber);
-	$: digit = scientific(question.answer).digit;
+	const answer = getAnswerElement();
+	let question: Question | undefined;
+	$: digit = question ? scientific(question.answer).digit : 1;
 	let hint: HintType | undefined;
 	let done = false;
+	let correct: boolean | null = null;
+	let dailyTodo = false;
 
-	function reset() {
-		questionNumber += 1;
+	async function reset() {
+		if (!seed) return;
+		if (dailyTodo) {
+			setSeed(today);
+		} else {
+			const rng = seeded_prng(seed);
+			setSeed(rng.int(0, 1e10).toString());
+		}
 		guess = 0;
 		guesses = [];
+		correct = null;
 		hint = undefined;
-		question = random_question(questionNumber);
 	}
 
-	$: done = hint?.type === 'correct' || guesses.length >= 6;
+	function setSeed(newSeed: string) {
+		seed = newSeed;
+		setGlobalSeed(seed);
+		if (seed === today) {
+			dailyTodo = false;
+			window.sessionStorage.setItem('practice', '');
+		} else {
+			isComplete(today).then((complete) => (dailyTodo = !complete));
+		}
+		getAnswers(seed).then((answers) => {
+			guesses = answers?.guesses.slice() ?? [];
+		});
+		return seed;
+	}
+
+	onMount(async () => {
+		const practice = window.sessionStorage.getItem('practice');
+		if (practice === null) {
+			// practice if the page is opened to a specific question
+			daily = seed === today;
+			window.sessionStorage.setItem('practice', daily ? '' : 'true');
+		} else {
+			// only auto-load todays if we haven't already done it
+			daily = !(await isComplete(today));
+		}
+		seed = daily ? today : getGlobalSeed();
+		question = await random_question(seed);
+		// Set today every 5 mins
+		setInterval(
+			() => {
+				today = getTodaySeed();
+			},
+			1000 * 60 * 5
+		);
+		setSeed(seed);
+	});
+
+	$: random_question(seed).then((next) => (question = next));
+	$: {
+		if (question && guesses.length) {
+			const lastGuess = guesses[guesses.length - 1];
+			const answerMagnitude = Math.floor(Math.log10(question.answer));
+			if (lastGuess === answerMagnitude) {
+				correct = true;
+			} else if (guesses.length >= 6) {
+				correct = false;
+			}
+		}
+	}
+	$: done = correct !== null;
 </script>
 
+<svelte:head>
+	<meta name="description" content="I'm Ethan Ferguson, and this is my website." />
+</svelte:head>
+
 <Modal bind:showModal={showHelp}>
-	<Example />
+	{#if showHelp}
+		<Example />
+	{/if}
 </Modal>
 
 <div class="w-full h-screen vrt justify-stretch bg-theme gap-4">
@@ -64,10 +140,11 @@
 	</div>
 	<div class="w-full h-full pb-6 px-2 overflow-auto" style="scrollbar-gutter: stable both-edges;">
 		<div class="vrt">
-			<Question {question} value={guess} />
+			<QuestionView {question} value={guess} />
+			<GuessDisplay {guess} {digit} lhs={question?.values[0].name} rhs={question?.values[1].name} />
 			<Guesser
-				on:change={() => {
-					if (done) {
+				on:change={async () => {
+					if (done || !question) {
 						return;
 					}
 					if (guesses.includes(guess)) {
@@ -75,18 +152,32 @@
 					}
 					const prev = guesses.length ? guesses[guesses.length - 1] : undefined;
 					guesses = [...guesses, guess];
-					hint = random_hint(guess + Math.log10(digit), Math.log10(question.answer), {
+					hint = await random_hint(guess + Math.log10(digit), Math.log10(question.answer), {
 						direction_skew: hint?.type === 'direction' ? 0 : 0.4,
 						num: guesses.length,
 						previous_guess_magnitude: prev
 					});
+					done = hint?.type === 'correct' || guesses.length >= 6;
+					if (done) {
+						correct = hint?.type === 'correct';
+					}
+					setAnswers(
+						{
+							questionId: question.id,
+							guesses,
+							correct
+						},
+						seed
+					);
 				}}
 				bind:guess
 				{digit}
 				disabled={done}
 			/>
-			{#if done}
-				<Explanation {question} {reset} correct={hint?.type === 'correct'} />
+			{#if done && question && correct !== null}
+				<Explanation {question} {reset} {correct}
+					>Play {dailyTodo ? "today's" : 'again'}?</Explanation
+				>
 			{:else}
 				<Hint {hint} />
 			{/if}

@@ -24,10 +24,11 @@
 			scientific: scientific(num)
 		};
 	});
+	const vars = ['X', 'Y'];
 </script>
 
 <Modal showModal>
-	<div class="vrt items-start w-full py-4 gap-2">
+	<div class="vrt items-start w-full py-4 gap-2 font-serif">
 		<div class="w-full">
 			{#if correct}
 				<h1>Correct!</h1>
@@ -35,22 +36,28 @@
 				<h1>Better luck next time...</h1>
 			{/if}
 		</div>
-		{#each values as value}
-			<div class="flex gap-2 justify-between w-full">
-				<p>
-					<span class="font-bold">{value.name}</span>
-				</p>
-				<div class="flex items-center gap-2 italic text-2xl">
+		{#each values as value, i}
+			<div class="flex gap-2 justify-between items-center w-full italic">
+				<div class="flex gap-2 items-center">
+					<p class="text-xl whitespace-nowrap">{vars[i]} =</p>
+					<p class="font-bold text-balance">{value.name}</p>
+				</div>
+				<div class="flex items-center gap-2 text-2xl">
 					≈ <Scientific value={value.num} />
 					<Units units={value.units} />
 				</div>
 			</div>
 		{/each}
 		<div class="flex flex-col w-full items-start">
-			<div><FracQuestion {question} /></div>
 			<div
-				class="flex flex-wrap items-center justify-end w-full max-w-full gap-2 italic text-2xl whitespace-nowrap"
+				class="flex flex-wrap items-center justify-end w-full max-w-full gap-2 font-serif italic text-2xl whitespace-nowrap"
 			>
+				<div class="flex vrt p-1 text-xl italic max-w-md">
+					<Frac>
+						<p slot="num">{'X'}</p>
+						<p slot="den">{'Y'}</p>
+					</Frac>
+				</div>
 				≈
 				<Frac>
 					<div slot="num" class="flex items-center gap-2">
@@ -79,26 +86,28 @@
 							<p slot="exp">{values[1].scientific.magnitude}</p></Scientific
 						>
 					</p>
-				</Frac>·
-				<Frac>
-					<p slot="num">
-						<Units units={values[0].units} />
-					</p>
-					<p slot="den">
-						<Units units={values[1].units} />
-					</p>
-				</Frac> ≈
+				</Frac>
+				{#if values[0].units || values[1].units}·
+					<Frac>
+						<p slot="num">
+							<Units units={values[0].units} />
+						</p>
+						<p slot="den">
+							<Units units={values[1].units} />
+						</p>
+					</Frac>
+				{/if} ≈
 				<Scientific value={question.answer} />
 			</div>
 		</div>
-		<div class="flex w-full justify-center mt-6">
+		<div class="flex w-full justify-center mt-6 font-sans">
 			<button
 				class="flex gap-4 bg-primary px-4 py-2 rounded"
 				on:click={() => {
 					open = false;
 					reset();
 				}}
-				>Play again? <Rotate />
+				><slot /> <Rotate />
 			</button>
 		</div>
 	</div>
