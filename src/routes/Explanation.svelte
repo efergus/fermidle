@@ -8,10 +8,12 @@
 	import FracQuestion from './FracQuestion.svelte';
 	import Frac from './format/Frac.svelte';
 	import Rotate from '$lib/icons/Rotate.svelte';
+	import clsx from 'clsx';
 
 	export let question: Question;
 	export let correct = true;
 	export let open = true;
+	export let guesses: number[] = [];
 	export let reset = () => {};
 
 	$: values = question.values.map(({ name, value }) => {
@@ -25,15 +27,31 @@
 		};
 	});
 	const vars = ['X', 'Y'];
+	$: len = guesses.length;
 </script>
 
 <Modal showModal>
-	<div class="vrt items-start w-full py-4 gap-2 font-serif">
-		<div class="w-full">
+	<div class="vrt items-start w-full pb-2 px-2 gap-2 font-serif">
+		<div
+			class="w-full flex flex-col gap-2 items-center px-2 font-bold font-sans text-center text-balance"
+		>
 			{#if correct}
-				<h1>Correct!</h1>
+				<h2>{len === 1 ? 'Impressive' : 'Correct'}!</h2>
+				<p>You got the answer in {len} guess{len === 1 ? '!' : 'es.'}</p>
+				<div class="flex gap-2 mt-2">
+					{#each guesses as guess, i}
+						<div
+							class={clsx(
+								i + 1 === len ? 'bg-primary scale-125 shadow' : 'bg-secondary',
+								'px-2 py-1 rounded w-10 h-10 vrt justify-center'
+							)}
+						>
+							<p>{guess}</p>
+						</div>
+					{/each}
+				</div>
 			{:else}
-				<h1>Better luck next time...</h1>
+				<h2>Better luck next time...</h2>
 			{/if}
 		</div>
 		{#each values as value, i}
@@ -60,11 +78,11 @@
 				</div>
 				≈
 				<Frac>
-					<div slot="num" class="flex items-center gap-2">
+					<div slot="num" class="flex items-end gap-2">
 						<Scientific value={values[0].num} />
 						<Units units={values[0].units} />
 					</div>
-					<div slot="den" class="flex items-center gap-2">
+					<div slot="den" class="flex items-end gap-2">
 						<Scientific value={values[1].num} />
 						<Units units={values[1].units} />
 					</div>
