@@ -98,7 +98,7 @@
 					open = false;
 					reset();
 				}}
-				>Play again? <Rotate />
+				><slot /> <Rotate />
 			</button>
 		</div>
 	</div>

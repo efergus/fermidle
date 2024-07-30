@@ -38,6 +38,7 @@
 		"@types/seedrandom": "^3.0.8",
 		"clsx": "^2.1.0",
 		"date-fns": "^3.6.0",
+		"localforage": "^1.10.0",
 		"random": "^4.1.0",
 		"seedrandom": "^3.0.5"
 	}

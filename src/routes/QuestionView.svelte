@@ -1,15 +1,16 @@
 <script lang="ts">
 	import type { Question } from '$lib/data/questions';
+	import { onBrowser } from '$lib/window';
 	import Frac from './format/Frac.svelte';
 	import FracQuestion from './FracQuestion.svelte';
 	import ValueImage from './ValueImage.svelte';
 
-	export let question: Question;
+	export let question: Question | undefined;
 	export let value: number = 1;
 	export let describe = false;
-	export let loading = typeof window === 'undefined';
+	$: loading = !onBrowser() || typeof question === 'undefined';
 
-	$: values = question.values;
+	$: values = question?.values ?? [];
 	$: repeat1 = value < 0 ? 'repeat' : 'no-repeat';
 	$: repeat2 = value > 0 ? 'repeat' : 'no-repeat';
 </script>

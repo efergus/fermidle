@@ -1,6 +1,8 @@
 import random from 'random';
 import data from './questions.json';
-import { addDays, formatISO, isValid, parseISO } from 'date-fns';
+import { formatISO, isValid, parseISO } from 'date-fns';
+import { pushState } from '$app/navigation';
+import { writable } from 'svelte/store';
 
 export type Value = {
 	value: string;
@@ -9,42 +11,61 @@ export type Value = {
 };
 
 export type Question = {
+	id: string;
 	question: string;
 	answer: number;
 	values: Value[];
 };
 
-function globalSeed() {
+export function getTodaySeed() {
 	return formatISO(new Date(), { representation: 'date' });
 }
-const GLOBAL_SEED = globalSeed();
 
-function seeded_prng(...seed: (string | number)[]) {
-	let globalSeed = GLOBAL_SEED;
-	if (typeof window !== 'undefined') {
-		const params = new URLSearchParams(window.location.search);
-		let seed = params.get('s');
-		if (!seed) {
-			params.set('s', GLOBAL_SEED);
-			window.location.search = params.toString();
-		}
-		let date = parseISO(seed || '');
-		if (!seed || !isValid(date) || date > new Date()) {
-			seed = GLOBAL_SEED;
-			params.set('s', GLOBAL_SEED);
-			window.location.search = params.toString();
-		}
-		globalSeed = seed;
+export function getGlobalSeed() {
+	const today = getTodaySeed();
+	console.log({ today });
+	if (typeof window === 'undefined') {
+		return today;
 	}
+	const url = new URL(window.location.href);
+	const params = new URLSearchParams(url.search);
 
-	const seedString = seed.map((x) => x.toString()).join('|') ?? '';
-	return random.clone(globalSeed + seedString);
+	let seed = params.get('s');
+
+	if (!seed) {
+		return today;
+	}
+	let date = parseISO(seed || '');
+	const now = new Date();
+	if (isValid(date) && date > now) {
+		return today;
+	}
+	return seed;
 }
 
-export function random_question(num: number): Question {
-	const rng = seeded_prng('question', num);
+export function setGlobalSeed(seed: string) {
+	const url = new URL(window.location.href);
+	const params = new URLSearchParams(url.search);
+
+	if (seed === getTodaySeed()) {
+		params.delete('s');
+	} else {
+		params.set('s', seed);
+	}
+	url.search = params.toString();
+	pushState(url.href, { seed });
+}
+
+export function seeded_prng(...seed: (string | number)[]) {
+	const seedString = seed.map((x) => x.toString()).join('|') ?? '';
+	return random.clone(seedString);
+}
+
+export async function random_question(seed: string): Promise<Question> {
+	const rng = seeded_prng('question', seed);
 	const question = rng.choice(data)!;
 	return {
+		id: question.id,
 		question: question.question,
 		answer: question.answer,
 		values: question.values.map(({ value, name, image }) => ({ value, name, image }))
@@ -97,12 +118,12 @@ type HintOptions = {
 	previous_guess_magnitude?: number;
 };
 
-export function random_hint(
+export async function random_hint(
 	guess_magnitude: number,
 	answer_magnitude: number,
 	options: HintOptions = {}
-): Hint {
-	const rng = seeded_prng('hint', options.num ?? 0);
+): Promise<Hint> {
+	const rng = await seeded_prng('hint', options.num ?? 0);
 	const int_answer = Math.floor(answer_magnitude);
 	const int_guess = Math.floor(guess_magnitude);
 	if (int_guess === int_answer) {
@@ -130,3 +151,5 @@ export function random_hint(
 		value
 	};
 }
+
+const activeQuestion = writable<Question>();

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { setAnswer } from '$lib/context/answer';
+	import { setAnswerElement } from '$lib/context/answer';
 	import { dispatchers, ident } from '$lib/dispatch';
 	import CheckIcon from '$lib/icons/CheckIcon.svelte';
 	import { onMount } from 'svelte';
@@ -152,7 +152,7 @@
 	}
 	$: {
 		if (input) {
-			setAnswer(input);
+			setAnswerElement(input);
 		}
 	}
 </script>
