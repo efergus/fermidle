@@ -37,12 +37,4 @@
 			</Increment>
 		</div>
 	</div>
-	<!-- <div class="text-4xl w-full max-w-md break-words flex flex-wrap content-start">
-		{#each guessDisplay as item}
-			<p>{item}</p>
-		{/each}
-		<div class="vrt justify-end">
-			<p class="pl-2 font-bold text-2xl">{unit}</p>
-		</div>
-	</div> -->
 </div>

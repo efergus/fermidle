@@ -23,7 +23,6 @@ export function getTodaySeed() {
 
 export function getGlobalSeed() {
 	const today = getTodaySeed();
-	console.log({ today });
 	if (typeof window === 'undefined') {
 		return today;
 	}

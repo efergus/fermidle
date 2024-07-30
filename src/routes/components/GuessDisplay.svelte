@@ -48,7 +48,6 @@
 					<p>{item}</p>
 				{/each}
 			{/if}
-			<!-- <p class="ml-2">×</p> -->
 		</div>
 	</div>
 </div>
