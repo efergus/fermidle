@@ -35,5 +35,5 @@
 		{/if}
 	</div>
 	<div class="p-1 text-base text-right w-full">*not to scale</div>
-	<FracQuestion {question} />
+	<!-- <FracQuestion {question} /> -->
 </div>

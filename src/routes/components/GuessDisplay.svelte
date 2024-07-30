@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
+	import Frac from '../format/Frac.svelte';
 
 	export let guess: number | null = null;
 	export let digit = 5;
@@ -23,21 +24,37 @@
 	}
 </script>
 
-<div class="text-xl w-full max-w-md break-words flex flex-wrap">
-	<p class="font-bold">{lhs} ≈</p>
-	<div class="ml-2 flex flex-wrap justify-stretch">
-		{#if guess === null}
-			<p>???</p>
-		{:else}
-			{#each guessDisplay as item}
-				<p>{item}</p>
-			{/each}
-		{/if}
-		<div class="vrt justify-end grow">
-			<p class="ml-2 font-bold">· {rhs}</p>
+<div class="grid gap-2 text-xl w-full max-w-xs break-words content-center items-center min-h-[6em]">
+	<p>X</p>
+	<p>=</p>
+	<p class="value">{lhs}</p>
+	<p>Y</p>
+	<p>=</p>
+	<p class="value">{rhs}</p>
+	<div class="flex gap-2 w-full justify-center items-center col-span-3">
+		<Frac>
+			<p slot="num">X</p>
+			<p slot="den">Y</p>
+		</Frac>
+		<p>≈</p>
+		<div class="flex flex-wrap">
+			{#if guess === null}
+				<p class="value">???</p>
+			{:else}
+				{#each guessDisplay as item}
+					<p>{item}</p>
+				{/each}
+			{/if}
+			<!-- <p class="ml-2">×</p> -->
 		</div>
 	</div>
 </div>
 
 <style lang="postcss">
+	.grid {
+		grid-template-columns: min-content min-content 1fr;
+	}
+	.value {
+		@apply font-bold italic text-end;
+	}
 </style>

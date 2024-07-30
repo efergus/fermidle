@@ -141,7 +141,7 @@
 	<div class="w-full h-full pb-6 px-2 overflow-auto" style="scrollbar-gutter: stable both-edges;">
 		<div class="vrt">
 			<QuestionView {question} value={guess} />
-			<!-- <GuessDisplay {guess} lhs={question?.values[0].name} rhs={question?.values[1].name} /> -->
+			<GuessDisplay {guess} {digit} lhs={question?.values[0].name} rhs={question?.values[1].name} />
 			<Guesser
 				on:change={async () => {
 					if (done || !question) {
