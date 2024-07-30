@@ -24,19 +24,22 @@
 	}
 </script>
 
-<div class="grid gap-2 text-xl w-full max-w-xs break-words content-center items-center min-h-[6em]">
-	<p>X</p>
-	<p>=</p>
-	<p class="value">{lhs}</p>
-	<p>Y</p>
-	<p>=</p>
-	<p class="value">{rhs}</p>
-	<div class="flex gap-2 w-full justify-center items-center col-span-3">
+<div class="flex flex-col items-center font-serif italic text-xl max-w-lg">
+	<div class="grid gap-2 w-full max-w-xs break-words content-center items-center">
+		<p>X</p>
+		<p>=</p>
+		<div class="value"><p>{lhs}</p></div>
+		<p>Y</p>
+		<p>=</p>
+		<div class="value"><p>{rhs}</p></div>
+	</div>
+
+	<div class="flex gap-2 w-full justify-center items-center col-span-3 min-h-[5em]">
 		<Frac>
 			<p slot="num">X</p>
 			<p slot="den">Y</p>
 		</Frac>
-		<p>≈</p>
+		<p class="font-sans">≈</p>
 		<div class="flex flex-wrap">
 			{#if guess === null}
 				<p class="value">???</p>
@@ -54,7 +57,7 @@
 	.grid {
 		grid-template-columns: min-content min-content 1fr;
 	}
-	.value {
-		@apply font-bold italic text-end;
+	div.value {
+		@apply flex justify-end text-center font-bold text-balance;
 	}
 </style>

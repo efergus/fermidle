@@ -9,31 +9,14 @@
 
 	export let guess = 0;
 	export let digit = 5;
-	export let unit = 'units';
 	export let placeholder = '?';
 	export let disabled = false;
-
-	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
-	let guessDisplay = [''];
 
 	let inputGroup: HTMLDivElement | null = null;
 
 	const incrementer = (value: number) => () => {
 		guess += value;
 	};
-
-	$: $guessDisplayAmt = guess;
-	$: {
-		const amt = Math.round($guessDisplayAmt);
-		const d = digit.toString();
-		const zeros = new Array(Math.abs(amt)).fill('0');
-		if (amt >= 0) {
-			guessDisplay = [d, ...zeros.flatMap((z, i) => (i % 3 === 2 ? [z, ','] : [z])).reverse()];
-		} else {
-			zeros[0] = '0.';
-			guessDisplay = [...zeros, d];
-		}
-	}
 </script>
 
 <div class="vrt gap-4 w-full">
@@ -54,12 +37,12 @@
 			</Increment>
 		</div>
 	</div>
-	<div class="text-4xl w-full max-w-md break-words flex flex-wrap content-start">
+	<!-- <div class="text-4xl w-full max-w-md break-words flex flex-wrap content-start">
 		{#each guessDisplay as item}
 			<p>{item}</p>
 		{/each}
 		<div class="vrt justify-end">
 			<p class="pl-2 font-bold text-2xl">{unit}</p>
 		</div>
-	</div>
+	</div> -->
 </div>
