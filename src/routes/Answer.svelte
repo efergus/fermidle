@@ -20,13 +20,6 @@
 			{#each display as value, index (index)}
 				<div class={clsx('hrz min-h-[3rem] border rounded px-6 bg-theme')} out:fade={options}>
 					<p
-						in:fade={{
-							...options
-						}}
-					>
-						Your answer was:
-					</p>
-					<p
 						class="w-[3.5ch] text-4xl text-center font-semibold"
 						in:clone={{ node: target, opacity: 1, ...options }}
 					>

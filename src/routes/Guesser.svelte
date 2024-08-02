@@ -22,7 +22,6 @@
 <div class="vrt gap-4 w-full mb-4">
 	<div class="hrz items-start">
 		<div class="h-full hrz justify-end pt-8 gap-4 text-7xl md:text-8xl">
-			<!-- <p class="text-6xl">≈</p> -->
 			<b>
 				{digit}·10
 			</b>
