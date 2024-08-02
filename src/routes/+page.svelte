@@ -172,7 +172,6 @@
 
 					changed = true;
 					guesses = nextGuesses;
-					console.log({ guesses, changed });
 					done = hint?.type === 'correct' || guesses.length >= 6;
 					if (done) {
 						correct = hint?.type === 'correct';
