@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { getAnswerElement, provideAnswerElement } from '$lib/context/answer';
 	import {
 		getGlobalSeed,
@@ -135,7 +136,7 @@
 		</div>
 		<div class="max-w-lg w-full hrz justify-between font-bold text-2xl">
 			<div class="basis-0 grow" />
-			<a href="/"><FermidleIcon /></a>
+			<a href={base}><FermidleIcon /></a>
 			<div class="flex justify-end basis-0 grow">
 				<button
 					class="px-3 hover:bg-primary active:bg-primary/80 rounded"
