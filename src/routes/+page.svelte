@@ -32,6 +32,7 @@
 	let today = getTodaySeed();
 	let seed = today;
 	let daily: boolean | null = null;
+	let changed = false;
 
 	provideAnswerElement();
 
@@ -48,13 +49,14 @@
 		if (dailyTodo) {
 			setSeed(today);
 		} else {
-			const rng = seeded_prng(seed);
+			const rng = seeded_prng(Math.random().toString());
 			setSeed(rng.int(0, 1e10).toString());
 		}
 		guess = 0;
 		guesses = [];
 		correct = null;
 		hint = undefined;
+		changed = false;
 	}
 
 	function setSeed(newSeed: string) {
@@ -85,28 +87,30 @@
 		seed = daily ? today : getGlobalSeed();
 		question = await random_question(seed);
 		// Set today every 5 mins
-		setInterval(
-			() => {
-				today = getTodaySeed();
-			},
-			1000 * 60 * 5
-		);
+		setInterval(() => {
+			today = getTodaySeed();
+			isComplete(today).then((complete) => {
+				dailyTodo = !complete;
+			});
+		}, 1000 * 60);
 		setSeed(seed);
 	});
 
 	$: random_question(seed).then((next) => (question = next));
-	$: {
-		if (question && guesses.length) {
-			const lastGuess = guesses[guesses.length - 1];
-			const answerMagnitude = Math.floor(Math.log10(question.answer));
-			if (lastGuess === answerMagnitude) {
-				correct = true;
-			} else if (guesses.length >= 6) {
-				correct = false;
-			}
+	$: if (question && guesses.length) {
+		const lastGuess = guesses[guesses.length - 1];
+		const answerMagnitude = Math.floor(Math.log10(question.answer));
+		if (lastGuess === answerMagnitude) {
+			correct = true;
+		} else if (guesses.length >= 6) {
+			correct = false;
 		}
 	}
 	$: done = correct !== null;
+	$: {
+		guess;
+		changed = true;
+	}
 </script>
 
 <svelte:head>
@@ -119,16 +123,19 @@
 	{/if}
 </Modal>
 
-<div class="w-full h-screen vrt justify-stretch bg-theme gap-4">
-	<div class="w-full hrz justify-between">
+<div class="w-full h-screen relative vrt justify-stretch bg-theme gap-4">
+	<div class="w-full hrz justify-between sticky top-0 bg-theme">
 		<div>
-			<button class="p-1 m-1 stroke-contrast hover:bg-primary rounded-lg" on:click={reset}
-				><Rotate /></button
-			>
+			<button
+				class="p-1 m-1 stroke-contrast enabled:hover:bg-primary rounded-lg disabled:opacity-30"
+				on:click={reset}
+				disabled={seed === today && !done}
+				><Rotate />
+			</button>
 		</div>
 		<div class="max-w-lg w-full hrz justify-between font-bold text-2xl">
 			<div class="basis-0 grow" />
-			<div><FermidleIcon /></div>
+			<a href="/"><FermidleIcon /></a>
 			<div class="flex justify-end basis-0 grow">
 				<button
 					class="px-3 hover:bg-primary active:bg-primary/80 rounded"
@@ -138,10 +145,15 @@
 		</div>
 		<DarkModeButton />
 	</div>
-	<div class="w-full h-full pb-6 px-2 overflow-auto" style="scrollbar-gutter: stable both-edges;">
-		<div class="vrt">
+	<div class="w-full h-full pb-6 px-2" style="scrollbar-gutter: stable both-edges;">
+		<div class="vrt gap-2">
 			<QuestionView {question} value={guess} />
-			<GuessDisplay {guess} {digit} lhs={question?.values[0].name} rhs={question?.values[1].name} />
+			<GuessDisplay
+				guess={changed ? guess : null}
+				{digit}
+				lhs={question?.values[0].name}
+				rhs={question?.values[1].name}
+			/>
 			<Guesser
 				on:change={async () => {
 					if (done || !question) {
@@ -151,12 +163,15 @@
 						return;
 					}
 					const prev = guesses.length ? guesses[guesses.length - 1] : undefined;
-					guesses = [...guesses, guess];
+					const nextGuesses = [...guesses, guess];
 					hint = await random_hint(guess + Math.log10(digit), Math.log10(question.answer), {
 						direction_skew: hint?.type === 'direction' ? 0 : 0.4,
 						num: guesses.length,
 						previous_guess_magnitude: prev
 					});
+
+					changed = true;
+					guesses = nextGuesses;
 					done = hint?.type === 'correct' || guesses.length >= 6;
 					if (done) {
 						correct = hint?.type === 'correct';
@@ -175,9 +190,9 @@
 				disabled={done}
 			/>
 			{#if done && question && correct !== null}
-				<Explanation {question} {reset} {correct}
-					>Play {dailyTodo ? "today's" : 'again'}?</Explanation
-				>
+				<Explanation {question} {reset} {correct} {guesses}>
+					Play {dailyTodo ? "today's" : 'again'}?
+				</Explanation>
 			{:else}
 				<Hint {hint} />
 			{/if}

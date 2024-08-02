@@ -34,7 +34,7 @@
 		<div class="value"><p>{rhs}</p></div>
 	</div>
 
-	<div class="flex gap-2 w-full justify-center items-center col-span-3 min-h-[5em]">
+	<div class="flex gap-2 w-full justify-center items-center col-span-3 min-h-[5em] -my-2">
 		<Frac>
 			<p slot="num">X</p>
 			<p slot="den">Y</p>
@@ -57,6 +57,6 @@
 		grid-template-columns: min-content min-content 1fr;
 	}
 	div.value {
-		@apply flex justify-end text-center font-bold text-balance;
+		@apply flex justify-center text-center font-bold text-balance;
 	}
 </style>

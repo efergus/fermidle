@@ -75,7 +75,7 @@
 	};
 
 	const keyListener = (e: KeyboardEvent) => {
-		if (!input) return;
+		if (!input || disabled) return;
 		e.stopPropagation();
 		const key = e.key;
 		const target = input;
@@ -183,7 +183,7 @@
 	/>
 
 	<button
-		class="absolute top-0 right-0 translate-x-full h-full flex items-center px-2 rounded enabled:hover:bg-secondary"
+		class="absolute top-0 right-0 translate-x-full h-full flex items-center px-2 rounded enabled:hover:bg-secondary disabled:opacity-30"
 		on:click={submit}
 		tabindex="-1"
 		{disabled}

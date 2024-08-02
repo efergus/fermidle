@@ -39,7 +39,7 @@
 	$: powers = unit_powers(units);
 </script>
 
-<div class="inline">
+<div class="inline text-sm">
 	{#if powers.den.length}
 		<Frac>
 			<div slot="num">
