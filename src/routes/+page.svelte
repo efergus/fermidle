@@ -26,6 +26,8 @@
 	import { onMount } from 'svelte';
 	import { getAnswers, isComplete, setAnswers } from '$lib/data/store';
 	import GuessDisplay from './components/GuessDisplay.svelte';
+	import { onBrowser } from '$lib/window';
+	import localforage from 'localforage';
 
 	let guess = 0;
 	let guesses: number[] = [];
@@ -44,6 +46,19 @@
 	let done = false;
 	let correct: boolean | null = null;
 	let dailyTodo = false;
+
+	const tutorialStore = onBrowser()
+		? localforage.createInstance({
+				name: 'tutorial'
+			})
+		: null;
+
+	tutorialStore?.getItem('played').then((played) => {
+		if (!played) {
+			showHelp = true;
+			tutorialStore?.setItem('played', true);
+		}
+	});
 
 	async function reset() {
 		if (!seed) return;
