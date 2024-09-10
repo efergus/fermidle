@@ -30,7 +30,7 @@
 	dialog {
 		max-width: 95vw;
 		max-height: 90vh;
-		width: 32em;
+		width: max(min-content, 32em);
 		border-radius: 0.2em;
 		border: none;
 		padding: 0;

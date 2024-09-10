@@ -26,6 +26,8 @@
 	import { onMount } from 'svelte';
 	import { getAnswers, isComplete, setAnswers } from '$lib/data/store';
 	import GuessDisplay from './components/GuessDisplay.svelte';
+	import { onBrowser } from '$lib/window';
+	import localforage from 'localforage';
 
 	let guess = 0;
 	let guesses: number[] = [];
@@ -44,6 +46,19 @@
 	let done = false;
 	let correct: boolean | null = null;
 	let dailyTodo = false;
+
+	const tutorialStore = onBrowser()
+		? localforage.createInstance({
+				name: 'tutorial'
+			})
+		: null;
+
+	tutorialStore?.getItem('played').then((played) => {
+		if (!played) {
+			showHelp = true;
+			tutorialStore?.setItem('played', true);
+		}
+	});
 
 	async function reset() {
 		if (!seed) return;
@@ -108,14 +123,10 @@
 		}
 	}
 	$: done = correct !== null;
-	$: {
-		guess;
-		changed = true;
-	}
 </script>
 
 <svelte:head>
-	<meta name="description" content="I'm Ethan Ferguson, and this is my website." />
+	<meta name="description" content="Fermidle, a physics numbers guessing game." />
 </svelte:head>
 
 <Modal bind:showModal={showHelp}>
@@ -149,12 +160,7 @@
 	<div class="w-full h-full pb-6 px-2" style="scrollbar-gutter: stable both-edges;">
 		<div class="vrt gap-2">
 			<QuestionView {question} value={guess} />
-			<GuessDisplay
-				guess={changed ? guess : null}
-				{digit}
-				lhs={question?.values[0].name}
-				rhs={question?.values[1].name}
-			/>
+			<GuessDisplay guess={changed ? guess : null} {digit} />
 			<Guesser
 				on:change={async () => {
 					if (done || !question) {
@@ -187,13 +193,12 @@
 					);
 				}}
 				bind:guess
+				on:input={() => (changed = true)}
 				{digit}
 				disabled={done}
 			/>
 			{#if done && question && correct !== null}
-				<Explanation {question} {reset} {correct} {guesses}>
-					Play {dailyTodo ? "today's" : 'again'}?
-				</Explanation>
+				<Explanation {question} {reset} {correct} {guesses}>Play again?</Explanation>
 			{:else}
 				<Hint {hint} />
 			{/if}

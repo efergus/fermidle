@@ -16,7 +16,7 @@
 
 <div class="w-full max-w-md relative">
 	{#if target}
-		<div class="absolute vrt items-stretch gap-2 w-full">
+		<div class="absolute grid grid-cols-2 gap-2 w-full">
 			{#each display as value, index (index)}
 				<div class={clsx('hrz min-h-[3rem] border rounded px-6 bg-theme')} out:fade={options}>
 					<p
@@ -29,7 +29,7 @@
 			{/each}
 		</div>
 	{/if}
-	<div class="vrt items-stretch gap-2 w-full">
+	<div class="grid grid-cols-2 gap-2 w-full">
 		{#each extra as invisible}
 			<div
 				class={clsx(
