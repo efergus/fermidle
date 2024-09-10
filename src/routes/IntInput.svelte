@@ -172,7 +172,6 @@
 		{disabled}
 		bind:this={input}
 		on:focus
-		on:input
 		on:input={(e) => {
 			value = parse(e.currentTarget.value);
 		}}

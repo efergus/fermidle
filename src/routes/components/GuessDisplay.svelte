@@ -4,8 +4,6 @@
 
 	export let guess: number | null = null;
 	export let digit = 5;
-	export let lhs = 'X';
-	export let rhs = 'Y';
 
 	let guessDisplayAmt = spring(0, { stiffness: 0.1, damping: 0.8 });
 	let guessDisplay = [''];
@@ -25,15 +23,6 @@
 </script>
 
 <div class="flex flex-col items-center font-serif italic text-xl max-w-lg">
-	<div class="grid gap-2 w-full max-w-xs break-words content-center items-center">
-		<p>X</p>
-		<p>=</p>
-		<div class="value"><p>{lhs}</p></div>
-		<p>Y</p>
-		<p>=</p>
-		<div class="value"><p>{rhs}</p></div>
-	</div>
-
 	<div class="flex gap-2 w-full justify-center items-center col-span-3 min-h-[5em] -my-2">
 		<Frac>
 			<p slot="num">X</p>
@@ -51,12 +40,3 @@
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-	.grid {
-		grid-template-columns: min-content min-content 1fr;
-	}
-	div.value {
-		@apply flex justify-center text-center font-bold text-balance;
-	}
-</style>

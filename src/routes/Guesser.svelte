@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import IntInput from './IntInput.svelte';
 	import { spring } from 'svelte/motion';
+	import { dispatchers, ident } from '$lib/dispatch';
 
 	export let guess = 0;
 	export let digit = 5;
@@ -14,8 +15,13 @@
 
 	let inputGroup: HTMLDivElement | null = null;
 
+	const { input } = dispatchers({
+		input: ident<void>
+	});
+
 	const incrementer = (value: number) => () => {
 		guess += value;
+		input();
 	};
 </script>
 
@@ -30,7 +36,7 @@
 			<Increment {disabled} on:click={incrementer(1)}>
 				<ChevronUp />
 			</Increment>
-			<IntInput on:change {disabled} bind:value={guess} {placeholder} />
+			<IntInput on:change on:input={() => input()} {disabled} bind:value={guess} {placeholder} />
 			<Increment {disabled} on:click={incrementer(-1)}>
 				<ChevronDown />
 			</Increment>

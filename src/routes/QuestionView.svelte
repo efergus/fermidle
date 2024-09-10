@@ -35,4 +35,25 @@
 		{/if}
 	</div>
 	<div class="p-1 text-base text-right w-full">*not to scale</div>
+	<div class="vrt">
+		<div
+			class="grid gap-2 w-full max-w-xs break-words content-center items-center font-serif italic"
+		>
+			<p>X</p>
+			<p>=</p>
+			<div class="value"><p>{values[0]?.name}</p></div>
+			<p>Y</p>
+			<p>=</p>
+			<div class="value"><p>{values[1]?.name}</p></div>
+		</div>
+	</div>
 </div>
+
+<style lang="postcss">
+	.grid {
+		grid-template-columns: min-content min-content 1fr;
+	}
+	div.value {
+		@apply flex justify-center text-center font-bold text-balance;
+	}
+</style>

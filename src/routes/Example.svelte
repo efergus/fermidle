@@ -1,8 +1,9 @@
 <script lang="ts">
+	import GuessDisplay from './components/GuessDisplay.svelte';
 	import Question from './QuestionView.svelte';
 </script>
 
-<div class="flex flex-col gap-2">
+<div class="flex flex-col gap-2 w-full max-w-prose px-2 pb-4">
 	<h2 class="mb-2">What is Fermidle?</h2>
 	<p class="bold">Guess the answer to the nearest power of ten!</p>
 	<p>
@@ -19,13 +20,13 @@
 			answer: 3.4e-4,
 			values: [
 				{
-					name: 'Height of the Eiffel Tower',
+					name: 'The height of the Eiffel Tower',
 					value: '3.3e2 m1',
 					image:
 						'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/400px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg'
 				},
 				{
-					name: 'Diameter of a Golf Ball',
+					name: 'The diameter of a Golf Ball',
 					value: '4.1e-2 m1',
 					image:
 						'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Golfball.jpg/400px-Golfball.jpg'
@@ -34,6 +35,7 @@
 		}}
 		value={0}
 	/>
+	<GuessDisplay />
 	<p>
 		In other words, "How many Golf Balls would it take to reach the top of the Eiffel Tower"? Pretty
 		easy if you know both those values. But what if you don't? Well, we can make educated guesses
@@ -77,6 +79,8 @@
 	</p>
 	<p><i>3e-2m / 1.2e2m ≈ 3e-4</i></p>
 	<p>Which means the final answer would actually be <i>-4</i>.</p>
+	<p></p>
+	<p>That's all there is to it, now go forth and estimate!</p>
 </div>
 
 <style>
